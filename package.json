@@ -1,6 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "portfolio_v6",
+  "homepage": "http://julcresus.github.io/portfolio-julcresus",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,44 +15,18 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-text-loop": "^2.3.0"
-=======
-  "name": "portfolio-julcresus",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.15",
-    "@fortawesome/free-brands-svg-icons": "^5.7.2",
-    "@fortawesome/free-solid-svg-icons": "^5.7.2",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "bootstrap": "^4.3.1",
-    "braces": "^2.3.2",
-    "i": "^0.3.6",
-    "npm": "^6.8.0",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-ga": "^2.5.7",
-    "react-html-parser": "^2.0.2",
-    "react-responsive-carousel": "^3.1.47",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
-    "eject": "react-scripts eject"
-=======
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-<<<<<<< HEAD
   "browserslist": {
     "production": [
       ">0.2%",
@@ -64,17 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "homepage": "http://juliencresus.com",
-  "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "git-push": "^0.1.1"
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
   }
 }

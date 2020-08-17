@@ -43,11 +43,7 @@ export function register(config) {
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
-<<<<<<< HEAD
               'worker. To learn more, visit https://bit.ly/CRA-PWA'
-=======
-              'worker. To learn more, visit http://bit.ly/CRA-PWA'
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
           );
         });
       } else {
@@ -75,11 +71,7 @@ function registerValidSW(swUrl, config) {
               // content until all client tabs are closed.
               console.log(
                 'New content is available and will be used when all ' +
-<<<<<<< HEAD
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
-=======
-                  'tabs for this page are closed. See http://bit.ly/CRA-PWA.'
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
               );
 
               // Execute callback
@@ -108,13 +100,9 @@ function registerValidSW(swUrl, config) {
 
 function checkValidServiceWorker(swUrl, config) {
   // Check if the service worker can be found. If it can't reload the page.
-<<<<<<< HEAD
   fetch(swUrl, {
     headers: { 'Service-Worker': 'script' },
   })
-=======
-  fetch(swUrl)
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
       const contentType = response.headers.get('content-type');
@@ -142,7 +130,6 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-<<<<<<< HEAD
     navigator.serviceWorker.ready
       .then(registration => {
         registration.unregister();
@@ -150,10 +137,5 @@ export function unregister() {
       .catch(error => {
         console.error(error.message);
       });
-=======
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
->>>>>>> 91fcfc3a4ba704a9e0ba78a9d4a1dddd3ed5e885
   }
 }
