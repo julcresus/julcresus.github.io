@@ -9,14 +9,10 @@ import { Carousel } from 'react-responsive-carousel';
 function Playstation() {
   return (
     <div>
-      <div className="subheader">
-        <h1>
-          <a href='/'> &#60; back</a>
-        </h1>
-      </div>
+     
       <Carousel>
                 <div>
-                    <img src="./img/ps.jpg" />
+                    <img src="./img/psstore/main.jpg" />
                 </div>
                 <div>
                     <img src="./img/psstore/picture1.jpg" />
@@ -61,8 +57,14 @@ function Playstation() {
           <p className='description'>
           You can try it using this link: <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank'>https://projects.invisionapp.com/share/UHA1EOIVZ#/screens</a>",
           </p>
+          <br></br>
           </Col>
         </Row>
+        <div className="subheader">
+        <h1>
+          <a href='/'> &#60; back</a>
+        </h1>
+      </div>
         </Container>
 
     </div>

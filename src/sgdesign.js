@@ -9,23 +9,19 @@ import { Carousel } from 'react-responsive-carousel';
 function SgDesign() {
   return (
     <div>
-      <div className="subheader">
-        <h1>
-          <a href='/'> &#60; back</a>
-        </h1>
-      </div>
+      
       <Carousel>
                 <div>
                     <img src="./img/sg.jpg" />
                 </div>
                 <div>
-                    <img src="./img/sgdesign/picture1.png" />
+                    <img src="./img/sgdesign/picture1.jpg" />
                 </div>
                 <div>
-                    <img src="./img/sgdesign/picture2.png" />
+                    <img src="./img/sgdesign/picture2.jpg" />
                 </div>
                 <div>
-                    <img src="./img/sgdesign/picture3.png" />
+                    <img src="./img/sgdesign/picture3.jpg" />
                 </div>
             </Carousel>
         
@@ -48,8 +44,14 @@ function SgDesign() {
           <p className='description'>
           You can read more about the design process here: <a href='https://design.sgmarkets.com/en/' target='_blank'> https://design.sgmarkets.com/en/</a>
           </p>
+          <br></br>
           </Col>
         </Row>
+        <div className="subheader">
+        <h1>
+          <a href='/'> &#60; back</a>
+        </h1>
+      </div>
         </Container>
 
     </div>

@@ -9,17 +9,13 @@ import { Carousel } from 'react-responsive-carousel';
 function PrideInLondon() {
   return (
     <div>
-      <div className="subheader">
-        <h1>
-          <a href='/'> &#60; back</a>
-        </h1>
-      </div>
+     
       <Carousel>
                 <div>
                     <img src="./img/pride.jpg" />
                 </div>
                 <div>
-                    <img src="./img/pride/picture1.png" />
+                    <img src="./img/pride/picture1.jpg" />
                 </div>
                 <div>
                     <img src="./img/pride/picture2.jpg" />
@@ -40,8 +36,14 @@ function PrideInLondon() {
           <p className='description'>
           To create this interface, I used Sketch, my personal favorite, combined with InVision for the interaction and the sharing.
           </p>
+          <br></br>
           </Col>
         </Row>
+        <div className="subheader">
+        <h1>
+          <a href='/'> &#60; back</a>
+        </h1>
+      </div>
         </Container>
 
     </div>

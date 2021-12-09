@@ -1,6 +1,6 @@
 {
   "name": "portfolio_v6",
-  "homepage": "http://julcresus.github.io/portfolio-julcresus",
+"homepage": "http://julcresus.github.io/julcresus.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,8 +11,10 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
+    "react-ga": "^3.3.0",
     "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
+    "react-router-scroll-top": "^0.2.1",
     "react-scripts": "^3.4.3",
     "react-text-loop": "^2.3.0"
   },
@@ -38,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
+    
 }
