@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ad449255e3229a59ce51a050c5861f3",
+    "revision": "a201fd7cba89abe44068e232b5a88a16",
     "url": "/julcresus.github.io/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/julcresus.github.io/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "126cbb9cc3d8728e437c",
+    "revision": "9901f3cc7fc0d0521d95",
     "url": "/julcresus.github.io/static/css/main.cf6eae6d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/julcresus.github.io/static/js/2.02851d16.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "126cbb9cc3d8728e437c",
-    "url": "/julcresus.github.io/static/js/main.36eb6ae1.chunk.js"
+    "revision": "9901f3cc7fc0d0521d95",
+    "url": "/julcresus.github.io/static/js/main.86c008b7.chunk.js"
   },
   {
     "revision": "8b24a6c477a0bce4fb88",

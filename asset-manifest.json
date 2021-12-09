@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/julcresus.github.io/static/css/main.cf6eae6d.chunk.css",
-    "main.js": "/julcresus.github.io/static/js/main.36eb6ae1.chunk.js",
-    "main.js.map": "/julcresus.github.io/static/js/main.36eb6ae1.chunk.js.map",
+    "main.js": "/julcresus.github.io/static/js/main.86c008b7.chunk.js",
+    "main.js.map": "/julcresus.github.io/static/js/main.86c008b7.chunk.js.map",
     "runtime-main.js": "/julcresus.github.io/static/js/runtime-main.e57b3d66.js",
     "runtime-main.js.map": "/julcresus.github.io/static/js/runtime-main.e57b3d66.js.map",
     "static/css/2.fb346933.chunk.css": "/julcresus.github.io/static/css/2.fb346933.chunk.css",
     "static/js/2.02851d16.chunk.js": "/julcresus.github.io/static/js/2.02851d16.chunk.js",
     "static/js/2.02851d16.chunk.js.map": "/julcresus.github.io/static/js/2.02851d16.chunk.js.map",
     "index.html": "/julcresus.github.io/index.html",
-    "precache-manifest.29c0f0987a601e9d6ebc76ad07934ba4.js": "/julcresus.github.io/precache-manifest.29c0f0987a601e9d6ebc76ad07934ba4.js",
+    "precache-manifest.7cc185b87a80853a759e4ba5a38b0017.js": "/julcresus.github.io/precache-manifest.7cc185b87a80853a759e4ba5a38b0017.js",
     "service-worker.js": "/julcresus.github.io/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/julcresus.github.io/static/css/2.fb346933.chunk.css.map",
     "static/css/main.cf6eae6d.chunk.css.map": "/julcresus.github.io/static/css/main.cf6eae6d.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.fb346933.chunk.css",
     "static/js/2.02851d16.chunk.js",
     "static/css/main.cf6eae6d.chunk.css",
-    "static/js/main.36eb6ae1.chunk.js"
+    "static/js/main.86c008b7.chunk.js"
   ]
 }
