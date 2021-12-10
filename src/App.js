@@ -17,7 +17,7 @@ import ScrollToTop from 'react-router-scroll-top'
 function App() {
   return (
     <div className="App">
-      <Router basename='/' hashtype={"slash"}>
+      <Router basename={process.env.PUBLIC_URL} hashtype={"slash"}>
       <ScrollToTop>
       <div className="header">
         <h1>
