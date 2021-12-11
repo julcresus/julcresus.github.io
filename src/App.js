@@ -32,7 +32,6 @@ function App() {
           of them to render at a time
         */}
         <Switch>
-        <Route path='/julcresus.github.io' exact component={Home}/>
           <Route exact path="/" component={Home} />
           <Route exact path="/playstation" component={Playstation} />
             
