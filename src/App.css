@@ -192,6 +192,12 @@ a
   font-size: 24pt;
   line-height: 36pt;
 }
+.sub-title
+{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+}
 .project{
   float: left;
   text-align: left;

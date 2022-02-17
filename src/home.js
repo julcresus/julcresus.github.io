@@ -51,6 +51,16 @@ function Home() {
               </Link>
           </div>
           <div class='project'>
+              <img src='./img/mod.png' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Methods - Armed Forces Recruitment Program</p>
+                <p class='tags'>ux design, responsive ui Design, coding</p>
+              </div>
+              <Link to="/mod" class='button'>
+                  See the project
+              </Link>
+          </div>
+          <div class='project'>
               <img src='./img/emm.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Methods - Every Mind Matters</p>

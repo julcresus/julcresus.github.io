@@ -11,6 +11,7 @@ import EveryMindMatters from "./everymindmatters";
 import PrideInLondon from "./prideinlondon";
 import SgDesign from "./sgdesign";
 import ESFA from "./esfa";
+import Mod from "./mod";
 import ScrollToTop from 'react-router-scroll-top'
 
 
@@ -41,6 +42,7 @@ function App() {
             
           <Route exact path="/sgdesign" component={SgDesign} />
           <Route exact path="/esfa" component={ESFA} />
+          <Route exact path="/mod" component={Mod} />
         </Switch>
         </ScrollToTop>
     </Router>

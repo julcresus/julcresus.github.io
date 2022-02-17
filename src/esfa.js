@@ -23,9 +23,12 @@ function ESFA() {
           <Row>
           
           <Col>
+          <p className='sub-title'>Project description</p>
           <p className='description'>
           The ESFA is accountable for funding education and training for children, young people and adults. It is the result of the combination of the former responsibilities of the Education Funding Agency (EFA) and Skills Funding Agency (SFA).
           </p>
+          <p className='sub-title'>My role</p>
+       
           <br></br>
           <p className='description'>
           I’ve worked on the MyESF service (“View you payments” and “Subcontractor Declaration Tool”) and the National Funding Formula from January to November 2020.
