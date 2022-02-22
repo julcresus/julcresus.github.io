@@ -41,16 +41,6 @@ function Home() {
       </div>
       <div class="projects">
       <div class='project'>
-              <img src='./img/esfa.jpg' width="100%"></img>
-              <div class='imgcaption'>
-                <p>Methods - ESFA</p>
-                <p class='tags'>ux design, research, user testing</p>
-              </div>
-              <Link to="/esfa" class='button'>
-                  See the project
-              </Link>
-          </div>
-          <div class='project'>
               <img src='./img/mod.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Methods - Armed Forces Recruitment Program</p>
@@ -60,6 +50,8 @@ function Home() {
                   See the project
               </Link>
           </div>
+     
+          
           <div class='project'>
               <img src='./img/emm.png' width="100%"></img>
               <div class='imgcaption'>
@@ -67,6 +59,16 @@ function Home() {
                 <p class='tags'>ux design, research, user testing</p>
               </div>
               <Link to="/everymindmatters" class='button'>
+                  See the project
+              </Link>
+          </div>
+          <div class='project'>
+              <img src='./img/esfa.jpg' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Methods - ESFA</p>
+                <p class='tags'>ux design, research, user testing</p>
+              </div>
+              <Link to="/esfa" class='button'>
                   See the project
               </Link>
           </div>
@@ -81,6 +83,16 @@ function Home() {
               </Link>
           </div>
           <div class='project'>
+              <img src='./img/ps.jpg' width="100%"></img>
+              <div class='imgcaption'>
+                <p>University Case Study: Playstation Store</p>
+                <p class='tags'>UX design, UI Design, App Redesign</p>
+              </div>
+              <Link to="/playstation" class='button'>
+                  See the project
+              </Link>
+          </div>
+          <div class='project'>
               <img src='./img/pride.jpg' width="100%"></img>
               <div class='imgcaption'>
                 <p>Pride in London</p>
@@ -90,16 +102,7 @@ function Home() {
                   See the project
               </Link>
           </div>
-          <div class='project' style={{display: 'none'}} >
-              <img src='./img/ps.jpg' width="100%"></img>
-              <div class='imgcaption'>
-                <p>University Case Study: Playstation Store</p>
-                <p class='tags'>UX design, UI Design, Redesign</p>
-              </div>
-              <Link to="/playstation" class='button'>
-                  See the project
-              </Link>
-          </div>
+          
           </div>
 
       

@@ -19,14 +19,17 @@ function ESFA() {
       
         <p className='project-title'>Methods - ESFA (Education & Skills Funding Agency)</p>
         <p className='tags'>UX design, UI Design, Coding</p>
+        
         <Container>
           <Row>
           
           <Col>
           <p className='sub-title'>Project description</p>
+          <br></br>
           <p className='description'>
           The ESFA is accountable for funding education and training for children, young people and adults. It is the result of the combination of the former responsibilities of the Education Funding Agency (EFA) and Skills Funding Agency (SFA).
           </p>
+          <br></br>
           <p className='sub-title'>My role</p>
        
           <br></br>
@@ -45,6 +48,7 @@ function ESFA() {
         </h1>
       </div>
         </Container>
+         In order to collaborate with the researchers and service designers
         
 
     </div>

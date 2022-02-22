@@ -50,7 +50,7 @@ The new solution situates the candidate at the heart of the recruitment process 
           <p className='sub-title'>My role</p>
           <br></br>
           <p className='description'>
-          I was the UX Designer on the project. It lasted 5 months, shortnend due to the pandemic. The team was composed of a service designer, a user researcher and user experience designer, althought the SD and UR left the project after month 1.<br></br>
+          I was the UX Designer on the project. It lasted 5 months, shortnend due to the pandemic. The team was composed of a service designer and a user experience designer, althought the SD left the project after month 1.<br></br>
           <br></br>For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
           </p>
           <br></br>
