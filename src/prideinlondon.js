@@ -3,25 +3,23 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function PrideInLondon() {
   return (
     <div>
-     
-      <Carousel>
-                <div>
-                    <img src="./img/pride.jpg" />
-                </div>
-                <div>
-                    <img src="./img/pride/picture1.jpg" />
-                </div>
-                <div>
-                    <img src="./img/pride/picture2.jpg" />
-                </div>
-            </Carousel>
-        
+      <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/pride.jpg'} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/pride/picture1.jpg'} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/pride/picture2.jpg'} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel>
+
       <div className='project'>
       
         <p className='project-title'>Pride In London</p>

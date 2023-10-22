@@ -3,18 +3,18 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function ESFA() {
   return (
     <div>
-      
-      <Carousel>
-                <div>
-                    <img src="./img/esfa.jpg" />
-                </div>
-                
-            </Carousel>
+    
+            <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/esfa.jpg'} alt="slide 1" />
+  </CCarouselItem>
+
+</CCarousel>
       <div className='project'>
       
         <p className='project-title'>Methods - ESFA (Education & Skills Funding Agency)</p>
@@ -34,7 +34,7 @@ function ESFA() {
        
           <br></br>
           <p className='description'>
-          I’ve worked on the MyESF service (“View you payments” and “Subcontractor Declaration Tool”) and the National Funding Formula from January to November 2020.
+          I’ve worked on the MyESF service (“View your payments” and “Subcontractor Declaration Tool”) and the National Funding Formula from January to November 2020.
           <br></br>
           <br></br>For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
           </p>
@@ -48,7 +48,7 @@ function ESFA() {
         </h1>
       </div>
         </Container>
-         In order to collaborate with the researchers and service designers
+       
         
 
     </div>

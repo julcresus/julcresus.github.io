@@ -16,7 +16,10 @@ import Rethink from "./rethink";
 import Mag from "./mag";
 import Shyl from "./shyl";
 import Shya from "./shya";
-import ScrollToTop from 'react-router-scroll-top'
+import ScrollToTop from 'react-router-scroll-top';
+
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+
 
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
     <div className="App">
       <Router basename={process.env.PUBLIC_URL} hashtype={"slash"}>
       <ScrollToTop>
-      <div className="header">
+      <div className="header_">
         <h1>
           <a href='/'>julien crésus</a>
         </h1>

@@ -3,36 +3,39 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+
 
 function Mod() {
   return (
     <div>
       
-      <Carousel>
-      <div>
-                    <img src="./img/mod.png" />
-                </div>
-                <div>
-                    <img src="./img/mod/mod-0.png" />
-                </div>
-                <div>
-                    <img src="./img/mod/mod-1.png" />
-                </div>
-                <div><img src="./img/mod/mod-2.png" />
-                    </div>
-                    <div>
-                    <img src="./img/mod/mod-3.png" />
-                    
-                    </div>
-                    <div>
-                    <img src="./img/mod/mod-4.png" />
-                    </div>
-                    <div>
-                    <img src="./img/mod/mod-5.png" />
-                    </div>
-                
-            </Carousel>
+      <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod.png'} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-0.png'} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-1.png'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-2.png'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-3.png'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-4.png'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/mod/mod-5.png'} alt="slide 3" />
+  </CCarouselItem>
+
+
+</CCarousel>
+
       <div className='project'>
       
         <p className='project-title'>Methods - MoD (Armed Forces Recruitement Process)</p>
@@ -44,20 +47,17 @@ function Mod() {
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
-          The AFRP is responsible for delivering a single, common, tri-Service recruiting process for the Royal Navy, British Army and Royal Air Force.<br></br>
-The new solution situates the candidate at the heart of the recruitment process while ensuring that the Armed Forces achieve the right quality and quantity of candidates to satisfy demand while remaining agile and responsive to change.</p>
-<br></br>
+          The Armed Forces Recruiting Process (AFRP) project aimed to revolutionize the recruitment procedures for the Royal Navy, British Army, and Royal Air Force. It had a dual objective: prioritizing the candidate's experience while ensuring the Armed Forces had access to the right quantity and quality of recruits, all while maintaining agility and adaptability to changing circumstances.</p>
+          <br></br>
           <p className='sub-title'>My role</p>
           <br></br>
           <p className='description'>
-          I was the UX Designer on the project. It lasted 5 months, shortnend due to the pandemic. The team was composed of a service designer and a user experience designer, althought the SD left the project after month 1.<br></br>
-          <br></br>For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
+          I had the privilege of serving as the UX Designer on this transformational project. Our ambitious five-month timeline was unexpectedly shortened due to the pandemic, which presented unique challenges. At the project's outset, I collaborated with a service designer and another UX designer, although the latter departed after the first month.<br></br><br></br>For enhancing user experiences and streamlining the candidate journey, I harnessed the power of the GOV.UK Design System, incorporating React and Express.JS. This technology stack provided a robust platform for cooperation with researchers, fellow UX designers, and stakeholders. Notably, it proved to be more efficient and compliant with GDS regulations compared to software-based design tools like Figma or Sketch.
           </p>
           <br></br>
           <p className='sub-title'>Outcomes</p>
           <br></br>
-          <p className='description'>As final product, an online mockup was delivered to the AFRP, using React, Bootstrap and the GOV.UK design kit. It was using the main candidate user journey, with a rough design to show the flow first and foremost. 
-Thanks to that, the AFRP development team made a working prototype using the mockups  and SalesForce. It, then, got tested internally between the different services, which was different to our user testing sessions, as schedule conflicts and difficult policies held off some of ours.</p>
+          <p className='description'>The crowning achievement of the project was the delivery of an online mockup for the AFRP. This mockup, developed using React, Bootstrap, and the GOV.UK design kit, focused on the primary candidate journey. Its design initially emphasized flow and functionality. This mockup served as the cornerstone upon which the AFRP development team built a functional prototype, incorporating Salesforce. <br></br><br></br>Subsequent internal testing within the various Armed Forces branches allowed us to refine the process. It's worth noting that internal testing presented its own set of challenges, including schedule conflicts and policy constraints, which we navigated diligently.<br></br><br></br>This project underscores the critical role of user experience design in reshaping recruiting processes for the betterment of the Armed Forces. It demonstrates the power of effective collaboration, modern design frameworks, and adaptability in the face of unexpected challenges. Ultimately, the project aimed at serving both the candidates and the Armed Forces efficiently, and the resulting outcomes are a testament to this vision.</p>
           
           </Col>
         </Row>

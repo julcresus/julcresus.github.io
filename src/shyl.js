@@ -3,36 +3,31 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function Shyl() {
   return (
     <div>
-      
-      <Carousel>
-      <div>
-                    <img src="./img/shyl.png" />
-                </div>
-                <div>
-                    <img src="./img/shyl/shyl-0.png" />
-                </div>
-                <div>
-                    <img src="./img/shyl/shyl-1.png" />
-                </div>
-                <div><img src="./img/shyl/shyl-2.png" />
-                    </div>
-                    <div>
-                    <img src="./img/shyl/shyl-3.png" />
-                    
-                    </div>
-                    <div>
-                    <img src="./img/shyl/shyl-4.png" />
-                    </div>
-                    <div>
-                    <img src="./img/shyl/shyl-5.png" />
-                    </div>
-                
-            </Carousel>
+      <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/shyl.png'} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture1.jpg'} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture2.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture3.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture4.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture5.jpg'} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel>
       <div className='project'>
       
         <p className='project-title'>Dam Digital - Shy Lifestyle</p>

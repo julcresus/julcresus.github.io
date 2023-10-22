@@ -3,34 +3,32 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function Playstation() {
   return (
     <div>
-     
-      <Carousel>
-                <div>
-                    <img src="./img/psstore/main.jpg" />
-                </div>
-                <div>
-                    <img src="./img/psstore/picture1.jpg" />
-                </div>
-                <div>
-                    <img src="./img/psstore/picture2.jpg" />
-                </div>
-                <div>
-                    <img src="./img/psstore/picture3.jpg" />
-                </div>
-                <div>
-                    <img src="./img/psstore/picture4.jpg" />
-                </div>
-                <div>
-                    <img src="./img/psstore/picture5.jpg" />
-                </div>
-            </Carousel>
-        
+           <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/main.jpg'} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture1.jpg'} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture2.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture3.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture4.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/psstore/picture5.jpg'} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel>
+
       <div className='project'>
       
         <p className='project-title'>University Case Study: Playstation Store</p>
@@ -39,23 +37,31 @@ function Playstation() {
           <Row>
           <Col>
           <p className='description'>
-          Within the scope of my studies in Kingston University, the goal was to analyse a desktop system such as a website or an application and redesign it for mobile devices, using UX principles and the CIF (Common Industry Format) for Usability Test Report. I decided to focus on the PlayStation Store, which, in my opinion, has a lack of consistency between all current platforms. I decided to merge the PlayStation Store and the current PlayStation Messages app and make an application of its time.
-          </p>
+          During my academic journey at Kingston University, my project focused on the analysis and redesign of a desktop system, such as a website or application, to enhance its usability on mobile devices. This endeavor was guided by essential UX (User Experience) principles and involved the application of the Common Industry Format (CIF) for Usability Test Reports. I chose to tackle the PlayStation Store, a platform I identified as lacking consistency across various devices. My aim was to merge the PlayStation Store with the existing PlayStation Messages app to create a modern, integrated application.</p>
           <br></br>
           <ul className='description'>
-            <li>Benchmark about the different game platforms (Xbox Store, PlayStation Store Desktop, PS Store Console...)</li>
-            <li>Testing on those platforms by making the user try different easy tasks and interview them on their behaviour and opinion</li>
-            <li>Surveying a bigger audience made of gamers and non gamers about their use of the gaming platform</li>
-            <li>Understanding of all the data gathered and defining the deliverables</li>
-            <li>Building user journeys and personas based on the research done before</li>
-            <li>Content creation such as messages and games</li>
-            <li>Wireframing the app using Axure</li>
-            <li>UI Design using Sketch and InVision</li>
-            <li>App testing on same users as before</li>
+          <li>Conducted an in-depth analysis of diverse game platforms, including the Xbox Store, PlayStation Store Desktop, and PS Store Console, to identify industry standards and opportunities for improvement.</li>
+
+<li>Engaged users in hands-on testing across these platforms, systematically assigning easy tasks. Subsequent interviews provided valuable insights into user behavior and opinions, shaping the project's direction.</li>
+
+<li>Expanded research scope by surveying a diverse audience, encompassing both gamers and non-gamers, to gain a comprehensive understanding of their interactions with gaming platforms.</li>
+
+<li>Meticulously analyzed the collected data to derive actionable insights, serving as the foundation for defining project deliverables and key objectives.</li>
+
+<li>Leveraged research findings to craft user journeys and personas, ensuring that the subsequent design phase aligns seamlessly with user needs and expectations.</li>
+
+<li>Initiated content creation, encompassing messaging and game elements, that harmonized with the project's overarching goals and user preferences.</li>
+
+<li>Utilized Axure to craft comprehensive wireframes, providing a visual roadmap for the application's structure and user flow.</li>
+
+<li>Employed design tools like Sketch and InVision to implement the User Interface (UI) design, focusing on aesthetics and user-friendly visual elements.</li>
+
+<li>Conducted rigorous testing of the application with the same user group as before, ensuring the integration of feedback and fine-tuning for optimum performance and usability.</li>
+
           </ul>
           <br></br>
           <p className='description'>
-          You can try it using this link: <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank'>https://projects.invisionapp.com/share/UHA1EOIVZ#/screens</a>",
+          You can try it using this InVision <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank'>link</a>.
           </p>
           <br></br>
           </Col>

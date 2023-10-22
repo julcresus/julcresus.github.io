@@ -4,26 +4,27 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+
 
 function SgDesign() {
   return (
     <div>
-      
-      <Carousel>
-                <div>
-                    <img src="./img/sg.jpg" />
-                </div>
-                <div>
-                    <img src="./img/sgdesign/picture1.jpg" />
-                </div>
-                <div>
-                    <img src="./img/sgdesign/picture2.jpg" />
-                </div>
-                <div>
-                    <img src="./img/sgdesign/picture3.jpg" />
-                </div>
-            </Carousel>
+           <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/sgdesign/main.jpg'} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/sgdesign/picture1.jpg'} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/sgdesign/picture2.jpg'} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={'./img/sgdesign/picture3.jpg'} alt="slide 3" />
+  </CCarouselItem>
+
+</CCarousel>
         
       <div className='project'>
       
