@@ -40,7 +40,7 @@ function EveryMindMatters() {
 
       <div className='project'>
       
-        <p className='project-title'>Methods - Every Mind Matters</p>
+        <p className='project-title'>Every Mind Matters</p>
         <p className='tags'>UX design, UI Design, Redesign</p>
         <Container>
           <Row>

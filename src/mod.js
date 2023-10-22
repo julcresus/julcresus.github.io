@@ -38,7 +38,7 @@ function Mod() {
 
       <div className='project'>
       
-        <p className='project-title'>Methods - MoD (Armed Forces Recruitement Process)</p>
+        <p className='project-title'>MoD (Armed Forces Recruitement Process)</p>
         <p className='tags'>UX design, Responsive UI Design, Coding</p>
         <Container>
           <Row>

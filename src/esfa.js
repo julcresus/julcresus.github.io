@@ -17,7 +17,7 @@ function ESFA() {
 </CCarousel>
       <div className='project'>
       
-        <p className='project-title'>Methods - ESFA (Education & Skills Funding Agency)</p>
+        <p className='project-title'>ESFA (Education & Skills Funding Agency)</p>
         <p className='tags'>UX design, UI Design, Coding</p>
         
         <Container>

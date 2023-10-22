@@ -39,17 +39,17 @@ function Home() {
       </div>
 
       <div id='project' class="projects">
-      <div class='project hidden'>
+      <div class='project'>
               <img src='./img/shyl.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Dam Digital - Shy Lifestyle</p>
                 <p class='tags'>app design, ux research, ux design</p>
               </div>
-              <Link to="/#" class='button disabled'>
+              <Link to="/shyl" class='button '>
                   See the project
               </Link>
           </div> 
-          <div class='project hidden'>
+          <div class='project '>
               <img src='./img/rethink.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Dam Digital - Rethink</p>
@@ -59,7 +59,7 @@ function Home() {
                   See the project
               </Link>
           </div>
-          <div class='project hidden'>
+          <div class='project '>
               <img src='./img/shya.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Dam Digital - Shy Aviation</p>
@@ -70,7 +70,7 @@ function Home() {
               </Link>
           </div>
 
-        <div class='project hidden'>
+        <div class='project '>
               <img src='./img/mag.png' width="100%"></img>
               <div class='imgcaption'>
                 <p>Dam Digital - McArthurGlen</p>
