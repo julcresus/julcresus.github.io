@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import Playstation from "./playstation";
 import EveryMindMatters from "./everymindmatters";
 import PrideInLondon from "./prideinlondon";
@@ -29,17 +30,56 @@ function Home() {
                       <div>testing </div>
                       <div>working </div>
                       <div>researching </div>
-                  </TextLoop> @ Methods, London, UK.
+                  </TextLoop> @ Dam Digital, London, UK.
                   <br></br>
                   <br></br>
-                  You can check my CV <a href='./pdf/cv.pdf' target='_blank'>here</a>.
+                  You can check my CV <a href='./pdf/cv.pdf' target='_blank'>here</a> and see some examples of my work <HashLink to="/#project">below</HashLink>.
         </p>
 
       </div>
-      <div class='bottom_button'>
-        <a>Scroll down for my projects</a>
-      </div>
-      <div class="projects">
+
+      <div id='project' class="projects">
+      <div class='project'>
+              <img src='./img/shyl.png' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Dam Digital - Shy Lifestyle</p>
+                <p class='tags'>app design, ux research, ux design</p>
+              </div>
+              <Link to="/#" class='button disabled'>
+                  See the project
+              </Link>
+          </div> 
+          <div class='project'>
+              <img src='./img/rethink.png' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Dam Digital - Rethink</p>
+                <p class='tags'>ux design, responsive ui Design, product design</p>
+              </div>
+              <Link to="/#" class='button disabled'>
+                  See the project
+              </Link>
+          </div>
+          <div class='project'>
+              <img src='./img/shya.png' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Dam Digital - Shy Aviation</p>
+                <p class='tags'>ux design, user research</p>
+              </div>
+              <Link to="/#" class='button disabled'>
+                  See the project
+              </Link>
+          </div>
+
+        <div class='project'>
+              <img src='./img/mag.png' width="100%"></img>
+              <div class='imgcaption'>
+                <p>Dam Digital - McArthurGlen</p>
+                <p class='tags'>app design, responsive web design, ux research </p>
+              </div>
+              <Link to="/#" class='button disabled'>
+                  See the project
+              </Link>
+          </div>
       <div class='project'>
               <img src='./img/mod.png' width="100%"></img>
               <div class='imgcaption'>
@@ -50,7 +90,6 @@ function Home() {
                   See the project
               </Link>
           </div>
-     
           
           <div class='project'>
               <img src='./img/emm.png' width="100%"></img>

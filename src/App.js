@@ -12,6 +12,10 @@ import PrideInLondon from "./prideinlondon";
 import SgDesign from "./sgdesign";
 import ESFA from "./esfa";
 import Mod from "./mod";
+import Rethink from "./rethink";
+import Mag from "./mag";
+import Shyl from "./shyl";
+import Shya from "./shya";
 import ScrollToTop from 'react-router-scroll-top'
 
 
@@ -22,7 +26,7 @@ function App() {
       <ScrollToTop>
       <div className="header">
         <h1>
-          <a href='/'>julien cresus</a>
+          <a href='/'>julien crésus</a>
         </h1>
       </div>
       {/*
@@ -43,6 +47,10 @@ function App() {
           <Route exact path="/sgdesign" component={SgDesign} />
           <Route exact path="/esfa" component={ESFA} />
           <Route exact path="/mod" component={Mod} />
+          <Route exact path="/shya" component={Shya} />
+          <Route exact path="/shyl" component={Shyl} />
+          <Route exact path="/rethink" component={Rethink} />
+          <Route exact path="/mag" component={Mag} />
         </Switch>
         </ScrollToTop>
     </Router>

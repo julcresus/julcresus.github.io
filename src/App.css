@@ -60,16 +60,42 @@ body {
   padding-right: 12.5%;
   float: left;
 }
+@media only screen and (max-device-width: 1000px) {
+.App {
+  padding-left: 5%;
+  padding-right: 5% !important;
+}
+}
+@media only screen and (max-device-width: 480px) {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tags
+{
+  font-size: 9pt !important;
+  margin-bottom: auto;
+  line-height: 18pt;
+}
+#intro
+{
+  font-size: 15pt;
+  margin-top: 45%;
+}
+.container{
+  height: 75vh !important
+}
+.imgcaption p{
+  font-size: 6.2vw
+}
+.project{
+  margin-bottom: 15% !important;
+}
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+
+
 }
 
 .App-link {
@@ -104,7 +130,7 @@ font-family: adobe-garamond-pro, serif;
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  height: 80vh;
+  height: 75vh;
 }
 .description
 {
@@ -116,7 +142,7 @@ font-family: adobe-garamond-pro, serif;
 }
 .intro
 {
-  width: 80%;
+  width: 100%;
   margin: auto;
   font-size: 20pt;
   margin-top: 25%;
@@ -148,6 +174,7 @@ h1{
   font-family: adobe-garamond-pro, serif;
   font-size: 24pt;
   line-height: 36pt;
+  padding-top: 40px;
 }
 .tags
 {
@@ -184,7 +211,7 @@ a
   text-decoration: none !important
 }
 .project{
-  margin-bottom: 40px;
+  margin-bottom: 5%;
 }
 .project-title
 {
