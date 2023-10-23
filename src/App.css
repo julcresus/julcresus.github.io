@@ -4,18 +4,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: -apple-system,BlinkMacSystemFont,sans-serif
 }
-
+html{scroll-behavior:smooth}
 code {
   font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
 }
-
+p{
+  margin-bottom: 0 !important;
+}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: initial
+  vertical-align: initial;
+}
+a{
+  font-weight: 700;
+  text-decoration: underline;
+}
+a:visited
+{
+  color: #000;
+  text-decoration: underline;
+}
+.intro a{
+  font-weight: 700;
+  text-decoration: underline;
+}
+.intro a:visited
+{
+  color: #000;
+  text-decoration: underline;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -61,7 +81,10 @@ body {
   padding-right: 12.5%;
   float: left
 }
-
+.imgcaption
+{
+  margin-top: 3%;
+}
 @media only screen and (max-device-width: 1000px) {
   .App {
       padding-left:5%;
@@ -86,7 +109,8 @@ body {
   }
 
   .imgcaption p {
-      font-size: 6.2vw
+      font-size: 6.2vw;
+      line-height: 9vw;
   }
 
   .project {
@@ -120,7 +144,12 @@ body {
 .subheader {
   height: 10vh;
   text-align: center;
-  font-size: 15pt
+  font-size: 15pt !important;
+  color: #000;
+}
+.subheader h1{
+  font-size: 15pt !important;
+  color: #000 !important
 }
 
 .container,.subheader {
@@ -202,6 +231,13 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 12px
 }
+.tags_ {
+  font-family: "Roboto Mono",sans-serif;
+  color: #999;
+  font-size: 10pt;
+  text-transform: uppercase;
+  margin-bottom: 25px !important
+}
 
 .button {
   font-family: -apple-system,BlinkMacSystemFont,sans-serif;
@@ -228,7 +264,12 @@ a {
 }
 
 .project {
-  margin-bottom: 5%
+  margin-bottom: 5%;
+}
+.project_inside {
+  margin-bottom: 3%;
+  margin-top: 5%;
+
 }
 
 .project-title {
@@ -238,12 +279,15 @@ a {
 }
 
 .sub-title {
-  font-family: -apple-system,BlinkMacSystemFont,sans-serif;
-  font-weight: 700;
-  font-size: 20pt
+  font-family: "Roboto Mono",sans-serif;
+  color: #000;
+  font-size: 18pt;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 800;
 }
 
-.footer,.project {
+.footer,.project, .project_inside {
   float: left;
   text-align: left
 }
@@ -485,4 +529,13 @@ a {
 .hidden
 {
   display: none;
+}
+hr{
+  width: 20%;
+  margin: auto !important;
+  padding-top: 25px ;
+  margin-top: 25px !important;
+}
+.btn{
+  font-weight: 700 !important;
 }

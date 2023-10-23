@@ -45,7 +45,7 @@ function Home() {
                 <p>Dam Digital - Shy Lifestyle</p>
                 <p class='tags'>app design, ux research, ux design</p>
               </div>
-              <Link to="/shyl" class='button '>
+              <Link to="/shyl" class='btn btn-outline-dark btn-lg'>
                   See the project
               </Link>
           </div> 
@@ -55,7 +55,7 @@ function Home() {
                 <p>Dam Digital - Rethink</p>
                 <p class='tags'>ux design, responsive ui Design, product design</p>
               </div>
-              <Link to="/#" class='button disabled'>
+              <Link to="/#" class='btn btn-outline-dark btn-lg'>
                   See the project
               </Link>
           </div>
@@ -65,7 +65,7 @@ function Home() {
                 <p>Dam Digital - Shy Aviation</p>
                 <p class='tags'>ux design, user research</p>
               </div>
-              <Link to="/#" class='button disabled'>
+              <Link to="/#" class='btn btn-outline-dark btn-lg'>
                   See the project
               </Link>
           </div>
@@ -76,7 +76,7 @@ function Home() {
                 <p>Dam Digital - McArthurGlen</p>
                 <p class='tags'>app design, responsive web design, ux research </p>
               </div>
-              <Link to="/#" class='button disabled'>
+              <Link to="/#" class='btn btn-outline-dark btn-lg'>
                   See the project
               </Link>
           </div>
@@ -86,7 +86,7 @@ function Home() {
                 <p>Methods - Armed Forces Recruitment Program</p>
                 <p class='tags'>ux design, responsive ui Design, coding</p>
               </div>
-              <Link to="/mod" class='button'>
+              <Link to="/mod" class='btn btn-outline-dark btn-lg '>
                   See the project
               </Link>
           </div>
@@ -97,7 +97,7 @@ function Home() {
                 <p>Methods - Every Mind Matters</p>
                 <p class='tags'>ux design, research, user testing</p>
               </div>
-              <Link to="/everymindmatters" class='button'>
+              <Link to="/everymindmatters" class='btn btn-lg btn-outline-dark'>
                   See the project
               </Link>
           </div>
@@ -107,7 +107,7 @@ function Home() {
                 <p>Methods - ESFA</p>
                 <p class='tags'>ux design, research, user testing</p>
               </div>
-              <Link to="/esfa" class='button'>
+              <Link to="/esfa" class='btn btn-outline-dark btn-lg '>
                   See the project
               </Link>
           </div>
@@ -117,7 +117,7 @@ function Home() {
                 <p>Societe Generale Design</p>
                 <p class='tags'>UX design, UI Design</p>
               </div>
-              <Link to="/sgdesign" class='button'>
+              <Link to="/sgdesign" class='btn btn-outline-dark btn-lg '>
                   See the project
               </Link>
           </div>
@@ -127,7 +127,7 @@ function Home() {
                 <p>University Case Study: Playstation Store</p>
                 <p class='tags'>UX design, UI Design, App Redesign</p>
               </div>
-              <Link to="/playstation" class='button'>
+              <Link to="/playstation" class='btn btn-outline-dark btn-lg '>
                   See the project
               </Link>
           </div>
@@ -137,7 +137,7 @@ function Home() {
                 <p>Pride in London</p>
                 <p class='tags'>UI Design</p>
               </div>
-              <Link to="/prideinlondon" class='button'>
+              <Link to="/prideinlondon" class='btn btn-outline-dark btn-lg '>
                   See the project
               </Link>
           </div>

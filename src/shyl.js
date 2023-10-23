@@ -4,42 +4,46 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Shyl() {
   return (
     <div>
+      <hr></hr>
+      <p className='project-title'>Shy Lifestyle</p>
+      <p className='tags_'>App design, UX research, UX design</p>
+
+
       <CCarousel controls indicators dark>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/shyl.png'} alt="slide 1" />
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/shyl/shyl_1.png'} alt="slide 2" />
+    <CImage className="d-block w-10" src={'./img/shyl/shyl_1.png'} alt="slide 2" />
     <CCarouselCaption className="d-none d-md-block">
-      <h5>Wireframes board on Whimsical</h5>
+      <h5>Live app version</h5>
     </CCarouselCaption>
   </CCarouselItem>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/shyl/shyl_2.png'} alt="slide 3" />
+    <CImage className="d-block w-10" src={'./img/shyl/shyl_2.png'} alt="slide 3" />
     <CCarouselCaption className="d-none d-md-block">
       <h5>Main user journey</h5>
     </CCarouselCaption>
   </CCarouselItem>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/shyl/shyl_3.png'} alt="slide 4" />
+    <CImage className="d-block w-10" src={'./img/shyl/shyl_3.png'} alt="slide 4" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Main journey</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-5" src={'./img/shyl/shyl_4.png'} alt="slide 4" />
     <CCarouselCaption className="d-none d-md-block">
       <h5>Account settings journey</h5>
     </CCarouselCaption>
   </CCarouselItem>
 
 </CCarousel>
-      <div className='project'>
-      
-        <p className='project-title'>Shy Lifestyle</p>
-        <p className='tags'>App design, UX research, UX design</p>
-        <Container>
-          <Row>
-          
-          <Col>
+
+  <div className='project_inside'>
+
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
@@ -58,17 +62,16 @@ function Shyl() {
           <br></br>
           <p className='description'></p>
           
-          </Col>
-        </Row>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
         
 
     </div>
+
     </div>
   );
 }
