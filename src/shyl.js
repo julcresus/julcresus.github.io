@@ -18,7 +18,7 @@ function Shyl() {
   <CCarouselItem>
     <CImage className="d-block w-10" src={'./img/shyl/shyl_1.png'} alt="slide 2" />
     <CCarouselCaption className="d-none d-md-block">
-      <h5>Live app version</h5>
+      <h5>Latest UI screens</h5>
     </CCarouselCaption>
   </CCarouselItem>
   <CCarouselItem>
@@ -30,13 +30,13 @@ function Shyl() {
   <CCarouselItem>
     <CImage className="d-block w-10" src={'./img/shyl/shyl_3.png'} alt="slide 4" />
     <CCarouselCaption className="d-none d-md-block">
-      <h5>Main journey</h5>
+      <h5>Wireframes from the main journey</h5>
     </CCarouselCaption>
   </CCarouselItem>
   <CCarouselItem>
     <CImage className="d-block w-5" src={'./img/shyl/shyl_4.png'} alt="slide 4" />
     <CCarouselCaption className="d-none d-md-block">
-      <h5>Account settings journey</h5>
+      <h5>Wireframes from the account settings journey</h5>
     </CCarouselCaption>
   </CCarouselItem>
 
@@ -55,13 +55,38 @@ function Shyl() {
           <br></br>
           <p className='sub-title'>My role</p>
           <br></br>
-          <p className='description'>
-         </p>
+          <div className='description'>
+          <p>
+        For the mobile app, I played a pivotal role as the UX Designer, collaborating closely with the UI Designer to ensure the creation of a seamless and luxurious experience for the <b>SHY Lifestyle</b> members. This project revolved around an innovative concept, enabling users to book premium lifestyle services, engage in personalized chats with the company, all within an exclusive membership system.
+    </p>
+    <br></br>
+    <strong>Understanding User Needs:</strong>
+    <p>I initiated the project by conducting comprehensive competition research to understand the competitive landscape and identify gaps that our app could address. This research allowed us to set the stage for creating a unique and differentiated user experience.</p>
+    <br></br>
+    <strong>UI Inspiration and Design:</strong>
+    <p>In collaboration with the UI Designer, I researched UI inspiration from various sources, drawing on the latest design trends and innovative approaches in the luxury service industry. This research served as a foundation for crafting a design that resonated with the target audience and captured the essence of luxury.</p>
+    <br></br>
+    <strong>Deciphering Client Expectations:</strong>
+    <p>We worked closely with our client, translating their vision and expectations into actionable design elements. Maintaining open lines of communication, we ensured alignment with their objectives and seamlessly integrated their insights into the design process.</p>
+    <br></br>
+    <strong>User Journeys and Wireframes:</strong>
+    <p>As the UX Designer, I developed detailed user journeys and wireframes to map out the interactions and experiences of our members. These served as the blueprint for the entire design and development process, ensuring intuitive navigation and a user-friendly interface.</p>
+    <br></br>
+    <p>Collaborating with the UI Designer was a critical aspect of our success. Our collective efforts resulted in a mobile app that seamlessly combined functionality, aesthetics, and exclusivity. Users could effortlessly book luxury lifestyle services, engage in personalized conversations with the company, and enjoy a streamlined experience within the membership system.</p>
+         </div>
           <br></br>
           <p className='sub-title'>Outcomes</p>
           <br></br>
-          <p className='description'></p>
-          
+          <div className='description'>
+          <p>While the mobile app is currently in the testing phase, I'm delighted to report that the client is already thrilled with the progress. Our user-centered design approach and collaborative efforts have exceeded their expectations, setting the stage for a successful app launch.</p>
+          <br></br>
+          <strong>Membership Engagement:</strong>
+    <p>The introduction of a membership system has already shown promising signs of driving engagement and loyalty, aligning with the client's vision of a more exclusive and interactive service.</p>
+    <br></br>
+    <strong>Enhanced User Experience:</strong>
+    <p>Our design choices, guided by extensive research and user feedback, have already demonstrated a highly intuitive and engaging user experience during testing. Members are seamlessly navigating and booking luxury lifestyle services, enhancing their interaction with the app.</p>
+
+    </div>
 
         <div className="subheader">
         <h1>

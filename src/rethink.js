@@ -4,72 +4,97 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Rethink() {
   return (
     <div>
-      
-      <Carousel>
-      <div>
-                    <img src="./img/rethink.png" />
-                </div>
-                <div>
-                    <img src="./img/rethink/rethink-0.png" />
-                </div>
-                <div>
-                    <img src="./img/rethink/rethink-1.png" />
-                </div>
-                <div><img src="./img/rethink/rethink-2.png" />
-                    </div>
-                    <div>
-                    <img src="./img/rethink/rethink-3.png" />
-                    
-                    </div>
-                    <div>
-                    <img src="./img/rethink/rethink-4.png" />
-                    </div>
-                    <div>
-                    <img src="./img/rethink/rethink-5.png" />
-                    </div>
-                
-            </Carousel>
-      <div className='project'>
-      
-        <p className='project-title'>Methods - Rethink</p>
-        <p className='tags'>UX design, Responsive UI Design, Coding</p>
-        <Container>
-          <Row>
-          
-          <Col>
+      <hr></hr>
+      <p className='project-title'>Rethink: Mental Illness</p>
+      <p className='tags_'>UX Design, Responsive UI Design, Product Design</p>
+
+
+      <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-10" src={'./img/rethink/rethink_1.png'} alt="slide 2" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Current live version</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-10" src={'./img/shyl/shyl_2.png'} alt="slide 3" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Main user journey</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-10" src={'./img/shyl/shyl_3.png'} alt="slide 4" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Wireframes from the main journey</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-5" src={'./img/shyl/shyl_4.png'} alt="slide 4" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Wireframes from the account settings journey</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+
+</CCarousel>
+
+  <div className='project_inside'>
+
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
-          The AFRP is responsible for delivering a single, common, tri-Service recruiting process for the Royal Navy, British Army and Royal Air Force.<br></br>
-The new solution situates the candidate at the heart of the recruitment process while ensuring that the Armed Forces achieve the right quality and quantity of candidates to satisfy demand while remaining agile and responsive to change.</p>
-<br></br>
+          Rethink Mental Illness is a charity that supports people affected by mental illness. They provide a range of services, including information and advice, support groups, and advocacy. Their mission is to improve the lives of people severely affected by mental illness. They believe that everyone deserves to live a full and meaningful life, regardless of their mental health.<br></br><br></br>
+          The donation module is a critical part of Rethink Mental Illness's fundraising efforts. It allows donors to make one-time or recurring donations to support the charity's work. Our goal was to redesign the donation module to make it more user-friendly and accessible, and make its funnel easier to understand and use.</p>
+          <br></br>
           <p className='sub-title'>My role</p>
           <br></br>
-          <p className='description'>
-          I was the UX Designer on the project. It lasted 5 months, shortnend due to the pandemic. The team was composed of a service designer and a user experience designer, althought the SD left the project after month 1.<br></br>
-          <br></br>For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
-          </p>
+          <div className='description'>
+          <p>
+        For the mobile app, I played a pivotal role as the UX Designer, collaborating closely with the UI Designer to ensure the creation of a seamless and luxurious experience for the <b>SHY Lifestyle</b> members. This project revolved around an innovative concept, enabling users to book premium lifestyle services, engage in personalized chats with the company, all within an exclusive membership system.
+    </p>
+    <br></br>
+    <strong>Understanding User Needs:</strong>
+    <p>I initiated the project by conducting comprehensive competition research to understand the competitive landscape and identify gaps that our app could address. This research allowed us to set the stage for creating a unique and differentiated user experience.</p>
+    <br></br>
+    <strong>UI Inspiration and Design:</strong>
+    <p>In collaboration with the UI Designer, I researched UI inspiration from various sources, drawing on the latest design trends and innovative approaches in the luxury service industry. This research served as a foundation for crafting a design that resonated with the target audience and captured the essence of luxury.</p>
+    <br></br>
+    <strong>Deciphering Client Expectations:</strong>
+    <p>We worked closely with our client, translating their vision and expectations into actionable design elements. Maintaining open lines of communication, we ensured alignment with their objectives and seamlessly integrated their insights into the design process.</p>
+    <br></br>
+    <strong>User Journeys and Wireframes:</strong>
+    <p>As the UX Designer, I developed detailed user journeys and wireframes to map out the interactions and experiences of our members. These served as the blueprint for the entire design and development process, ensuring intuitive navigation and a user-friendly interface.</p>
+    <br></br>
+    <p>Collaborating with the UI Designer was a critical aspect of our success. Our collective efforts resulted in a mobile app that seamlessly combined functionality, aesthetics, and exclusivity. Users could effortlessly book luxury lifestyle services, engage in personalized conversations with the company, and enjoy a streamlined experience within the membership system.</p>
+         </div>
           <br></br>
           <p className='sub-title'>Outcomes</p>
           <br></br>
-          <p className='description'>As final product, an online mockup was delivered to the AFRP, using React, Bootstrap and the GOV.UK design kit. It was using the main candidate user journey, with a rough design to show the flow first and foremost. 
-Thanks to that, the AFRP development team made a working prototype using the mockups  and SalesForce. It, then, got tested internally between the different services, which was different to our user testing sessions, as schedule conflicts and difficult policies held off some of ours.</p>
-          
-          </Col>
-        </Row>
+          <div className='description'>
+          <p>While the mobile app is currently in the testing phase, I'm delighted to report that the client is already thrilled with the progress. Our user-centered design approach and collaborative efforts have exceeded their expectations, setting the stage for a successful app launch.</p>
+          <br></br>
+          <strong>Membership Engagement:</strong>
+    <p>The introduction of a membership system has already shown promising signs of driving engagement and loyalty, aligning with the client's vision of a more exclusive and interactive service.</p>
+    <br></br>
+    <strong>Enhanced User Experience:</strong>
+    <p>Our design choices, guided by extensive research and user feedback, have already demonstrated a highly intuitive and engaging user experience during testing. Members are seamlessly navigating and booking luxury lifestyle services, enhancing their interaction with the app.</p>
+
+    </div>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
         
 
     </div>
+
     </div>
   );
 }

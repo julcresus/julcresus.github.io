@@ -9,13 +9,15 @@ import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/reac
 function Mod() {
   return (
     <div>
-      
+            <hr></hr>
+      <p className='project-title'>MoD (Armed Forces Recruitement Process)</p>
+      <p className='tags_'>UX design, Responsive UI Design, Coding</p>
       <CCarousel controls indicators dark>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/mod.png'} alt="slide 1" />
+    <CImage className="d-block w-100" src={'./img/mod/mod-4.png'} alt="slide 2" />
   </CCarouselItem>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/mod/mod-0.png'} alt="slide 2" />
+    <CImage className="d-block w-100" src={'./img/mod/mod-0.png'} alt="slide 3" />
   </CCarouselItem>
   <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/mod/mod-1.png'} alt="slide 3" />
@@ -27,23 +29,15 @@ function Mod() {
     <CImage className="d-block w-100" src={'./img/mod/mod-3.png'} alt="slide 3" />
   </CCarouselItem>
   <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/mod/mod-4.png'} alt="slide 3" />
-  </CCarouselItem>
-  <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/mod/mod-5.png'} alt="slide 3" />
   </CCarouselItem>
 
 
 </CCarousel>
 
-      <div className='project'>
-      
-        <p className='project-title'>MoD (Armed Forces Recruitement Process)</p>
-        <p className='tags'>UX design, Responsive UI Design, Coding</p>
-        <Container>
-          <Row>
-          
-          <Col>
+      <div className='project_inside'>
+
+
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
@@ -59,14 +53,12 @@ function Mod() {
           <br></br>
           <p className='description'>The crowning achievement of the project was the delivery of an online mockup for the AFRP. This mockup, developed using React, Bootstrap, and the GOV.UK design kit, focused on the primary candidate journey. Its design initially emphasized flow and functionality. This mockup served as the cornerstone upon which the AFRP development team built a functional prototype, incorporating Salesforce. <br></br><br></br>Subsequent internal testing within the various Armed Forces branches allowed us to refine the process. It's worth noting that internal testing presented its own set of challenges, including schedule conflicts and policy constraints, which we navigated diligently.<br></br><br></br>This project underscores the critical role of user experience design in reshaping recruiting processes for the betterment of the Armed Forces. It demonstrates the power of effective collaboration, modern design frameworks, and adaptability in the face of unexpected challenges. Ultimately, the project aimed at serving both the candidates and the Armed Forces efficiently, and the resulting outcomes are a testament to this vision.</p>
           
-          </Col>
-        </Row>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
         
 
     </div>

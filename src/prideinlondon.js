@@ -8,10 +8,10 @@ import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/reac
 function PrideInLondon() {
   return (
     <div>
+      <hr></hr>
+            <p className='project-title'>Pride In London</p>
+        <p className='tags_'>UI Design</p>
       <CCarousel controls indicators dark>
-  <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/pride.jpg'} alt="slide 1" />
-  </CCarouselItem>
   <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/pride/picture1.jpg'} alt="slide 2" />
   </CCarouselItem>
@@ -20,13 +20,8 @@ function PrideInLondon() {
   </CCarouselItem>
 </CCarousel>
 
-      <div className='project'>
-      
-        <p className='project-title'>Pride In London</p>
-        <p className='tags'>UI Design</p>
-        <Container>
-          <Row>
-          <Col>
+      <div className='project_inside'>
+
           <p className='description'>
           I got to work on the Pride in London website, as a volunteer. It was a small experience because of time schedule, although, I got to see most of the process that was made, and got to work with really nice people. I mainly worked on the UI of 'Places to Eat & Drink', based on wireframes, desktop and mobile version. It's an experience I'd love to try again next year, much more earlier to give myself more time on it.
           </p>
@@ -35,14 +30,12 @@ function PrideInLondon() {
           To create this interface, I used Sketch, my personal favorite, combined with InVision for the interaction and the sharing.
           </p>
           <br></br>
-          </Col>
-        </Row>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
 
     </div>
     </div>

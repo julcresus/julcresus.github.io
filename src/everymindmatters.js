@@ -7,11 +7,11 @@ import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/reac
 
 function EveryMindMatters() {
   return (
-    <div>
+    <div> 
+      <hr></hr>
+             <p className='project-title'>Every Mind Matters</p>
+        <p className='tags_'>UX design, UI Design, Redesign</p>
                <CCarousel controls indicators dark>
-  <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/emm.png'} alt="slide 1" />
-  </CCarouselItem>
   <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/emm/picture7.jpg'} alt="slide 2" />
   </CCarouselItem>
@@ -38,14 +38,7 @@ function EveryMindMatters() {
   </CCarouselItem>
 </CCarousel>
 
-      <div className='project'>
-      
-        <p className='project-title'>Every Mind Matters</p>
-        <p className='tags'>UX design, UI Design, Redesign</p>
-        <Container>
-          <Row>
-          
-          <Col>
+      <div className='project_inside'>
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
@@ -61,14 +54,12 @@ function EveryMindMatters() {
           <br></br>
           <p className='description'>The culmination of our efforts resulted in the delivery of an interactive prototype created using Figma. We also provided the client with new content blueprints and code drops, serving as guidance for the developers. These assets aimed to support the project's overarching mission of making mental health resources and information accessible to all.</p>
           
-          </Col>
-        </Row>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
         
         
 

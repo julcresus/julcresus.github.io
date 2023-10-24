@@ -20,6 +20,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   vertical-align: initial;
 }
 a{
+  color: #000 !important;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -27,6 +28,9 @@ a:visited
 {
   color: #000;
   text-decoration: underline;
+}
+.btn:hover{
+  color: white !important;
 }
 .intro a{
   font-weight: 700;
@@ -74,12 +78,24 @@ body {
   font-size: 16px;
   padding: 15px
 }
-
+.project-title{
+  padding-bottom: 2%;
+  padding-top: 2%
+}
 .App {
   text-align: center;
   padding-left: 12.5%;
   padding-right: 12.5%;
-  float: left
+  float: left;
+  width: 100%;
+}
+.me{
+  filter: grayscale(100%);
+  margin-bottom: 20px;
+}
+.aboutme-row
+{
+  margin-top: 2% !important
 }
 .imgcaption
 {
@@ -98,7 +114,9 @@ body {
       margin-bottom: auto;
       line-height: 18pt
   }
-
+  .project-title{
+    padding-bottom: 10%;
+  }
   #intro {
       font-size: 15pt;
       margin-top: 45%
@@ -116,6 +134,7 @@ body {
   .project {
       margin-bottom: 15%!important
   }
+
 }
 
 @media (prefers-reduced-motion:no-preference) {
@@ -146,7 +165,9 @@ body {
   text-align: center;
   font-size: 15pt !important;
   color: #000;
+  margin-top: 2% !important
 }
+
 .subheader h1{
   font-size: 15pt !important;
   color: #000 !important
@@ -166,7 +187,7 @@ body {
 }
 
 .description {
-  font-family: -apple-system,BlinkMacSystemFont,sans-serif
+  font-family: "Avenir Next" !important;
 }
 
 .description {
@@ -176,7 +197,8 @@ body {
 .intro {
   width: 100%;
   font-size: 20pt;
-  margin: 25% auto auto
+  margin: 25% auto auto;
+  line-height: 135%;
 }
 
 .bottom_button {
@@ -275,11 +297,11 @@ a {
 .project-title {
   font-family: adobe-garamond-pro,serif;
   font-size: 24pt;
-  line-height: 36pt
+  line-height: 36pt;
 }
 
 .sub-title {
-  font-family: "Roboto Mono",sans-serif;
+  
   color: #000;
   font-size: 18pt;
   text-transform: uppercase;
@@ -533,9 +555,13 @@ a {
 hr{
   width: 20%;
   margin: auto !important;
-  padding-top: 25px ;
   margin-top: 25px !important;
+  margin-bottom: 25px !important;
 }
 .btn{
   font-weight: 700 !important;
+}
+.abouttext
+{
+font-size: 1.1em
 }

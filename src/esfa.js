@@ -8,22 +8,17 @@ import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/reac
 function ESFA() {
   return (
     <div>
-    
+      <hr></hr>
+            <p className='project-title'>ESFA (Education & Skills Funding Agency)</p>
+        <p className='tags_'>UX design, UI Design, Coding</p>
             <CCarousel controls indicators dark>
   <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/esfa.jpg'} alt="slide 1" />
   </CCarouselItem>
 
 </CCarousel>
-      <div className='project'>
-      
-        <p className='project-title'>ESFA (Education & Skills Funding Agency)</p>
-        <p className='tags'>UX design, UI Design, Coding</p>
-        
-        <Container>
-          <Row>
-          
-          <Col>
+      <div className='project_inside'>
+
           <p className='sub-title'>Project description</p>
           <br></br>
           <p className='description'>
@@ -40,18 +35,12 @@ function ESFA() {
           </p>
           <br></br>
           
-          </Col>
-        </Row>
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
-       
-        
-
-    </div>
+</div>
     </div>
   );
 }

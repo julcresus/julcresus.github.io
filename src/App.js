@@ -16,6 +16,7 @@ import Rethink from "./rethink";
 import Mag from "./mag";
 import Shyl from "./shyl";
 import Shya from "./shya";
+import AboutMe from "./aboutme";
 import ScrollToTop from 'react-router-scroll-top';
 
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
@@ -41,6 +42,7 @@ function App() {
         */}
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/aboutme" component={AboutMe} />
           <Route exact path="/playstation" component={Playstation} />
             
           <Route exact path="/prideinlondon" component={PrideInLondon} />

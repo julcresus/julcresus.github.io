@@ -8,10 +8,11 @@ import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/reac
 function Playstation() {
   return (
     <div>
+      <hr></hr>        
+      <p className='project-title'>University Case Study: Playstation Store</p>
+        <p className='tags_'>UX design, UI Design, Redesign</p>
            <CCarousel controls indicators dark>
-  <CCarouselItem>
-    <CImage className="d-block w-100" src={'./img/psstore/main.jpg'} alt="slide 1" />
-  </CCarouselItem>
+
   <CCarouselItem>
     <CImage className="d-block w-100" src={'./img/psstore/picture1.jpg'} alt="slide 2" />
   </CCarouselItem>
@@ -29,10 +30,9 @@ function Playstation() {
   </CCarouselItem>
 </CCarousel>
 
-      <div className='project'>
+      <div className='project_inside'>
       
-        <p className='project-title'>University Case Study: Playstation Store</p>
-        <p className='tags'>UX design, UI Design, Redesign</p>
+
         <Container>
           <Row>
           <Col>

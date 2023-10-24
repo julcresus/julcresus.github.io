@@ -18,9 +18,6 @@ function Home() {
     <div className="App">
       <div class="container">
         <p id="intro" class="intro">
-           I design interfaces and experiences for every type of user.
-          <br></br>
-          <br></br>
           Currently, <TextLoop interval={1300}>
                       <div>
                           <span>designing </span>
@@ -30,10 +27,14 @@ function Home() {
                       <div>testing </div>
                       <div>working </div>
                       <div>researching </div>
-                  </TextLoop> @ Dam Digital, London, UK.
+                  </TextLoop> @ Dam Digital, London, UK, <br></br>where I design interfaces and experiences for every type of user.
                   <br></br>
                   <br></br>
-                  You can check my CV <a href='./pdf/cv.pdf' target='_blank'>here</a> and see some examples of my work <HashLink to="/#project">below</HashLink>.
+                  You can find more about me <Link to="/aboutme">here</Link> and check my CV <a href='./pdf/cv.pdf' target='_blank'>here</a>.
+                  <br></br>
+                  <br></br>
+                  You can also see some examples of my work <HashLink to="/#project">below</HashLink>.
+                  
         </p>
 
       </div>
@@ -46,7 +47,7 @@ function Home() {
                 <p class='tags'>app design, ux research, ux design</p>
               </div>
               <Link to="/shyl" class='btn btn-outline-dark btn-lg'>
-                  See the project
+                  View project
               </Link>
           </div> 
           <div class='project '>
@@ -55,8 +56,8 @@ function Home() {
                 <p>Dam Digital - Rethink</p>
                 <p class='tags'>ux design, responsive ui Design, product design</p>
               </div>
-              <Link to="/#" class='btn btn-outline-dark btn-lg'>
-                  See the project
+              <Link to="/#" class='btn btn-outline-dark btn-lg disabled'>
+                  View project
               </Link>
           </div>
           <div class='project '>
@@ -65,8 +66,8 @@ function Home() {
                 <p>Dam Digital - Shy Aviation</p>
                 <p class='tags'>ux design, user research</p>
               </div>
-              <Link to="/#" class='btn btn-outline-dark btn-lg'>
-                  See the project
+              <Link to="/#" class='btn btn-outline-dark btn-lg disabled'>
+                  View project
               </Link>
           </div>
 
@@ -76,8 +77,8 @@ function Home() {
                 <p>Dam Digital - McArthurGlen</p>
                 <p class='tags'>app design, responsive web design, ux research </p>
               </div>
-              <Link to="/#" class='btn btn-outline-dark btn-lg'>
-                  See the project
+              <Link to="/#" class='btn btn-outline-dark btn-lg disabled'>
+                  View project
               </Link>
           </div>
       <div class='project'>
@@ -87,7 +88,7 @@ function Home() {
                 <p class='tags'>ux design, responsive ui Design, coding</p>
               </div>
               <Link to="/mod" class='btn btn-outline-dark btn-lg '>
-                  See the project
+                  View project
               </Link>
           </div>
           
@@ -98,7 +99,7 @@ function Home() {
                 <p class='tags'>ux design, research, user testing</p>
               </div>
               <Link to="/everymindmatters" class='btn btn-lg btn-outline-dark'>
-                  See the project
+                  View project
               </Link>
           </div>
           <div class='project'>
@@ -108,7 +109,7 @@ function Home() {
                 <p class='tags'>ux design, research, user testing</p>
               </div>
               <Link to="/esfa" class='btn btn-outline-dark btn-lg '>
-                  See the project
+                  View project
               </Link>
           </div>
           <div class='project'>
@@ -118,7 +119,7 @@ function Home() {
                 <p class='tags'>UX design, UI Design</p>
               </div>
               <Link to="/sgdesign" class='btn btn-outline-dark btn-lg '>
-                  See the project
+                  View project
               </Link>
           </div>
           <div class='project'>
@@ -128,7 +129,7 @@ function Home() {
                 <p class='tags'>UX design, UI Design, App Redesign</p>
               </div>
               <Link to="/playstation" class='btn btn-outline-dark btn-lg '>
-                  See the project
+                  View project
               </Link>
           </div>
           <div class='project'>
@@ -138,7 +139,7 @@ function Home() {
                 <p class='tags'>UI Design</p>
               </div>
               <Link to="/prideinlondon" class='btn btn-outline-dark btn-lg '>
-                  See the project
+                  View project
               </Link>
           </div>
           
