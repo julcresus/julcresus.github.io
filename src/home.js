@@ -56,7 +56,7 @@ function Home() {
                 <p>Dam Digital - Rethink</p>
                 <p class='tags'>ux design, responsive ui Design, product design</p>
               </div>
-              <Link to="/#" class='btn btn-outline-dark btn-lg disabled'>
+              <Link to="/rethink" class='btn btn-outline-dark btn-lg'>
                   View project
               </Link>
           </div>
