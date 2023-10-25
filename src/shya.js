@@ -41,16 +41,6 @@ Moreover, Shy Aviation prioritizes sustainability, actively reducing their envir
     <p>To enhance the user experience, they've partnered with Dam Digital to develop a cutting-edge online tool for user-friendly bookings of private flights, helicopters, and group charters.</p>
 
           </div>
-          <br></br>
-          <p className='sub-title'>My role</p>
-          <br></br>
-          <div className='description'></div>
-
-    <br></br>
-  
-          <p className='sub-title'>Outcomes</p>
-          <br></br>
-
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>

@@ -34,17 +34,7 @@ function Rethink() {
           Rethink Mental Illness is a charity that supports people affected by mental illness. They provide a range of services, including information and advice, support groups, and advocacy. Their mission is to improve the lives of people severely affected by mental illness. They believe that everyone deserves to live a full and meaningful life, regardless of their mental health.<br></br><br></br>
           The donation module is a critical part of Rethink Mental Illness's fundraising efforts. It allows donors to make one-time or recurring donations to support the charity's work. Our goal was to redesign the donation module to make it more user-friendly and accessible, and make its funnel easier to understand and use.</p>
           <br></br>
-          <p className='sub-title'>My role</p>
-          <br></br>
-          <div className='description'>
-             </div>
-          <br></br>
-          <p className='sub-title'>Outcomes</p>
-          <br></br>
-          <div className='description'>
-  
-    </div>
-
+          
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
