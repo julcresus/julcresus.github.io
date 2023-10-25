@@ -66,7 +66,7 @@ function Home() {
                 <p>Dam Digital - Shy Aviation</p>
                 <p class='tags'>ux design, user research</p>
               </div>
-              <Link to="/#" class='btn btn-outline-dark btn-lg disabled'>
+              <Link to="/shya" class='btn btn-outline-dark btn-lg'>
                   View project
               </Link>
           </div>

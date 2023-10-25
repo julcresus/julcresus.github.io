@@ -1,75 +1,65 @@
 import React from 'react';
 import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Carousel } from 'react-responsive-carousel';
+import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Shya() {
   return (
     <div>
-      
-      <Carousel>
-      <div>
-                    <img src="./img/shya.png" />
-                </div>
-                <div>
-                    <img src="./img/shya/shya-0.png" />
-                </div>
-                <div>
-                    <img src="./img/shya/shya-1.png" />
-                </div>
-                <div><img src="./img/shya/shya-2.png" />
-                    </div>
-                    <div>
-                    <img src="./img/shya/shya-3.png" />
-                    
-                    </div>
-                    <div>
-                    <img src="./img/shya/shya-4.png" />
-                    </div>
-                    <div>
-                    <img src="./img/shya/shya-5.png" />
-                    </div>
-                
-            </Carousel>
-      <div className='project'>
-      
-        <p className='project-title'>Dam Digital - Shy Aviation</p>
-        <p className='tags'>UX design, Responsive UI Design, Coding</p>
-        <Container>
-          <Row>
-          
-          <Col>
+      <hr></hr>
+      <p className='project-title'>Shy Aviation</p>
+      <p className='tags_'>UX design, User Research</p>
+
+
+      <CCarousel controls indicators dark>
+  <CCarouselItem>
+    <CImage className="d-block w-10" src={'./img/shya/shya_1.png'} alt="slide 2" />
+    <CCarouselCaption className="d-none d-md-block">
+      <h5>Latest UI screens</h5>
+    </CCarouselCaption>
+  </CCarouselItem>
+
+
+</CCarousel>
+
+  <div className='project_inside'>
+
           <p className='sub-title'>Project description</p>
           <br></br>
-          <p className='description'>
-          The AFRP is responsible for delivering a single, common, tri-Service recruiting process for the Royal Navy, British Army and Royal Air Force.<br></br>
-The new solution situates the candidate at the heart of the recruitment process while ensuring that the Armed Forces achieve the right quality and quantity of candidates to satisfy demand while remaining agile and responsive to change.</p>
-<br></br>
+          <div className='description'>
+          <p>As a global aviation charter leader, Shy Aviation grants access to every aircraft in the market. Their services encompass:</p>
+          <ul className='description'>
+              <li>Private jet charter</li>
+              <li>Aircraft management</li>
+              <li>Aircraft sales and acquisitions</li>
+              <li>Expert consulting</li>
+          </ul>
+    <p>Their unwavering commitment is simple: delivering an unmatched level of service. With a dedicated team of experienced professionals, they tailor solutions to meet each client's unique needs.
+Moreover, Shy Aviation prioritizes sustainability, actively reducing their environmental impact through sustainable aviation fuel and innovative fuel efficiency technologies.</p>
+    <br></br>
+    <p>To enhance the user experience, they've partnered with Dam Digital to develop a cutting-edge online tool for user-friendly bookings of private flights, helicopters, and group charters.</p>
+
+          </div>
+          <br></br>
           <p className='sub-title'>My role</p>
           <br></br>
-          <p className='description'>
-          I was the UX Designer on the project. It lasted 5 months, shortnend due to the pandemic. The team was composed of a service designer and a user experience designer, althought the SD left the project after month 1.<br></br>
-          <br></br>For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
-          </p>
-          <br></br>
+          <div className='description'></div>
+
+    <br></br>
+  
           <p className='sub-title'>Outcomes</p>
           <br></br>
-          <p className='description'>As final product, an online mockup was delivered to the AFRP, using React, Bootstrap and the GOV.UK design kit. It was using the main candidate user journey, with a rough design to show the flow first and foremost. 
-Thanks to that, the AFRP development team made a working prototype using the mockups  and SalesForce. It, then, got tested internally between the different services, which was different to our user testing sessions, as schedule conflicts and difficult policies held off some of ours.</p>
-          
-          </Col>
-        </Row>
+
         <div className="subheader">
         <h1>
           <a href='/'> &#60; back</a>
         </h1>
       </div>
-        </Container>
         
 
     </div>
+
     </div>
   );
 }

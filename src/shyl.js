@@ -21,24 +21,6 @@ function Shyl() {
       <h5>Latest UI screens</h5>
     </CCarouselCaption>
   </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-block w-10" src={'./img/shyl/shyl_2.png'} alt="slide 3" />
-    <CCarouselCaption className="d-none d-md-block">
-      <h5>Main user journey</h5>
-    </CCarouselCaption>
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-block w-10" src={'./img/shyl/shyl_3.png'} alt="slide 4" />
-    <CCarouselCaption className="d-none d-md-block">
-      <h5>Wireframes from the main journey</h5>
-    </CCarouselCaption>
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-block w-5" src={'./img/shyl/shyl_4.png'} alt="slide 4" />
-    <CCarouselCaption className="d-none d-md-block">
-      <h5>Wireframes from the account settings journey</h5>
-    </CCarouselCaption>
-  </CCarouselItem>
 
 </CCarousel>
 
