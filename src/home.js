@@ -27,7 +27,7 @@ function Home() {
                       <div>testing </div>
                       <div>working </div>
                       <div>researching </div>
-                  </TextLoop> @ Dam Digital, London, UK, <br></br>where I design interfaces and experiences for every type of user.
+                  </TextLoop> @ Cognizant, London, UK, <br></br>where I design interfaces and experiences for every type of user.
                   <br></br>
                   <br></br>
                   You can find more about me <Link to="/aboutme">here</Link> and check my CV <a href='./pdf/cv.pdf' target='_blank'>here</a>.
