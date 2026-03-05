@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPL Command Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f1419;
+            --bg-secondary: #1a1f2e;
+            --bg-card: #242b3d;
+            --accent-primary: #00ff88;
+            --accent-secondary: #00d4ff;
+            --accent-danger: #ff3366;
+            --accent-warning: #ffaa00;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --border-color: #2d3748;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5)); }
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .team-id-section {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-id-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        input {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 8px;
+            padding: 1rem 2.5rem;
+            color: var(--bg-primary);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--accent-primary);
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: rgba(255, 51, 102, 0.1);
+            border: 2px solid var(--accent-danger);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--accent-danger);
+            margin: 2rem 0;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            height: fit-content;
+            align-self: start;
+        }
+
+        .card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--accent-primary);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .stat-row:first-child {
+            padding-top: 0;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .player-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .player-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 1rem;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .player-item:hover {
+            background: var(--bg-card);
+            border-color: var(--accent-secondary);
+            transform: translateX(5px);
+        }
+
+        .team-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+        }
+
+        .team-logo-small {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .player-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .player-team {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .position-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pos-gk {
+            background: rgba(255, 170, 0, 0.2);
+            color: var(--accent-warning);
+        }
+
+        .pos-def {
+            background: rgba(0, 212, 255, 0.2);
+            color: var(--accent-secondary);
+        }
+
+        .pos-mid {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-primary);
+        }
+
+        .pos-fwd {
+            background: rgba(255, 51, 102, 0.2);
+            color: var(--accent-danger);
+        }
+
+        .player-price {
+            font-family: 'Inter', sans-serif;
+            color: var(--accent-secondary);
+            font-weight: 700;
+        }
+
+        .player-form {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .form-good {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-primary);
+        }
+
+        .form-average {
+            background: rgba(255, 170, 0, 0.2);
+            color: var(--accent-warning);
+        }
+
+        .form-poor {
+            background: rgba(255, 51, 102, 0.2);
+            color: var(--accent-danger);
+        }
+
+        .recommendation {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 212, 255, 0.1));
+            border: 2px solid var(--accent-primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recommendation::before {
+            content: '⚡';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 5rem;
+            opacity: 0.1;
+        }
+
+        .recommendation-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .badge-captain {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+        }
+
+        .badge-transfer {
+            background: var(--accent-secondary);
+            color: var(--bg-primary);
+        }
+
+        .badge-warning {
+            background: var(--accent-danger);
+            color: white;
+        }
+
+        .fixture-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .fixture-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .fixture-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-primary);
+        }
+
+        .fixture-gw {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .fixture-opponent {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .fixture-difficulty {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+            display: inline-block;
+        }
+
+        .difficulty-1 {
+            background: rgba(0, 255, 136, 0.3);
+            color: var(--accent-primary);
+        }
+
+        .difficulty-2 {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-primary);
+        }
+
+        .difficulty-3 {
+            background: rgba(255, 170, 0, 0.2);
+            color: var(--accent-warning);
+        }
+
+        .difficulty-4 {
+            background: rgba(255, 51, 102, 0.2);
+            color: var(--accent-danger);
+        }
+
+        .difficulty-5 {
+            background: rgba(255, 51, 102, 0.3);
+            color: var(--accent-danger);
+        }
+
+        .prediction-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .prediction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .prediction-player {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .prediction-score {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .prediction-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .prediction-stat {
+            text-align: center;
+        }
+
+        .prediction-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .prediction-stat-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 0.25rem;
+        }
+
+        .price-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .price-up {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-primary);
+        }
+
+        .price-down {
+            background: rgba(255, 51, 102, 0.2);
+            color: var(--accent-danger);
+        }
+
+        .price-stable {
+            background: rgba(139, 157, 195, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .transfer-suggestion {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-secondary);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .transfer-out {
+            text-align: right;
+        }
+
+        .transfer-arrow {
+            font-size: 2rem;
+            color: var(--accent-secondary);
+        }
+
+        .transfer-player {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .transfer-reason {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .metric-box:hover {
+            border-color: var(--accent-primary);
+            transform: scale(1.05);
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        .tab:hover {
+            color: var(--accent-primary);
+        }
+
+        .tab.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+            margin: 3rem 0;
+            opacity: 0.3;
+        }
+
+        .info-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-pill-icon {
+            font-size: 1.2rem;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .quick-stat-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quick-stat-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 255, 136, 0.2);
+        }
+
+        .quick-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-stat-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .quick-stat-detail {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .gameweek-info {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .gameweek-info h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .metric-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        .tab:hover {
+            color: var(--accent-primary);
+        }
+
+        .tab.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .player-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My FPL Advisor</h1>
+            <p class="subtitle">Your Weekly Transfer Intelligence</p>
+        </header>
+
+        <div class="team-id-section">
+            <h2 style="font-family: 'Inter', sans-serif; margin-bottom: 1rem; font-weight: 700;">Initialize Dashboard</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Enter your FPL Team ID to access real-time analytics</p>
+            <div class="input-group">
+                <input type="number" id="teamId" placeholder="Enter Team ID (e.g., 123456)" value="5847889" />
+                <button onclick="loadTeam()">Load Team Data</button>
+            </div>
+        </div>
+
+        <div id="content"></div>
+    </div>
+
+    <script>
+        let globalData = {};
+
+        async function loadTeam() {
+            const teamId = document.getElementById('teamId').value;
+            if (!teamId) {
+                showError('Please enter a valid Team ID');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                // Use CORS proxy to fetch data
+                const corsProxy = 'https://corsproxy.io/?';
+                const baseUrl = 'https://fantasy.premierleague.com/api/';
+
+                // Fetch bootstrap data (all players, teams, etc.)
+                console.log('Fetching bootstrap data...');
+                const bootstrapRes = await fetch(corsProxy + encodeURIComponent(baseUrl + 'bootstrap-static/'));
+                if (!bootstrapRes.ok) throw new Error('Bootstrap fetch failed: ' + bootstrapRes.status);
+                const bootstrap = await bootstrapRes.json();
+
+                // Fetch user's team data
+                console.log('Fetching team data...');
+                const teamRes = await fetch(corsProxy + encodeURIComponent(baseUrl + `entry/${teamId}/`));
+                if (!teamRes.ok) throw new Error('Team fetch failed: ' + teamRes.status);
+                const teamData = await teamRes.json();
+
+                // Fetch current gameweek picks
+                const currentGW = bootstrap.events.find(e => e.is_current)?.id || 21;
+                console.log('Fetching picks for GW', currentGW);
+                const picksRes = await fetch(corsProxy + encodeURIComponent(baseUrl + `entry/${teamId}/event/${currentGW}/picks/`));
+                if (!picksRes.ok) throw new Error('Picks fetch failed: ' + picksRes.status);
+                const picks = await picksRes.json();
+
+                // Fetch fixtures for next 5 gameweeks
+                console.log('Fetching fixtures...');
+                const fixturesRes = await fetch(corsProxy + encodeURIComponent(baseUrl + 'fixtures/'));
+                if (!fixturesRes.ok) throw new Error('Fixtures fetch failed: ' + fixturesRes.status);
+                const allFixtures = await fixturesRes.json();
+
+                globalData = {
+                    bootstrap,
+                    teamData,
+                    picks,
+                    currentGW,
+                    fixtures: allFixtures
+                };
+
+                console.log('All data loaded successfully!');
+                renderDashboard();
+            } catch (error) {
+                console.error('Detailed error:', error);
+                showError(`Failed to load team data: ${error.message}<br><br>This might be due to:<br>
+                    • Invalid Team ID<br>
+                    • FPL API temporarily down<br>
+                    • CORS proxy issues<br><br>
+                    Please check your Team ID and try again in a moment.`);
+            }
+        }
+
+        function showLoading() {
+            document.getElementById('content').innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading team data from FPL servers...</p>
+                </div>
+            `;
+        }
+
+        function showError(message) {
+            document.getElementById('content').innerHTML = `
+                <div class="error">
+                    <h3 style="margin-bottom: 1rem; font-family: 'Orbitron', sans-serif;">⚠️ Error</h3>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        function renderDashboard() {
+            const { bootstrap, teamData, picks, currentGW, fixtures } = globalData;
+            const players = bootstrap.elements;
+            const teams = bootstrap.teams;
+
+            // Get current squad
+            const squad = picks.picks.map(pick => {
+                const player = players.find(p => p.id === pick.element);
+                const team = teams.find(t => t.id === player.team);
+                return {
+                    ...player,
+                    teamName: team.short_name,
+                    teamObj: team,
+                    isCaptain: pick.is_captain,
+                    isViceCaptain: pick.is_vice_captain,
+                    multiplier: pick.multiplier
+                };
+            });
+
+            // Calculate team value
+            const teamValue = (squad.reduce((sum, p) => sum + p.now_cost, 0) / 10).toFixed(1);
+
+            // Get top performers
+            const topScorers = [...players]
+                .sort((a, b) => b.total_points - a.total_points)
+                .slice(0, 10);
+
+            // Get form players
+            const inFormPlayers = [...players]
+                .filter(p => parseFloat(p.form) > 0)
+                .sort((a, b) => parseFloat(b.form) - parseFloat(a.form))
+                .slice(0, 10);
+
+            // Get recommendations
+            const recommendations = generateRecommendations(squad, players, teams);
+
+            // Get fixtures for next 5 gameweeks
+            const upcomingFixtures = getUpcomingFixtures(fixtures, currentGW, teams);
+
+            // Get predicted points for squad
+            const predictions = generatePredictions(squad, upcomingFixtures, currentGW);
+
+            // Get price change predictions
+            const priceChanges = getPriceChangePredictions(squad);
+
+            // Get transfer suggestions
+            const transferSuggestions = generateTransferSuggestions(squad, players, teams, upcomingFixtures);
+
+            const html = `
+                <div class="gameweek-info">
+                    <h2>Gameweek ${currentGW}</h2>
+                    <p style="color: var(--text-secondary);">Manager: ${teamData.player_first_name} ${teamData.player_last_name}</p>
+                    <p style="color: var(--text-secondary);">Overall Rank: ${teamData.summary_overall_rank?.toLocaleString() || 'N/A'}</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">Team Overview</div>
+                        <div class="stat-row">
+                            <span class="stat-label">Total Points</span>
+                            <span class="stat-value">${teamData.summary_overall_points || 0}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Gameweek Points</span>
+                            <span class="stat-value">${picks.entry_history.points}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Team Value</span>
+                            <span class="stat-value">£${teamValue}m</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Bank</span>
+                            <span class="stat-value">£${(picks.entry_history.bank / 10).toFixed(1)}m</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Free Transfers</span>
+                            <span class="stat-value">${picks.entry_history.event_transfers}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">🎯 Gameweek ${currentGW + 1} Action Plan</div>
+                    ${generateActionPlan(squad, players, teams, upcomingFixtures, picks, currentGW, recommendations, predictions)}
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab('squad')">Your Squad</button>
+                        <button class="tab" onclick="switchTab('predictions')">GW Predictions</button>
+                        <button class="tab" onclick="switchTab('fixtures')">Fixture Analysis</button>
+                        <button class="tab" onclick="switchTab('transfers')">Transfer Market</button>
+                    </div>
+
+                    <div id="tab-squad" class="tab-content active">
+                        <div class="quick-stats">
+                            <div class="quick-stat-card">
+                                <div class="quick-stat-label">Squad Value</div>
+                                <div class="quick-stat-value">£${teamValue}m</div>
+                                <div class="quick-stat-detail">+£${(picks.entry_history.bank / 10).toFixed(1)}m in bank</div>
+                            </div>
+                            <div class="quick-stat-card">
+                                <div class="quick-stat-label">Top Scorer</div>
+                                <div class="quick-stat-value">${squad.reduce((max, p) => p.total_points > max.total_points ? p : max).web_name.split(' ').pop()}</div>
+                                <div class="quick-stat-detail">${squad.reduce((max, p) => p.total_points > max.total_points ? p : max).total_points} points</div>
+                            </div>
+                            <div class="quick-stat-card">
+                                <div class="quick-stat-label">Best Form</div>
+                                <div class="quick-stat-value">${squad.filter(p => parseFloat(p.form) > 0).reduce((max, p) => parseFloat(p.form) > parseFloat(max.form) ? p : max, squad[0]).web_name.split(' ').pop()}</div>
+                                <div class="quick-stat-detail">Form ${squad.filter(p => parseFloat(p.form) > 0).reduce((max, p) => parseFloat(p.form) > parseFloat(max.form) ? p : max, squad[0]).form}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 1.5rem 0;">
+                            <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Squad (${squad.length} Players)
+                            </h4>
+                        </div>
+                        
+                        <div class="player-list">
+                            ${squad.map(player => {
+                                const priceChange = priceChanges.find(p => p.id === player.id);
+                                const positionName = getPositionName(player.element_type);
+                                const positionClass = getPositionClass(player.element_type);
+                                const logoUrl = getTeamLogoUrl(player.teamObj.code);
+                                
+                                return `
+                                    <div class="player-item">
+                                        <img src="${logoUrl}" alt="${player.teamName}" class="team-logo" onerror="this.style.display='none'">
+                                        <div>
+                                            <div class="player-name">
+                                                ${player.isCaptain ? '<span style="color: var(--accent-primary); margin-right: 0.25rem;">⭐</span>' : ''}
+                                                ${player.isViceCaptain ? '<span style="color: var(--text-secondary); margin-right: 0.25rem;">✨</span>' : ''}
+                                                ${player.web_name}
+                                                <span class="position-badge ${positionClass}">${positionName}</span>
+                                            </div>
+                                            <div class="player-team">${player.teamName} • ${player.total_points} pts total</div>
+                                        </div>
+                                        <div class="player-price">
+                                            £${(player.now_cost / 10).toFixed(1)}m
+                                            ${priceChange && priceChange.direction !== 'stable' ? `<div class="price-change price-${priceChange.direction}">${priceChange.icon} ${priceChange.text}</div>` : ''}
+                                        </div>
+                                        <div class="player-form ${getFormClass(parseFloat(player.form))}">${player.form}</div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+
+                    <div id="tab-predictions" class="tab-content">
+                        <h3 style="font-family: 'Inter', sans-serif; font-weight: 700; margin-bottom: 1rem; color: var(--accent-primary);">Predicted Points - Next Gameweek</h3>
+                        <div class="info-pill">
+                            <span class="info-pill-icon">📊</span>
+                            <span>Based on form, fixture difficulty, and average points</span>
+                        </div>
+                        ${predictions.slice(0, 11).map((pred, index) => {
+                            const logoUrl = getTeamLogoUrl(pred.player.teamObj.code);
+                            return `
+                            <div class="prediction-card">
+                                <div class="prediction-header">
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <img src="${logoUrl}" alt="${pred.player.teamName}" class="team-logo-small" onerror="this.style.display='none'">
+                                        <div>
+                                            <div class="prediction-player">
+                                                ${index === 0 ? '👑 ' : ''}${pred.player.web_name}
+                                                <span class="position-badge ${getPositionClass(pred.player.element_type)}">${getPositionName(pred.player.element_type)}</span>
+                                            </div>
+                                            <div style="color: var(--text-secondary); font-size: 0.9rem;">${pred.player.teamName} vs ${pred.opponent}</div>
+                                        </div>
+                                    </div>
+                                    <div class="prediction-score">${pred.predicted.toFixed(1)}</div>
+                                </div>
+                                <div class="prediction-details">
+                                    <div class="prediction-stat">
+                                        <div class="prediction-stat-label">Form</div>
+                                        <div class="prediction-stat-value">${pred.player.form}</div>
+                                    </div>
+                                    <div class="prediction-stat">
+                                        <div class="prediction-stat-label">Difficulty</div>
+                                        <div class="prediction-stat-value ${getDifficultyClass(pred.difficulty)}">${pred.difficulty}/5</div>
+                                    </div>
+                                    <div class="prediction-stat">
+                                        <div class="prediction-stat-label">PPG</div>
+                                        <div class="prediction-stat-value">${pred.player.points_per_game}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `}).join('')}
+                    </div>
+
+                    <div id="tab-fixtures" class="tab-content">
+                        <h3 style="font-family: 'Inter', sans-serif; font-weight: 700; margin-bottom: 1rem; color: var(--accent-primary);">Fixture Difficulty - Next 5 Gameweeks</h3>
+                        <div class="info-pill">
+                            <span class="info-pill-icon">📅</span>
+                            <span>Green = Easy fixtures, Red = Difficult fixtures</span>
+                        </div>
+                        ${getUniqueTeamsFromSquad(squad, teams).map(team => {
+                            const teamFixtures = upcomingFixtures.filter(f => 
+                                f.team_h === team.id || f.team_a === team.id
+                            ).slice(0, 5);
+                            const logoUrl = getTeamLogoUrl(team.code);
+                            
+                            return `
+                                <div style="margin-bottom: 2rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                                    <h4 style="font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.75rem;">
+                                        <img src="${logoUrl}" alt="${team.short_name}" class="team-logo-small" onerror="this.style.display='none'">
+                                        ${team.name}
+                                    </h4>
+                                    <div class="fixture-grid">
+                                        ${teamFixtures.map(fixture => {
+                                            const isHome = fixture.team_h === team.id;
+                                            const opponent = teams.find(t => t.id === (isHome ? fixture.team_a : fixture.team_h));
+                                            const difficulty = isHome ? fixture.team_h_difficulty : fixture.team_a_difficulty;
+                                            const oppLogoUrl = getTeamLogoUrl(opponent.code);
+                                            
+                                            return `
+                                                <div class="fixture-item">
+                                                    <div class="fixture-gw">GW${fixture.event}</div>
+                                                    <img src="${oppLogoUrl}" alt="${opponent.short_name}" style="width: 32px; height: 32px; margin: 0.5rem auto;" onerror="this.style.display='none'">
+                                                    <div class="fixture-opponent">${isHome ? '🏠' : '✈️'} ${opponent.short_name}</div>
+                                                    <div class="fixture-difficulty difficulty-${difficulty}">${difficulty}/5</div>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <div id="tab-transfers" class="tab-content">
+                        <h3 style="font-family: 'Inter', sans-serif; font-weight: 700; margin-bottom: 1rem; color: var(--accent-primary);">Smart Transfer Suggestions</h3>
+                        
+                        <div class="metric-grid">
+                            <div class="metric-box">
+                                <div class="metric-label">Rising in Price</div>
+                                <div class="metric-value" style="color: var(--accent-primary);">↑ ${priceChanges.filter(p => p.direction === 'up').length}</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-label">Falling in Price</div>
+                                <div class="metric-value" style="color: var(--accent-danger);">↓ ${priceChanges.filter(p => p.direction === 'down').length}</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-label">Injured Players</div>
+                                <div class="metric-value" style="color: var(--accent-warning);">🚑 ${squad.filter(p => p.chance_of_playing_next_round !== null && p.chance_of_playing_next_round < 75).length}</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-label">Poor Form</div>
+                                <div class="metric-value" style="color: var(--accent-danger);">📉 ${squad.filter(p => parseFloat(p.form) < 3 && parseFloat(p.form) > 0).length}</div>
+                            </div>
+                        </div>
+
+                        ${transferSuggestions.length > 0 ? `
+                            <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; margin: 2rem 0 1rem; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Recommended Transfers
+                            </h4>
+                        ` : ''}
+
+                        ${transferSuggestions.map(suggestion => {
+                            const outLogoUrl = getTeamLogoUrl(suggestion.out.teamObj.code);
+                            const inLogoUrl = getTeamLogoUrl(teams.find(t => t.id === suggestion.in.team).code);
+                            
+                            return `
+                            <div class="transfer-suggestion">
+                                <div class="transfer-out" style="display: flex; align-items: center; gap: 1rem; justify-content: flex-end;">
+                                    <div style="text-align: right;">
+                                        <div class="transfer-player">${suggestion.out.web_name}</div>
+                                        <div class="transfer-reason">${suggestion.outReason}</div>
+                                        <div style="margin-top: 0.5rem; color: var(--text-secondary);">£${(suggestion.out.now_cost / 10).toFixed(1)}m</div>
+                                    </div>
+                                    <img src="${outLogoUrl}" alt="${suggestion.out.teamName}" class="team-logo-small" onerror="this.style.display='none'">
+                                </div>
+                                <div class="transfer-arrow">→</div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <img src="${inLogoUrl}" alt="${suggestion.in.teamName}" class="team-logo-small" onerror="this.style.display='none'">
+                                    <div>
+                                        <div class="transfer-player">${suggestion.in.web_name}</div>
+                                        <div class="transfer-reason">${suggestion.inReason}</div>
+                                        <div style="margin-top: 0.5rem; color: var(--accent-primary);">£${(suggestion.in.now_cost / 10).toFixed(1)}m</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `}).join('')}
+
+                        <h3 style="font-family: 'Inter', sans-serif; font-weight: 700; margin: 2rem 0 1rem; color: var(--accent-primary);">Top Form Players Available</h3>
+                        <div class="info-pill">
+                            <span class="info-pill-icon">🔥</span>
+                            <span>Players with highest form ratings not in your squad</span>
+                        </div>
+                        <div class="player-list">
+                            ${inFormPlayers.slice(0, 8).map(player => {
+                                const team = teams.find(t => t.id === player.team);
+                                const owned = squad.some(p => p.id === player.id);
+                                const logoUrl = getTeamLogoUrl(team.code);
+                                const positionName = getPositionName(player.element_type);
+                                const positionClass = getPositionClass(player.element_type);
+                                
+                                return `
+                                    <div class="player-item" style="${owned ? 'opacity: 0.5;' : ''}">
+                                        <img src="${logoUrl}" alt="${team.short_name}" class="team-logo" onerror="this.style.display='none'">
+                                        <div>
+                                            <div class="player-name">
+                                                ${player.web_name} ${owned ? '✓' : ''}
+                                                <span class="position-badge ${positionClass}">${positionName}</span>
+                                            </div>
+                                            <div class="player-team">${team.short_name} • ${player.total_points} pts total</div>
+                                        </div>
+                                        <div class="player-price">£${(player.now_cost / 10).toFixed(1)}m</div>
+                                        <div class="player-form ${getFormClass(parseFloat(player.form))}">${player.form}</div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('content').innerHTML = html;
+        }
+
+        function getFormClass(form) {
+            if (form >= 6) return 'form-good';
+            if (form >= 4) return 'form-average';
+            return 'form-poor';
+        }
+
+        function generateRecommendations(squad, allPlayers, teams) {
+            const recommendations = [];
+
+            // Captain recommendation
+            const bestCaptain = squad
+                .filter(p => parseFloat(p.form) > 0)
+                .sort((a, b) => parseFloat(b.form) - parseFloat(a.form))[0];
+
+            if (bestCaptain) {
+                recommendations.push({
+                    title: 'Captain Pick',
+                    description: `${bestCaptain.web_name} is in excellent form with a form rating of ${bestCaptain.form}. Consider making them your captain this week.`,
+                    badges: [
+                        { text: 'High Priority', class: 'badge-captain' }
+                    ]
+                });
+            }
+
+            // Transfer recommendations (players with poor form)
+            const poorFormPlayers = squad
+                .filter(p => parseFloat(p.form) < 3 && parseFloat(p.form) > 0)
+                .sort((a, b) => parseFloat(a.form) - parseFloat(b.form));
+
+            if (poorFormPlayers.length > 0) {
+                const player = poorFormPlayers[0];
+                recommendations.push({
+                    title: 'Transfer Suggestion',
+                    description: `${player.web_name} has poor form (${player.form}). Consider transferring them out for a player in better form.`,
+                    badges: [
+                        { text: 'Transfer Out', class: 'badge-transfer' }
+                    ]
+                });
+            }
+
+            // Injury warnings
+            const injuredPlayers = squad.filter(p => 
+                p.chance_of_playing_next_round !== null && 
+                p.chance_of_playing_next_round < 75
+            );
+
+            if (injuredPlayers.length > 0) {
+                recommendations.push({
+                    title: 'Injury Alert',
+                    description: `${injuredPlayers.map(p => p.web_name).join(', ')} may be unavailable. Check team news before the deadline.`,
+                    badges: [
+                        { text: 'Urgent', class: 'badge-warning' }
+                    ]
+                });
+            }
+
+            return recommendations;
+        }
+
+        function generateActionPlan(squad, allPlayers, teams, fixtures, picks, currentGW, recommendations, predictions) {
+            const bank = picks.entry_history.bank / 10;
+            const freeTransfers = picks.entry_history.event_transfers;
+            
+            // Find problems in the squad
+            const injuredPlayers = squad.filter(p => 
+                p.chance_of_playing_next_round !== null && 
+                p.chance_of_playing_next_round < 50
+            );
+            
+            const poorFormPlayers = squad.filter(p => 
+                parseFloat(p.form) < 3 && parseFloat(p.form) > 0
+            ).sort((a, b) => parseFloat(a.form) - parseFloat(b.form));
+
+            const suspendedPlayers = squad.filter(p => 
+                p.chance_of_playing_next_round === 0
+            );
+
+            // Find best captain options
+            const captainOptions = squad
+                .filter(p => parseFloat(p.form) > 0)
+                .map(p => {
+                    const nextFixture = fixtures.find(f => 
+                        f.event === currentGW + 1 && 
+                        (f.team_h === p.team || f.team_a === p.team)
+                    );
+                    const difficulty = nextFixture ? 
+                        (nextFixture.team_h === p.team ? nextFixture.team_h_difficulty : nextFixture.team_a_difficulty) 
+                        : 3;
+                    const score = parseFloat(p.form) * (6 - difficulty) / 5;
+                    return { player: p, score, difficulty };
+                })
+                .sort((a, b) => b.score - a.score)
+                .slice(0, 3);
+
+            let actionHTML = '';
+
+            // Priority 1: Captain
+            const captainLogoUrl = getTeamLogoUrl(captainOptions[0].player.teamObj.code);
+            actionHTML += `
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--accent-primary); margin-bottom: 0.75rem;">
+                        1️⃣ CAPTAIN CHOICE
+                    </h4>
+                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-primary); display: flex; align-items: center; gap: 1rem;">
+                        <img src="${captainLogoUrl}" alt="${captainOptions[0].player.teamName}" class="team-logo" onerror="this.style.display='none'">
+                        <div style="flex: 1;">
+                            <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                                ⭐ ${captainOptions[0].player.web_name} (${captainOptions[0].player.teamName})
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+                                Form: ${captainOptions[0].player.form} | Fixture Difficulty: ${captainOptions[0].difficulty}/5
+                            </div>
+                            <div style="color: var(--accent-primary); font-size: 0.85rem;">
+                                Best overall option based on form and fixture difficulty
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        Alternatives: ${captainOptions.slice(1).map(c => c.player.web_name).join(', ')}
+                    </div>
+                </div>
+            `;
+
+            // Priority 2: Transfers
+            if (suspendedPlayers.length > 0 || injuredPlayers.length > 0 || poorFormPlayers.length > 0) {
+                const transferTargets = [...suspendedPlayers, ...injuredPlayers, ...poorFormPlayers.slice(0, 2)];
+                const uniqueTargets = transferTargets.filter((p, i, arr) => 
+                    arr.findIndex(x => x.id === p.id) === i
+                ).slice(0, 2);
+
+                actionHTML += `
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--accent-warning); margin-bottom: 0.75rem;">
+                            2️⃣ TRANSFER RECOMMENDATIONS
+                        </h4>
+                        <div style="background: rgba(255, 170, 0, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-warning); margin-bottom: 1rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Budget Available: £${bank.toFixed(1)}m</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">Free Transfers: ${freeTransfers === 1 ? '1 free transfer' : freeTransfers + ' transfers (-4 points per extra)'}</div>
+                        </div>
+                `;
+
+                uniqueTargets.forEach((target, i) => {
+                    let reason = '📉 Poor form';
+                    let reasonColor = 'var(--accent-warning)';
+                    if (target.chance_of_playing_next_round === 0) {
+                        reason = '❌ SUSPENDED';
+                        reasonColor = 'var(--accent-danger)';
+                    } else if (target.chance_of_playing_next_round !== null && target.chance_of_playing_next_round < 50) {
+                        reason = '🚑 INJURED';
+                        reasonColor = 'var(--accent-danger)';
+                    }
+
+                    // Find replacements
+                    const replacements = allPlayers
+                        .filter(p => 
+                            p.element_type === target.element_type &&
+                            p.now_cost <= target.now_cost + (bank * 10) &&
+                            parseFloat(p.form) > 5 &&
+                            !squad.some(sp => sp.id === p.id)
+                        )
+                        .sort((a, b) => parseFloat(b.form) - parseFloat(a.form))
+                        .slice(0, 3);
+
+                    const outLogoUrl = getTeamLogoUrl(target.teamObj.code);
+                    const inLogoUrl = replacements.length > 0 ? getTeamLogoUrl(teams.find(t => t.id === replacements[0].team).code) : '';
+
+                    actionHTML += `
+                        <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: 8px; margin-bottom: 0.75rem; border: 1px solid var(--border-color);">
+                            <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 0.75rem; justify-content: flex-end;">
+                                    <div style="text-align: right;">
+                                        <div style="font-weight: 600; color: var(--accent-danger); margin-bottom: 0.25rem;">${target.web_name}</div>
+                                        <div style="font-size: 0.85rem; color: ${reasonColor}; margin-bottom: 0.25rem;">${reason}</div>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary);">£${(target.now_cost / 10).toFixed(1)}m • Form ${target.form}</div>
+                                    </div>
+                                    <img src="${outLogoUrl}" alt="${target.teamName}" style="width: 36px; height: 36px;" onerror="this.style.display='none'">
+                                </div>
+                                <div style="font-size: 1.5rem; color: var(--accent-secondary);">→</div>
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    ${replacements.length > 0 ? `
+                                        <img src="${inLogoUrl}" alt="" style="width: 36px; height: 36px;" onerror="this.style.display='none'">
+                                        <div>
+                                            <div style="font-weight: 600; color: var(--accent-primary); margin-bottom: 0.25rem;">${replacements[0].web_name}</div>
+                                            <div style="font-size: 0.85rem; color: var(--accent-primary); margin-bottom: 0.25rem;">🔥 Form ${replacements[0].form}</div>
+                                            <div style="font-size: 0.85rem; color: var(--text-secondary);">£${(replacements[0].now_cost / 10).toFixed(1)}m • ${replacements[0].total_points} pts</div>
+                                        </div>
+                                    ` : `
+                                        <div style="color: var(--text-secondary); font-style: italic;">No suitable replacements in budget</div>
+                                    `}
+                                </div>
+                            </div>
+                            ${replacements.length > 1 ? `
+                                <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-secondary);">
+                                    💡 Other options: ${replacements.slice(1, 3).map(r => `${r.web_name} (£${(r.now_cost / 10).toFixed(1)}m, Form ${r.form})`).join(', ')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                });
+
+                actionHTML += `</div>`;
+            } else {
+                actionHTML += `
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--accent-primary); margin-bottom: 0.75rem;">
+                            2️⃣ TRANSFERS
+                        </h4>
+                        <div style="background: rgba(0, 255, 136, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-primary);">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">✅ No urgent transfers needed</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Your squad looks healthy. Save your free transfer and bank for future gameweeks, or use it to upgrade a player.
+                            </div>
+                            <div style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-secondary);">
+                                Budget available: £${bank.toFixed(1)}m | Free transfers: ${freeTransfers}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Priority 3: Formation & Bench
+            actionHTML += `
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--accent-secondary); margin-bottom: 0.75rem;">
+                        3️⃣ TEAM SELECTION
+                    </h4>
+                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <div style="margin-bottom: 0.75rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Starting XI</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Prioritize players with good form and favorable fixtures. Check predicted points in the predictions tab.
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Bench Order</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Put your highest-scoring bench player first for automatic substitutions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 212, 255, 0.05)); border: 2px solid var(--border-color); border-radius: 8px; padding: 1.25rem;">
+                        <div style="font-weight: 700; margin-bottom: 1rem; color: var(--accent-primary); font-size: 1rem;">
+                            💡 Recommended Formation for GW${currentGW + 1}
+                        </div>
+                        ${generateIdealFormation(squad, predictions)}
+                    </div>
+                </div>
+            `;
+
+            // Add other recommendations
+            if (recommendations && recommendations.length > 0) {
+                actionHTML += `
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--border-color);">
+                        <h4 style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            ⚠️ Important Alerts
+                        </h4>
+                        ${recommendations.map(rec => `
+                            <div class="recommendation">
+                                <div class="recommendation-title">${rec.title}</div>
+                                <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">${rec.description}</p>
+                                <div>
+                                    ${rec.badges.map(badge => 
+                                        `<span class="badge ${badge.class}">${badge.text}</span>`
+                                    ).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            return actionHTML;
+        }
+
+        function getUpcomingFixtures(allFixtures, currentGW, teams) {
+            return allFixtures
+                .filter(f => f.event >= currentGW && f.event <= currentGW + 5)
+                .sort((a, b) => a.event - b.event);
+        }
+
+        function generatePredictions(squad, fixtures, currentGW) {
+            const predictions = squad.map(player => {
+                const nextFixture = fixtures.find(f => 
+                    f.event === currentGW && 
+                    (f.team_h === player.team || f.team_a === player.team)
+                );
+
+                if (!nextFixture) {
+                    return {
+                        player,
+                        predicted: parseFloat(player.points_per_game) || 2,
+                        difficulty: 3,
+                        opponent: 'TBD'
+                    };
+                }
+
+                const isHome = nextFixture.team_h === player.team;
+                const difficulty = isHome ? nextFixture.team_h_difficulty : nextFixture.team_a_difficulty;
+                const opponentTeam = globalData.bootstrap.teams.find(t => 
+                    t.id === (isHome ? nextFixture.team_a : nextFixture.team_h)
+                );
+
+                // Simple prediction: form + ppg - difficulty adjustment
+                const form = parseFloat(player.form) || 2;
+                const ppg = parseFloat(player.points_per_game) || 2;
+                const difficultyAdjustment = (6 - difficulty) * 0.5;
+                const predicted = (form * 0.6 + ppg * 0.4 + difficultyAdjustment);
+
+                return {
+                    player,
+                    predicted,
+                    difficulty,
+                    opponent: opponentTeam?.short_name || 'TBD'
+                };
+            });
+
+            return predictions.sort((a, b) => b.predicted - a.predicted);
+        }
+
+        function getPriceChangePredictions(squad) {
+            return squad.map(player => {
+                const transfersInPercentage = (player.transfers_in_event / 1000000) || 0;
+                const transfersOutPercentage = (player.transfers_out_event / 1000000) || 0;
+                const netTransfers = transfersInPercentage - transfersOutPercentage;
+
+                let direction = 'stable';
+                let icon = '●';
+                let text = 'Stable';
+
+                // Simplified prediction based on net transfers
+                if (netTransfers > 2) {
+                    direction = 'up';
+                    icon = '↑';
+                    text = 'Rising';
+                } else if (netTransfers < -2) {
+                    direction = 'down';
+                    icon = '↓';
+                    text = 'Falling';
+                }
+
+                return {
+                    id: player.id,
+                    direction,
+                    icon,
+                    text
+                };
+            });
+        }
+
+        function generateTransferSuggestions(squad, allPlayers, teams, fixtures) {
+            const suggestions = [];
+
+            // Find players to transfer out (poor form, injured, bad fixtures)
+            const transferTargets = squad
+                .filter(p => {
+                    const poorForm = parseFloat(p.form) < 3;
+                    const injured = p.chance_of_playing_next_round !== null && p.chance_of_playing_next_round < 50;
+                    return poorForm || injured;
+                })
+                .slice(0, 3);
+
+            transferTargets.forEach(outPlayer => {
+                // Find suitable replacements in same position and similar price range
+                const position = outPlayer.element_type;
+                const priceRange = outPlayer.now_cost;
+                
+                const replacements = allPlayers
+                    .filter(p => 
+                        p.element_type === position &&
+                        p.now_cost >= priceRange - 10 &&
+                        p.now_cost <= priceRange + 10 &&
+                        parseFloat(p.form) > 5 &&
+                        !squad.some(sp => sp.id === p.id)
+                    )
+                    .sort((a, b) => parseFloat(b.form) - parseFloat(a.form))
+                    .slice(0, 1);
+
+                if (replacements.length > 0) {
+                    const inPlayer = replacements[0];
+                    const inTeam = teams.find(t => t.id === inPlayer.team);
+                    
+                    let outReason = 'Poor form';
+                    if (outPlayer.chance_of_playing_next_round !== null && outPlayer.chance_of_playing_next_round < 50) {
+                        outReason = 'Injury concern';
+                    }
+
+                    suggestions.push({
+                        out: outPlayer,
+                        in: {...inPlayer, teamName: inTeam.short_name},
+                        outReason,
+                        inReason: `Excellent form (${inPlayer.form})`
+                    });
+                }
+            });
+
+            return suggestions;
+        }
+
+        function getUniqueTeamsFromSquad(squad, teams) {
+            const teamIds = [...new Set(squad.map(p => p.team))];
+            return teamIds.map(id => teams.find(t => t.id === id));
+        }
+
+        function generateIdealFormation(squad, predictions) {
+            // Sort predictions by predicted points
+            const sortedPlayers = [...predictions].sort((a, b) => b.predicted - a.predicted);
+            
+            // Separate by position (1=GK, 2=DEF, 3=MID, 4=FWD)
+            const gks = sortedPlayers.filter(p => p.player.element_type === 1);
+            const defs = sortedPlayers.filter(p => p.player.element_type === 2);
+            const mids = sortedPlayers.filter(p => p.player.element_type === 3);
+            const fwds = sortedPlayers.filter(p => p.player.element_type === 4);
+
+            // Determine best formation based on top predicted players
+            // Must have: 1 GK, 3-5 DEF, 2-5 MID, 1-3 FWD (total 11)
+            let formation = { gk: 1, def: 0, mid: 0, fwd: 0 };
+            let startingXI = [];
+
+            // Add best GK
+            startingXI.push(gks[0]);
+
+            // Get top predicted outfield players (10 players)
+            const outfield = [...defs, ...mids, ...fwds].sort((a, b) => b.predicted - a.predicted).slice(0, 10);
+
+            // Count by position
+            const defCount = outfield.filter(p => p.player.element_type === 2).length;
+            const midCount = outfield.filter(p => p.player.element_type === 3).length;
+            const fwdCount = outfield.filter(p => p.player.element_type === 4).length;
+
+            // Ensure minimum requirements (3 DEF, 2 MID, 1 FWD)
+            let adjustedOutfield = [];
+            let defsToAdd = Math.max(3, defCount);
+            let midsToAdd = Math.max(2, midCount);
+            let fwdsToAdd = Math.max(1, fwdCount);
+
+            // Add minimum required from each position
+            adjustedOutfield.push(...defs.slice(0, defsToAdd));
+            adjustedOutfield.push(...mids.slice(0, midsToAdd));
+            adjustedOutfield.push(...fwds.slice(0, fwdsToAdd));
+
+            // Fill remaining spots with best players
+            const remaining = 11 - 1 - adjustedOutfield.length; // 11 total - GK - current outfield
+            if (remaining > 0) {
+                const unusedDefs = defs.slice(defsToAdd);
+                const unusedMids = mids.slice(midsToAdd);
+                const unusedFwds = fwds.slice(fwdsToAdd);
+                const additionalPlayers = [...unusedDefs, ...unusedMids, ...unusedFwds]
+                    .sort((a, b) => b.predicted - a.predicted)
+                    .slice(0, remaining);
+                adjustedOutfield.push(...additionalPlayers);
+            }
+
+            startingXI.push(...adjustedOutfield.slice(0, 10));
+
+            // Count final formation
+            formation.def = startingXI.filter(p => p.player.element_type === 2).length;
+            formation.mid = startingXI.filter(p => p.player.element_type === 3).length;
+            formation.fwd = startingXI.filter(p => p.player.element_type === 4).length;
+
+            // Get bench players (sorted by predicted points)
+            const bench = sortedPlayers.filter(p => !startingXI.includes(p)).slice(0, 4);
+
+            let html = `
+                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                    <div style="background: var(--bg-card); padding: 0.75rem 1.5rem; border-radius: 8px; border: 2px solid var(--accent-primary);">
+                        <div style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--accent-primary);">
+                            ${formation.def}-${formation.mid}-${formation.fwd}
+                        </div>
+                    </div>
+                    <div style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+                        Based on predicted points and fixture difficulty
+                    </div>
+                </div>
+
+                <div style="display: grid; gap: 0.75rem;">
+                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-warning);">
+                        <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">
+                            🧤 Goalkeeper
+                        </div>
+                        ${gks[0] ? `
+                            <div style="color: var(--text-primary);">
+                                ${gks[0].player.web_name} (${gks[0].player.teamName}) - ${gks[0].predicted.toFixed(1)} pts
+                            </div>
+                        ` : '<div style="color: var(--text-secondary);">No goalkeeper available</div>'}
+                    </div>
+
+                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-secondary);">
+                        <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">
+                            🛡️ Defenders (${formation.def})
+                        </div>
+                        ${startingXI.filter(p => p.player.element_type === 2).map(p => `
+                            <div style="color: var(--text-primary); padding: 0.25rem 0;">
+                                • ${p.player.web_name} (${p.player.teamName}) - ${p.predicted.toFixed(1)} pts
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-primary);">
+                        <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">
+                            ⚡ Midfielders (${formation.mid})
+                        </div>
+                        ${startingXI.filter(p => p.player.element_type === 3).map(p => `
+                            <div style="color: var(--text-primary); padding: 0.25rem 0;">
+                                • ${p.player.web_name} (${p.player.teamName}) - ${p.predicted.toFixed(1)} pts
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-danger);">
+                        <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">
+                            ⚽ Forwards (${formation.fwd})
+                        </div>
+                        ${startingXI.filter(p => p.player.element_type === 4).map(p => `
+                            <div style="color: var(--text-primary); padding: 0.25rem 0;">
+                                • ${p.player.web_name} (${p.player.teamName}) - ${p.predicted.toFixed(1)} pts
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="background: rgba(139, 157, 195, 0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--text-secondary);">
+                        <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">
+                            🪑 Bench (Order by predicted points)
+                        </div>
+                        ${bench.map((p, i) => `
+                            <div style="color: var(--text-secondary); padding: 0.25rem 0; font-size: 0.9rem;">
+                                ${i + 1}. ${p.player.web_name} (${getPositionName(p.player.element_type)}) - ${p.predicted.toFixed(1)} pts
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div style="margin-top: 1rem; padding: 1rem; background: rgba(0, 212, 255, 0.05); border-radius: 8px; border: 1px solid var(--border-color);">
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                        💡 <strong>Tip:</strong> This formation maximizes your predicted points based on current form and fixtures. Adjust based on your captain choice and any late team news.
+                    </div>
+                </div>
+            `;
+
+            return html;
+        }
+
+        function getDifficultyClass(difficulty) {
+            if (difficulty <= 2) return 'form-good';
+            if (difficulty === 3) return 'form-average';
+            return 'form-poor';
+        }
+
+        function getPositionName(type) {
+            const positions = {
+                1: 'GK',
+                2: 'DEF',
+                3: 'MID',
+                4: 'FWD'
+            };
+            return positions[type] || 'UNK';
+        }
+
+        function getPositionClass(type) {
+            const classes = {
+                1: 'pos-gk',
+                2: 'pos-def',
+                3: 'pos-mid',
+                4: 'pos-fwd'
+            };
+            return classes[type] || '';
+        }
+
+        function getTeamLogoUrl(teamCode) {
+            return `https://resources.premierleague.com/premierleague/badges/t${teamCode}.png`;
+        }
+
+        function switchTab(tabName) {
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            // Add active class to selected tab and content
+            event.target.classList.add('active');
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

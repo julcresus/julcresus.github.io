@@ -1,0 +1,504 @@
+/* ─────────────────────────────────────────
+   CSS Custom Properties
+───────────────────────────────────────── */
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #999999;
+  --font-serif: adobe-garamond-pro, serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: 0.25s ease;
+}
+
+.dark-mode {
+  --bg: #111111;
+  --fg: #ffffff;
+  --muted: #777777;
+}
+
+/* ─────────────────────────────────────────
+   Base Reset & Body
+───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─────────────────────────────────────────
+   Navigation
+───────────────────────────────────────── */
+.nav-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  z-index: 100;
+  transition: background-color var(--transition);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 6.25vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 18pt;
+  font-weight: 400;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────
+   Page Wrapper
+───────────────────────────────────────── */
+.page-wrapper {
+  padding: 0 6.25vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────
+   Hero / Intro
+───────────────────────────────────────── */
+.intro-container {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding: 48px 0;
+}
+
+.intro {
+  font-family: var(--font-serif);
+  font-size: clamp(18pt, 2.5vw, 26pt);
+  line-height: 1.45;
+  font-weight: 400;
+  max-width: 860px;
+}
+
+.intro-links {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.intro-link {
+  font-family: var(--font-mono);
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+
+.intro-link:hover {
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────
+   Project Grid
+───────────────────────────────────────── */
+.projects-section {
+  padding-top: 32px;
+  padding-bottom: 80px;
+}
+
+.section-label {
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+/* ─────────────────────────────────────────
+   Project Card
+───────────────────────────────────────── */
+.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 48px;
+  cursor: pointer;
+}
+
+.project-card-disabled {
+  cursor: default;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.project-card-image-wrap {
+  overflow: hidden;
+  background-color: #f3f3f3;
+  aspect-ratio: 16 / 9;
+}
+
+.dark-mode .project-card-image-wrap {
+  background-color: #222222;
+}
+
+.project-card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.project-card:hover .project-card-image-wrap img {
+  transform: scale(1.03);
+}
+
+.project-card-caption {
+  padding-top: 16px;
+}
+
+.project-card-title {
+  font-family: var(--font-serif);
+  font-size: 18pt;
+  line-height: 1.3;
+  color: var(--fg);
+  margin-bottom: 8px;
+  transition: opacity var(--transition);
+}
+
+.project-card:hover .project-card-title {
+  opacity: 0.6;
+}
+
+.project-card-tags {
+  font-family: var(--font-serif);
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ─────────────────────────────────────────
+   About Page
+───────────────────────────────────────── */
+.about-page {
+  padding: 64px 6.25vw 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 340px;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.about-text {
+  font-family: var(--font-serif);
+  font-size: 14pt;
+  line-height: 1.65;
+  color: var(--fg);
+}
+
+.about-text p + p {
+  margin-top: 20px;
+}
+
+.about-text a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--fg);
+  transition: opacity var(--transition);
+}
+
+.about-text a:hover {
+  opacity: 0.5;
+}
+
+.about-back {
+  display: inline-block;
+  margin-top: 48px;
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.about-back:hover {
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────
+   Project Detail Pages
+───────────────────────────────────────── */
+.project_inside {
+  padding: 40px 0 80px;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  font-size: 28pt;
+  line-height: 1.2;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+
+.sub-title {
+  font-family: var(--font-serif);
+  font-size: 13pt;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 8px;
+  margin-top: 32px;
+}
+
+.tags_ {
+  font-family: var(--font-serif);
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.description {
+  font-family: var(--font-serif);
+  font-size: 14pt;
+  line-height: 1.65;
+}
+
+.description li {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.description a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--fg);
+  transition: opacity var(--transition);
+}
+
+.description a:hover {
+  opacity: 0.5;
+}
+
+.carousel-wrap {
+  margin: 24px 0 40px;
+}
+
+.imgcaption {
+  margin-top: 12px;
+  font-family: var(--font-serif);
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ─────────────────────────────────────────
+   Carousel overrides (Bootstrap handles base styles)
+───────────────────────────────────────── */
+.carousel-item {
+  background-color: #f3f3f3;
+  min-height: 200px;
+}
+
+.dark-mode .carousel-item {
+  background-color: #222222;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/*
+ * Bootstrap's arrow icons are white SVGs — invisible on a white bg.
+ * CCarousel's `dark` prop sets data-coreui-theme, not .carousel-dark,
+ * so Bootstrap's dark-arrow filter never fires.
+ * Fix: invert to black in light mode, restore white in dark mode.
+ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100%);
+}
+
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  filter: none;
+}
+
+/*
+ * CoreUI uses data-coreui-target; Bootstrap styles data-bs-target.
+ * Provide indicator styles manually for both modes.
+ */
+.carousel-indicators [data-coreui-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  padding: 0;
+  margin: 0 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.4;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-indicators [data-coreui-target].active {
+  opacity: 1;
+}
+
+.dark-mode .carousel-indicators [data-coreui-target] {
+  background-color: #fff;
+}
+
+/* ─────────────────────────────────────────
+   Footer / Outro (project pages)
+───────────────────────────────────────── */
+.outro {
+  font-family: var(--font-serif);
+  font-size: 20pt;
+  text-align: center;
+  margin: 48px auto 64px;
+  max-width: 600px;
+}
+
+.footer {
+  font-family: var(--font-serif);
+  padding: 0 6.25vw 48px;
+}
+
+/* ─────────────────────────────────────────
+   Animations
+───────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────
+   Utilities
+───────────────────────────────────────── */
+.hidden {
+  display: none;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────
+   Responsive
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 20px 5vw;
+  }
+
+  .nav-logo {
+    font-size: 15pt;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .page-wrapper {
+    padding: 0 5vw;
+  }
+
+  .intro {
+    font-size: 16pt;
+  }
+
+  .intro-container {
+    min-height: 70vh;
+    padding: 32px 0;
+  }
+
+  .about-page {
+    padding: 40px 5vw 60px;
+  }
+
+  .project_inside {
+    padding: 32px 5vw 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .intro {
+    font-size: 14pt;
+  }
+
+  .project-card-title {
+    font-size: 15pt;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card-image-wrap img {
+    will-change: transform;
+  }
+}

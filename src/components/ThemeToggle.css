@@ -1,0 +1,15 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-serif, adobe-garamond-pro, serif);
+  font-size: 11pt;
+  color: var(--fg, #000000);
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.5;
+}
