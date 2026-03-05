@@ -35,7 +35,7 @@ function Shya() {
           To enhance the user experience, they've partnered with Dam Digital to develop a cutting-edge online tool for user-friendly bookings of private flights, helicopters, and group charters.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

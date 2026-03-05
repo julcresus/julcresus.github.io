@@ -26,7 +26,7 @@ function Rethink() {
           The donation module is a critical part of Rethink Mental Illness's fundraising efforts. It allows donors to make one-time or recurring donations to support the charity's work. Our goal was to redesign the donation module to make it more user-friendly and accessible, and make its funnel easier to understand and use.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

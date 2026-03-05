@@ -28,7 +28,7 @@ function PrideInLondon() {
           To create this interface, I used Sketch, combined with InVision for the interaction and the sharing.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

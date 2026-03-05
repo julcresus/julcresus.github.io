@@ -14,15 +14,17 @@ const projects = [
     alt: 'HMRC project with Cognizant',
     title: 'Cognizant — HMRC Wales',
     tags: 'UX Design, UI Design, User Research',
+    year: '2025–2026',
     route: '/hmrc',
     disabled: false
   },
   {
     id: 'naturalengland',
-    image: './img/naturalengland.webp',
+    image: './img/naturalengland.png',
     alt: 'Natural England / DEFRA project with Cognizant',
     title: 'Cognizant — Natural England / DEFRA',
     tags: 'UX Design, UI Design, User Research, Service Design',
+    year: '2024–2025',
     route: '/naturalengland',
     disabled: false
   },
@@ -32,6 +34,7 @@ const projects = [
     alt: 'DEFRA project with Cognizant',
     title: 'Cognizant — DEFRA',
     tags: 'UX Design, UI Design, User Research',
+    year: '2024–2025',
     route: '/defra',
     disabled: false
   },
@@ -41,15 +44,17 @@ const projects = [
     alt: 'Shy Lifestyle app design showcase',
     title: 'Dam Digital — Shy Lifestyle',
     tags: 'App Design, UX Design, User Research',
+    year: '2023',
     route: '/shyl',
     disabled: false
   },
   {
     id: 'rethink',
-    image: './img/rethink.webp',
+    image: './img/rethink.png',
     alt: 'Rethink responsive UI design project',
     title: 'Dam Digital — Rethink',
-    tags: 'UX Design, Responsive UI Design, Product Design',
+    tags: 'UX Design, UI Design, Product Design',
+    year: '2022',
     route: '/rethink',
     disabled: false
   },
@@ -59,6 +64,7 @@ const projects = [
     alt: 'Shy Aviation UX research project',
     title: 'Dam Digital — Shy Aviation',
     tags: 'UX Design, User Research',
+    year: '2022',
     route: '/shya',
     disabled: false
   },
@@ -67,7 +73,9 @@ const projects = [
     image: './img/mag.webp',
     alt: 'McArthurGlen app design project',
     title: 'Dam Digital — McArthurGlen',
-    tags: 'App Design, Responsive Web Design, UX Research',
+    tags: 'App Design, UX Design, User Research',
+    year: '2022',
+    note: 'Case study under NDA',
     route: '/#',
     disabled: true
   },
@@ -76,7 +84,8 @@ const projects = [
     image: './img/mod.webp',
     alt: 'Armed Forces Recruitment Program UI design',
     title: 'Methods — Armed Forces Recruitment Program',
-    tags: 'UX Design, Responsive UI Design, Coding',
+    tags: 'UX Design, UI Design, Coding',
+    year: '2019–2020',
     route: '/mod',
     disabled: false
   },
@@ -85,7 +94,8 @@ const projects = [
     image: './img/emm.webp',
     alt: 'Every Mind Matters UX research and testing',
     title: 'Methods — Every Mind Matters',
-    tags: 'UX Design, Research, User Testing',
+    tags: 'UX Design, UI Design, User Research',
+    year: '2018',
     route: '/everymindmatters',
     disabled: false
   },
@@ -95,6 +105,7 @@ const projects = [
     alt: 'ESFA user testing project',
     title: 'Methods — ESFA',
     tags: 'UX Design, UI Design, Coding',
+    year: '2018',
     route: '/esfa',
     disabled: false
   },
@@ -104,6 +115,7 @@ const projects = [
     alt: 'Societe Generale UX and UI design',
     title: 'Societe Generale Design',
     tags: 'UX Design, UI Design',
+    year: '2019',
     route: '/sgdesign',
     disabled: false
   },
@@ -112,7 +124,8 @@ const projects = [
     image: './img/ps.webp',
     alt: 'PlayStation Store app redesign case study',
     title: 'University Case Study — Playstation Store',
-    tags: 'UX Design, UI Design, App Redesign',
+    tags: 'UX Design, UI Design, App Design',
+    year: '2019',
     route: '/playstation',
     disabled: false
   },
@@ -122,6 +135,7 @@ const projects = [
     alt: 'Pride in London UI design',
     title: 'Pride in London',
     tags: 'UI Design',
+    year: '2018',
     route: '/prideinlondon',
     disabled: false
   }
@@ -141,7 +155,8 @@ const ProjectCard = React.memo(({ project, index }) => {
         </div>
         <div className="project-card-caption">
           <p className="project-card-title">{project.title}</p>
-          <p className="project-card-tags">{project.tags}</p>
+          <p className="project-card-tags">{project.tags}{project.year && ` · ${project.year}`}</p>
+          {project.note && <p className="project-card-note">{project.note}</p>}
         </div>
       </div>
     );
@@ -158,7 +173,7 @@ const ProjectCard = React.memo(({ project, index }) => {
       </div>
       <div className="project-card-caption">
         <p className="project-card-title">{project.title}</p>
-        <p className="project-card-tags">{project.tags}</p>
+        <p className="project-card-tags">{project.tags}{project.year && ` · ${project.year}`}</p>
       </div>
     </Link>
   );
@@ -179,11 +194,11 @@ function Home() {
               <span>creating</span>
               <span>coding</span>
               <span>testing</span>
-              <span>working</span>
+              <span>iterating</span>
               <span>researching</span>
             </TextLoop>
-            {' '}@ Cognizant, London, UK,{' '}
-            where I design interfaces and experiences for every type of user.
+            {' '}@ Cognizant, London, UK —{' '}
+            working across government services, fintech, and consumer products.
           </p>
           <div className="intro-links">
             <Link to="/aboutme" className="intro-link">About me</Link>

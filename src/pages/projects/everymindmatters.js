@@ -54,7 +54,7 @@ function EveryMindMatters() {
           The culmination of our efforts resulted in the delivery of an interactive prototype created using Figma. We also provided the client with new content blueprints and code drops, serving as guidance for the developers. These assets aimed to support the project's overarching mission of making mental health resources and information accessible to all.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

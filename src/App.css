@@ -96,6 +96,11 @@ a {
   opacity: 0.5;
 }
 
+.nav-link-active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ─────────────────────────────────────────
    Page Wrapper
 ───────────────────────────────────────── */
@@ -223,6 +228,15 @@ a {
   font-size: 10pt;
   font-style: italic;
   color: var(--muted);
+}
+
+.project-card-note {
+  font-family: var(--font-mono);
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 6px;
 }
 
 /* ─────────────────────────────────────────
@@ -359,8 +373,8 @@ a {
 .carousel-item img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  max-height: 70vh;
+  object-fit: contain;
   display: block;
 }
 
@@ -423,7 +437,25 @@ a {
 
 .footer {
   font-family: var(--font-serif);
+  font-size: 10pt;
+  color: var(--muted);
   padding: 0 6.25vw 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.footer-link:hover {
+  opacity: 0.5;
+}
+
+.footer-sep {
+  color: var(--muted);
 }
 
 /* ─────────────────────────────────────────
@@ -454,11 +486,15 @@ a {
   }
 
   .nav-logo {
-    font-size: 15pt;
+    font-size: 13pt;
   }
 
   .nav-links {
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 10pt;
   }
 
   .page-wrapper {
@@ -484,8 +520,16 @@ a {
 }
 
 @media (max-width: 480px) {
+  .nav-logo {
+    font-size: 11pt;
+  }
+
   .nav-links {
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 9pt;
   }
 
   .intro {

@@ -4,8 +4,10 @@ import {
   Switch,
   Route,
   Link,
+  NavLink,
   useLocation,
 } from "react-router-dom";
+import { NavHashLink } from 'react-router-hash-link';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
@@ -103,7 +105,8 @@ function App() {
           <div className="nav-inner">
             <Link to="/" className="nav-logo">julien crésus-ashton</Link>
             <div className="nav-links">
-              <Link to="/aboutme" className="nav-link">About</Link>
+              <NavHashLink exact to="/#projects" className="nav-link" activeClassName="nav-link-active">Work</NavHashLink>
+              <NavLink exact to="/aboutme" className="nav-link" activeClassName="nav-link-active">About</NavLink>
               <a
                 href="./pdf/cv.pdf"
                 target="_blank"
@@ -136,6 +139,11 @@ function App() {
             <Route component={NotFound} />
           </Switch>
         </Suspense>
+        <footer className="footer">
+          <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
+          <span className="footer-sep"> — </span>
+          <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
+        </footer>
       </Router>
     </ThemeProvider>
   );

@@ -28,7 +28,7 @@ function ESFA() {
           For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

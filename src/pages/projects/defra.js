@@ -45,7 +45,7 @@ function DEFRA() {
           The collaborative approach between UX design and user research helped identify key user pain points and validate design decisions throughout the project. The work contributed to improving internal processes and data management for DEFRA agency staff.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

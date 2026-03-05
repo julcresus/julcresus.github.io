@@ -50,7 +50,7 @@ function Mod() {
           Subsequent internal testing within the various Armed Forces branches allowed us to refine the process. This project underscores the critical role of user experience design in reshaping recruiting processes for the betterment of the Armed Forces.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ function SgDesign() {
           You can read more about the design process here: <a href='https://design.sgmarkets.com/en/' target='_blank' rel='noreferrer'>design.sgmarkets.com</a>
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

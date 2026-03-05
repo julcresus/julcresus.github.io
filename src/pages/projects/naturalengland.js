@@ -45,7 +45,7 @@ function NaturalEngland() {
           The ongoing work contributes to making environmental monitoring and conservation management more accessible and efficient for Natural England teams. The project continues to evolve through regular testing and iteration, with designs informed by real user needs and technical requirements.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

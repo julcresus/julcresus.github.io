@@ -47,7 +47,7 @@ function HMRC() {
           The project continues to develop through regular testing and iteration, with ongoing improvements based on user feedback and research insights. The work contributes to making government services more accessible and easier to use for citizens in Wales.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

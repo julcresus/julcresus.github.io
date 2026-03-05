@@ -37,7 +37,7 @@ function Mag() {
           Thanks to that, the AFRP development team made a working prototype using the mockups and Salesforce. It then got tested internally between the different services.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ function Shyl() {
           <strong>Enhanced User Experience:</strong> Our design choices, guided by extensive research and user feedback, have already demonstrated a highly intuitive and engaging user experience during testing.
         </p>
 
-        <a href="/" className="about-back">← Back</a>
+        <a href="/#projects" className="about-back">← Back</a>
       </div>
     </div>
   );
