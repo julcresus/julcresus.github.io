@@ -16,12 +16,12 @@ function ESFA() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
           The ESFA is accountable for funding education and training for children, young people and adults. It is the result of the combination of the former responsibilities of the Education Funding Agency (EFA) and Skills Funding Agency (SFA).
         </p>
 
-        <p className="sub-title">My role</p>
+        <p className="sub-title">Role</p>
         <p className="description">
           I've worked on the MyESFA service ("View your payments" and "Subcontractor Declaration Tool") and the National Funding Formula from January to November 2020.
           <br /><br />

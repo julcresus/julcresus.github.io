@@ -4,10 +4,10 @@ function DEFRA() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">DEFRA - Department for Environment, Food & Rural Affairs</p>
+        <p className="project-title">DEFRA — Department for Environment, Food & Rural Affairs</p>
         <p className="tags_">UX Design, UI Design, User Research</p>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
           The Department for Environment, Food & Rural Affairs (DEFRA) is responsible for safeguarding the natural environment, supporting food and farming industries, and sustaining a thriving rural economy.
           <br /><br />
@@ -16,22 +16,23 @@ function DEFRA() {
           Working as part of the UCD team at Cognizant, I collaborated with user researchers to understand internal user needs and translate requirements into accessible digital experiences.
         </p>
 
-        <p className="sub-title">My role</p>
+        <p className="sub-title">Role</p>
         <p className="description">
           As a UX Designer working alongside user researchers, I contributed to designing and testing digital services for internal DEFRA agency staff.
-          <br /><br />
-          My responsibilities included:
-          <br /><br />
-          • Designing wireframes and prototypes in Figma based on user requirements<br />
-          • Supporting user research sessions with internal stakeholders<br />
-          • Creating user flows and journey maps<br />
-          • Iterating designs based on user feedback and testing<br />
-          • Developing design concepts for data management interfaces<br />
-          • Collaborating with user researchers to plan and conduct testing sessions<br /><br />
+        </p>
+        <ul className="description">
+          <li>Designing wireframes and prototypes in Figma based on user requirements</li>
+          <li>Supporting user research sessions with internal stakeholders</li>
+          <li>Creating user flows and journey maps</li>
+          <li>Iterating designs based on user feedback and testing</li>
+          <li>Developing design concepts for data management interfaces</li>
+          <li>Collaborating with user researchers to plan and conduct testing sessions</li>
+        </ul>
+        <p className="description">
           The work required understanding complex internal processes while creating clear, accessible interfaces that met diverse user needs across different roles.
         </p>
 
-        <p className="sub-title">Approach</p>
+        <p className="sub-title">Process</p>
         <p className="description">
           The project involved close collaboration with user research, conducting in-depth interviews and testing sessions with internal users across various roles. Regular workshops and requirement gathering sessions helped inform the design direction.
           <br /><br />

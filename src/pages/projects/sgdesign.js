@@ -22,25 +22,35 @@ function SgDesign() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
-          SG Markets Foreign Exchange is a fast, secure and reliable way to electronically access Societe Generale's deep FX liquidity. FX has many products such as Options, Target Accumulator and Bulk Trading.
+          SG Markets Foreign Exchange is Societe Generale's electronic FX trading platform, covering products including Options, Target Accumulator, and Bulk Trading.
           <br /><br />
-          I was brought on board around 35% of the project. Each product had its own process, although there was a common base on every process:
+          I joined the project partway through and worked across multiple FX products, contributing to UX and UI design while the design system was transitioning from Bootstrap 3 to Bootstrap 4.
+        </p>
+
+        <p className="sub-title">Process</p>
+        <p className="description">
+          Each product followed a common design process:
         </p>
         <ul className="description">
-          <li>Meeting with the stakeholders, P.O and developers</li>
-          <li>Defining use cases, as a follow-up of the stakeholders meeting</li>
+          <li>Stakeholder, product owner, and developer alignment sessions</li>
+          <li>Defining use cases based on stakeholder input</li>
           <li>Building user journeys and personas</li>
-          <li>Validating all the research with the team</li>
-          <li>Wireframing based on the research</li>
-          <li>UI/UX prototyping using Adobe Photoshop/XD</li>
-          <li>Developer handout using InVision</li>
+          <li>Validating research findings with the team</li>
+          <li>Wireframing based on validated research</li>
+          <li>UI prototyping in Adobe Photoshop and XD</li>
+          <li>Developer handoff via InVision</li>
         </ul>
         <p className="description">
-          Moreover, the design system was being switched from Bootstrap 3 to Bootstrap 4, which provided a new design system and style. The processes were taking more time and needed more supervision from the transition team.
+          The Bootstrap 3 to 4 migration ran in parallel, requiring closer coordination with the transition team and additional review time on design decisions.
           <br /><br />
-          You can read more about the design process here: <a href='https://design.sgmarkets.com/en/' target='_blank' rel='noreferrer'>design.sgmarkets.com</a>
+          You can read more about the design process at <a href='https://design.sgmarkets.com/en/' target='_blank' rel='noreferrer'>design.sgmarkets.com</a>.
+        </p>
+
+        <p className="sub-title">Outcomes</p>
+        <p className="description">
+          Several of the product designs shipped as part of the live SG Markets FX platform. Others remained in prototype stage or were deprioritised during the Bootstrap migration period.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>

@@ -2,7 +2,6 @@ import '../App.css';
 import React from 'react';
 import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -200,10 +199,6 @@ function Home() {
             {' '}@ Cognizant, London, UK —{' '}
             working across government services, fintech, and consumer products.
           </p>
-          <div className="intro-links">
-            <Link to="/aboutme" className="intro-link">About me</Link>
-            <HashLink to="/#projects" className="intro-link">See work ↓</HashLink>
-          </div>
         </div>
       </div>
 
@@ -217,6 +212,11 @@ function Home() {
             </Col>
           ))}
         </Row>
+      </div>
+
+      {/* Contact CTA */}
+      <div className="contact-cta">
+        <a href="mailto:cresusjulien@gmail.com" className="contact-cta-link">Let's work together →</a>
       </div>
     </div>
   );

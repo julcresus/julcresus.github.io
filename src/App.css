@@ -125,29 +125,8 @@ a {
   font-size: clamp(18pt, 2.5vw, 26pt);
   line-height: 1.45;
   font-weight: 400;
+  letter-spacing: -0.01em;
   max-width: 860px;
-}
-
-.intro-links {
-  margin-top: 32px;
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.intro-link {
-  font-family: var(--font-mono);
-  font-size: 9pt;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--fg);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity var(--transition);
-}
-
-.intro-link:hover {
-  opacity: 0.5;
 }
 
 /* ─────────────────────────────────────────
@@ -307,12 +286,14 @@ a {
 }
 
 .sub-title {
-  font-family: var(--font-serif);
-  font-size: 13pt;
-  font-weight: 700;
-  color: var(--fg);
-  margin-bottom: 8px;
-  margin-top: 32px;
+  font-family: var(--font-mono);
+  font-size: 10pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 12px;
+  margin-top: 48px;
 }
 
 .tags_ {
@@ -425,6 +406,56 @@ a {
 }
 
 /* ─────────────────────────────────────────
+   Contact CTA (home page)
+───────────────────────────────────────── */
+.contact-cta {
+  padding: 64px 0 80px;
+  text-align: center;
+  border-top: 1px solid var(--muted);
+}
+
+/* ─────────────────────────────────────────
+   404 Not Found
+───────────────────────────────────────── */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  text-align: center;
+  padding: 48px 0;
+}
+
+.not-found-code {
+  font-family: var(--font-serif);
+  font-size: clamp(60pt, 10vw, 96pt);
+  line-height: 1;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.not-found-message {
+  font-family: var(--font-serif);
+  font-size: 14pt;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.contact-cta-link {
+  font-family: var(--font-serif);
+  font-size: clamp(18pt, 2.5vw, 24pt);
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.contact-cta-link:hover {
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────
    Footer / Outro (project pages)
 ───────────────────────────────────────── */
 .outro {
@@ -515,7 +546,7 @@ a {
   }
 
   .project_inside {
-    padding: 32px 5vw 60px;
+    padding: 32px 0 60px;
   }
 }
 

@@ -41,12 +41,31 @@ const ESFA = lazy(() => import("./pages/projects/esfa"));
 const Mod = lazy(() => import("./pages/projects/mod"));
 const Mag = lazy(() => import("./pages/projects/mag"));
 
-// Scroll to top on route change
+// Page titles per route
+const PAGE_TITLES = {
+  '/': 'Julien Crésus-Ashton | UX Designer',
+  '/aboutme': 'About — Julien Crésus-Ashton',
+  '/hmrc': 'HMRC Wales — Julien Crésus-Ashton',
+  '/naturalengland': 'Natural England — Julien Crésus-Ashton',
+  '/defra': 'DEFRA — Julien Crésus-Ashton',
+  '/shyl': 'Shy Lifestyle — Julien Crésus-Ashton',
+  '/rethink': 'Rethink Mental Illness — Julien Crésus-Ashton',
+  '/shya': 'Shy Aviation — Julien Crésus-Ashton',
+  '/mod': 'Armed Forces Recruitment — Julien Crésus-Ashton',
+  '/everymindmatters': 'Every Mind Matters — Julien Crésus-Ashton',
+  '/esfa': 'ESFA — Julien Crésus-Ashton',
+  '/sgdesign': 'Societe Generale — Julien Crésus-Ashton',
+  '/playstation': 'PlayStation Store — Julien Crésus-Ashton',
+  '/prideinlondon': 'Pride in London — Julien Crésus-Ashton',
+};
+
+// Scroll to top and update page title on route change
 function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = PAGE_TITLES[location.pathname] || 'Julien Crésus-Ashton | UX Designer';
   }, [location.pathname]);
 
   return null;

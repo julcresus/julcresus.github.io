@@ -16,14 +16,14 @@ function Mag() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
           The AFRP is responsible for delivering a single, common, tri-Service recruiting process for the Royal Navy, British Army and Royal Air Force.
           <br /><br />
           The new solution situates the candidate at the heart of the recruitment process while ensuring that the Armed Forces achieve the right quality and quantity of candidates to satisfy demand while remaining agile and responsive to change.
         </p>
 
-        <p className="sub-title">My role</p>
+        <p className="sub-title">Role</p>
         <p className="description">
           I was the UX Designer on the project. It lasted 5 months, shortened due to the pandemic. The team was composed of a service designer and a user experience designer, although the SD left the project after month 1.
           <br /><br />

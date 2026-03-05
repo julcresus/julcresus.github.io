@@ -6,7 +6,7 @@ function Mod() {
     <div className="page-wrapper">
       <div className="project_inside">
         <p className="project-title">MoD — Armed Forces Recruitment Process</p>
-        <p className="tags_">UX Design, Responsive UI Design, Coding</p>
+        <p className="tags_">UX Design, UI Design, Coding</p>
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -31,23 +31,21 @@ function Mod() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
-          The Armed Forces Recruiting Process (AFRP) project aimed to revolutionise the recruitment procedures for the Royal Navy, British Army, and Royal Air Force. It had a dual objective: prioritising the candidate's experience while ensuring the Armed Forces had access to the right quantity and quality of recruits, all while maintaining agility and adaptability to changing circumstances.
+          The Armed Forces Recruiting Process (AFRP) aimed to redesign recruitment for the Royal Navy, British Army, and Royal Air Force — putting the candidate at the centre while helping each service attract the right number and quality of recruits.
         </p>
 
-        <p className="sub-title">My role</p>
+        <p className="sub-title">Role</p>
         <p className="description">
-          I had the privilege of serving as the UX Designer on this transformational project. Our ambitious five-month timeline was unexpectedly shortened due to the pandemic, which presented unique challenges. At the project's outset, I collaborated with a service designer and another UX designer, although the latter departed after the first month.
+          I was the UX Designer on a five-month project that was cut short by the pandemic. The team initially included a service designer and another UX designer, though I worked independently for most of the engagement.
           <br /><br />
-          For enhancing user experiences and streamlining the candidate journey, I harnessed the power of the GOV.UK Design System, incorporating React and Express.JS. This technology stack provided a robust platform for cooperation with researchers, fellow UX designers, and stakeholders.
+          I used the GOV.UK Design System with React and Express.JS to prototype the candidate journey — an approach that made collaboration with researchers and stakeholders faster and more transparent than traditional design tools.
         </p>
 
         <p className="sub-title">Outcomes</p>
         <p className="description">
-          The crowning achievement of the project was the delivery of an online mockup for the AFRP. This mockup, developed using React, Bootstrap, and the GOV.UK design kit, focused on the primary candidate journey. Its design initially emphasised flow and functionality. This mockup served as the cornerstone upon which the AFRP development team built a functional prototype, incorporating Salesforce.
-          <br /><br />
-          Subsequent internal testing within the various Armed Forces branches allowed us to refine the process. This project underscores the critical role of user experience design in reshaping recruiting processes for the betterment of the Armed Forces.
+          The project delivered a coded online mockup built with React, Bootstrap, and the GOV.UK design kit, focused on the main candidate journey. The AFRP development team used it as a foundation to build a working prototype in Salesforce, which then went through internal testing across the different Armed Forces branches.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>

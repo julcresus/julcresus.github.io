@@ -5,8 +5,8 @@ function Playstation() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">University Case Study — Playstation Store</p>
-        <p className="tags_">UX Design, UI Design, App Redesign</p>
+        <p className="project-title">University Case Study — PlayStation Store</p>
+        <p className="tags_">UX Design, UI Design, App Design</p>
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -28,25 +28,29 @@ function Playstation() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Project description</p>
+        <p className="sub-title">Overview</p>
         <p className="description">
-          During my academic journey at Kingston University, my project focused on the analysis and redesign of a desktop system to enhance its usability on mobile devices. This endeavor was guided by essential UX principles and involved the application of the Common Industry Format (CIF) for Usability Test Reports.
-          <br /><br />
-          I chose to tackle the PlayStation Store, a platform I identified as lacking consistency across various devices. My aim was to merge the PlayStation Store with the existing PlayStation Messages app to create a modern, integrated application.
+          A university case study at Kingston University focused on analysing and redesigning the PlayStation Store for mobile. The Store lacked consistency across devices, so the goal was to merge it with the PlayStation Messages app into a single, integrated mobile experience — applying UX principles and the Common Industry Format (CIF) for usability testing throughout.
+        </p>
+
+        <p className="sub-title">Role</p>
+        <p className="description">
+          I led the full design process from research through to final prototype.
         </p>
         <ul className="description">
-          <li>Conducted an in-depth analysis of diverse game platforms to identify industry standards and opportunities for improvement.</li>
-          <li>Engaged users in hands-on testing across these platforms, assigning easy tasks. Subsequent interviews provided valuable insights into user behaviour and opinions.</li>
-          <li>Expanded research scope by surveying a diverse audience, encompassing both gamers and non-gamers.</li>
-          <li>Meticulously analysed the collected data to derive actionable insights, serving as the foundation for defining project deliverables.</li>
-          <li>Leveraged research findings to craft user journeys and personas.</li>
-          <li>Initiated content creation, encompassing messaging and game elements.</li>
-          <li>Utilised Axure to craft comprehensive wireframes.</li>
-          <li>Employed Sketch and InVision to implement the UI design.</li>
-          <li>Conducted rigorous testing of the application with the same user group.</li>
+          <li>Analysed competing game platforms to identify industry standards and design opportunities</li>
+          <li>Conducted usability testing and interviews with gamers and non-gamers</li>
+          <li>Ran a broader survey to capture diverse user perspectives</li>
+          <li>Synthesised research into user journeys and personas</li>
+          <li>Wireframed the new experience in Axure</li>
+          <li>Designed the UI in Sketch and built an interactive prototype in InVision</li>
+          <li>Tested the final prototype with the original user group</li>
         </ul>
+
+        <p className="sub-title">Outcomes</p>
         <p className="description">
-          You can try it using this InVision <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank' rel='noreferrer'>link</a>.
+          The project delivered a fully interactive prototype combining the PlayStation Store and Messages into a unified mobile app. You can explore it via the InVision{' '}
+          <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank' rel='noreferrer'>prototype link</a>.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>
