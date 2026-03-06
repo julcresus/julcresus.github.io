@@ -30,15 +30,11 @@ jobs:
     - name: Run tests
       run: npm test -- --coverage --watchAll=false
 
-    - name: Run lint
-      run: npm run build
-      continue-on-error: true
-
     - name: Build project
       run: npm run build
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build
         path: build/
@@ -69,4 +65,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-        cname: julcresus.github.io
