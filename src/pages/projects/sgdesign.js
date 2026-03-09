@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function SgDesign() {
   return (
@@ -12,12 +12,15 @@ function SgDesign() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/sgdesign/picture1.webp'} alt="Societe Generale design screen 1" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/sgdesign/picture2.webp'} alt="Societe Generale design screen 2" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/sgdesign/picture3.webp'} alt="Societe Generale design screen 3" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>
@@ -28,6 +31,13 @@ function SgDesign() {
           <br /><br />
           I joined the project partway through and worked across multiple FX products, contributing to UX and UI design while the design system was transitioning from Bootstrap 3 to Bootstrap 4.
         </p>
+
+        <p className="sub-title">Role</p>
+        <ul className="description">
+          <li>Designed UI components and page layouts in Figma and Adobe XD</li>
+          <li>Produced interactive prototypes for stakeholder review and developer handoff via InVision</li>
+          <li>Worked closely with engineers during the Bootstrap 3 to 4 migration</li>
+        </ul>
 
         <p className="sub-title">Process</p>
         <p className="description">

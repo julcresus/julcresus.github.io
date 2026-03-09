@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Mod() {
   return (
@@ -12,21 +12,27 @@ function Mod() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-4.webp'} alt="MoD recruitment process screen 1" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-0.webp'} alt="MoD recruitment process screen 2" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-1.webp'} alt="MoD recruitment process screen 3" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-2.webp'} alt="MoD recruitment process screen 4" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-3.webp'} alt="MoD recruitment process screen 5" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/mod/mod-5.webp'} alt="MoD recruitment process screen 6" />
+              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

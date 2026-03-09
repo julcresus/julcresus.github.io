@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Playstation() {
   return (
@@ -12,18 +12,23 @@ function Playstation() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/psstore/picture1.webp'} alt="PlayStation Store redesign screen 1" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/psstore/picture2.webp'} alt="PlayStation Store redesign screen 2" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/psstore/picture3.webp'} alt="PlayStation Store redesign screen 3" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/psstore/picture4.webp'} alt="PlayStation Store redesign screen 4" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/psstore/picture5.webp'} alt="PlayStation Store redesign screen 5" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — InVision</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

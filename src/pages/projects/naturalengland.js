@@ -41,7 +41,7 @@ function NaturalEngland() {
           Prototyping plays a central role in the design process, allowing the team to test assumptions, explore technical constraints, and communicate design intent to stakeholders and developers.
         </p>
 
-        <p className="sub-title">Impact</p>
+        <p className="sub-title">Outcomes</p>
         <p className="description">
           The ongoing work contributes to making environmental monitoring and conservation management more accessible and efficient for Natural England teams. The project continues to evolve through regular testing and iteration, with designs informed by real user needs and technical requirements.
         </p>

@@ -41,7 +41,7 @@ function DEFRA() {
           Following GDS standards, the focus remained on creating accessible, intuitive interfaces that simplified complex workflows and data management tasks for internal staff.
         </p>
 
-        <p className="sub-title">Impact</p>
+        <p className="sub-title">Outcomes</p>
         <p className="description">
           The collaborative approach between UX design and user research helped identify key user pain points and validate design decisions throughout the project. The work contributed to improving internal processes and data management for DEFRA agency staff.
         </p>

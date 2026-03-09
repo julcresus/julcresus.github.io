@@ -1,5 +1,5 @@
 import '../App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
@@ -15,6 +15,7 @@ const projects = [
     tags: 'UX Design, UI Design, User Research',
     year: '2025–2026',
     route: '/hmrc',
+    sector: 'government',
     disabled: false
   },
   {
@@ -25,6 +26,7 @@ const projects = [
     tags: 'UX Design, UI Design, User Research, Service Design',
     year: '2024–2025',
     route: '/naturalengland',
+    sector: 'government',
     disabled: false
   },
   {
@@ -35,6 +37,7 @@ const projects = [
     tags: 'UX Design, UI Design, User Research',
     year: '2024–2025',
     route: '/defra',
+    sector: 'government',
     disabled: false
   },
   {
@@ -45,6 +48,7 @@ const projects = [
     tags: 'App Design, UX Design, User Research',
     year: '2023',
     route: '/shyl',
+    sector: 'consumer',
     disabled: false
   },
   {
@@ -55,6 +59,7 @@ const projects = [
     tags: 'UX Design, UI Design, Product Design',
     year: '2022',
     route: '/rethink',
+    sector: 'consumer',
     disabled: false
   },
   {
@@ -65,6 +70,7 @@ const projects = [
     tags: 'UX Design, User Research',
     year: '2022',
     route: '/shya',
+    sector: 'consumer',
     disabled: false
   },
   {
@@ -76,6 +82,7 @@ const projects = [
     year: '2022',
     note: 'Case study under NDA',
     route: '/#',
+    sector: 'consumer',
     disabled: true
   },
   {
@@ -86,6 +93,7 @@ const projects = [
     tags: 'UX Design, UI Design, Coding',
     year: '2019–2020',
     route: '/mod',
+    sector: 'government',
     disabled: false
   },
   {
@@ -96,6 +104,7 @@ const projects = [
     tags: 'UX Design, UI Design, User Research',
     year: '2018',
     route: '/everymindmatters',
+    sector: 'government',
     disabled: false
   },
   {
@@ -106,6 +115,7 @@ const projects = [
     tags: 'UX Design, UI Design, Coding',
     year: '2018',
     route: '/esfa',
+    sector: 'government',
     disabled: false
   },
   {
@@ -116,6 +126,7 @@ const projects = [
     tags: 'UX Design, UI Design',
     year: '2019',
     route: '/sgdesign',
+    sector: 'fintech',
     disabled: false
   },
   {
@@ -126,6 +137,7 @@ const projects = [
     tags: 'UX Design, UI Design, App Design',
     year: '2019',
     route: '/playstation',
+    sector: 'consumer',
     disabled: false
   },
   {
@@ -136,9 +148,12 @@ const projects = [
     tags: 'UI Design',
     year: '2018',
     route: '/prideinlondon',
+    sector: 'consumer',
     disabled: false
   }
 ];
+
+const FILTERS = ['All', 'Government', 'Consumer', 'Fintech'];
 
 // Memoized ProjectCard component
 const ProjectCard = React.memo(({ project, index }) => {
@@ -181,6 +196,12 @@ const ProjectCard = React.memo(({ project, index }) => {
 ProjectCard.displayName = 'ProjectCard';
 
 function Home() {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filtered = activeFilter === 'All'
+    ? projects
+    : projects.filter(p => p.sector === activeFilter.toLowerCase());
+
   return (
     <div className="page-wrapper">
       {/* Hero */}
@@ -205,8 +226,21 @@ function Home() {
       {/* Project grid */}
       <div id="projects" className="projects-section">
         <p className="section-label">Selected work</p>
+
+        <div className="filter-bar">
+          {FILTERS.map(f => (
+            <button
+              key={f}
+              className={`filter-btn${activeFilter === f ? ' filter-btn-active' : ''}`}
+              onClick={() => setActiveFilter(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
         <Row className="g-4 g-md-5">
-          {projects.map((project, index) => (
+          {filtered.map((project, index) => (
             <Col xs={12} md={6} key={project.id}>
               <ProjectCard project={project} index={index} />
             </Col>

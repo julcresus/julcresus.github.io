@@ -41,7 +41,7 @@ function HMRC() {
           Regular collaboration with user researchers, content designers, service designers, and stakeholders ensures the design meets both user needs and policy requirements.
         </p>
 
-        <p className="sub-title">Impact</p>
+        <p className="sub-title">Outcomes</p>
         <p className="description">
           The project continues to develop through regular testing and iteration, with ongoing improvements based on user feedback and research insights. The work contributes to making government services more accessible and easier to use for citizens in Wales.
         </p>

@@ -19,7 +19,7 @@ function AboutMe() {
         <Col xs={12} sm={8} md={8} className="about-text">
           <p className="project-title">Bonjour!</p>
           <p>
-            I'm Julien, a Paris-born and London-based UX Designer, passionate about creating meaningful and user-centered experiences through empathy and problem-solving.
+            I'm Julien, a Paris-born UX Designer based in London, with seven years of experience working across government services, fintech, and consumer products.
           </p>
           <p>
             Outside of work, I enjoy playing rugby and baking.

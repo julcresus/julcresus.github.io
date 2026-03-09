@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function EveryMindMatters() {
   return (
@@ -12,27 +12,35 @@ function EveryMindMatters() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture7.webp'} alt="Every Mind Matters screen 1" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture8.webp'} alt="Every Mind Matters screen 2" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture1.webp'} alt="Every Mind Matters screen 3" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture2.webp'} alt="Every Mind Matters screen 4" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture3.webp'} alt="Every Mind Matters screen 5" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture4.webp'} alt="Every Mind Matters screen 6" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture5.webp'} alt="Every Mind Matters screen 7" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/emm/picture6.webp'} alt="Every Mind Matters screen 8" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

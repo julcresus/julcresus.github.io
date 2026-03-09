@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function ESFA() {
   return (
@@ -12,6 +12,7 @@ function ESFA() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/esfa.webp'} alt="ESFA project screen" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — React / Express.js</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

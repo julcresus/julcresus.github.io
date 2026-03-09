@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function PrideInLondon() {
   return (
@@ -12,9 +12,11 @@ function PrideInLondon() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/pride/picture1.webp'} alt="Pride in London design screen 1" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — Sketch</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/pride/picture2.webp'} alt="Pride in London design screen 2" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — Sketch</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

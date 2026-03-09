@@ -1,5 +1,5 @@
 import '../../App.css';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Mag() {
   return (
@@ -12,6 +12,7 @@ function Mag() {
           <CCarousel controls indicators dark>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/shya.webp'} alt="McArthurGlen project overview" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>Case study under NDA</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>
