@@ -11,36 +11,36 @@ function EveryMindMatters() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture7.webp'} alt="Every Mind Matters screen 1" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture7.webp'} alt="Every Mind Matters user flow diagram" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UX — user flow diagram</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture8.webp'} alt="Every Mind Matters screen 2" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture8.webp'} alt="Every Mind Matters lo-fi wireframes" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — lo-fi screen overview</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture1.webp'} alt="Every Mind Matters screen 3" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture1.webp'} alt="Every Mind Matters home screen" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — home screen & action overview</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture2.webp'} alt="Every Mind Matters screen 4" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture2.webp'} alt="Every Mind Matters mental health topics" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — mental health topics</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture3.webp'} alt="Every Mind Matters screen 5" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture3.webp'} alt="Every Mind Matters helping others flow" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — helping others flow</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture4.webp'} alt="Every Mind Matters screen 6" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture4.webp'} alt="Every Mind Matters mental health quiz" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — mental health quiz</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture5.webp'} alt="Every Mind Matters screen 7" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture5.webp'} alt="Every Mind Matters urgent support screen" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — urgent support</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture6.webp'} alt="Every Mind Matters screen 8" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — Figma</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/emm/picture6.webp'} alt="Every Mind Matters action library" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — action library</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

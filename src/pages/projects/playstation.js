@@ -11,24 +11,24 @@ function Playstation() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/psstore/picture1.webp'} alt="PlayStation Store redesign screen 1" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/psstore/picture1.webp'} alt="PlayStation Store app splash screen" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — app splash screen</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/psstore/picture2.webp'} alt="PlayStation Store redesign screen 2" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/psstore/picture2.webp'} alt="PlayStation Store personalised home feed" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — personalised home feed</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/psstore/picture3.webp'} alt="PlayStation Store redesign screen 3" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/psstore/picture3.webp'} alt="PlayStation Store game detail page" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — game detail page</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/psstore/picture4.webp'} alt="PlayStation Store redesign screen 4" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Sketch</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/psstore/picture4.webp'} alt="PlayStation Store search results" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — search results</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/psstore/picture5.webp'} alt="PlayStation Store redesign screen 5" />
-              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — InVision</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/psstore/picture5.webp'} alt="PlayStation Store integrated messaging" />
+              <CCarouselCaption className="d-none d-md-block"><p>Interactive prototype — integrated messaging</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

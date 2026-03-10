@@ -11,16 +11,16 @@ function SgDesign() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture1.webp'} alt="Societe Generale design screen 1" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/sgdesign/picture1.webp'} alt="SG Markets FX multi-tile trading workspace" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — FX multi-tile trading workspace</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture2.webp'} alt="Societe Generale design screen 2" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/sgdesign/picture2.webp'} alt="SG Markets bulk trade negotiation screen" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — bulk trade negotiation</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture3.webp'} alt="Societe Generale design screen 3" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI screens — Figma / Adobe XD</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/sgdesign/picture3.webp'} alt="SG Markets FX rate tile grid" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — FX rate tile grid</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

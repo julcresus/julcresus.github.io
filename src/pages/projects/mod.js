@@ -11,28 +11,28 @@ function Mod() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-4.webp'} alt="MoD recruitment process screen 1" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-4.webp'} alt="MoD recruitment landing page and branch selection" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — landing page & branch selection</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-0.webp'} alt="MoD recruitment process screen 2" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-0.webp'} alt="User flow workshop with stakeholders" />
+              <CCarouselCaption className="d-none d-md-block"><p>Research — user flow workshop</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-1.webp'} alt="MoD recruitment process screen 3" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-1.webp'} alt="Mobile wireframes for eligibility check and account creation" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — eligibility check & account creation</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-2.webp'} alt="MoD recruitment process screen 4" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-2.webp'} alt="Mobile wireframes for candidate dashboard and application form" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — candidate dashboard & application</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-3.webp'} alt="MoD recruitment process screen 5" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-3.webp'} alt="Mobile wireframes for assessment booking and results" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — assessment booking & results</p></CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mod/mod-5.webp'} alt="MoD recruitment process screen 6" />
-              <CCarouselCaption className="d-none d-md-block"><p>Candidate journey — coded prototype</p></CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/mod/mod-5.webp'} alt="Pre-production Salesforce prototype showing candidate dashboard" />
+              <CCarouselCaption className="d-none d-md-block"><p>Prototype — candidate dashboard & profile</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>
