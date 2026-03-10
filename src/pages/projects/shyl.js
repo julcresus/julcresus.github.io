@@ -11,10 +11,24 @@ function Shyl() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shyl/shyl_1.webp'} alt="Shy Lifestyle latest UI screens" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block">
-                <h5>Latest UI screens</h5>
-              </CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/shyl/shyl_1.webp'} alt="Shy Lifestyle app UI screens" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — app screens</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shyl/shyl_2.webp'} alt="Shy Lifestyle app UI screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — service browsing</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shyl/shyl_3.webp'} alt="Shy Lifestyle app UI screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — booking flow</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shyl/shyl_4.webp'} alt="Shy Lifestyle app UI screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — member profile</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shyl/picture5.png'} alt="Shy Lifestyle UX workflow wireframes" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — UX workflow</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

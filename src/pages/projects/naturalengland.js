@@ -1,4 +1,5 @@
 import '../../App.css';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function NaturalEngland() {
   return (
@@ -6,6 +7,31 @@ function NaturalEngland() {
       <div className="project_inside">
         <p className="project-title">Natural England / DEFRA</p>
         <p className="tags_">UX Design, UI Design, User Research, Service Design</p>
+
+        <div className="carousel-wrap">
+          <CCarousel controls indicators dark>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/naturalengland/picture1.png'} alt="NRMS service overview" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — service overview</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/naturalengland/picture2.png'} alt="NRMS survey management" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — survey management</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/naturalengland/picture3.png'} alt="NRMS monitoring specification" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — monitoring specification</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/naturalengland/picture4.png'} alt="NRMS site map view" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — site map</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/naturalengland/picture5.png'} alt="NRMS survey creation flow" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — survey creation</p></CCarouselCaption>
+            </CCarouselItem>
+          </CCarousel>
+        </div>
 
         <p className="sub-title">Overview</p>
         <p className="description">

@@ -11,10 +11,24 @@ function Shya() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/shya_1.webp'} alt="Shy Aviation latest UI screens" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block">
-                <h5>Latest UI screens</h5>
-              </CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/shya/picture1.png'} alt="Shy Aviation booking user journey" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UX — booking user journey map</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shya/picture2.png'} alt="Shy Aviation booking wireframes" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — booking flow</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shya/picture3.png'} alt="Shy Aviation quote flow wireframes" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — quote flow</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shya/picture4.png'} alt="Shy Aviation charter selection wireframes" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — charter type selection</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/shya/picture5.png'} alt="Shy Aviation quote enquiry screen" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — quote enquiry</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>

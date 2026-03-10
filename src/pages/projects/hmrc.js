@@ -1,4 +1,5 @@
 import '../../App.css';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function HMRC() {
   return (
@@ -6,6 +7,31 @@ function HMRC() {
       <div className="project_inside">
         <p className="project-title">HMRC — HM Revenue & Customs</p>
         <p className="tags_">UX Design, UI Design, User Research</p>
+
+        <div className="carousel-wrap">
+          <CCarousel controls indicators dark>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/hmrc/picture1.png'} alt="HMRC Welsh start page" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — Welsh start page (Cymraeg)</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/hmrc/picture2.png'} alt="HMRC postcode search" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — postcode search with bilingual toggle</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/hmrc/picture3.png'} alt="HMRC search results" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — search results</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/hmrc/picture4.png'} alt="HMRC property details" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — property details</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/hmrc/picture5.png'} alt="HMRC challenge scenario selection" />
+              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — challenge scenario selection</p></CCarouselCaption>
+            </CCarouselItem>
+          </CCarousel>
+        </div>
 
         <p className="sub-title">Overview</p>
         <p className="description">

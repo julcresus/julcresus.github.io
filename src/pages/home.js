@@ -140,17 +140,6 @@ const projects = [
     sector: 'consumer',
     disabled: false
   },
-  {
-    id: 'pride',
-    image: './img/pride.webp',
-    alt: 'Pride in London UI design',
-    title: 'Pride in London',
-    tags: 'UI Design',
-    year: '2018',
-    route: '/prideinlondon',
-    sector: 'consumer',
-    disabled: false
-  }
 ];
 
 const FILTERS = ['All', 'Government', 'Consumer', 'Fintech'];

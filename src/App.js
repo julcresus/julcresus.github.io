@@ -35,7 +35,6 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 // Lazy load less frequently visited project pages
 const Playstation = lazy(() => import("./pages/projects/playstation"));
 const EveryMindMatters = lazy(() => import("./pages/projects/everymindmatters"));
-const PrideInLondon = lazy(() => import("./pages/projects/prideinlondon"));
 const SgDesign = lazy(() => import("./pages/projects/sgdesign"));
 const ESFA = lazy(() => import("./pages/projects/esfa"));
 const Mod = lazy(() => import("./pages/projects/mod"));
@@ -56,7 +55,6 @@ const PAGE_TITLES = {
   '/esfa': 'ESFA — Julien Crésus-Ashton',
   '/sgdesign': 'Societe Generale — Julien Crésus-Ashton',
   '/playstation': 'PlayStation Store — Julien Crésus-Ashton',
-  '/prideinlondon': 'Pride in London — Julien Crésus-Ashton',
 };
 
 // Scroll to top and update page title on route change
@@ -143,7 +141,6 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/playstation" component={Playstation} />
-            <Route exact path="/prideinlondon" component={PrideInLondon} />
             <Route exact path="/everymindmatters" component={EveryMindMatters} />
             <Route exact path="/sgdesign" component={SgDesign} />
             <Route exact path="/esfa" component={ESFA} />

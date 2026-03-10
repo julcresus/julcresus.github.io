@@ -1,19 +1,45 @@
 import '../../App.css';
+import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function DEFRA() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">DEFRA — Department for Environment, Food & Rural Affairs</p>
+        <p className="project-title">DEFRA / APHA — People Planner</p>
         <p className="tags_">UX Design, UI Design, User Research</p>
+
+        <div className="carousel-wrap">
+          <CCarousel controls indicators dark>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/defra/picture1.jpg'} alt="People Planner dashboard" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — home dashboard</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/defra/picture2.jpg'} alt="People Planner planned activities calendar" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — planned activities calendar</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/defra/picture3.jpg'} alt="People Planner manager team view" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — manager team activities view</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/defra/picture4.jpg'} alt="People Planner edit allocation" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — edit team member allocation</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/defra/picture5.png'} alt="People Planner add absence" />
+              <CCarouselCaption className="d-none d-md-block"><p>UI design — add absence / leave</p></CCarouselCaption>
+            </CCarouselItem>
+          </CCarousel>
+        </div>
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          The Department for Environment, Food & Rural Affairs (DEFRA) is responsible for safeguarding the natural environment, supporting food and farming industries, and sustaining a thriving rural economy.
+          The Animal and Plant Health Agency (APHA) is an executive agency of DEFRA, responsible for safeguarding animal and plant health for the benefit of people, the environment, and the economy.
           <br /><br />
-          This project focused on designing internal digital services for DEFRA agencies, helping staff manage workforce planning and financial processes more efficiently. The work involved creating user-friendly interfaces for complex data management and reporting systems.
+          This alpha project focused on designing an internal workforce planning tool — People Planner — to help APHA staff and managers plan, track, and report on team activities, absences, and outbreak resourcing across the agency.
           <br /><br />
-          Working as part of the UCD team at Cognizant, I collaborated with user researchers to understand internal user needs and translate requirements into accessible digital experiences.
+          Working as part of the UCD team at Cognizant, I collaborated with user researchers to understand the needs of both individual staff members and team managers, translating complex scheduling workflows into a clear, accessible interface.
         </p>
 
         <p className="sub-title">Role</p>

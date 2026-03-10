@@ -11,10 +11,24 @@ function Rethink() {
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
             <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/rethink_1.webp'} alt="Rethink current live version" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block">
-                <h5>Live version at time of design</h5>
-              </CCarouselCaption>
+              <CImage className="d-block w-100" src={'./img/rethink/picture1.png'} alt="Rethink donation module wireframes" loading="eager" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — donation module redesign</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/rethink/picture2.png'} alt="Rethink donation flow screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — donation flow</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/rethink/picture3.png'} alt="Rethink recurring donation screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — recurring donation screens</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/rethink/picture4.png'} alt="Rethink one-time donation screens" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — one-time donation screens</p></CCarouselCaption>
+            </CCarouselItem>
+            <CCarouselItem>
+              <CImage className="d-block w-100" src={'./img/rethink/picture5.png'} alt="Rethink donation module components" />
+              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — component exploration</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>
