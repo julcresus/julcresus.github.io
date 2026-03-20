@@ -19,7 +19,10 @@ function AboutMe() {
         <Col xs={12} sm={8} md={8} className="about-text">
           <p className="project-title">Bonjour!</p>
           <p>
-            I'm Julien, a Paris-born UX Designer based in London, with seven years of experience working across government services, fintech, and consumer products.
+            I'm Julien, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I work mainly in government — designing services for HMRC, DEFRA, and the Ministry of Defence, where the people using what you build often have no choice but to use it.
+          </p>
+          <p>
+            I care about accessibility as a baseline, not a box to tick. I work well across research, product and development, and I'm comfortable moving between different kinds of teams.
           </p>
           <p>
             Outside of work, I enjoy playing rugby and baking.

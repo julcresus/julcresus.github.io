@@ -541,6 +541,17 @@ a {
   color: var(--muted);
 }
 
+.footer-identity {
+  margin: 0 0 8px;
+  opacity: 0.5;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
 /* ─────────────────────────────────────────
    Animations
 ───────────────────────────────────────── */

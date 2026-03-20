@@ -90,7 +90,7 @@ const projects = [
     image: './img/mod.webp',
     alt: 'Armed Forces Recruitment Program UI design',
     title: 'Methods — Armed Forces Recruitment Program',
-    tags: 'UX Design, UI Design, Coding',
+    tags: 'UX Design, UI Design, GDS Toolkit, React',
     year: '2019–2020',
     route: '/mod',
     sector: 'government',
@@ -112,7 +112,7 @@ const projects = [
     image: './img/esfa.webp',
     alt: 'ESFA user testing project',
     title: 'Methods — ESFA',
-    tags: 'UX Design, UI Design, Coding',
+    tags: 'UX Design, UI Design, GDS Toolkit, React',
     year: '2018',
     route: '/esfa',
     sector: 'government',
@@ -127,17 +127,6 @@ const projects = [
     year: '2019',
     route: '/sgdesign',
     sector: 'fintech',
-    disabled: false
-  },
-  {
-    id: 'ps',
-    image: './img/ps.webp',
-    alt: 'PlayStation Store app redesign case study',
-    title: 'University Case Study — Playstation Store',
-    tags: 'UX Design, UI Design, App Design',
-    year: '2019',
-    route: '/playstation',
-    sector: 'consumer',
     disabled: false
   },
 ];
@@ -197,17 +186,17 @@ function Home() {
       <div className="intro-container">
         <div>
           <p className="intro">
-            Currently,{' '}
+            Senior Interaction Designer — currently{' '}
             <TextLoop interval={1300}>
               <span>designing</span>
-              <span>creating</span>
-              <span>coding</span>
+              <span>researching</span>
+              <span>prototyping</span>
               <span>testing</span>
               <span>iterating</span>
-              <span>researching</span>
+              <span>facilitating</span>
             </TextLoop>
-            {' '}@ Cognizant, London, UK —{' '}
-            working across government services, fintech, and consumer products.
+            {' '}@ Cognizant, London —{' '}
+            working mainly in government services.
           </p>
         </div>
       </div>

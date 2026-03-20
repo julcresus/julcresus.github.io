@@ -42,7 +42,7 @@ const Mag = lazy(() => import("./pages/projects/mag"));
 
 // Page titles per route
 const PAGE_TITLES = {
-  '/': 'Julien Crésus-Ashton | UX Designer',
+  '/': 'Julien Crésus-Ashton | Senior Interaction Designer',
   '/aboutme': 'About — Julien Crésus-Ashton',
   '/hmrc': 'HMRC Wales — Julien Crésus-Ashton',
   '/naturalengland': 'Natural England — Julien Crésus-Ashton',
@@ -63,7 +63,7 @@ function ScrollToTop() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = PAGE_TITLES[location.pathname] || 'Julien Crésus-Ashton | UX Designer';
+    document.title = PAGE_TITLES[location.pathname] || 'Julien Crésus-Ashton | Senior Interaction Designer';
   }, [location.pathname]);
 
   return null;
@@ -156,9 +156,12 @@ function App() {
           </Switch>
         </Suspense>
         <footer className="footer">
-          <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
-          <span className="footer-sep"> — </span>
-          <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
+          <p className="footer-identity">Julien Crésus-Ashton · Senior Interaction Designer · London</p>
+          <div className="footer-links">
+            <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
+            <span className="footer-sep"> — </span>
+            <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
+          </div>
         </footer>
       </Router>
     </ThemeProvider>
