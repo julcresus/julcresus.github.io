@@ -10,7 +10,7 @@ describe('Home Component', () => {
       </BrowserRouter>
     );
 
-    const introText = screen.getByText(/Currently,/i);
+    const introText = screen.getByText(/Senior Interaction Designer/i);
     expect(introText).toBeInTheDocument();
   });
 
