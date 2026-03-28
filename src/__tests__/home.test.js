@@ -39,14 +39,14 @@ describe('Home Component', () => {
     });
   });
 
-  test('renders "View project" buttons', () => {
-    render(
+  test('renders project cards', () => {
+    const { container } = render(
       <BrowserRouter>
         <Home />
       </BrowserRouter>
     );
 
-    const viewButtons = screen.getAllByText(/View project/i);
-    expect(viewButtons.length).toBeGreaterThan(0);
+    const projectCards = container.querySelectorAll('.project-card');
+    expect(projectCards.length).toBeGreaterThan(0);
   });
 });

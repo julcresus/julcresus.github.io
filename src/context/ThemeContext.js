@@ -18,7 +18,9 @@ export const ThemeProvider = ({ children }) => {
       return JSON.parse(saved);
     }
     // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return typeof window.matchMedia === 'function'
+      ? window.matchMedia('(prefers-color-scheme: dark)')?.matches ?? false
+      : false;
   });
 
   useEffect(() => {
