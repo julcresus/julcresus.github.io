@@ -195,8 +195,7 @@ function Home() {
               <span>iterating</span>
               <span>facilitating</span>
             </TextLoop>
-            {' '}@ Cognizant, London —{' '}
-            working mainly in government services.
+            {' '}@ Cognizant, London.
           </p>
         </div>
       </div>
