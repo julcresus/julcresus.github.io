@@ -186,7 +186,7 @@ function Home() {
       <div className="intro-container">
         <div>
           <p className="intro">
-            Senior Interaction Designer — currently{' '}
+            Senior Interaction Designer, currently{' '}
             <TextLoop interval={1300}>
               <span>designing</span>
               <span>researching</span>
@@ -195,7 +195,7 @@ function Home() {
               <span>iterating</span>
               <span>facilitating</span>
             </TextLoop>
-            {' '}@ Cognizant, London.
+            {' '}@ Cognizant.
           </p>
         </div>
       </div>
