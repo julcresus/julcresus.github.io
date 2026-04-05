@@ -39,14 +39,14 @@ function Mod() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          The Armed Forces Recruiting Process (AFRP) aimed to redesign recruitment for the Royal Navy, British Army, and Royal Air Force — putting the candidate at the centre while helping each service attract the right number and quality of recruits.
+          The Armed Forces Recruiting Process (AFRP) aimed to redesign recruitment for the Royal Navy, British Army, and Royal Air Force, putting the candidate at the centre while helping each service attract the right number and quality of recruits.
         </p>
 
         <p className="sub-title">Role</p>
         <p className="description">
           I was the UX Designer on a five-month project that was cut short by the pandemic. The team initially included a service designer and another UX designer, though I worked independently for most of the engagement.
           <br /><br />
-          I used the GOV.UK Design System with React and Express.JS to prototype the candidate journey — an approach that made collaboration with researchers and stakeholders faster and more transparent than traditional design tools.
+          I used the GOV.UK Design System with React and Express.JS to prototype the candidate journey, an approach that made collaboration with researchers and stakeholders faster and more transparent than traditional design tools.
         </p>
 
         <p className="sub-title">Outcomes</p>

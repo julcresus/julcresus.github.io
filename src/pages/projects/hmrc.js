@@ -35,7 +35,7 @@ function HMRC() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          Wales has its own Council Tax system. Properties there are banded differently from England — nine bands instead of eight, valued against 2003 prices rather than 1991, with 22 local authorities each setting their own rates. Citizens in Wales who think their band is wrong have the right to challenge it. They also have the legal right to do that in Welsh.
+          Wales has its own Council Tax system. Properties there are banded differently from England: nine bands instead of eight, valued against 2003 prices rather than 1991, with 22 local authorities each setting their own rates. Citizens in Wales who think their band is wrong have the right to challenge it. They also have the legal right to do that in Welsh.
           <br /><br />
           The service existed for England. The Welsh side didn't. I was brought in as the sole interaction designer to build it out.
         </p>
@@ -44,7 +44,7 @@ function HMRC() {
         <p className="description">
           The starting point was an English-language service that worked well for English users. Adapting it for Wales wasn't just translation. The policies are different, the band system is different, and a meaningful part of the user base would want to complete the whole journey in Welsh.
           <br /><br />
-          The people we were designing for weren't technical users. Many were dealing with the service because they felt they'd been charged the wrong amount — already a stressful starting point. Getting the language wrong, or sending someone down the wrong route because of a conditional logic error, would have real consequences.
+          The people we were designing for weren't technical users. Many were dealing with the service because they felt they'd been charged the wrong amount. Already a stressful starting point. Getting the language wrong, or sending someone down the wrong route because of a conditional logic error, would have real consequences.
         </p>
 
         <p className="sub-title">What I designed</p>

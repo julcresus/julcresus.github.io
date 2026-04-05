@@ -37,7 +37,7 @@ function DEFRA() {
         <p className="description">
           The Animal and Plant Health Agency (APHA) is an executive agency of DEFRA, responsible for safeguarding animal and plant health for the benefit of people, the environment, and the economy.
           <br /><br />
-          This alpha project focused on designing an internal workforce planning tool — People Planner — to help APHA staff and managers plan, track, and report on team activities, absences, and outbreak resourcing across the agency.
+          This alpha project focused on designing an internal workforce planning tool, People Planner, to help APHA staff and managers plan, track, and report on team activities, absences, and outbreak resourcing across the agency.
           <br /><br />
           Working as part of the UCD team at Cognizant, I collaborated with user researchers to understand the needs of both individual staff members and team managers, translating complex scheduling workflows into a clear, accessible interface.
         </p>

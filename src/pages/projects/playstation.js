@@ -35,7 +35,7 @@ function Playstation() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          A university case study at Kingston University focused on analysing and redesigning the PlayStation Store for mobile. The Store lacked consistency across devices, so the goal was to merge it with the PlayStation Messages app into a single, integrated mobile experience — applying UX principles and the Common Industry Format (CIF) for usability testing throughout.
+          A university case study at Kingston University focused on analysing and redesigning the PlayStation Store for mobile. The Store lacked consistency across devices, so the goal was to merge it with the PlayStation Messages app into a single, integrated mobile experience, applying UX principles and the Common Industry Format (CIF) for usability testing throughout.
         </p>
 
         <p className="sub-title">Role</p>

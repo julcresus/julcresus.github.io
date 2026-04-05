@@ -37,7 +37,7 @@ function Shya() {
         <p className="description">
           Shy Aviation is a global aviation charter company offering private jet charter, aircraft management, sales, and expert consulting.
           <br /><br />
-          The project involved partnering with Dam Digital to design an online booking tool for private flights, helicopters, and group charters — replacing a manual quoting process with a self-serve digital experience.
+          The project involved partnering with Dam Digital to design an online booking tool for private flights, helicopters, and group charters, replacing a manual quoting process with a self-serve digital experience.
         </p>
 
         <p className="sub-title">Role</p>

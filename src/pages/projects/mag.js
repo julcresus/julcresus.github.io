@@ -37,7 +37,7 @@ function Mag() {
         <p className="description">
           McArthurGlen is Europe's leading designer outlet group, operating over 25 centres across 9 countries. Dam Digital is the digital agency behind McArthurGlen's apps and web platforms.
           <br /><br />
-          This project focused on redesigning the McArthurGlen shopping app (V2) — a loyalty and offers platform used by shoppers across all centres. The work covered the full app experience, from onboarding and offer discovery through to in-store QR code redemption.
+          This project focused on redesigning the McArthurGlen shopping app (V2), a loyalty and offers platform used by shoppers across all centres. The work covered the full app experience, from onboarding and offer discovery through to in-store QR code redemption.
         </p>
 
         <p className="sub-title">Role</p>
@@ -55,7 +55,7 @@ function Mag() {
 
         <p className="sub-title">Outcomes</p>
         <p className="description">
-          The redesigned app introduced a cleaner offer browsing experience, a streamlined QR-based redemption flow, and improved onboarding — helping shoppers discover and use their exclusive club benefits more easily across McArthurGlen's centres.
+          The redesigned app introduced a cleaner offer browsing experience, a streamlined QR-based redemption flow, and improved onboarding, helping shoppers discover and use their exclusive club benefits more easily across McArthurGlen's centres.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>

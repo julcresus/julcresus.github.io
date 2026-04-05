@@ -25,7 +25,7 @@ function PrideInLondon() {
         <p className="description">
           I volunteered as a UI Designer on the Pride in London website, contributing to the 'Places to Eat & Drink' section. Working from existing wireframes, I designed both desktop and mobile versions of the interface.
           <br /><br />
-          Joining late in the process meant working quickly and adapting to decisions already made — a useful experience in picking up mid-project and delivering within constraints.
+          Joining late in the process meant working quickly and adapting to decisions already made, a useful experience in picking up mid-project and delivering within constraints.
           <br /><br />
           Tools used: Sketch for design, InVision for prototyping and handoff.
         </p>

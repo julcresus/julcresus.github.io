@@ -37,7 +37,7 @@ function Rethink() {
         <p className="description">
           Rethink Mental Illness is a charity supporting people severely affected by mental illness through information, advice, support groups, and advocacy.
           <br /><br />
-          The project focused on redesigning their donation module — a critical part of the charity's fundraising efforts — to make it more accessible, easier to understand, and more effective at converting visitors into donors.
+          The project focused on redesigning their donation module, a critical part of the charity's fundraising efforts, to make it more accessible, easier to understand, and more effective at converting visitors into donors.
         </p>
 
         <p className="sub-title">Role</p>

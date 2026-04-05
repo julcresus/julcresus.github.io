@@ -19,7 +19,7 @@ function AboutMe() {
         <Col xs={12} sm={8} md={8} className="about-text">
           <p className="project-title">Bonjour!</p>
           <p>
-            I'm Julien, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I work mainly in government — designing services for HMRC, DEFRA, and the Ministry of Defence, where the people using what you build often have no choice but to use it.
+            I'm Julien, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I work mainly in government, designing services for HMRC, DEFRA, and the Ministry of Defence, where the people using what you build often have no choice but to use it.
           </p>
           <p>
             I care about accessibility as a baseline, not a box to tick. I work well across research, product and development, and I'm comfortable moving between different kinds of teams.
@@ -28,7 +28,7 @@ function AboutMe() {
             Outside of work, I enjoy playing rugby and baking.
           </p>
           <p>
-            I'm always open to connecting — reach me at{' '}
+            I'm always open to connecting, reach me at{' '}
             <a href="mailto:cresusjulien@gmail.com">cresusjulien@gmail.com</a>{' '}
             or on{' '}
             <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>.
