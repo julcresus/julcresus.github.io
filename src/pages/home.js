@@ -80,10 +80,9 @@ const projects = [
     title: 'Dam Digital — McArthurGlen',
     tags: 'App Design, UX Design, User Research',
     year: '2022',
-    note: 'Case study under NDA',
-    route: '/#',
+    route: '/mag',
     sector: 'consumer',
-    disabled: true
+    disabled: false
   },
   {
     id: 'mod',

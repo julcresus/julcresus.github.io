@@ -28,7 +28,7 @@ function HMRC() {
             </CCarouselItem>
             <CCarouselItem>
               <CImage className="d-block w-100" src={'./img/hmrc/picture5.png'} alt="HMRC challenge scenario selection" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — challenge scenario selection</p></CCarouselCaption>
+              <CCarouselCaption className="d-none d-md-block"><p>Main journey draft</p></CCarouselCaption>
             </CCarouselItem>
           </CCarousel>
         </div>
