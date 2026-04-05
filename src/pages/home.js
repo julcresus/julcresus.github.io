@@ -107,17 +107,6 @@ const projects = [
     disabled: false
   },
   {
-    id: 'esfa',
-    image: './img/esfa.webp',
-    alt: 'ESFA user testing project',
-    title: 'Methods — ESFA',
-    tags: 'UX Design, UI Design, GDS Toolkit, React',
-    year: '2018',
-    route: '/esfa',
-    sector: 'government',
-    disabled: false
-  },
-  {
     id: 'sg',
     image: './img/sg.webp',
     alt: 'Societe Generale UX and UI design',
