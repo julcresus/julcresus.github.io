@@ -5,8 +5,8 @@ function DEFRA() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">DEFRA / APHA — People Planner</p>
-        <p className="tags_">UX Design, UI Design, User Research</p>
+        <p className="project-title">DEFRA / APHA / People Planner</p>
+        <p className="tags_">UX Design, Interaction Design, Internal Tools · 2024–2025</p>
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -35,41 +35,37 @@ function DEFRA() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          The Animal and Plant Health Agency (APHA) is an executive agency of DEFRA, responsible for safeguarding animal and plant health for the benefit of people, the environment, and the economy.
+          The Animal and Plant Health Agency protects animal and plant health across England, Wales and Scotland. Their work includes routine surveillance and responding to disease outbreaks, which means at any point, managers might need to rapidly redeploy staff across teams and regions.
           <br /><br />
-          This alpha project focused on designing an internal workforce planning tool, People Planner, to help APHA staff and managers plan, track, and report on team activities, absences, and outbreak resourcing across the agency.
-          <br /><br />
-          Working as part of the UCD team at Cognizant, I collaborated with user researchers to understand the needs of both individual staff members and team managers, translating complex scheduling workflows into a clear, accessible interface.
+          Before this project, all of that planning happened in Excel. Managers tracked team activities, absences and outbreak resourcing across sprawling spreadsheets, with no shared view and no easy way to report upward. The aim was to move this into a purpose-built internal tool (People Planner) built on PowerBI.
         </p>
 
-        <p className="sub-title">Role</p>
+        <p className="sub-title">The challenge</p>
         <p className="description">
-          As a UX Designer working alongside user researchers, I contributed to designing and testing digital services for internal DEFRA agency staff.
-        </p>
-        <ul className="description">
-          <li>Designing wireframes and prototypes in Figma based on user requirements</li>
-          <li>Supporting user research sessions with internal stakeholders</li>
-          <li>Creating user flows and journey maps</li>
-          <li>Iterating designs based on user feedback and testing</li>
-          <li>Developing design concepts for data management interfaces</li>
-          <li>Collaborating with user researchers to plan and conduct testing sessions</li>
-        </ul>
-        <p className="description">
-          The work required understanding complex internal processes while creating clear, accessible interfaces that met diverse user needs across different roles.
+          PowerBI is not a natural home for a designed service. It comes with Microsoft's Fluent design system baked in, a Figma design kit that only partially maps to what the platform can actually render, and very limited room for customisation. The gap between what you can prototype in Figma and what a developer can build in PowerBI is significant: components behave differently, layouts have constraints, and interactions that feel obvious in a design tool either don't exist or need to be approximated.
+          <br /><br />
+          My job was to design something that worked for managers — clear, accessible, fast to use in high-pressure situations, while staying within what the platform could actually deliver. That meant constant negotiation between user needs and technical reality.
         </p>
 
-        <p className="sub-title">Process</p>
+        <p className="sub-title">What I designed</p>
         <p className="description">
-          The project involved close collaboration with user research, conducting in-depth interviews and testing sessions with internal users across various roles. Regular workshops and requirement gathering sessions helped inform the design direction.
+          The tool had three main areas: a home dashboard showing each manager's planned activities and team notifications, a team activities view with a calendar and day-level activity list, and an edit flow for updating individual team members' allocations.
           <br /><br />
-          Design concepts were tested iteratively through multiple rounds of user sessions, allowing for continuous refinement based on feedback.
+          The calendar was one of the trickier problems. Managers needed to see planned activities, absences and non-working days at a glance across their whole team, then drill into a specific day to see who was doing what. Getting that level of information density to work clearly, without overwhelming the interface or breaking PowerBI's rendering, required a lot of iteration on the colour coding and the relationship between the calendar and the list panel beside it.
           <br /><br />
-          Following GDS standards, the focus remained on creating accessible, intuitive interfaces that simplified complex workflows and data management tasks for internal staff.
+          The edit form also needed careful thought. Managers could update a single day or apply changes across a whole activity period. The interaction pattern for that, selecting days on the calendar while filling in the form on the right, had to work predictably, especially for someone doing it quickly under pressure.
+          <br /><br />
+          Throughout, I worked closely with developers to understand what was actually buildable. If I designed something in Figma that PowerBI couldn't replicate, we'd find out at handoff. That feedback loop shaped how I approached the designs, starting from the platform's constraints rather than treating them as a problem for the end.
+        </p>
+
+        <p className="sub-title">How we worked</p>
+        <p className="description">
+          User research ran alongside design throughout, with regular testing sessions with APHA managers. Findings fed directly into decisions: what the dashboard needed to surface, how the calendar should handle edge cases, what level of detail they needed at a glance versus on click.
         </p>
 
         <p className="sub-title">Outcomes</p>
         <p className="description">
-          The collaborative approach between UX design and user research helped identify key user pain points and validate design decisions throughout the project. The work contributed to improving internal processes and data management for DEFRA agency staff.
+          The People Planner tool was developed and tested with APHA staff as part of an ongoing alpha. The design work helped establish patterns for how complex scheduling workflows could be handled within PowerBI's constraints, and gave the development team clear, buildable specifications to work from.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>
