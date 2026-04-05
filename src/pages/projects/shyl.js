@@ -5,8 +5,8 @@ function Shyl() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">Shy Lifestyle</p>
-        <p className="tags_">App Design, UX Design, User Research</p>
+        <p className="project-title">Dam Digital / Shy Lifestyle</p>
+        <p className="tags_">App Design, UX Design, User Research · 2023</p>
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -35,25 +35,29 @@ function Shyl() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          Shy Lifestyle is a luxury lifestyle and travel management service, offering everything from everyday concierge tasks to private jet charters and exclusive event access.
-          <br /><br />
-          The project involved partnering with Dam Digital to design a mobile app giving members a seamless way to browse and book their full suite of services.
+          Shy Lifestyle is a luxury concierge and travel management service, offering members everything from everyday requests through to private jet charters and exclusive event access. The project involved designing a mobile app giving members a single place to browse and book their full range of services.
         </p>
 
-        <p className="sub-title">Role</p>
+        <p className="sub-title">The challenge</p>
         <p className="description">
-          I was the UX Designer on the project, working closely with the UI Designer throughout.
+          Luxury products have specific design expectations. The interface needed to feel premium and effortless, not functional and form-heavy. Getting that balance right while still making all the service information clear and bookable took significant design research. We mapped the competitive landscape carefully to understand what the best luxury apps in this space were doing, and where the gaps were.
+          <br /><br />
+          The booking system itself was also complex. Shy Lifestyle offers a wide range of services with very different booking requirements. Making that breadth feel organised rather than overwhelming was one of the main design challenges.
         </p>
-        <ul className="description">
-          <li>Competitive research to map the luxury lifestyle app landscape</li>
-          <li>Developing user journeys and wireframes to define the member experience</li>
-          <li>Working with the client to translate their brand vision into design decisions</li>
-          <li>Collaborating with the UI Designer to ensure research and UX thinking informed the visual direction</li>
-        </ul>
+
+        <p className="sub-title">What I designed</p>
+        <p className="description">
+          I led UX and research for the project, working closely with the UI designer throughout. That covered competitive research, user journey mapping, wireframes, and prototypes for the membership browsing, service discovery, and booking flows. I worked with the client to translate their brand positioning into design decisions that felt consistent with the Shy Lifestyle experience.
+        </p>
+
+        <p className="sub-title">How we worked</p>
+        <p className="description">
+          The project involved close collaboration with the client to align design decisions with their brand vision, alongside regular design reviews and iteration.
+        </p>
 
         <p className="sub-title">Outcomes</p>
         <p className="description">
-          The app launched into testing with strong client feedback. The membership system and booking flow were well-received, with early testing showing good engagement across the core user journeys.
+          The app launched and is live at shylifestyle.com. The membership system and booking flow are in active use.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>

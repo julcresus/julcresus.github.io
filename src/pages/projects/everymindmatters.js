@@ -6,7 +6,7 @@ function EveryMindMatters() {
     <div className="page-wrapper">
       <div className="project_inside">
         <p className="project-title">Every Mind Matters</p>
-        <p className="tags_">UX Design, UI Design, User Research</p>
+        <p className="tags_">UX Design, Interaction Design, User Research · 2019</p>
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -47,19 +47,31 @@ function EveryMindMatters() {
 
         <p className="sub-title">Overview</p>
         <p className="description">
-          Every Mind Matters is a Public Health England and NHS initiative designed to help people take practical steps to look after their mental health and support those around them.
+          Every Mind Matters is a Public Health England and NHS initiative that helps people take practical steps to look after their mental health. The project focused on designing the structure and key journeys for the new website, with a particular emphasis on the mental health quiz, a tool to help users understand what kind of support they might need.
         </p>
 
-        <p className="sub-title">Role</p>
+        <p className="sub-title">The challenge</p>
         <p className="description">
-          From February to April 2019, I worked as part of a team of user researchers and service designers to shape the new website's structure and user interactions. A key focus throughout was accessibility, designing for users regardless of their mental health status or digital confidence.
+          Designing for mental health means designing for people who may already be overwhelmed. Users experiencing anxiety don't respond well to busy, information-heavy screens. Research sessions with people affected by anxiety and low mood shaped the design in specific ways: blue and yellow were found to be the most calming colour combination, content had to be kept short and focused, and the number of decisions per screen was deliberately kept low to reduce cognitive load.
           <br /><br />
-          I worked in Figma and Sketch using the GOV.UK Design System, ensuring all design decisions aligned with GDS standards.
+          Making it work on mobile was a priority from the start. The people most likely to use the service in a difficult moment are on their phones, not at a desktop.
+        </p>
+
+        <p className="sub-title">What I designed</p>
+        <p className="description">
+          The main focus was the mental health quiz: a branching flow that helped users identify what kind of support would be most relevant to them, from self-help techniques through to urgent support pathways. Getting the structure right meant thinking carefully about how to ask sensitive questions without creating anxiety in the process of seeking help.
+          <br /><br />
+          I also worked on the overall site architecture, including the mental health topics section and the "helping others" flow for people supporting someone else. All design was done in Figma and Sketch using the GOV.UK Design System.
+        </p>
+
+        <p className="sub-title">How we worked</p>
+        <p className="description">
+          The project ran for around five months with a team that included user researchers and service designers. Research with real users fed directly into design decisions, particularly around the quiz flow and the amount of information shown per screen.
         </p>
 
         <p className="sub-title">Outcomes</p>
         <p className="description">
-          The project delivered an interactive Figma prototype alongside content blueprints and code guidance for the development team, providing a clear handoff for a service that needed to reach as many people as possible.
+          The project delivered a full interactive Figma prototype to NHS Digital, alongside content blueprints and code guidance for the development team. Parts of the work fed into the live Every Mind Matters service.
         </p>
 
         <a href="/#projects" className="about-back">← Back</a>
