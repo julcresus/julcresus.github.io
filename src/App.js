@@ -27,7 +27,9 @@ import Shya from "./pages/projects/shya";
 // Initialize Google Analytics
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 if (TRACKING_ID) {
-  ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize(TRACKING_ID, {
+    gaOptions: { storage: 'none', anonymizeIp: true },
+  });
 }
 
 // Lazy load components for better performance
