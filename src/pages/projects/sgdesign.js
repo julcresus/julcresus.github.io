@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function SgDesign() {
@@ -7,7 +8,7 @@ function SgDesign() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Société Générale / SG Markets FX Platform</h1>
-        <p className="tags_">UX Design, Interaction Design, Design Systems · 2017–2018</p>
+        <ProjectMeta client="Société Générale" year="2017–2018" role="Interaction Design · Design Systems" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

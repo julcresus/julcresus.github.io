@@ -1,5 +1,7 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
+import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function NaturalEngland() {
@@ -7,7 +9,7 @@ function NaturalEngland() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Natural England / DEFRA / Protected Sites Monitoring</h1>
-        <p className="tags_">UX Design, Interaction Design, Service Design · 2024–2025</p>
+        <ProjectMeta client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" role="Interaction Design · Service Design · User Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -70,6 +72,10 @@ function NaturalEngland() {
         <p className="description">
           The service continues to be developed and tested in active sprints. The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field and office-based users.
         </p>
+
+        <ProtectedSection>
+          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
+        </ProtectedSection>
 
         <ProjectNav current="/naturalengland" />
       </div>

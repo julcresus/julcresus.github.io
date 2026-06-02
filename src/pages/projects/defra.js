@@ -1,5 +1,7 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
+import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function DEFRA() {
@@ -7,7 +9,7 @@ function DEFRA() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">DEFRA / APHA / People Planner</h1>
-        <p className="tags_">UX Design, Interaction Design, Internal Tools · 2024–2025</p>
+        <ProjectMeta client="DEFRA / APHA" agency="Cognizant" year="2024–2025" role="Interaction Design · User Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -68,6 +70,10 @@ function DEFRA() {
         <p className="description">
           The People Planner tool was developed and tested with APHA staff as part of an ongoing alpha. The design work helped establish patterns for how complex scheduling workflows could be handled within PowerBI's constraints, and gave the development team clear, buildable specifications to work from.
         </p>
+
+        <ProtectedSection>
+          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
+        </ProtectedSection>
 
         <ProjectNav current="/defra" />
       </div>

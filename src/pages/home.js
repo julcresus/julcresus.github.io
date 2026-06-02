@@ -32,40 +32,42 @@ function CyclingWord() {
   );
 }
 
-// Project data
 const projects = [
   {
     id: 'hmrc',
     image: './img/hmrc.webp',
     alt: 'HMRC project with Cognizant',
     title: 'Cognizant — HMRC Wales',
-    tags: 'UX Design, UI Design, User Research',
-    year: '2025–2026',
+    tags: 'UX Design, Interaction Design, User Research',
+    year: '2023–Present',
+    readTime: 4,
+    teaser: 'Bilingual Welsh service · GOV.UK Prototype Kit',
     route: '/hmrc',
     sector: 'government',
-    disabled: false
   },
   {
     id: 'naturalengland',
     image: './img/naturalengland.webp',
     alt: 'Natural England / DEFRA project with Cognizant',
     title: 'Cognizant — Natural England / DEFRA',
-    tags: 'UX Design, UI Design, User Research, Service Design',
+    tags: 'UX Design, Service Design, User Research',
     year: '2024–2025',
+    readTime: 4,
+    teaser: 'Protected sites monitoring · field survey tools',
     route: '/naturalengland',
     sector: 'government',
-    disabled: false
   },
   {
     id: 'defra',
     image: './img/defra.webp',
     alt: 'DEFRA project with Cognizant',
-    title: 'Cognizant — DEFRA',
-    tags: 'UX Design, UI Design, User Research',
+    title: 'Cognizant — DEFRA / APHA',
+    tags: 'UX Design, Interaction Design, User Research',
     year: '2024–2025',
+    readTime: 4,
+    teaser: 'Internal scheduling tool · PowerBI constraints',
     route: '/defra',
     sector: 'government',
-    disabled: false
   },
   {
     id: 'shyl',
@@ -74,9 +76,10 @@ const projects = [
     title: 'Dam Digital — Shy Lifestyle',
     tags: 'App Design, UX Design, User Research',
     year: '2023',
+    readTime: 3,
+    teaser: 'Luxury concierge app · premium booking flows',
     route: '/shyl',
     sector: 'consumer',
-    disabled: false
   },
   {
     id: 'rethink',
@@ -85,9 +88,10 @@ const projects = [
     title: 'Dam Digital — Rethink',
     tags: 'UX Design, UI Design, Product Design',
     year: '2022',
+    readTime: 3,
+    teaser: 'Charity donation module · accessibility-first',
     route: '/rethink',
     sector: 'consumer',
-    disabled: false
   },
   {
     id: 'shya',
@@ -96,9 +100,10 @@ const projects = [
     title: 'Dam Digital — Shy Aviation',
     tags: 'UX Design, User Research',
     year: '2022',
+    readTime: 3,
+    teaser: 'Private jet booking · corporate client journeys',
     route: '/shya',
     sector: 'consumer',
-    disabled: false
   },
   {
     id: 'mag',
@@ -107,82 +112,94 @@ const projects = [
     title: 'Dam Digital — McArthurGlen',
     tags: 'App Design, UX Design, User Research',
     year: '2022',
+    readTime: 3,
+    teaser: 'Designer outlet loyalty app · QR redemption flow',
     route: '/mag',
     sector: 'consumer',
-    disabled: false
   },
   {
     id: 'mod',
     image: './img/mod.webp',
     alt: 'Armed Forces Recruitment Program UI design',
-    title: 'Methods — Armed Forces Recruitment Program',
-    tags: 'UX Design, UI Design, GDS Toolkit, React',
+    title: 'Methods — Armed Forces Recruitment',
+    tags: 'UX Design, Interaction Design, GOV.UK',
     year: '2019–2020',
+    readTime: 2,
+    teaser: 'Multi-branch candidate journey · coded prototype',
     route: '/mod',
     sector: 'government',
-    disabled: false
   },
   {
     id: 'emm',
     image: './img/emm.webp',
     alt: 'Every Mind Matters UX research and testing',
     title: 'Methods — Every Mind Matters',
-    tags: 'UX Design, UI Design, User Research',
-    year: '2018',
+    tags: 'UX Design, Interaction Design, User Research',
+    year: '2019',
+    readTime: 4,
+    teaser: 'NHS mental health quiz · cognitive load design',
     route: '/everymindmatters',
     sector: 'government',
-    disabled: false
   },
   {
     id: 'sg',
     image: './img/sg.webp',
     alt: 'Societe Generale UX and UI design',
-    title: 'Societe Generale Design',
-    tags: 'UX Design, UI Design',
-    year: '2019',
+    title: 'Société Générale',
+    tags: 'Interaction Design, Design Systems',
+    year: '2017–2018',
+    readTime: 4,
+    teaser: 'FX trading platform · data-dense interfaces',
     route: '/sgdesign',
     sector: 'fintech',
-    disabled: false
   },
 ];
 
 const FILTERS = ['All', 'Government', 'Consumer', 'Fintech'];
 
-// Memoized ProjectCard component
 const ProjectCard = React.memo(({ project, index }) => {
-  if (project.disabled) {
-    return (
-      <div className="project-card project-card-disabled">
+  const wrapRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.08 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const delay = `${Math.min(index, 3) * 80}ms`;
+  const animClass = `card-anim${visible ? ' card-visible' : ''}`;
+
+  return (
+    <div ref={wrapRef} className={animClass} style={{ transitionDelay: delay }}>
+      <Link to={project.route} className="project-card">
         <div className="project-card-image-wrap">
           <img
             src={project.image}
             alt={project.alt}
-            loading="lazy"
+            loading={index < 4 ? 'eager' : 'lazy'}
           />
+          {project.teaser && (
+            <div className="project-card-overlay" aria-hidden="true">
+              <span className="project-card-overlay-text">{project.teaser}</span>
+            </div>
+          )}
         </div>
         <div className="project-card-caption">
           <p className="project-card-title">{project.title}</p>
-          <p className="project-card-tags">{project.tags}{project.year && ` · ${project.year}`}</p>
-          {project.note && <p className="project-card-note">{project.note}</p>}
+          <p className="project-card-tags">
+            {project.tags}
+            {project.year && ` · ${project.year}`}
+            {project.readTime && ` · ${project.readTime} min read`}
+          </p>
         </div>
-      </div>
-    );
-  }
-
-  return (
-    <Link to={project.route} className="project-card">
-      <div className="project-card-image-wrap">
-        <img
-          src={project.image}
-          alt={project.alt}
-          loading={index < 4 ? "eager" : "lazy"}
-        />
-      </div>
-      <div className="project-card-caption">
-        <p className="project-card-title">{project.title}</p>
-        <p className="project-card-tags">{project.tags}{project.year && ` · ${project.year}`}</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 });
 
@@ -197,7 +214,6 @@ function Home() {
 
   return (
     <div className="page-wrapper">
-      {/* Hero */}
       <div className="intro-container">
         <div>
           <p className="intro" aria-label="Senior Interaction Designer, currently designing at Cognizant.">
@@ -208,7 +224,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Project grid */}
       <div id="projects" className="projects-section">
         <p className="section-label">Selected work</p>
 
@@ -234,7 +249,6 @@ function Home() {
         </Row>
       </div>
 
-      {/* Contact CTA */}
       <div className="contact-cta">
         <a href="mailto:cresusjulien@gmail.com" className="contact-cta-link">Let's work together →</a>
       </div>

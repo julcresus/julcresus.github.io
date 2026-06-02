@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Mod() {
@@ -7,7 +8,7 @@ function Mod() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">MoD — Armed Forces Recruitment Process</h1>
-        <p className="tags_">UX Design, UI Design, Coding</p>
+        <ProjectMeta client="Ministry of Defence" agency="Methods" year="2019–2020" role="UX Design · Prototyping" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

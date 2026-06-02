@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function Rethink() {
@@ -7,7 +8,7 @@ function Rethink() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Rethink Mental Illness</h1>
-        <p className="tags_">UX Design, UI Design, Product Design</p>
+        <ProjectMeta client="Rethink Mental Illness" agency="Dam Digital" year="2022" role="UX Design · Product Design" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

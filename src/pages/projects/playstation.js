@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Playstation() {
@@ -7,7 +8,7 @@ function Playstation() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">University Case Study — PlayStation Store</h1>
-        <p className="tags_">UX Design, UI Design, App Design</p>
+        <ProjectMeta client="Kingston University" year="2016–2017" role="UX Design · Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

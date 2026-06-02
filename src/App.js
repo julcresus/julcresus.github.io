@@ -93,7 +93,7 @@ const PROJECT_ROUTES = new Set([
   '/esfa', '/playstation',
 ]);
 
-// Handles scroll-to-top, page title, and per-page meta on route change
+// Handles scroll-to-top, per-page Helmet meta, and GA pageviews on route change
 function RouteHandler() {
   const location = useLocation();
   const title = PAGE_TITLES[location.pathname] || PAGE_TITLES['/'];
@@ -101,11 +101,10 @@ function RouteHandler() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = title;
     if (TRACKING_ID) {
       ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
     }
-  }, [location.pathname, location.search, title]);
+  }, [location.pathname, location.search]);
 
   return (
     <Helmet>
@@ -120,10 +119,22 @@ function RouteHandler() {
   );
 }
 
-// Nav extracted as component so it can use useLocation inside Router context
+// Nav with reading progress bar and active-state awareness for project pages
 function Nav() {
   const location = useLocation();
   const isProjectPage = PROJECT_ROUTES.has(location.pathname);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (!isProjectPage) { setProgress(0); return; }
+    const update = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(total > 0 ? Math.min((window.scrollY / total) * 100, 100) : 0);
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+    return () => window.removeEventListener('scroll', update);
+  }, [isProjectPage, location.pathname]);
 
   return (
     <nav className="nav-header">
@@ -143,7 +154,44 @@ function Nav() {
           <ThemeToggle />
         </div>
       </div>
+      {isProjectPage && (
+        <div
+          className="reading-progress"
+          style={{ transform: `scaleX(${progress / 100})` }}
+          role="progressbar"
+          aria-valuenow={Math.round(progress)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label="Reading progress"
+        />
+      )}
     </nav>
+  );
+}
+
+// Animated route wrapper — key change triggers CSS enter animation on navigation
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <div key={location.key} className="route-transition">
+      <Switch location={location}>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/aboutme" component={AboutMe} />
+        <Route exact path="/playstation" component={Playstation} />
+        <Route exact path="/everymindmatters" component={EveryMindMatters} />
+        <Route exact path="/sgdesign" component={SgDesign} />
+        <Route exact path="/esfa" component={ESFA} />
+        <Route exact path="/mod" component={Mod} />
+        <Route exact path="/shya" component={Shya} />
+        <Route exact path="/shyl" component={Shyl} />
+        <Route exact path="/rethink" component={Rethink} />
+        <Route exact path="/mag" component={Mag} />
+        <Route exact path="/defra" component={DEFRA} />
+        <Route exact path="/naturalengland" component={NaturalEngland} />
+        <Route exact path="/hmrc" component={HMRC} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   );
 }
 
@@ -209,23 +257,7 @@ function App() {
           <Nav />
           <main id="main-content">
             <Suspense fallback={<LoadingFallback />}>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/aboutme" component={AboutMe} />
-                <Route exact path="/playstation" component={Playstation} />
-                <Route exact path="/everymindmatters" component={EveryMindMatters} />
-                <Route exact path="/sgdesign" component={SgDesign} />
-                <Route exact path="/esfa" component={ESFA} />
-                <Route exact path="/mod" component={Mod} />
-                <Route exact path="/shya" component={Shya} />
-                <Route exact path="/shyl" component={Shyl} />
-                <Route exact path="/rethink" component={Rethink} />
-                <Route exact path="/mag" component={Mag} />
-                <Route exact path="/defra" component={DEFRA} />
-                <Route exact path="/naturalengland" component={NaturalEngland} />
-                <Route exact path="/hmrc" component={HMRC} />
-                <Route component={NotFound} />
-              </Switch>
+              <AnimatedRoutes />
             </Suspense>
           </main>
           <BackToTopButton />

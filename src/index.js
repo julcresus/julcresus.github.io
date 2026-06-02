@@ -17,4 +17,4 @@ ReactDOM.render(
 
 // Enable service worker for offline support and better performance
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
+serviceWorker.unregister();

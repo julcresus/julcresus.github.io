@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function Shya() {
@@ -7,7 +8,7 @@ function Shya() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Dam Digital / Shy Aviation</h1>
-        <p className="tags_">UX Design, User Research · 2022</p>
+        <ProjectMeta client="Shy Aviation" agency="Dam Digital" year="2022" role="UX Design · Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function EveryMindMatters() {
@@ -7,7 +8,7 @@ function EveryMindMatters() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Every Mind Matters</h1>
-        <p className="tags_">UX Design, Interaction Design, User Research · 2019</p>
+        <ProjectMeta client="Public Health England / NHS" agency="Methods" year="2019" role="UX Design · Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

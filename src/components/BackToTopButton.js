@@ -14,7 +14,10 @@ function BackToTopButton() {
   return (
     <button
       className="back-to-top"
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      onClick={() => {
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+      }}
       aria-label="Back to top"
     >
       ↑

@@ -1,11 +1,32 @@
 import { useEffect, useRef } from 'react';
 
 function Lightbox({ src, alt, onClose }) {
+  const overlayRef = useRef(null);
   const closeBtnRef = useRef(null);
 
   useEffect(() => {
     closeBtnRef.current?.focus();
-    const onKey = e => { if (e.key === 'Escape') onClose(); };
+
+    const onKey = e => {
+      if (e.key === 'Escape') { onClose(); return; }
+
+      if (e.key === 'Tab') {
+        const focusable = overlayRef.current?.querySelectorAll(
+          'button, [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusable || focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
@@ -16,6 +37,7 @@ function Lightbox({ src, alt, onClose }) {
 
   return (
     <div
+      ref={overlayRef}
       className="lightbox-overlay"
       onClick={onClose}
       role="dialog"
@@ -35,6 +57,7 @@ function Lightbox({ src, alt, onClose }) {
         alt={alt}
         className="lightbox-img"
         onClick={e => e.stopPropagation()}
+        tabIndex={0}
       />
     </div>
   );

@@ -1,5 +1,7 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
+import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function HMRC() {
@@ -7,7 +9,7 @@ function HMRC() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">HMRC / Welsh Council Tax Service</h1>
-        <p className="tags_">UX Design, Interaction Design, User Research · 2023–Present</p>
+        <ProjectMeta client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
@@ -75,6 +77,10 @@ function HMRC() {
         <p className="description">
           The service continues to be developed and tested in active sprints. The prototypes are built in the GOV.UK Prototype Kit using HTML and CSS, and have been used in multiple rounds of usability testing with real users in Wales.
         </p>
+
+        <ProtectedSection>
+          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
+        </ProtectedSection>
 
         <ProjectNav current="/hmrc" />
       </div>

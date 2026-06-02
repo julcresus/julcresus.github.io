@@ -1,5 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectMeta from '../../components/ProjectMeta';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function ESFA() {
@@ -7,7 +8,7 @@ function ESFA() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">ESFA — Education & Skills Funding Agency</h1>
-        <p className="tags_">UX Design, UI Design, Coding</p>
+        <ProjectMeta client="ESFA" agency="Methods" year="2020" role="UX Design · Prototyping" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
