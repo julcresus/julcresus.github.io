@@ -1,4 +1,5 @@
 import '../../App.css';
+import { NavHashLink } from 'react-router-hash-link';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -17,7 +18,7 @@ function AboutMe() {
           />
         </Col>
         <Col xs={12} sm={8} md={8} className="about-text">
-          <p className="project-title">Bonjour!</p>
+          <h1 className="project-title">Bonjour!</h1>
           <p>
             I'm Julien, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I work mainly in government, designing services for HMRC, DEFRA, and the Ministry of Defence, where the people using what you build often have no choice but to use it.
           </p>
@@ -35,7 +36,7 @@ function AboutMe() {
           </p>
         </Col>
       </Row>
-      <a href="/#projects" className="about-back">← Back</a>
+      <NavHashLink to="/#projects" className="about-back">← Back</NavHashLink>
     </div>
   );
 }

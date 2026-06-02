@@ -1,9 +1,36 @@
 import '../App.css';
-import React, { useState } from 'react';
-import TextLoop from "react-text-loop";
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+const CYCLE_WORDS = ['designing', 'researching', 'prototyping', 'testing', 'iterating', 'facilitating'];
+
+function CyclingWord() {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const reducedMotion = useRef(
+    typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
+
+  useEffect(() => {
+    if (reducedMotion.current) return;
+    const interval = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex(i => (i + 1) % CYCLE_WORDS.length);
+        setVisible(true);
+      }, 300);
+    }, 1600);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span aria-hidden="true" style={{ transition: 'opacity 0.3s ease', opacity: visible ? 1 : 0 }}>
+      {CYCLE_WORDS[index]}
+    </span>
+  );
+}
 
 // Project data
 const projects = [
@@ -20,7 +47,7 @@ const projects = [
   },
   {
     id: 'naturalengland',
-    image: './img/naturalengland.png',
+    image: './img/naturalengland.webp',
     alt: 'Natural England / DEFRA project with Cognizant',
     title: 'Cognizant — Natural England / DEFRA',
     tags: 'UX Design, UI Design, User Research, Service Design',
@@ -173,16 +200,9 @@ function Home() {
       {/* Hero */}
       <div className="intro-container">
         <div>
-          <p className="intro">
+          <p className="intro" aria-label="Senior Interaction Designer, currently designing at Cognizant.">
             Senior Interaction Designer, currently{' '}
-            <TextLoop interval={1300}>
-              <span>designing</span>
-              <span>researching</span>
-              <span>prototyping</span>
-              <span>testing</span>
-              <span>iterating</span>
-              <span>facilitating</span>
-            </TextLoop>
+            <CyclingWord />
             {' '}@ Cognizant.
           </p>
         </div>
@@ -198,6 +218,7 @@ function Home() {
               key={f}
               className={`filter-btn${activeFilter === f ? ' filter-btn-active' : ''}`}
               onClick={() => setActiveFilter(f)}
+              aria-pressed={activeFilter === f}
             >
               {f}
             </button>

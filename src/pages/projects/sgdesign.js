@@ -1,11 +1,12 @@
 import '../../App.css';
+import ProjectNav from '../../components/ProjectNav';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function SgDesign() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">Société Générale / SG Markets FX Platform</p>
+        <h1 className="project-title">Société Générale / SG Markets FX Platform</h1>
         <p className="tags_">UX Design, Interaction Design, Design Systems · 2017–2018</p>
 
         <div className="carousel-wrap">
@@ -25,21 +26,21 @@ function SgDesign() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Overview</p>
+        <h2 className="sub-title">Overview</h2>
         <p className="description">
           SG Markets is the digital trading platform Société Générale built for institutional FX clients. I joined the digital design team within the Corporate &amp; Investment Banking division, working on a live product used daily by traders and clients across the bank.
           <br /><br />
           The platform covered spot FX, forwards, options and bulk trade workflows. Dense, data-heavy screens where speed and accuracy matter more than anything else.
         </p>
 
-        <p className="sub-title">The challenge</p>
+        <h2 className="sub-title">The challenge</h2>
         <p className="description">
           Designing for traders is different from designing for most users. They're fast, precise, and they've built their workflow around how things already work. Small interface changes can break muscle memory. Every design decision had to earn its place.
           <br /><br />
           The team was modernising the platform. New design system, new tile-based workspace, cleaner workflows throughout. The challenge was doing all of that without making people feel like they'd lost something.
         </p>
 
-        <p className="sub-title">What I worked on</p>
+        <h2 className="sub-title">What I worked on</h2>
         <p className="description">
           I was part of a small team working across different parts of the platform. We sat on the same floor as the traders, which meant testing wasn't a formal monthly event. It happened constantly. You'd walk over with a prototype, watch someone click through it, and come back with notes the same afternoon.
           <br /><br />
@@ -55,19 +56,19 @@ function SgDesign() {
           <strong>The design system.</strong> I helped set up and apply a shared design system across the platform, translating brand guidelines into components that worked at the density financial interfaces require. This meant thinking about things like number formatting, colour use for buy/sell states, and how to handle error conditions in a context where mistakes are costly.
         </p>
 
-        <p className="sub-title">How we worked</p>
+        <h2 className="sub-title">How we worked</h2>
         <p className="description">
           Co-creation sessions with traders, product owners and IT were a regular part of the process. These weren't polished presentations. They were working sessions where we'd sketch out ideas on a whiteboard, get immediate pushback, and iterate on the spot. Having engineers in the room from the start meant we avoided designing things that couldn't be built.
         </p>
 
-        <p className="sub-title">Outcomes</p>
+        <h2 className="sub-title">Outcomes</h2>
         <p className="description">
           The updated platform shipped to clients as part of an ongoing programme of improvements. Working this close to end users, literally in the same room, gave me a strong sense of what it means to design for people who depend on your product to do their job every day.
           <br /><br />
           <em>Visual artefacts shared with permission from Société Générale. Certain client data has been replaced with dummy information.</em>
         </p>
 
-        <a href="/#projects" className="about-back">← Back</a>
+        <ProjectNav current="/sgdesign" />
       </div>
     </div>
   );

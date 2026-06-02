@@ -1,11 +1,12 @@
 import '../../App.css';
+import ProjectNav from '../../components/ProjectNav';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function NaturalEngland() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">Natural England / DEFRA / Protected Sites Monitoring</p>
+        <h1 className="project-title">Natural England / DEFRA / Protected Sites Monitoring</h1>
         <p className="tags_">UX Design, Interaction Design, Service Design · 2024–2025</p>
 
         <div className="carousel-wrap">
@@ -33,7 +34,7 @@ function NaturalEngland() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Overview</p>
+        <h2 className="sub-title">Overview</h2>
         <p className="description">
           Natural England looks after protected sites across England: habitats, wildlife areas, geological sites. Keeping on top of them means sending surveyors into the field regularly, collecting data, and feeding it back into a central picture of how each site is doing.
           <br /><br />
@@ -42,14 +43,14 @@ function NaturalEngland() {
           The aim was to replace that with a GOV.UK service that actually matched how people worked.
         </p>
 
-        <p className="sub-title">The challenge</p>
+        <h2 className="sub-title">The challenge</h2>
         <p className="description">
           The users came in two types with quite different needs. Field surveyors needed something they could use on site: clear, focused, not demanding too much context-switching when they were outdoors trying to record what they saw. Managers needed a higher-level view: which sites had been surveyed, what needed attention, what surveys still needed scheduling.
           <br /><br />
           The data itself was complex. Different types of protected site have different monitoring requirements, different species to look for, different reporting frameworks. On top of that, some information is sensitive, and access to certain site data depended on a user's role and clearance level. Designing screens that showed the right information to the right person, without creating confusion about what was visible or why, took real care.
         </p>
 
-        <p className="sub-title">What I designed</p>
+        <h2 className="sub-title">What I designed</h2>
         <p className="description">
           The service had a few main areas. A site overview page was one of the earlier iterations that research pushed us to add. Users were getting dropped into survey detail without enough context about the site itself. A landing page with key links and a summary of recent activity made it significantly easier to orientate.
           <br /><br />
@@ -58,19 +59,19 @@ function NaturalEngland() {
           Journey maps helped us work through the different user paths early on, and the GOV.UK Prototype Kit let us test interactions with real users rather than static mockups.
         </p>
 
-        <p className="sub-title">How we worked</p>
+        <h2 className="sub-title">How we worked</h2>
         <p className="description">
           We ran several rounds of usability testing with ecologists and field surveyors. One clear finding was the missing site landing page. Users kept losing their bearings navigating straight into survey detail. That came directly from testing and was one of the more tangible moments where research reshaped the design.
           <br /><br />
           Working with expert users was one of the more interesting aspects. Ecologists and surveyors know their domain deeply. They had strong opinions about how data should be structured and what information mattered most. Getting designs in front of them early and often was the only way to make sure we were reflecting that knowledge rather than designing around it.
         </p>
 
-        <p className="sub-title">Outcomes</p>
+        <h2 className="sub-title">Outcomes</h2>
         <p className="description">
           The service continues to be developed and tested in active sprints. The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field and office-based users.
         </p>
 
-        <a href="/#projects" className="about-back">← Back</a>
+        <ProjectNav current="/naturalengland" />
       </div>
     </div>
   );

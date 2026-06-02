@@ -1,11 +1,12 @@
 import '../../App.css';
+import ProjectNav from '../../components/ProjectNav';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function ESFA() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">ESFA — Education & Skills Funding Agency</p>
+        <h1 className="project-title">ESFA — Education & Skills Funding Agency</h1>
         <p className="tags_">UX Design, UI Design, Coding</p>
 
         <div className="carousel-wrap">
@@ -17,19 +18,19 @@ function ESFA() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Overview</p>
+        <h2 className="sub-title">Overview</h2>
         <p className="description">
           The ESFA is accountable for funding education and training for children, young people and adults. It is the result of the combination of the former responsibilities of the Education Funding Agency (EFA) and Skills Funding Agency (SFA).
         </p>
 
-        <p className="sub-title">Role</p>
+        <h2 className="sub-title">Role</h2>
         <p className="description">
           I've worked on the MyESFA service ("View your payments" and "Subcontractor Declaration Tool") and the National Funding Formula from January to November 2020.
           <br /><br />
           For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
         </p>
 
-        <a href="/#projects" className="about-back">← Back</a>
+        <ProjectNav current="/esfa" />
       </div>
     </div>
   );

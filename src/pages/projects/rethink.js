@@ -1,11 +1,12 @@
 import '../../App.css';
+import ProjectNav from '../../components/ProjectNav';
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 
 function Rethink() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">Rethink Mental Illness</p>
+        <h1 className="project-title">Rethink Mental Illness</h1>
         <p className="tags_">UX Design, UI Design, Product Design</p>
 
         <div className="carousel-wrap">
@@ -33,14 +34,14 @@ function Rethink() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Overview</p>
+        <h2 className="sub-title">Overview</h2>
         <p className="description">
           Rethink Mental Illness is a charity supporting people severely affected by mental illness through information, advice, support groups, and advocacy.
           <br /><br />
           The project focused on redesigning their donation module, a critical part of the charity's fundraising efforts, to make it more accessible, easier to understand, and more effective at converting visitors into donors.
         </p>
 
-        <p className="sub-title">Role</p>
+        <h2 className="sub-title">Role</h2>
         <p className="description">
           Working at Dam Digital, I led the UX and product design for the donation module redesign.
         </p>
@@ -51,12 +52,12 @@ function Rethink() {
           <li>Ensuring the redesign met accessibility standards throughout</li>
         </ul>
 
-        <p className="sub-title">Outcomes</p>
+        <h2 className="sub-title">Outcomes</h2>
         <p className="description">
           The redesigned donation module went live on the Rethink Mental Illness website, delivering a clearer funnel with improved clarity around one-time and recurring giving options. The site has since evolved with a new design direction, but the work served as the foundation for the improved donation experience.
         </p>
 
-        <a href="/#projects" className="about-back">← Back</a>
+        <ProjectNav current="/rethink" />
       </div>
     </div>
   );

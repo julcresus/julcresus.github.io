@@ -1,11 +1,12 @@
 import '../../App.css';
+import ProjectNav from '../../components/ProjectNav';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function Playstation() {
   return (
     <div className="page-wrapper">
       <div className="project_inside">
-        <p className="project-title">University Case Study — PlayStation Store</p>
+        <h1 className="project-title">University Case Study — PlayStation Store</h1>
         <p className="tags_">UX Design, UI Design, App Design</p>
 
         <div className="carousel-wrap">
@@ -33,12 +34,12 @@ function Playstation() {
           </CCarousel>
         </div>
 
-        <p className="sub-title">Overview</p>
+        <h2 className="sub-title">Overview</h2>
         <p className="description">
           A university case study at Kingston University focused on analysing and redesigning the PlayStation Store for mobile. The Store lacked consistency across devices, so the goal was to merge it with the PlayStation Messages app into a single, integrated mobile experience, applying UX principles and the Common Industry Format (CIF) for usability testing throughout.
         </p>
 
-        <p className="sub-title">Role</p>
+        <h2 className="sub-title">Role</h2>
         <p className="description">
           I led the full design process from research through to final prototype.
         </p>
@@ -52,13 +53,13 @@ function Playstation() {
           <li>Tested the final prototype with the original user group</li>
         </ul>
 
-        <p className="sub-title">Outcomes</p>
+        <h2 className="sub-title">Outcomes</h2>
         <p className="description">
           The project delivered a fully interactive prototype combining the PlayStation Store and Messages into a unified mobile app. You can explore it via the InVision{' '}
           <a href='https://projects.invisionapp.com/share/UHA1EOIVZ#/screens' target='_blank' rel='noreferrer'>prototype link</a>.
         </p>
 
-        <a href="/#projects" className="about-back">← Back</a>
+        <ProjectNav current="/playstation" />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
 :root {
   --bg: #ffffff;
   --fg: #000000;
-  --muted: #999999;
+  --muted: #767676; /* 4.54:1 on white — passes WCAG AA */
   --font-serif: adobe-garamond-pro, serif;
   --font-mono: 'Roboto Mono', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -14,7 +14,7 @@
 .dark-mode {
   --bg: #111111;
   --fg: #ffffff;
-  --muted: #777777;
+  --muted: #888888; /* 5.33:1 on #111 — passes WCAG AA */
 }
 
 /* ─────────────────────────────────────────
@@ -22,6 +22,13 @@
 ───────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -561,8 +568,146 @@ a {
 }
 
 /* ─────────────────────────────────────────
+   Back to Top Button
+───────────────────────────────────────── */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Lightbox
+───────────────────────────────────────── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: default;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.carousel-item img {
+  cursor: zoom-in;
+}
+
+/* ─────────────────────────────────────────
+   Project Navigation (prev / next)
+───────────────────────────────────────── */
+.project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 40px;
+  margin-top: 64px;
+  border-top: 1px solid var(--muted);
+}
+
+.project-nav-all {
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  color: var(--muted);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.project-nav-all:hover {
+  opacity: 0.5;
+}
+
+.project-nav-seq {
+  display: flex;
+  gap: 32px;
+}
+
+.project-nav-link {
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.project-nav-link:hover {
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────
    Accessibility
 ───────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 8px 20px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  z-index: 200;
+  text-decoration: none;
+  transition: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 :focus-visible {
   outline: 2px solid var(--fg);
   outline-offset: 3px;

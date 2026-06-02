@@ -9,9 +9,12 @@ import {
 } from "react-router-dom";
 import { NavHashLink } from 'react-router-hash-link';
 import { lazy, Suspense, useEffect, useState } from 'react';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
-import ReactGA from 'react-ga';
+import BackToTopButton from './components/BackToTopButton';
+import Lightbox from './components/Lightbox';
+import ReactGA from 'react-ga4';
 
 // Import top project pages directly (no lazy loading for instant navigation)
 import HMRC from "./pages/projects/hmrc";
@@ -32,7 +35,6 @@ const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Lazy load less frequently visited project pages
 const Playstation = lazy(() => import("./pages/projects/playstation"));
 const EveryMindMatters = lazy(() => import("./pages/projects/everymindmatters"));
 const SgDesign = lazy(() => import("./pages/projects/sgdesign"));
@@ -40,7 +42,6 @@ const ESFA = lazy(() => import("./pages/projects/esfa"));
 const Mod = lazy(() => import("./pages/projects/mod"));
 const Mag = lazy(() => import("./pages/projects/mag"));
 
-// Page titles per route
 const PAGE_TITLES = {
   '/': 'Julien Crésus-Ashton | Senior Interaction Designer',
   '/aboutme': 'About — Julien Crésus-Ashton',
@@ -57,27 +58,117 @@ const PAGE_TITLES = {
   '/playstation': 'PlayStation Store — Julien Crésus-Ashton',
 };
 
-// Scroll to top and update page title on route change
-function ScrollToTop() {
+const PAGE_META = {
+  '/': {
+    description: 'Senior Interaction Designer with eight years of experience across government, consumer and fintech. Currently at Cognizant, London.',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Julien Crésus-Ashton",
+      "jobTitle": "Senior Interaction Designer",
+      "url": "https://juliencresus.com",
+      "email": "cresusjulien@gmail.com",
+      "sameAs": ["https://www.linkedin.com/in/juliencresus/"],
+      "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+    }
+  },
+  '/aboutme':        { description: 'About Julien Crésus-Ashton — Senior Interaction Designer, London. Eight years across government, consumer and fintech. Currently at Cognizant.' },
+  '/hmrc':           { description: 'Interaction design for HMRC\'s Welsh Council Tax challenge service — bilingual UX, conditional routing, GOV.UK Prototype Kit.' },
+  '/naturalengland': { description: 'Service design for Natural England\'s protected sites monitoring programme — field survey tools, GOV.UK prototype, user research.' },
+  '/defra':          { description: 'UX for DEFRA/APHA People Planner — complex scheduling tool built within PowerBI\'s constraints, with regular user testing with APHA managers.' },
+  '/shyl':           { description: 'App UX design for Shy Lifestyle, a luxury concierge and travel service — competitive research, booking flows, premium mobile app.' },
+  '/rethink':        { description: 'UX design for Rethink Mental Illness donation module redesign — reducing friction, accessibility, improving conversion for one-time and recurring giving.' },
+  '/shya':           { description: 'UX and research for Shy Aviation\'s self-serve booking tool — private jet and helicopter charter flows, corporate client journeys.' },
+  '/mag':            { description: 'App UX design for McArthurGlen\'s shopping loyalty platform — offer browsing, QR redemption flow, onboarding redesign.' },
+  '/mod':            { description: 'UX design for the Armed Forces Recruitment Process — GOV.UK design system, React prototyping, multi-branch candidate journey.' },
+  '/everymindmatters': { description: 'UX for Every Mind Matters mental health service — branching quiz flow, cognitive load reduction, GOV.UK design system.' },
+  '/sgdesign':       { description: 'Interaction design for SG Markets FX trading platform — tile-based workspace, bulk trade workflows, financial design systems.' },
+  '/playstation':    { description: 'University case study — PlayStation Store mobile app redesign, merging store and messaging into a unified experience.' },
+  '/esfa':           { description: 'UX design for ESFA\'s MyESFA service — GOV.UK design system, React and Express.js prototyping, accessible government services.' },
+};
+
+const PROJECT_ROUTES = new Set([
+  '/hmrc', '/naturalengland', '/defra', '/shyl', '/rethink',
+  '/shya', '/mag', '/mod', '/everymindmatters', '/sgdesign',
+  '/esfa', '/playstation',
+]);
+
+// Handles scroll-to-top, page title, and per-page meta on route change
+function RouteHandler() {
   const location = useLocation();
+  const title = PAGE_TITLES[location.pathname] || PAGE_TITLES['/'];
+  const meta = PAGE_META[location.pathname] || PAGE_META['/'];
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = PAGE_TITLES[location.pathname] || 'Julien Crésus-Ashton | Senior Interaction Designer';
-  }, [location.pathname]);
+    document.title = title;
+    if (TRACKING_ID) {
+      ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+    }
+  }, [location.pathname, location.search, title]);
 
-  return null;
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={meta.description} />
+      {meta.structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(meta.structuredData)}
+        </script>
+      )}
+    </Helmet>
+  );
 }
 
-// Delayed loading component to prevent flash on quick loads
+// Nav extracted as component so it can use useLocation inside Router context
+function Nav() {
+  const location = useLocation();
+  const isProjectPage = PROJECT_ROUTES.has(location.pathname);
+
+  return (
+    <nav className="nav-header">
+      <div className="nav-inner">
+        <Link to="/" className="nav-logo">julien crésus-ashton</Link>
+        <div className="nav-links">
+          <NavHashLink
+            exact
+            to="/#projects"
+            className={`nav-link${isProjectPage ? ' nav-link-active' : ''}`}
+            activeClassName="nav-link-active"
+          >
+            Work
+          </NavHashLink>
+          <NavLink exact to="/aboutme" className="nav-link" activeClassName="nav-link-active">About</NavLink>
+          <a href="./pdf/cv.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">CV ↗</a>
+          <ThemeToggle />
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// Opens full-size carousel images on click, via event delegation
+function LightboxManager() {
+  const [lightbox, setLightbox] = useState(null);
+
+  useEffect(() => {
+    const handleClick = e => {
+      const img = e.target.closest('.carousel-item img');
+      if (img) setLightbox({ src: img.src, alt: img.alt });
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
+
+  if (!lightbox) return null;
+  return <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />;
+}
+
 const LoadingFallback = () => {
   const [showSpinner, setShowSpinner] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSpinner(true);
-    }, 100);
-
+    const timer = setTimeout(() => setShowSpinner(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -108,63 +199,47 @@ const LoadingFallback = () => {
 };
 
 function App() {
-  useEffect(() => {
-    if (TRACKING_ID) {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }
-  }, []);
-
   return (
-    <ThemeProvider>
-      <Router basename={process.env.PUBLIC_URL}>
-        <ScrollToTop />
-        <nav className="nav-header">
-          <div className="nav-inner">
-            <Link to="/" className="nav-logo">julien crésus-ashton</Link>
-            <div className="nav-links">
-              <NavHashLink exact to="/#projects" className="nav-link" activeClassName="nav-link-active">Work</NavHashLink>
-              <NavLink exact to="/aboutme" className="nav-link" activeClassName="nav-link-active">About</NavLink>
-              <a
-                href="./pdf/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-link"
-              >
-                CV ↗
-              </a>
-              <ThemeToggle />
+    <HelmetProvider>
+      <ThemeProvider>
+        <Router basename={process.env.PUBLIC_URL}>
+          <RouteHandler />
+          <LightboxManager />
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <Nav />
+          <main id="main-content">
+            <Suspense fallback={<LoadingFallback />}>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/aboutme" component={AboutMe} />
+                <Route exact path="/playstation" component={Playstation} />
+                <Route exact path="/everymindmatters" component={EveryMindMatters} />
+                <Route exact path="/sgdesign" component={SgDesign} />
+                <Route exact path="/esfa" component={ESFA} />
+                <Route exact path="/mod" component={Mod} />
+                <Route exact path="/shya" component={Shya} />
+                <Route exact path="/shyl" component={Shyl} />
+                <Route exact path="/rethink" component={Rethink} />
+                <Route exact path="/mag" component={Mag} />
+                <Route exact path="/defra" component={DEFRA} />
+                <Route exact path="/naturalengland" component={NaturalEngland} />
+                <Route exact path="/hmrc" component={HMRC} />
+                <Route component={NotFound} />
+              </Switch>
+            </Suspense>
+          </main>
+          <BackToTopButton />
+          <footer className="footer">
+            <p className="footer-identity">Julien Crésus-Ashton · Senior Interaction Designer · London</p>
+            <div className="footer-links">
+              <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
+              <span className="footer-sep"> — </span>
+              <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
             </div>
-          </div>
-        </nav>
-        <Suspense fallback={<LoadingFallback />}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/aboutme" component={AboutMe} />
-            <Route exact path="/playstation" component={Playstation} />
-            <Route exact path="/everymindmatters" component={EveryMindMatters} />
-            <Route exact path="/sgdesign" component={SgDesign} />
-            <Route exact path="/esfa" component={ESFA} />
-            <Route exact path="/mod" component={Mod} />
-            <Route exact path="/shya" component={Shya} />
-            <Route exact path="/shyl" component={Shyl} />
-            <Route exact path="/rethink" component={Rethink} />
-            <Route exact path="/mag" component={Mag} />
-            <Route exact path="/defra" component={DEFRA} />
-            <Route exact path="/naturalengland" component={NaturalEngland} />
-            <Route exact path="/hmrc" component={HMRC} />
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
-        <footer className="footer">
-          <p className="footer-identity">Julien Crésus-Ashton · Senior Interaction Designer · London</p>
-          <div className="footer-links">
-            <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
-            <span className="footer-sep"> — </span>
-            <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
-          </div>
-        </footer>
-      </Router>
-    </ThemeProvider>
+          </footer>
+        </Router>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 
