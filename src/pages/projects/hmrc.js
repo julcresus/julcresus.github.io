@@ -8,7 +8,7 @@ function HMRC() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">HMRC / Welsh Council Tax Service</h1>
-        <ProjectMeta client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" />
+        <ProjectMeta client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" team="Sole interaction designer, with content design and user research" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

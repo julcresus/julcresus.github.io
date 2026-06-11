@@ -69,7 +69,7 @@ function NaturalEngland() {
 
         <h2 className="sub-title">Outcomes</h2>
         <p className="description">
-          The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field surveyors and office-based managers. Changes that came directly from usability testing — like the site overview page — are now part of the core service as it continues through development.
+          The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field surveyors and office-based managers. Changes that came directly from usability testing, like the site overview page, are now part of the core service as it continues through development.
         </p>
 
         <ProjectNav current="/naturalengland" />

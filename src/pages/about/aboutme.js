@@ -26,6 +26,9 @@ function AboutMe() {
             I care about accessibility as a baseline, not a box to tick. I work well across research, product and development, and I'm comfortable moving between different kinds of teams.
           </p>
           <p>
+            My approach is simple: most design problems are evidence problems. The work I'm proudest of started with watching someone struggle, whether a Welsh speaker hitting an English-only error message or a manager redeploying staff during a disease outbreak from a sprawling spreadsheet. The design followed from there. I'd rather put a rough prototype in front of users this week than present a polished one next month.
+          </p>
+          <p>
             Outside of work, I enjoy playing rugby and baking.
           </p>
           <p>

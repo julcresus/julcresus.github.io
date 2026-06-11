@@ -1,9 +1,11 @@
-function ProjectMeta({ client, agency, year, role }) {
+function ProjectMeta({ client, agency, year, role, team, duration }) {
   const items = [
     { label: 'Client', value: client },
     agency ? { label: 'Agency', value: agency } : null,
     { label: 'Year', value: year },
+    duration ? { label: 'Duration', value: duration } : null,
     { label: 'Role', value: role },
+    team ? { label: 'Team', value: team } : null,
   ].filter(Boolean);
 
   return (

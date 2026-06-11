@@ -8,7 +8,7 @@ function EveryMindMatters() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Every Mind Matters</h1>
-        <ProjectMeta client="Public Health England / NHS" agency="Methods" year="2019" role="UX Design · Research" />
+        <ProjectMeta client="Public Health England / NHS" agency="Methods" year="2019" duration="~5 months" role="UX Design · Research" team="With user researchers and service designers" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

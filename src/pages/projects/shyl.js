@@ -8,7 +8,7 @@ function Shyl() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">Dam Digital / Shy Lifestyle</h1>
-        <ProjectMeta client="Shy Lifestyle" agency="Dam Digital" year="2023" role="UX Lead · Research" />
+        <ProjectMeta client="Shy Lifestyle" agency="Dam Digital" year="2023" role="UX Lead · Research" team="Paired with a UI designer" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>

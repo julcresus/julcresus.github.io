@@ -33,6 +33,7 @@ if (TRACKING_ID) {
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
+const Accessibility = lazy(() => import("./pages/accessibility"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const EveryMindMatters = lazy(() => import("./pages/projects/everymindmatters"));
@@ -43,6 +44,7 @@ const Mag = lazy(() => import("./pages/projects/mag"));
 const PAGE_TITLES = {
   '/': 'Julien Crésus-Ashton | Senior Interaction Designer',
   '/aboutme': 'About — Julien Crésus-Ashton',
+  '/accessibility': 'Accessibility — Julien Crésus-Ashton',
   '/hmrc': 'HMRC Wales — Julien Crésus-Ashton',
   '/naturalengland': 'Natural England — Julien Crésus-Ashton',
   '/defra': 'DEFRA — Julien Crésus-Ashton',
@@ -69,6 +71,7 @@ const PAGE_META = {
     }
   },
   '/aboutme':        { description: 'About Julien Crésus-Ashton — Senior Interaction Designer, London. Eight years across government, consumer and fintech. Currently at Cognizant.' },
+  '/accessibility':  { description: 'Accessibility statement for juliencresus.com: WCAG 2.2 AA target, what\'s in place, known issues, and how to report a problem.' },
   '/hmrc':           { description: 'Interaction design for HMRC\'s Welsh Council Tax challenge service — bilingual UX, conditional routing, GOV.UK Prototype Kit.' },
   '/naturalengland': { description: 'Service design for Natural England\'s protected sites monitoring programme — field survey tools, GOV.UK prototype, user research.' },
   '/defra':          { description: 'UX for DEFRA/APHA People Planner — complex scheduling tool built within PowerBI\'s constraints, with regular user testing with APHA managers.' },
@@ -170,6 +173,7 @@ function AnimatedRoutes() {
       <Switch location={location}>
         <Route exact path="/" component={Home} />
         <Route exact path="/aboutme" component={AboutMe} />
+        <Route exact path="/accessibility" component={Accessibility} />
         <Route exact path="/everymindmatters" component={EveryMindMatters} />
         <Route exact path="/sgdesign" component={SgDesign} />
         <Route exact path="/mod" component={Mod} />
@@ -186,21 +190,55 @@ function AnimatedRoutes() {
   );
 }
 
-// Opens full-size carousel images on click, via event delegation
+// Opens full-size carousel images on click or Enter/Space, via event delegation.
+// Carousel images are rendered by CoreUI, so they're made focusable here rather than in JSX.
 function LightboxManager() {
   const [lightbox, setLightbox] = useState(null);
 
   useEffect(() => {
+    const open = img => setLightbox({ src: img.src, alt: img.alt, trigger: img });
+
     const handleClick = e => {
       const img = e.target.closest('.carousel-item img');
-      if (img) setLightbox({ src: img.src, alt: img.alt });
+      if (img) open(img);
     };
+    const handleKey = e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const img = e.target.closest?.('.carousel-item img');
+      if (img) {
+        e.preventDefault();
+        open(img);
+      }
+    };
+
+    const makeFocusable = () => {
+      document.querySelectorAll('.carousel-item img:not([tabindex])').forEach(img => {
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+      });
+    };
+    makeFocusable();
+    const observer = new MutationObserver(makeFocusable);
+    observer.observe(document.body, { childList: true, subtree: true });
+
     document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKey);
+    };
   }, []);
 
   if (!lightbox) return null;
-  return <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />;
+
+  const close = () => {
+    const { trigger } = lightbox;
+    setLightbox(null);
+    trigger?.focus();
+  };
+
+  return <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={close} />;
 }
 
 const LoadingFallback = () => {
@@ -258,6 +296,8 @@ function App() {
               <a href="mailto:cresusjulien@gmail.com" className="footer-link">cresusjulien@gmail.com</a>
               <span className="footer-sep"> — </span>
               <a href="https://www.linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn ↗</a>
+              <span className="footer-sep"> — </span>
+              <Link to="/accessibility" className="footer-link">Accessibility</Link>
             </div>
           </footer>
         </Router>

@@ -8,7 +8,7 @@ function Mod() {
     <div className="page-wrapper">
       <div className="project_inside">
         <h1 className="project-title">MoD — Armed Forces Recruitment Process</h1>
-        <ProjectMeta client="Ministry of Defence" agency="Methods" year="2019–2020" role="UX Design · Prototyping" />
+        <ProjectMeta client="Ministry of Defence" agency="Methods" year="2019–2020" duration="5 months" role="UX Design · Prototyping" team="Largely independent, after an initial team of three" />
 
         <div className="carousel-wrap">
           <CCarousel controls indicators dark>
