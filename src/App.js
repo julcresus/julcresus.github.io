@@ -27,9 +27,7 @@ import Shya from "./pages/projects/shya";
 // Initialize Google Analytics
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 if (TRACKING_ID) {
-  ReactGA.initialize(TRACKING_ID, {
-    gaOptions: { storage: 'none', anonymizeIp: true },
-  });
+  ReactGA.initialize(TRACKING_ID);
 }
 
 // Lazy load components for better performance
@@ -37,10 +35,8 @@ const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const Playstation = lazy(() => import("./pages/projects/playstation"));
 const EveryMindMatters = lazy(() => import("./pages/projects/everymindmatters"));
 const SgDesign = lazy(() => import("./pages/projects/sgdesign"));
-const ESFA = lazy(() => import("./pages/projects/esfa"));
 const Mod = lazy(() => import("./pages/projects/mod"));
 const Mag = lazy(() => import("./pages/projects/mag"));
 
@@ -55,9 +51,7 @@ const PAGE_TITLES = {
   '/shya': 'Shy Aviation — Julien Crésus-Ashton',
   '/mod': 'Armed Forces Recruitment — Julien Crésus-Ashton',
   '/everymindmatters': 'Every Mind Matters — Julien Crésus-Ashton',
-  '/esfa': 'ESFA — Julien Crésus-Ashton',
   '/sgdesign': 'Societe Generale — Julien Crésus-Ashton',
-  '/playstation': 'PlayStation Store — Julien Crésus-Ashton',
 };
 
 const PAGE_META = {
@@ -85,14 +79,11 @@ const PAGE_META = {
   '/mod':            { description: 'UX design for the Armed Forces Recruitment Process — GOV.UK design system, React prototyping, multi-branch candidate journey.' },
   '/everymindmatters': { description: 'UX for Every Mind Matters mental health service — branching quiz flow, cognitive load reduction, GOV.UK design system.' },
   '/sgdesign':       { description: 'Interaction design for SG Markets FX trading platform — tile-based workspace, bulk trade workflows, financial design systems.' },
-  '/playstation':    { description: 'University case study — PlayStation Store mobile app redesign, merging store and messaging into a unified experience.' },
-  '/esfa':           { description: 'UX design for ESFA\'s MyESFA service — GOV.UK design system, React and Express.js prototyping, accessible government services.' },
 };
 
 const PROJECT_ROUTES = new Set([
   '/hmrc', '/naturalengland', '/defra', '/shyl', '/rethink',
   '/shya', '/mag', '/mod', '/everymindmatters', '/sgdesign',
-  '/esfa', '/playstation',
 ]);
 
 // Handles scroll-to-top, per-page Helmet meta, and GA pageviews on route change
@@ -179,10 +170,8 @@ function AnimatedRoutes() {
       <Switch location={location}>
         <Route exact path="/" component={Home} />
         <Route exact path="/aboutme" component={AboutMe} />
-        <Route exact path="/playstation" component={Playstation} />
         <Route exact path="/everymindmatters" component={EveryMindMatters} />
         <Route exact path="/sgdesign" component={SgDesign} />
-        <Route exact path="/esfa" component={ESFA} />
         <Route exact path="/mod" component={Mod} />
         <Route exact path="/shya" component={Shya} />
         <Route exact path="/shyl" component={Shyl} />

@@ -1,7 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
 import ProjectMeta from '../../components/ProjectMeta';
-import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function DEFRA() {
@@ -70,10 +69,6 @@ function DEFRA() {
         <p className="description">
           The People Planner tool was developed and tested with APHA staff as part of an ongoing alpha. The design work helped establish patterns for how complex scheduling workflows could be handled within PowerBI's constraints, and gave the development team clear, buildable specifications to work from.
         </p>
-
-        <ProtectedSection>
-          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
-        </ProtectedSection>
 
         <ProjectNav current="/defra" />
       </div>

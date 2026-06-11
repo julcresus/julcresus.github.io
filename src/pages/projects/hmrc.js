@@ -1,7 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
 import ProjectMeta from '../../components/ProjectMeta';
-import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function HMRC() {
@@ -75,12 +74,8 @@ function HMRC() {
 
         <h2 className="sub-title">Outcomes</h2>
         <p className="description">
-          The service continues to be developed and tested in active sprints. The prototypes are built in the GOV.UK Prototype Kit using HTML and CSS, and have been used in multiple rounds of usability testing with real users in Wales.
+          The prototype, built in the GOV.UK Prototype Kit with HTML and CSS, has supported multiple rounds of usability testing with Welsh speakers, people new to the challenge process, and mobile users in Wales. The bilingual language-switching and conditional routing patterns designed here carry through the service as it moves towards assessment.
         </p>
-
-        <ProtectedSection>
-          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
-        </ProtectedSection>
 
         <ProjectNav current="/hmrc" />
       </div>

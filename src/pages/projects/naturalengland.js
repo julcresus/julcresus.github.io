@@ -1,7 +1,6 @@
 import '../../App.css';
 import ProjectNav from '../../components/ProjectNav';
 import ProjectMeta from '../../components/ProjectMeta';
-import ProtectedSection from '../../components/ProtectedSection';
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
 
 function NaturalEngland() {
@@ -70,12 +69,8 @@ function NaturalEngland() {
 
         <h2 className="sub-title">Outcomes</h2>
         <p className="description">
-          The service continues to be developed and tested in active sprints. The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field and office-based users.
+          The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field surveyors and office-based managers. Changes that came directly from usability testing — like the site overview page — are now part of the core service as it continues through development.
         </p>
-
-        <ProtectedSection>
-          {/* Add detailed artefacts here — annotated screens, research outputs, testing notes */}
-        </ProtectedSection>
 
         <ProjectNav current="/naturalengland" />
       </div>

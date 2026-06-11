@@ -54,7 +54,7 @@ function EveryMindMatters() {
 
         <h2 className="sub-title">The challenge</h2>
         <p className="description">
-          Designing for mental health means designing for people who may already be overwhelmed. Users experiencing anxiety don't respond well to busy, information-heavy screens. Research sessions with people affected by anxiety and low mood shaped the design in specific ways: blue and yellow were found to be the most calming colour combination, content had to be kept short and focused, and the number of decisions per screen was deliberately kept low to reduce cognitive load.
+          Designing for mental health means designing for people who may already be overwhelmed. Users experiencing anxiety don't respond well to busy, information-heavy screens. Research sessions with people affected by anxiety and low mood shaped the design in specific ways: content had to be kept short and focused, and the number of decisions per screen was deliberately kept low to reduce cognitive load.
           <br /><br />
           Making it work on mobile was a priority from the start. The people most likely to use the service in a difficult moment are on their phones, not at a desktop.
         </p>
