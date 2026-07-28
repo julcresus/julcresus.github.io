@@ -14,7 +14,6 @@ import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
 import BackToTopButton from './components/BackToTopButton';
 import Lightbox from './components/Lightbox';
-import CustomCursor from './components/CustomCursor';
 import PageTransition from './components/PageTransition';
 import { AnimatePresence } from 'framer-motion';
 import ReactGA from 'react-ga4';
@@ -282,7 +281,6 @@ function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <CustomCursor />
         <Router basename={process.env.PUBLIC_URL}>
           <RouteHandler />
           <LightboxManager />
