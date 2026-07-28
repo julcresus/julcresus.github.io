@@ -158,7 +158,7 @@ function Nav() {
             Work
           </NavHashLink>
           <NavLink exact to="/aboutme" className="nav-link" activeClassName="nav-link-active">About</NavLink>
-          <NavLink exact to="/cv" className="nav-link" activeClassName="nav-link-active">CV</NavLink>
+          <a href="./pdf/cv.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">CV ↗</a>
           <ThemeToggle />
         </div>
       </div>

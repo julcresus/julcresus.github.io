@@ -1176,3 +1176,40 @@ a {
   color: var(--fg);
   line-height: 1.6;
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .nav-header, .footer, .about-back, .theme-toggle {
+    display: none !important;
+  }
+  
+  .about-page {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .cv-role {
+    color: black !important;
+  }
+  
+  .cv-company, .cv-dates, .cv-bullets li {
+    color: #444 !important;
+  }
+  
+  .cv-bullets li::before {
+    color: #444 !important;
+  }
+
+  .section-label {
+    color: #888 !important;
+  }
+}
