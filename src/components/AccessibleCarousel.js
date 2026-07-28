@@ -8,8 +8,20 @@ function AccessibleCarousel({ images, ariaLabel = "Project images carousel" }) {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.clientWidth;
-      scrollRef.current.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      const container = scrollRef.current;
+      const scrollAmount = container.clientWidth;
+      const currentScroll = container.scrollLeft;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+
+      // Loop to beginning if at the end
+      if (direction === 1 && currentScroll >= maxScroll - 10) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      // Loop to end if at the beginning
+      } else if (direction === -1 && currentScroll <= 10) {
+        container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
     }
   };
 

@@ -844,7 +844,7 @@ a {
   opacity: 1;
 }
 
-.carousel-item img {
+.accessible-carousel-item img {
   cursor: zoom-in;
 }
 

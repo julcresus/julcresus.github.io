@@ -201,12 +201,12 @@ function LightboxManager() {
     const open = img => setLightbox({ src: img.src, alt: img.alt, trigger: img });
 
     const handleClick = e => {
-      const img = e.target.closest('.carousel-item img');
+      const img = e.target.closest('.accessible-carousel-item img');
       if (img) open(img);
     };
     const handleKey = e => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
-      const img = e.target.closest?.('.carousel-item img');
+      const img = e.target.closest?.('.accessible-carousel-item img');
       if (img) {
         e.preventDefault();
         open(img);
@@ -214,7 +214,7 @@ function LightboxManager() {
     };
 
     const makeFocusable = () => {
-      document.querySelectorAll('.carousel-item img:not([tabindex])').forEach(img => {
+      document.querySelectorAll('.accessible-carousel-item img:not([tabindex])').forEach(img => {
         img.setAttribute('tabindex', '0');
         img.setAttribute('role', 'button');
       });
