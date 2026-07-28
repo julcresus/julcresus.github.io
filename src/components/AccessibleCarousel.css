@@ -27,19 +27,20 @@
   display: none; /* Safari and Chrome */
 }
 
-.accessible-carousel .carousel-item {
+.accessible-carousel .accessible-carousel-item {
   flex: 0 0 100%;
   scroll-snap-align: start;
   position: relative;
+  display: block; /* ensure it displays over Bootstrap */
 }
 
-.accessible-carousel .carousel-item img {
+.accessible-carousel .accessible-carousel-item img {
   width: 100%;
   display: block;
 }
 
 /* Matching the CoreUI caption style */
-.accessible-carousel .carousel-caption {
+.accessible-carousel .accessible-carousel-caption {
   position: absolute;
   right: 15%;
   bottom: 1.25rem;
@@ -52,7 +53,7 @@
   border-radius: 8px;
 }
 
-.accessible-carousel .carousel-caption p {
+.accessible-carousel .accessible-carousel-caption p {
   margin: 0;
   font-size: 11pt;
 }

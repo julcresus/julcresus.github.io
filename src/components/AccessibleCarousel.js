@@ -8,7 +8,7 @@ function AccessibleCarousel({ images, ariaLabel = "Project images carousel" }) {
     <div className="accessible-carousel-wrap">
       <div className="accessible-carousel" aria-label={ariaLabel} tabIndex="0" role="region">
         {images.map((img, i) => (
-          <div key={i} className="carousel-item">
+          <div key={i} className="accessible-carousel-item">
             <img 
               src={img.src} 
               alt={img.alt || `Carousel image ${i + 1}`} 
@@ -16,7 +16,7 @@ function AccessibleCarousel({ images, ariaLabel = "Project images carousel" }) {
               className="d-block w-100"
             />
             {img.caption && (
-              <div className="carousel-caption d-none d-md-block">
+              <div className="accessible-carousel-caption d-none d-md-block">
                 <p>{img.caption}</p>
               </div>
             )}
