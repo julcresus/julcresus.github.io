@@ -138,7 +138,15 @@ function Nav() {
     <nav className="nav-header">
       <div className="nav-inner">
         <div className="nav-links">
-          <NavLink exact to="/" className="nav-link" activeClassName="nav-link-active">Home</NavLink>
+          <NavLink 
+            exact 
+            to="/" 
+            className="nav-link" 
+            activeClassName="nav-link-active"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Home
+          </NavLink>
           <NavHashLink
             exact
             to="/#projects"
