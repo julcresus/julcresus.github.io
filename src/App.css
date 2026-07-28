@@ -1114,9 +1114,9 @@ a {
 
 .cv-editorial-title {
   font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 10pt;
-  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 9pt;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -1125,6 +1125,7 @@ a {
   font-size: 11pt;
   line-height: 1.7;
   font-style: italic;
+  font-weight: 300;
   color: var(--fg);
   margin-bottom: 32px;
 }
@@ -1141,9 +1142,9 @@ a {
 
 .cv-section-title {
   font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 10pt;
-  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 9pt;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--muted);
   margin: 0;
@@ -1163,8 +1164,8 @@ a {
 }
 
 .cv-company-name {
-  font-size: 14pt;
-  font-weight: 500;
+  font-size: 13pt;
+  font-weight: 600;
   color: var(--fg);
   margin: 0;
 }
@@ -1176,6 +1177,7 @@ a {
 
 .cv-job-role {
   font-size: 11pt;
+  font-weight: 300;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -1191,6 +1193,7 @@ a {
   padding-left: 16px;
   margin-bottom: 10px;
   font-size: 10.5pt;
+  font-weight: 300;
   color: var(--fg);
   line-height: 1.55;
 }
