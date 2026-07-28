@@ -20,7 +20,7 @@ function AboutMe() {
         <Col xs={12} sm={8} md={8} className="about-text">
           <h1 className="project-title">Bonjour!</h1>
           <p>
-            I'm Julien, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I design critical public services for HMRC and DEFRA, as well as premium consumer apps for the private sector.
+            I'm <strong>Julien Crésus-Ashton</strong>, a Paris-born, London-based Senior Interaction Designer with eight years of experience. I design critical public services for HMRC and DEFRA, as well as premium consumer apps for the private sector.
           </p>
           <p>
             I care about accessibility as a baseline, not a box to tick. Whether I am balancing business goals for a lifestyle app or meeting strict government standards, I focus on making complex things simple. I work closely with research, product and engineering to make sure we build the right thing.
