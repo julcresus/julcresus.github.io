@@ -49,6 +49,7 @@ function CV() {
             <li>Directed design iterations in response to usability testing findings across alpha and beta, reducing friction at key decision points.</li>
             <li>Set design direction across DEFRA and Natural England, keeping decisions joined up across multidisciplinary delivery teams.</li>
             <li>Led design reviews and workshops with senior stakeholders across DEFRA and Natural England, translating research into actionable design decisions.</li>
+            <li>Informally coached other designers on GDS standards and coded prototyping in HTML/CSS, raising the team's capability to work closer to the medium.</li>
           </ul>
         </div>
 
