@@ -43,6 +43,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -85,9 +86,10 @@ a {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 18pt;
   font-weight: 400;
+  letter-spacing: -0.02em;
   color: var(--fg);
   text-decoration: none;
 }
@@ -99,8 +101,9 @@ a {
 }
 
 .nav-links a {
-  font-family: var(--font-mono);
-  font-size: 10pt;
+  font-family: var(--font-sans);
+  font-size: 11pt;
+  font-weight: 400;
   color: var(--fg);
   text-decoration: none;
   position: relative;
