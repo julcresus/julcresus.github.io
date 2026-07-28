@@ -1,0 +1,43 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: transparent;
+  border: 1px solid var(--fg);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: var(--fg);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor-dot.hovering {
+  opacity: 0;
+}
+
+body {
+  /* Hides default cursor on non-touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    cursor: none;
+  }
+}
+
+a, button, [role="button"], .project-card {
+  @media (hover: hover) and (pointer: fine) {
+    cursor: none !important;
+  }
+}

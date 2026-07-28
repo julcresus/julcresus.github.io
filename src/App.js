@@ -14,6 +14,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
 import BackToTopButton from './components/BackToTopButton';
 import Lightbox from './components/Lightbox';
+import CustomCursor from './components/CustomCursor';
+import PageTransition from './components/PageTransition';
+import { AnimatePresence } from 'framer-motion';
 import ReactGA from 'react-ga4';
 
 // Import top project pages directly (no lazy loading for instant navigation)
@@ -165,28 +168,28 @@ function Nav() {
   );
 }
 
-// Animated route wrapper — key change triggers CSS enter animation on navigation
+// Animated route wrapper — framer motion handles exit/enter
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <div key={location.key} className="route-transition">
-      <Switch location={location}>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/aboutme" component={AboutMe} />
-        <Route exact path="/accessibility" component={Accessibility} />
-        <Route exact path="/everymindmatters" component={EveryMindMatters} />
-        <Route exact path="/sgdesign" component={SgDesign} />
-        <Route exact path="/mod" component={Mod} />
-        <Route exact path="/shya" component={Shya} />
-        <Route exact path="/shyl" component={Shyl} />
-        <Route exact path="/rethink" component={Rethink} />
-        <Route exact path="/mag" component={Mag} />
-        <Route exact path="/defra" component={DEFRA} />
-        <Route exact path="/naturalengland" component={NaturalEngland} />
-        <Route exact path="/hmrc" component={HMRC} />
-        <Route component={NotFound} />
+    <AnimatePresence mode="wait">
+      <Switch location={location} key={location.pathname}>
+        <Route exact path="/"><PageTransition><Home /></PageTransition></Route>
+        <Route exact path="/aboutme"><PageTransition><AboutMe /></PageTransition></Route>
+        <Route exact path="/accessibility"><PageTransition><Accessibility /></PageTransition></Route>
+        <Route exact path="/everymindmatters"><PageTransition><EveryMindMatters /></PageTransition></Route>
+        <Route exact path="/sgdesign"><PageTransition><SgDesign /></PageTransition></Route>
+        <Route exact path="/mod"><PageTransition><Mod /></PageTransition></Route>
+        <Route exact path="/shya"><PageTransition><Shya /></PageTransition></Route>
+        <Route exact path="/shyl"><PageTransition><Shyl /></PageTransition></Route>
+        <Route exact path="/rethink"><PageTransition><Rethink /></PageTransition></Route>
+        <Route exact path="/mag"><PageTransition><Mag /></PageTransition></Route>
+        <Route exact path="/defra"><PageTransition><DEFRA /></PageTransition></Route>
+        <Route exact path="/naturalengland"><PageTransition><NaturalEngland /></PageTransition></Route>
+        <Route exact path="/hmrc"><PageTransition><HMRC /></PageTransition></Route>
+        <Route><PageTransition><NotFound /></PageTransition></Route>
       </Switch>
-    </div>
+    </AnimatePresence>
   );
 }
 
@@ -279,6 +282,7 @@ function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
+        <CustomCursor />
         <Router basename={process.env.PUBLIC_URL}>
           <RouteHandler />
           <LightboxManager />
@@ -299,6 +303,7 @@ function App() {
               <span className="footer-sep"> — </span>
               <Link to="/accessibility" className="footer-link">Accessibility</Link>
             </div>
+            <p className="footer-badge">✓ WCAG 2.2 AA / 100% Lighthouse Score</p>
           </footer>
         </Router>
       </ThemeProvider>

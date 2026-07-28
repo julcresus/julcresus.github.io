@@ -1,34 +1,17 @@
 import '../App.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { projects } from '../data/projects';
-
+import FadeIn from '../components/FadeIn';
 
 
 const FILTERS = ['All', 'Government', 'Consumer', 'Fintech'];
 
 const ProjectCard = React.memo(({ project, index }) => {
-  const wrapRef = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.08 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const delay = `${Math.min(index, 3) * 80}ms`;
-  const animClass = `card-anim${visible ? ' card-visible' : ''}`;
-
   return (
-    <div ref={wrapRef} className={animClass} style={{ transitionDelay: delay }}>
+    <FadeIn delay={Math.min(index, 3) * 0.1}>
       <Link to={project.route} className="project-card">
         <div className="project-card-image-wrap">
           <img
@@ -51,7 +34,7 @@ const ProjectCard = React.memo(({ project, index }) => {
           </p>
         </div>
       </Link>
-    </div>
+    </FadeIn>
   );
 });
 

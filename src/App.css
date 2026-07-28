@@ -651,16 +651,7 @@ a {
 /* ─────────────────────────────────────────
    Project Card — Scroll Entrance Animation
 ───────────────────────────────────────── */
-.card-anim {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
 
-.card-anim.card-visible {
-  opacity: 1;
-  transform: none;
-}
 
 /* ─────────────────────────────────────────
    Project Card — Hover Overlay Preview
@@ -1007,7 +998,7 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   .route-transition { animation: none; }
-  .card-anim { opacity: 1; transform: none; transition: none; }
+
   .project-card-overlay { transition: none; }
   .reading-progress { transition: none; }
 }
