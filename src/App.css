@@ -390,19 +390,21 @@ a {
 }
 
 .project-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 28pt;
+  font-weight: 400;
+  letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--fg);
   margin-bottom: 8px;
 }
 
 .sub-title {
-  font-family: var(--font-mono);
-  font-size: 10pt;
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 11pt;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   color: var(--muted);
   margin-bottom: 12px;
   margin-top: 48px;
