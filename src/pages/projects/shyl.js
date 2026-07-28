@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/shyl/shyl_1.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — app screens" },
-  { src: './img/shyl/shyl_2.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — service browsing" },
-  { src: './img/shyl/shyl_3.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — booking flow" },
-  { src: './img/shyl/shyl_4.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — member profile" },
-  { src: './img/shyl/picture5.png', alt: "Shy Lifestyle UX workflow wireframes", loading: 'lazy', caption: "Wireframes — UX workflow" }
+  { src: '/img/shyl/shyl_1.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — app screens" },
+  { src: '/img/shyl/shyl_2.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — service browsing" },
+  { src: '/img/shyl/shyl_3.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — booking flow" },
+  { src: '/img/shyl/shyl_4.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — member profile" },
+  { src: '/img/shyl/picture5.png', alt: "Shy Lifestyle UX workflow wireframes", loading: 'lazy', caption: "Wireframes — UX workflow" }
 ];
 
 function Shyl() {

@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/mag/picture1.png', alt: "McArthurGlen offer listing flow", loading: 'lazy', caption: "Wireframes — corp offer listing & QR redemption flow" },
-  { src: './img/mag/picture2.png', alt: "McArthurGlen Black Friday campaign responsive", loading: 'lazy', caption: "Wireframes — Black Friday campaign (desktop & mobile)" },
-  { src: './img/mag/picture3.png', alt: "McArthurGlen app tab navigation options", loading: 'lazy', caption: "App wireframes — tab navigation exploration" },
-  { src: './img/mag/picture4.png', alt: "McArthurGlen profile desktop wireframes", loading: 'lazy', caption: "Wireframes — corp profile desktop" },
-  { src: './img/mag/picture5.png', alt: "McArthurGlen offer listing components", loading: 'lazy', caption: "Wireframes — offer listing component library" }
+  { src: '/img/mag/picture1.png', alt: "McArthurGlen offer listing flow", loading: 'lazy', caption: "Wireframes — corp offer listing & QR redemption flow" },
+  { src: '/img/mag/picture2.png', alt: "McArthurGlen Black Friday campaign responsive", loading: 'lazy', caption: "Wireframes — Black Friday campaign (desktop & mobile)" },
+  { src: '/img/mag/picture3.png', alt: "McArthurGlen app tab navigation options", loading: 'lazy', caption: "App wireframes — tab navigation exploration" },
+  { src: '/img/mag/picture4.png', alt: "McArthurGlen profile desktop wireframes", loading: 'lazy', caption: "Wireframes — corp profile desktop" },
+  { src: '/img/mag/picture5.png', alt: "McArthurGlen offer listing components", loading: 'lazy', caption: "Wireframes — offer listing component library" }
 ];
 
 function Mag() {

@@ -2,7 +2,7 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/esfa.webp', alt: "ESFA project screen", loading: 'lazy', caption: "GOV.UK prototype — React / Express.js" }
+  { src: '/img/esfa.webp', alt: "ESFA project screen", loading: 'lazy', caption: "GOV.UK prototype — React / Express.js" }
 ];
 
 function Esfa() {

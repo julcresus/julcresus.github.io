@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/psstore/picture1.webp', alt: "PlayStation Store app splash screen", loading: 'lazy', caption: "UI design — app splash screen" },
-  { src: './img/psstore/picture2.webp', alt: "PlayStation Store personalised home feed", loading: 'lazy', caption: "UI design — personalised home feed" },
-  { src: './img/psstore/picture3.webp', alt: "PlayStation Store game detail page", loading: 'lazy', caption: "UI design — game detail page" },
-  { src: './img/psstore/picture4.webp', alt: "PlayStation Store search results", loading: 'lazy', caption: "UI design — search results" },
-  { src: './img/psstore/picture5.webp', alt: "PlayStation Store integrated messaging", loading: 'lazy', caption: "Interactive prototype — integrated messaging" }
+  { src: '/img/psstore/picture1.webp', alt: "PlayStation Store app splash screen", loading: 'lazy', caption: "UI design — app splash screen" },
+  { src: '/img/psstore/picture2.webp', alt: "PlayStation Store personalised home feed", loading: 'lazy', caption: "UI design — personalised home feed" },
+  { src: '/img/psstore/picture3.webp', alt: "PlayStation Store game detail page", loading: 'lazy', caption: "UI design — game detail page" },
+  { src: '/img/psstore/picture4.webp', alt: "PlayStation Store search results", loading: 'lazy', caption: "UI design — search results" },
+  { src: '/img/psstore/picture5.webp', alt: "PlayStation Store integrated messaging", loading: 'lazy', caption: "Interactive prototype — integrated messaging" }
 ];
 
 function Playstation() {

@@ -2,9 +2,9 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/sgdesign/picture1.webp', alt: "SG Markets FX multi-tile trading workspace", loading: 'lazy', caption: "UI design — FX multi-tile trading workspace" },
-  { src: './img/sgdesign/picture2.webp', alt: "SG Markets bulk trade negotiation screen", loading: 'lazy', caption: "UI design — bulk trade negotiation" },
-  { src: './img/sgdesign/picture3.webp', alt: "SG Markets FX rate tile grid", loading: 'lazy', caption: "UI design — FX rate tile grid" }
+  { src: '/img/sgdesign/picture1.webp', alt: "SG Markets FX multi-tile trading workspace", loading: 'lazy', caption: "UI design — FX multi-tile trading workspace" },
+  { src: '/img/sgdesign/picture2.webp', alt: "SG Markets bulk trade negotiation screen", loading: 'lazy', caption: "UI design — bulk trade negotiation" },
+  { src: '/img/sgdesign/picture3.webp', alt: "SG Markets FX rate tile grid", loading: 'lazy', caption: "UI design — FX rate tile grid" }
 ];
 
 function Sgdesign() {

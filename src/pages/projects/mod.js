@@ -2,12 +2,12 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/mod/mod-4.webp', alt: "MoD recruitment landing page and branch selection", loading: 'lazy', caption: "Prototype — landing page & branch selection" },
-  { src: './img/mod/mod-0.webp', alt: "User flow workshop with stakeholders", loading: 'lazy', caption: "Research — user flow workshop" },
-  { src: './img/mod/mod-1.webp', alt: "Mobile wireframes for eligibility check and account creation", loading: 'lazy', caption: "Wireframes — eligibility check & account creation" },
-  { src: './img/mod/mod-2.webp', alt: "Mobile wireframes for candidate dashboard and application form", loading: 'lazy', caption: "Wireframes — candidate dashboard & application" },
-  { src: './img/mod/mod-3.webp', alt: "Mobile wireframes for assessment booking and results", loading: 'lazy', caption: "Wireframes — assessment booking & results" },
-  { src: './img/mod/mod-5.webp', alt: "Pre-production Salesforce prototype showing candidate dashboard", loading: 'lazy', caption: "Prototype — candidate dashboard & profile" }
+  { src: '/img/mod/mod-4.webp', alt: "MoD recruitment landing page and branch selection", loading: 'lazy', caption: "Prototype — landing page & branch selection" },
+  { src: '/img/mod/mod-0.webp', alt: "User flow workshop with stakeholders", loading: 'lazy', caption: "Research — user flow workshop" },
+  { src: '/img/mod/mod-1.webp', alt: "Mobile wireframes for eligibility check and account creation", loading: 'lazy', caption: "Wireframes — eligibility check & account creation" },
+  { src: '/img/mod/mod-2.webp', alt: "Mobile wireframes for candidate dashboard and application form", loading: 'lazy', caption: "Wireframes — candidate dashboard & application" },
+  { src: '/img/mod/mod-3.webp', alt: "Mobile wireframes for assessment booking and results", loading: 'lazy', caption: "Wireframes — assessment booking & results" },
+  { src: '/img/mod/mod-5.webp', alt: "Pre-production Salesforce prototype showing candidate dashboard", loading: 'lazy', caption: "Prototype — candidate dashboard & profile" }
 ];
 
 function Mod() {

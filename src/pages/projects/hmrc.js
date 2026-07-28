@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/hmrc/picture1.png', alt: "HMRC Welsh start page", loading: 'lazy', caption: "GOV.UK prototype — Welsh start page (Cymraeg)" },
-  { src: './img/hmrc/picture2.png', alt: "HMRC postcode search", loading: 'lazy', caption: "GOV.UK prototype — postcode search with bilingual toggle" },
-  { src: './img/hmrc/picture3.png', alt: "HMRC search results", loading: 'lazy', caption: "GOV.UK prototype — search results" },
-  { src: './img/hmrc/picture4.png', alt: "HMRC property details", loading: 'lazy', caption: "GOV.UK prototype — property details" },
-  { src: './img/hmrc/picture5.png', alt: "HMRC challenge scenario selection", loading: 'lazy', caption: "Main journey draft" }
+  { src: '/img/hmrc/picture1.png', alt: "HMRC Welsh start page", loading: 'lazy', caption: "GOV.UK prototype — Welsh start page (Cymraeg)" },
+  { src: '/img/hmrc/picture2.png', alt: "HMRC postcode search", loading: 'lazy', caption: "GOV.UK prototype — postcode search with bilingual toggle" },
+  { src: '/img/hmrc/picture3.png', alt: "HMRC search results", loading: 'lazy', caption: "GOV.UK prototype — search results" },
+  { src: '/img/hmrc/picture4.png', alt: "HMRC property details", loading: 'lazy', caption: "GOV.UK prototype — property details" },
+  { src: '/img/hmrc/picture5.png', alt: "HMRC challenge scenario selection", loading: 'lazy', caption: "Main journey draft" }
 ];
 
 function Hmrc() {

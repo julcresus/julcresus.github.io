@@ -2,14 +2,14 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/emm/picture7.webp', alt: "Every Mind Matters user flow diagram", loading: 'lazy', caption: "UX — user flow diagram" },
-  { src: './img/emm/picture8.webp', alt: "Every Mind Matters lo-fi wireframes", loading: 'lazy', caption: "Wireframes — lo-fi screen overview" },
-  { src: './img/emm/picture1.webp', alt: "Every Mind Matters home screen", loading: 'lazy', caption: "Prototype — home screen & action overview" },
-  { src: './img/emm/picture2.webp', alt: "Every Mind Matters mental health topics", loading: 'lazy', caption: "Prototype — mental health topics" },
-  { src: './img/emm/picture3.webp', alt: "Every Mind Matters helping others flow", loading: 'lazy', caption: "Prototype — helping others flow" },
-  { src: './img/emm/picture4.webp', alt: "Every Mind Matters mental health quiz", loading: 'lazy', caption: "Prototype — mental health quiz" },
-  { src: './img/emm/picture5.webp', alt: "Every Mind Matters urgent support screen", loading: 'lazy', caption: "Prototype — urgent support" },
-  { src: './img/emm/picture6.webp', alt: "Every Mind Matters action library", loading: 'lazy', caption: "Prototype — action library" }
+  { src: '/img/emm/picture7.webp', alt: "Every Mind Matters user flow diagram", loading: 'lazy', caption: "UX — user flow diagram" },
+  { src: '/img/emm/picture8.webp', alt: "Every Mind Matters lo-fi wireframes", loading: 'lazy', caption: "Wireframes — lo-fi screen overview" },
+  { src: '/img/emm/picture1.webp', alt: "Every Mind Matters home screen", loading: 'lazy', caption: "Prototype — home screen & action overview" },
+  { src: '/img/emm/picture2.webp', alt: "Every Mind Matters mental health topics", loading: 'lazy', caption: "Prototype — mental health topics" },
+  { src: '/img/emm/picture3.webp', alt: "Every Mind Matters helping others flow", loading: 'lazy', caption: "Prototype — helping others flow" },
+  { src: '/img/emm/picture4.webp', alt: "Every Mind Matters mental health quiz", loading: 'lazy', caption: "Prototype — mental health quiz" },
+  { src: '/img/emm/picture5.webp', alt: "Every Mind Matters urgent support screen", loading: 'lazy', caption: "Prototype — urgent support" },
+  { src: '/img/emm/picture6.webp', alt: "Every Mind Matters action library", loading: 'lazy', caption: "Prototype — action library" }
 ];
 
 function Everymindmatters() {

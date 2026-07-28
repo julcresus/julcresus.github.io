@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/defra/picture1.jpg', alt: "People Planner dashboard", loading: 'lazy', caption: "UI design — home dashboard" },
-  { src: './img/defra/picture2.jpg', alt: "People Planner planned activities calendar", loading: 'lazy', caption: "UI design — planned activities calendar" },
-  { src: './img/defra/picture3.jpg', alt: "People Planner manager team view", loading: 'lazy', caption: "UI design — manager team activities view" },
-  { src: './img/defra/picture4.jpg', alt: "People Planner edit allocation", loading: 'lazy', caption: "UI design — edit team member allocation" },
-  { src: './img/defra/picture5.png', alt: "People Planner add absence", loading: 'lazy', caption: "UI design — add absence / leave" }
+  { src: '/img/defra/picture1.jpg', alt: "People Planner dashboard", loading: 'lazy', caption: "UI design — home dashboard" },
+  { src: '/img/defra/picture2.jpg', alt: "People Planner planned activities calendar", loading: 'lazy', caption: "UI design — planned activities calendar" },
+  { src: '/img/defra/picture3.jpg', alt: "People Planner manager team view", loading: 'lazy', caption: "UI design — manager team activities view" },
+  { src: '/img/defra/picture4.jpg', alt: "People Planner edit allocation", loading: 'lazy', caption: "UI design — edit team member allocation" },
+  { src: '/img/defra/picture5.png', alt: "People Planner add absence", loading: 'lazy', caption: "UI design — add absence / leave" }
 ];
 
 function Defra() {

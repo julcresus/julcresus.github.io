@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/shya/picture1.png', alt: "Shy Aviation booking user journey", loading: 'lazy', caption: "UX — booking user journey map" },
-  { src: './img/shya/picture2.png', alt: "Shy Aviation booking wireframes", loading: 'lazy', caption: "Wireframes — booking flow" },
-  { src: './img/shya/picture3.png', alt: "Shy Aviation quote flow wireframes", loading: 'lazy', caption: "Wireframes — quote flow" },
-  { src: './img/shya/picture4.png', alt: "Shy Aviation charter selection wireframes", loading: 'lazy', caption: "Wireframes — charter type selection" },
-  { src: './img/shya/picture5.png', alt: "Shy Aviation quote enquiry screen", loading: 'lazy', caption: "Wireframes — quote enquiry" }
+  { src: '/img/shya/picture1.png', alt: "Shy Aviation booking user journey", loading: 'lazy', caption: "UX — booking user journey map" },
+  { src: '/img/shya/picture2.png', alt: "Shy Aviation booking wireframes", loading: 'lazy', caption: "Wireframes — booking flow" },
+  { src: '/img/shya/picture3.png', alt: "Shy Aviation quote flow wireframes", loading: 'lazy', caption: "Wireframes — quote flow" },
+  { src: '/img/shya/picture4.png', alt: "Shy Aviation charter selection wireframes", loading: 'lazy', caption: "Wireframes — charter type selection" },
+  { src: '/img/shya/picture5.png', alt: "Shy Aviation quote enquiry screen", loading: 'lazy', caption: "Wireframes — quote enquiry" }
 ];
 
 function Shya() {

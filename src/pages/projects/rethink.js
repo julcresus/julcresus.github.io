@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/rethink/picture1.png', alt: "Rethink donation module wireframes", loading: 'lazy', caption: "Wireframes — donation module redesign" },
-  { src: './img/rethink/picture2.png', alt: "Rethink donation flow screens", loading: 'lazy', caption: "Wireframes — donation flow" },
-  { src: './img/rethink/picture3.png', alt: "Rethink recurring donation screens", loading: 'lazy', caption: "Wireframes — recurring donation screens" },
-  { src: './img/rethink/picture4.png', alt: "Rethink one-time donation screens", loading: 'lazy', caption: "Wireframes — one-time donation screens" },
-  { src: './img/rethink/picture5.png', alt: "Rethink donation module components", loading: 'lazy', caption: "Wireframes — component exploration" }
+  { src: '/img/rethink/picture1.png', alt: "Rethink donation module wireframes", loading: 'lazy', caption: "Wireframes — donation module redesign" },
+  { src: '/img/rethink/picture2.png', alt: "Rethink donation flow screens", loading: 'lazy', caption: "Wireframes — donation flow" },
+  { src: '/img/rethink/picture3.png', alt: "Rethink recurring donation screens", loading: 'lazy', caption: "Wireframes — recurring donation screens" },
+  { src: '/img/rethink/picture4.png', alt: "Rethink one-time donation screens", loading: 'lazy', caption: "Wireframes — one-time donation screens" },
+  { src: '/img/rethink/picture5.png', alt: "Rethink donation module components", loading: 'lazy', caption: "Wireframes — component exploration" }
 ];
 
 function Rethink() {

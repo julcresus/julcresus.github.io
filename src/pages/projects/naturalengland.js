@@ -2,11 +2,11 @@ import ProjectLayout from '../../components/ProjectLayout';
 import AccessibleCarousel from '../../components/AccessibleCarousel';
 
 const IMAGES = [
-  { src: './img/naturalengland/picture1.png', alt: "NRMS service overview", loading: 'lazy', caption: "GOV.UK prototype — service overview" },
-  { src: './img/naturalengland/picture2.png', alt: "NRMS survey management", loading: 'lazy', caption: "GOV.UK prototype — survey management" },
-  { src: './img/naturalengland/picture3.png', alt: "NRMS monitoring specification", loading: 'lazy', caption: "GOV.UK prototype — monitoring specification" },
-  { src: './img/naturalengland/picture4.png', alt: "NRMS site map view", loading: 'lazy', caption: "GOV.UK prototype — site map" },
-  { src: './img/naturalengland/picture5.png', alt: "NRMS survey creation flow", loading: 'lazy', caption: "GOV.UK prototype — survey creation" }
+  { src: '/img/naturalengland/picture1.png', alt: "NRMS service overview", loading: 'lazy', caption: "GOV.UK prototype — service overview" },
+  { src: '/img/naturalengland/picture2.png', alt: "NRMS survey management", loading: 'lazy', caption: "GOV.UK prototype — survey management" },
+  { src: '/img/naturalengland/picture3.png', alt: "NRMS monitoring specification", loading: 'lazy', caption: "GOV.UK prototype — monitoring specification" },
+  { src: '/img/naturalengland/picture4.png', alt: "NRMS site map view", loading: 'lazy', caption: "GOV.UK prototype — site map" },
+  { src: '/img/naturalengland/picture5.png', alt: "NRMS survey creation flow", loading: 'lazy', caption: "GOV.UK prototype — survey creation" }
 ];
 
 function Naturalengland() {
