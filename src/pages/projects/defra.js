@@ -15,8 +15,9 @@ function Defra() {
       title="DEFRA / APHA / People Planner"
       client="DEFRA / APHA" agency="Cognizant" year="2024–2025" role="Interaction Design · User Research" 
       route="/defra"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

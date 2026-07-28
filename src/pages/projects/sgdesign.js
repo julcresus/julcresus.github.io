@@ -13,8 +13,9 @@ function Sgdesign() {
       title="Société Générale / SG Markets FX Platform"
       client="Société Générale" year="2017–2018" role="Interaction Design · Design Systems" 
       route="/sgdesign"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

@@ -15,8 +15,9 @@ function Naturalengland() {
       title="Natural England / DEFRA / Protected Sites Monitoring"
       client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" role="Interaction Design · Service Design · User Research" 
       route="/naturalengland"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

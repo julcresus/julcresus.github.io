@@ -18,8 +18,9 @@ function Everymindmatters() {
       title="Every Mind Matters"
       client="Public Health England / NHS" agency="Methods" year="2019" duration="~5 months" role="UX Design · Research" team="With user researchers and service designers" 
       route="/everymindmatters"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

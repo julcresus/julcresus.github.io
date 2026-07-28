@@ -15,8 +15,9 @@ function Mag() {
       title="Dam Digital / McArthurGlen"
       client="McArthurGlen" agency="Dam Digital" year="2022" role="UX Design · Research" 
       route="/mag"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

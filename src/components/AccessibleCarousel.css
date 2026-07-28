@@ -1,6 +1,6 @@
 .accessible-carousel-wrap {
-  max-width: 800px;
-  margin: 32px auto 48px;
+  width: 100%;
+  margin: 0 0 48px;
   overflow: visible; /* allow arrow buttons to sit outside the rail */
   border-radius: 16px;
   transform: translateZ(0); /* Safari fix */

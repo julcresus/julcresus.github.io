@@ -15,8 +15,9 @@ function Shya() {
       title="Dam Digital / Shy Aviation"
       client="Shy Aviation" agency="Dam Digital" year="2022" role="UX Design · Research" 
       route="/shya"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

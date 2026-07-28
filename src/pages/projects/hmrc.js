@@ -15,8 +15,9 @@ function Hmrc() {
       title="HMRC / Welsh Council Tax Service"
       client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" team="Sole interaction designer, with content design and user research" 
       route="/hmrc"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

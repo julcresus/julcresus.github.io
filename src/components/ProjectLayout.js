@@ -11,6 +11,7 @@ function ProjectLayout({
   team, 
   duration, 
   route, 
+  carousel,
   children 
 }) {
   return (
@@ -26,7 +27,18 @@ function ProjectLayout({
           duration={duration} 
         />
         
-        {children}
+        <div className="project-split-layout">
+          <div className="project-split-text">
+            {children}
+          </div>
+          {carousel && (
+            <div className="project-split-media">
+              <div className="sticky-media">
+                {carousel}
+              </div>
+            </div>
+          )}
+        </div>
         
         <ProjectNav current={route} />
       </div>

@@ -11,8 +11,9 @@ function Esfa() {
       title="ESFA — Education & Skills Funding Agency"
       client="ESFA" agency="Methods" year="2020" role="UX Design · Prototyping" 
       route="/esfa"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">

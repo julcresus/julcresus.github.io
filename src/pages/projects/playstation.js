@@ -15,8 +15,9 @@ function Playstation() {
       title="University Case Study — PlayStation Store"
       client="Kingston University" year="2016–2017" role="UX Design · Research" 
       route="/playstation"
+    
+      carousel={<AccessibleCarousel images={IMAGES} />}
     >
-      <AccessibleCarousel images={IMAGES} />
 
       <h2 className="sub-title">Overview</h2>
         <p className="description">
