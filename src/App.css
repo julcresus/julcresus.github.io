@@ -320,6 +320,7 @@ a {
   max-width: 340px;
   filter: grayscale(80%);
   border-radius: 16px;
+  margin-bottom: 24px;
   display: block;
   transition: filter 0.4s ease, transform 0.4s ease;
 }
@@ -329,8 +330,21 @@ a {
   transform: translateY(-4px);
 }
 
+.about-lead {
+  font-size: clamp(14pt, 2vw, 18pt);
+  line-height: 1.4;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.fg-strong {
+  font-weight: 500;
+  color: var(--fg);
+}
+
 .about-text {
-  font-family: var(--font-serif);
+  padding-bottom: 48px;
+  font-family: var(--font-sans);
   font-size: clamp(12pt, 1.5vw, 14pt);
   line-height: 1.6;
   color: var(--fg);
