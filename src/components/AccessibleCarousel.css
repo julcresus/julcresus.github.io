@@ -48,7 +48,8 @@
 .accessible-carousel .accessible-carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top center; /* Ensures top UI is visible when cropping */
   display: block;
 }
 
