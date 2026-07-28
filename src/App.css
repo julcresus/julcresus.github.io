@@ -151,12 +151,23 @@ a {
 }
 
 .intro {
-  font-family: var(--font-serif);
-  font-size: clamp(24pt, 4vw, 42pt);
-  line-height: 1.25;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  font-family: var(--font-sans);
+  font-size: clamp(28pt, 4vw, 42pt);
+  line-height: 1.35;
+  font-weight: 300;
+  letter-spacing: -0.02em;
   max-width: 860px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.intro:last-child {
+  margin-bottom: 0;
+}
+
+.intro-strong {
+  font-weight: 500;
+  color: var(--fg);
 }
 
 /* ─────────────────────────────────────────

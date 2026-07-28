@@ -52,7 +52,10 @@ function Home() {
       <div className="intro-container">
         <div>
           <p className="intro">
-            Senior Interaction Designer, currently designing @ Cognizant.
+            Hello, I'm <strong className="intro-strong">Julien.</strong>
+          </p>
+          <p className="intro">
+            Senior Interaction Designer, currently @ <strong className="intro-strong">Cognizant.</strong>
           </p>
         </div>
       </div>
