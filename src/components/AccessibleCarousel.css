@@ -1,6 +1,7 @@
 .accessible-carousel-wrap {
   width: 100%;
-  margin: 0 0 48px;
+  max-width: 1000px; /* Constrain it slightly so it looks elegant above the text */
+  margin: 0 auto 48px;
   overflow: visible; /* allow arrow buttons to sit outside the rail */
   border-radius: 16px;
   transform: translateZ(0); /* Safari fix */
@@ -11,11 +12,11 @@
   overflow: hidden;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 
 .dark-mode .accessible-carousel-rail {
-  background-color: #1c1c1c;
+  background-color: #111;
   border-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -48,8 +49,7 @@
 .accessible-carousel .accessible-carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center; /* Ensures top UI is visible when cropping */
+  object-fit: contain;
   display: block;
 }
 

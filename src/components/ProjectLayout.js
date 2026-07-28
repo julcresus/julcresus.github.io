@@ -27,17 +27,14 @@ function ProjectLayout({
           duration={duration} 
         />
         
-        <div className="project-split-layout">
-          <div className="project-split-text">
-            {children}
+        {carousel && (
+          <div className="project-media-hero">
+            {carousel}
           </div>
-          {carousel && (
-            <div className="project-split-media">
-              <div className="sticky-media">
-                {carousel}
-              </div>
-            </div>
-          )}
+        )}
+
+        <div className="project-editorial-text">
+          {children}
         </div>
         
         <ProjectNav current={route} />
