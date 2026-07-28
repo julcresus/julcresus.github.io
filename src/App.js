@@ -137,7 +137,6 @@ function Nav() {
   return (
     <nav className="nav-header">
       <div className="nav-inner">
-        <Link to="/" className="nav-logo">julien crésus-ashton</Link>
         <div className="nav-links">
           <NavHashLink
             exact
