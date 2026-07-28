@@ -14,7 +14,7 @@ function CV() {
         <span className="cv-separator">·</span>
         <a href="https://linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer">linkedin.com/in/juliencresus</a>
         <span className="cv-separator">·</span>
-        <a href="https://julcresus.github.io">julcresus.github.io</a>
+        <a href="https://juliencresus.com">juliencresus.com</a>
         <span className="cv-separator">·</span>
         <span>London, UK</span>
       </div>
@@ -42,8 +42,8 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Prototyped in Figma and coded HTML/CSS to deliver accessible, GDS-compliant solutions.</li>
-            <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, setting the interaction model within Microsoft Fluent constraints and owning all design decisions through to handoff.</li>
+            <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Prototyped in Figma and coded HTML/CSS to deliver accessible, GDS-compliant solutions covering all 22 Welsh local authorities.</li>
+            <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, supporting a team of 5 planners operating across multiple Natural England reserves. Owned all design decisions within Microsoft Fluent constraints through to handoff.</li>
             <li>Set standards for personas, interaction models and service flows to GDS requirements; established WCAG 2.2 compliance as a team-wide expectation, not an afterthought.</li>
             <li>Partnered with engineers throughout delivery to translate design decisions into precise specifications, resolving feasibility issues without compromising user needs.</li>
             <li>Directed design iterations in response to usability testing findings across alpha and beta, reducing friction at key decision points.</li>
@@ -59,7 +59,7 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior UX/UI Designer</p>
           <ul className="cv-bullets">
-            <li>Led UX strategy across multiple concurrent clients including McArthurGlen and Crisis, owning the full design process from discovery through to handoff.</li>
+            <li>Led UX strategy across up to 3 concurrent client engagements including McArthurGlen and Crisis, owning the full design process from discovery through to handoff.</li>
             <li>Directed information architecture and complex interaction design across consumer and enterprise products, balancing user needs against technical and business constraints.</li>
             <li>Managed client relationships end-to-end, running regular design reviews and translating stakeholder feedback into design decisions without losing sight of user needs.</li>
             <li>Owned accessibility and design system standards across all concurrent projects, ensuring consistency without a central design operations function.</li>
@@ -88,7 +88,7 @@ function CV() {
           </div>
           <p className="cv-job-role">UX/UI Designer Trainee</p>
           <ul className="cv-bullets">
-            <li>Designed interaction models for trading platforms and internal financial tools in low- and high-fidelity using Adobe XD and Sketch, within agile delivery teams.</li>
+            <li>Designed interaction models for trading platforms and internal financial tools in low- and high-fidelity using Adobe XD and Sketch, shipping interface updates to internal trading systems used daily by the trading floor.</li>
             <li>Worked directly with quantitative analysts and IT teams to translate complex data workflows into usable interfaces for traders and internal users.</li>
             <li>Led co-creation sessions with traders, product owners and engineers to validate concepts early and reduce costly rework downstream.</li>
           </ul>
