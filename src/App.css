@@ -391,23 +391,23 @@ a {
 
 .project-title {
   font-family: var(--font-sans);
-  font-size: 28pt;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-size: clamp(32pt, 5vw, 48pt);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   color: var(--fg);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .sub-title {
   font-family: var(--font-sans);
-  font-size: 11pt;
-  font-weight: 500;
+  font-size: 9pt;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
   color: var(--muted);
-  margin-bottom: 12px;
-  margin-top: 48px;
+  margin-bottom: 16px;
+  margin-top: 64px;
 }
 
 .tags_ {
