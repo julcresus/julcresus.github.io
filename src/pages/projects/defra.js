@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function DEFRA() {
+const IMAGES = [
+  { src: './img/defra/picture1.jpg', alt: "People Planner dashboard", loading: 'lazy', caption: "UI design — home dashboard" },
+  { src: './img/defra/picture2.jpg', alt: "People Planner planned activities calendar", loading: 'lazy', caption: "UI design — planned activities calendar" },
+  { src: './img/defra/picture3.jpg', alt: "People Planner manager team view", loading: 'lazy', caption: "UI design — manager team activities view" },
+  { src: './img/defra/picture4.jpg', alt: "People Planner edit allocation", loading: 'lazy', caption: "UI design — edit team member allocation" },
+  { src: './img/defra/picture5.png', alt: "People Planner add absence", loading: 'lazy', caption: "UI design — add absence / leave" }
+];
+
+function Defra() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">DEFRA / APHA / People Planner</h1>
-        <ProjectMeta client="DEFRA / APHA" agency="Cognizant" year="2024–2025" role="Interaction Design · User Research" />
+    <ProjectLayout 
+      title="DEFRA / APHA / People Planner"
+      client="DEFRA / APHA" agency="Cognizant" year="2024–2025" role="Interaction Design · User Research" 
+      route="/defra"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/defra/picture1.jpg'} alt="People Planner dashboard" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — home dashboard</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/defra/picture2.jpg'} alt="People Planner planned activities calendar" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — planned activities calendar</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/defra/picture3.jpg'} alt="People Planner manager team view" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — manager team activities view</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/defra/picture4.jpg'} alt="People Planner edit allocation" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — edit team member allocation</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/defra/picture5.png'} alt="People Planner add absence" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — add absence / leave</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           The Animal and Plant Health Agency protects animal and plant health across England, Wales and Scotland. Their work includes routine surveillance and responding to disease outbreaks, which means at any point, managers might need to rapidly redeploy staff across teams and regions.
           <br /><br />
@@ -69,11 +52,8 @@ function DEFRA() {
         <p className="description">
           The People Planner tool was developed and tested with APHA staff as part of an ongoing alpha. The design work helped establish patterns for how complex scheduling workflows could be handled within PowerBI's constraints, and gave the development team clear, buildable specifications to work from.
         </p>
-
-        <ProjectNav current="/defra" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default DEFRA;
+export default Defra;

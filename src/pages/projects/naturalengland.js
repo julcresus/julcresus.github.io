@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function NaturalEngland() {
+const IMAGES = [
+  { src: './img/naturalengland/picture1.png', alt: "NRMS service overview", loading: 'lazy', caption: "GOV.UK prototype — service overview" },
+  { src: './img/naturalengland/picture2.png', alt: "NRMS survey management", loading: 'lazy', caption: "GOV.UK prototype — survey management" },
+  { src: './img/naturalengland/picture3.png', alt: "NRMS monitoring specification", loading: 'lazy', caption: "GOV.UK prototype — monitoring specification" },
+  { src: './img/naturalengland/picture4.png', alt: "NRMS site map view", loading: 'lazy', caption: "GOV.UK prototype — site map" },
+  { src: './img/naturalengland/picture5.png', alt: "NRMS survey creation flow", loading: 'lazy', caption: "GOV.UK prototype — survey creation" }
+];
+
+function Naturalengland() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Natural England / DEFRA / Protected Sites Monitoring</h1>
-        <ProjectMeta client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" role="Interaction Design · Service Design · User Research" />
+    <ProjectLayout 
+      title="Natural England / DEFRA / Protected Sites Monitoring"
+      client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" role="Interaction Design · Service Design · User Research" 
+      route="/naturalengland"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/naturalengland/picture1.png'} alt="NRMS service overview" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — service overview</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/naturalengland/picture2.png'} alt="NRMS survey management" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — survey management</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/naturalengland/picture3.png'} alt="NRMS monitoring specification" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — monitoring specification</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/naturalengland/picture4.png'} alt="NRMS site map view" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — site map</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/naturalengland/picture5.png'} alt="NRMS survey creation flow" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — survey creation</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           Natural England looks after protected sites across England: habitats, wildlife areas, geological sites. Keeping on top of them means sending surveyors into the field regularly, collecting data, and feeding it back into a central picture of how each site is doing.
           <br /><br />
@@ -71,11 +54,8 @@ function NaturalEngland() {
         <p className="description">
           The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field surveyors and office-based managers. Changes that came directly from usability testing, like the site overview page, are now part of the core service as it continues through development.
         </p>
-
-        <ProjectNav current="/naturalengland" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default NaturalEngland;
+export default Naturalengland;

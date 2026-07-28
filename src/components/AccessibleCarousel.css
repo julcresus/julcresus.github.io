@@ -1,0 +1,82 @@
+.accessible-carousel-wrap {
+  margin: 24px 0 40px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #f0f0f0;
+  transform: translateZ(0); /* Safari fix */
+  position: relative;
+}
+
+.dark-mode .accessible-carousel-wrap {
+  background-color: #1c1c1c;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.accessible-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.accessible-carousel::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.accessible-carousel .carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.accessible-carousel .carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Matching the CoreUI caption style */
+.accessible-carousel .carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 1.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.6); /* Add background for readability */
+  border-radius: 8px;
+}
+
+.accessible-carousel .carousel-caption p {
+  margin: 0;
+  font-size: 11pt;
+}
+
+/* Optional: small hint that it's scrollable if no trackpad */
+.accessible-carousel-wrap::after {
+  content: "→";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.accessible-carousel:active ~ .accessible-carousel-wrap::after {
+  opacity: 0;
+}

@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
+
+const IMAGES = [
+  { src: './img/shya/picture1.png', alt: "Shy Aviation booking user journey", loading: 'lazy', caption: "UX — booking user journey map" },
+  { src: './img/shya/picture2.png', alt: "Shy Aviation booking wireframes", loading: 'lazy', caption: "Wireframes — booking flow" },
+  { src: './img/shya/picture3.png', alt: "Shy Aviation quote flow wireframes", loading: 'lazy', caption: "Wireframes — quote flow" },
+  { src: './img/shya/picture4.png', alt: "Shy Aviation charter selection wireframes", loading: 'lazy', caption: "Wireframes — charter type selection" },
+  { src: './img/shya/picture5.png', alt: "Shy Aviation quote enquiry screen", loading: 'lazy', caption: "Wireframes — quote enquiry" }
+];
 
 function Shya() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Dam Digital / Shy Aviation</h1>
-        <ProjectMeta client="Shy Aviation" agency="Dam Digital" year="2022" role="UX Design · Research" />
+    <ProjectLayout 
+      title="Dam Digital / Shy Aviation"
+      client="Shy Aviation" agency="Dam Digital" year="2022" role="UX Design · Research" 
+      route="/shya"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/picture1.png'} alt="Shy Aviation booking user journey" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UX — booking user journey map</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/picture2.png'} alt="Shy Aviation booking wireframes" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — booking flow</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/picture3.png'} alt="Shy Aviation quote flow wireframes" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — quote flow</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/picture4.png'} alt="Shy Aviation charter selection wireframes" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — charter type selection</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/shya/picture5.png'} alt="Shy Aviation quote enquiry screen" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — quote enquiry</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           Shy Aviation is a global private aviation company offering charter flights, helicopter hire, aircraft management and consulting. Before this project, booking was handled manually through a quoting process. The project replaced that with a self-serve digital booking tool for private jets, helicopters and group charters.
         </p>
@@ -61,10 +44,7 @@ function Shya() {
         <p className="description">
           The booking tool launched as part of Shy Aviation's website and is live at shyaviation.com, replacing the previous manual quoting process.
         </p>
-
-        <ProjectNav current="/shya" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 

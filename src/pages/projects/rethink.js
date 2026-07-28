@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
+
+const IMAGES = [
+  { src: './img/rethink/picture1.png', alt: "Rethink donation module wireframes", loading: 'lazy', caption: "Wireframes — donation module redesign" },
+  { src: './img/rethink/picture2.png', alt: "Rethink donation flow screens", loading: 'lazy', caption: "Wireframes — donation flow" },
+  { src: './img/rethink/picture3.png', alt: "Rethink recurring donation screens", loading: 'lazy', caption: "Wireframes — recurring donation screens" },
+  { src: './img/rethink/picture4.png', alt: "Rethink one-time donation screens", loading: 'lazy', caption: "Wireframes — one-time donation screens" },
+  { src: './img/rethink/picture5.png', alt: "Rethink donation module components", loading: 'lazy', caption: "Wireframes — component exploration" }
+];
 
 function Rethink() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Rethink Mental Illness</h1>
-        <ProjectMeta client="Rethink Mental Illness" agency="Dam Digital" year="2022" role="UX Design · Product Design" />
+    <ProjectLayout 
+      title="Rethink Mental Illness"
+      client="Rethink Mental Illness" agency="Dam Digital" year="2022" role="UX Design · Product Design" 
+      route="/rethink"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/picture1.png'} alt="Rethink donation module wireframes" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — donation module redesign</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/picture2.png'} alt="Rethink donation flow screens" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — donation flow</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/picture3.png'} alt="Rethink recurring donation screens" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — recurring donation screens</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/picture4.png'} alt="Rethink one-time donation screens" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — one-time donation screens</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/rethink/picture5.png'} alt="Rethink donation module components" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — component exploration</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           Rethink Mental Illness is a charity supporting people severely affected by mental illness through information, advice, support groups, and advocacy.
           <br /><br />
@@ -57,10 +40,7 @@ function Rethink() {
         <p className="description">
           The redesigned donation module went live on the Rethink Mental Illness website, delivering a clearer funnel with improved clarity around one-time and recurring giving options. The site has since evolved with a new design direction, but the work served as the foundation for the improved donation experience.
         </p>
-
-        <ProjectNav current="/rethink" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 

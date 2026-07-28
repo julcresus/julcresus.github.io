@@ -1,25 +1,20 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function ESFA() {
+const IMAGES = [
+  { src: './img/esfa.webp', alt: "ESFA project screen", loading: 'lazy', caption: "GOV.UK prototype — React / Express.js" }
+];
+
+function Esfa() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">ESFA — Education & Skills Funding Agency</h1>
-        <ProjectMeta client="ESFA" agency="Methods" year="2020" role="UX Design · Prototyping" />
+    <ProjectLayout 
+      title="ESFA — Education & Skills Funding Agency"
+      client="ESFA" agency="Methods" year="2020" role="UX Design · Prototyping" 
+      route="/esfa"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/esfa.webp'} alt="ESFA project screen" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — React / Express.js</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           The ESFA is accountable for funding education and training for children, young people and adults. It is the result of the combination of the former responsibilities of the Education Funding Agency (EFA) and Skills Funding Agency (SFA).
         </p>
@@ -30,11 +25,8 @@ function ESFA() {
           <br /><br />
           For prototyping and making user journeys more accessible, I used the GOV.UK Design System with React and Express.JS. In order to collaborate with the researchers, other UX Designers and stakeholders, it was much easier, quicker and safer than using software-based design (Figma, Sketch). Indeed, it required following the GDS regulations and the GOV.UK Design System was perfectly designed based on that.
         </p>
-
-        <ProjectNav current="/esfa" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default ESFA;
+export default Esfa;

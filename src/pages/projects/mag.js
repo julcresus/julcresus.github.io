@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
+
+const IMAGES = [
+  { src: './img/mag/picture1.png', alt: "McArthurGlen offer listing flow", loading: 'lazy', caption: "Wireframes — corp offer listing & QR redemption flow" },
+  { src: './img/mag/picture2.png', alt: "McArthurGlen Black Friday campaign responsive", loading: 'lazy', caption: "Wireframes — Black Friday campaign (desktop & mobile)" },
+  { src: './img/mag/picture3.png', alt: "McArthurGlen app tab navigation options", loading: 'lazy', caption: "App wireframes — tab navigation exploration" },
+  { src: './img/mag/picture4.png', alt: "McArthurGlen profile desktop wireframes", loading: 'lazy', caption: "Wireframes — corp profile desktop" },
+  { src: './img/mag/picture5.png', alt: "McArthurGlen offer listing components", loading: 'lazy', caption: "Wireframes — offer listing component library" }
+];
 
 function Mag() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Dam Digital / McArthurGlen</h1>
-        <ProjectMeta client="McArthurGlen" agency="Dam Digital" year="2022" role="UX Design · Research" />
+    <ProjectLayout 
+      title="Dam Digital / McArthurGlen"
+      client="McArthurGlen" agency="Dam Digital" year="2022" role="UX Design · Research" 
+      route="/mag"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mag/picture1.png'} alt="McArthurGlen offer listing flow" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — corp offer listing & QR redemption flow</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mag/picture2.png'} alt="McArthurGlen Black Friday campaign responsive" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — Black Friday campaign (desktop & mobile)</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mag/picture3.png'} alt="McArthurGlen app tab navigation options" />
-              <CCarouselCaption className="d-none d-md-block"><p>App wireframes — tab navigation exploration</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mag/picture4.png'} alt="McArthurGlen profile desktop wireframes" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — corp profile desktop</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/mag/picture5.png'} alt="McArthurGlen offer listing components" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — offer listing component library</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           McArthurGlen is Europe's largest designer outlet group, operating over 25 centres across nine countries. The project involved redesigning and extending their shopping app, a loyalty and offers platform used by shoppers across all centres to browse deals and redeem them in-store.
         </p>
@@ -61,10 +44,7 @@ function Mag() {
         <p className="description">
           The redesigned app introduced a cleaner offer browsing experience, a more streamlined QR redemption journey, and improved onboarding for new members.
         </p>
-
-        <ProjectNav current="/mag" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 

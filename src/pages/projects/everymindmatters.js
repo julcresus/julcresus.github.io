@@ -1,53 +1,27 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function EveryMindMatters() {
+const IMAGES = [
+  { src: './img/emm/picture7.webp', alt: "Every Mind Matters user flow diagram", loading: 'lazy', caption: "UX — user flow diagram" },
+  { src: './img/emm/picture8.webp', alt: "Every Mind Matters lo-fi wireframes", loading: 'lazy', caption: "Wireframes — lo-fi screen overview" },
+  { src: './img/emm/picture1.webp', alt: "Every Mind Matters home screen", loading: 'lazy', caption: "Prototype — home screen & action overview" },
+  { src: './img/emm/picture2.webp', alt: "Every Mind Matters mental health topics", loading: 'lazy', caption: "Prototype — mental health topics" },
+  { src: './img/emm/picture3.webp', alt: "Every Mind Matters helping others flow", loading: 'lazy', caption: "Prototype — helping others flow" },
+  { src: './img/emm/picture4.webp', alt: "Every Mind Matters mental health quiz", loading: 'lazy', caption: "Prototype — mental health quiz" },
+  { src: './img/emm/picture5.webp', alt: "Every Mind Matters urgent support screen", loading: 'lazy', caption: "Prototype — urgent support" },
+  { src: './img/emm/picture6.webp', alt: "Every Mind Matters action library", loading: 'lazy', caption: "Prototype — action library" }
+];
+
+function Everymindmatters() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Every Mind Matters</h1>
-        <ProjectMeta client="Public Health England / NHS" agency="Methods" year="2019" duration="~5 months" role="UX Design · Research" team="With user researchers and service designers" />
+    <ProjectLayout 
+      title="Every Mind Matters"
+      client="Public Health England / NHS" agency="Methods" year="2019" duration="~5 months" role="UX Design · Research" team="With user researchers and service designers" 
+      route="/everymindmatters"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture7.webp'} alt="Every Mind Matters user flow diagram" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UX — user flow diagram</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture8.webp'} alt="Every Mind Matters lo-fi wireframes" />
-              <CCarouselCaption className="d-none d-md-block"><p>Wireframes — lo-fi screen overview</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture1.webp'} alt="Every Mind Matters home screen" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — home screen & action overview</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture2.webp'} alt="Every Mind Matters mental health topics" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — mental health topics</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture3.webp'} alt="Every Mind Matters helping others flow" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — helping others flow</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture4.webp'} alt="Every Mind Matters mental health quiz" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — mental health quiz</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture5.webp'} alt="Every Mind Matters urgent support screen" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — urgent support</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/emm/picture6.webp'} alt="Every Mind Matters action library" />
-              <CCarouselCaption className="d-none d-md-block"><p>Prototype — action library</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           Every Mind Matters is a Public Health England and NHS initiative that helps people take practical steps to look after their mental health. The project focused on designing the structure and key journeys for the new website, with a particular emphasis on the mental health quiz, a tool to help users understand what kind of support they might need.
         </p>
@@ -75,11 +49,8 @@ function EveryMindMatters() {
         <p className="description">
           The project delivered a full interactive Figma prototype to NHS Digital, alongside content blueprints and code guidance for the development team. Parts of the work fed into the live Every Mind Matters service.
         </p>
-
-        <ProjectNav current="/everymindmatters" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default EveryMindMatters;
+export default Everymindmatters;

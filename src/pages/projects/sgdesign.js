@@ -1,33 +1,22 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function SgDesign() {
+const IMAGES = [
+  { src: './img/sgdesign/picture1.webp', alt: "SG Markets FX multi-tile trading workspace", loading: 'lazy', caption: "UI design — FX multi-tile trading workspace" },
+  { src: './img/sgdesign/picture2.webp', alt: "SG Markets bulk trade negotiation screen", loading: 'lazy', caption: "UI design — bulk trade negotiation" },
+  { src: './img/sgdesign/picture3.webp', alt: "SG Markets FX rate tile grid", loading: 'lazy', caption: "UI design — FX rate tile grid" }
+];
+
+function Sgdesign() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">Société Générale / SG Markets FX Platform</h1>
-        <ProjectMeta client="Société Générale" year="2017–2018" role="Interaction Design · Design Systems" />
+    <ProjectLayout 
+      title="Société Générale / SG Markets FX Platform"
+      client="Société Générale" year="2017–2018" role="Interaction Design · Design Systems" 
+      route="/sgdesign"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture1.webp'} alt="SG Markets FX multi-tile trading workspace" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — FX multi-tile trading workspace</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture2.webp'} alt="SG Markets bulk trade negotiation screen" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — bulk trade negotiation</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/sgdesign/picture3.webp'} alt="SG Markets FX rate tile grid" />
-              <CCarouselCaption className="d-none d-md-block"><p>UI design — FX rate tile grid</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           SG Markets is the digital trading platform Société Générale built for institutional FX clients. I joined the digital design team within the Corporate &amp; Investment Banking division, working on a live product used daily by traders and clients across the bank.
           <br /><br />
@@ -68,11 +57,8 @@ function SgDesign() {
           <br /><br />
           <em>Visual artefacts shared with permission from Société Générale. Certain client data has been replaced with dummy information.</em>
         </p>
-
-        <ProjectNav current="/sgdesign" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default SgDesign;
+export default Sgdesign;

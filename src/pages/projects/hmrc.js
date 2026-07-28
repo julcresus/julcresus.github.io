@@ -1,41 +1,24 @@
-import '../../App.css';
-import ProjectNav from '../../components/ProjectNav';
-import ProjectMeta from '../../components/ProjectMeta';
-import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from '@coreui/react';
+import ProjectLayout from '../../components/ProjectLayout';
+import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-function HMRC() {
+const IMAGES = [
+  { src: './img/hmrc/picture1.png', alt: "HMRC Welsh start page", loading: 'lazy', caption: "GOV.UK prototype — Welsh start page (Cymraeg)" },
+  { src: './img/hmrc/picture2.png', alt: "HMRC postcode search", loading: 'lazy', caption: "GOV.UK prototype — postcode search with bilingual toggle" },
+  { src: './img/hmrc/picture3.png', alt: "HMRC search results", loading: 'lazy', caption: "GOV.UK prototype — search results" },
+  { src: './img/hmrc/picture4.png', alt: "HMRC property details", loading: 'lazy', caption: "GOV.UK prototype — property details" },
+  { src: './img/hmrc/picture5.png', alt: "HMRC challenge scenario selection", loading: 'lazy', caption: "Main journey draft" }
+];
+
+function Hmrc() {
   return (
-    <div className="page-wrapper">
-      <div className="project_inside">
-        <h1 className="project-title">HMRC / Welsh Council Tax Service</h1>
-        <ProjectMeta client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" team="Sole interaction designer, with content design and user research" />
+    <ProjectLayout 
+      title="HMRC / Welsh Council Tax Service"
+      client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" team="Sole interaction designer, with content design and user research" 
+      route="/hmrc"
+    >
+      <AccessibleCarousel images={IMAGES} />
 
-        <div className="carousel-wrap">
-          <CCarousel controls indicators dark>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/hmrc/picture1.png'} alt="HMRC Welsh start page" loading="eager" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — Welsh start page (Cymraeg)</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/hmrc/picture2.png'} alt="HMRC postcode search" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — postcode search with bilingual toggle</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/hmrc/picture3.png'} alt="HMRC search results" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — search results</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/hmrc/picture4.png'} alt="HMRC property details" />
-              <CCarouselCaption className="d-none d-md-block"><p>GOV.UK prototype — property details</p></CCarouselCaption>
-            </CCarouselItem>
-            <CCarouselItem>
-              <CImage className="d-block w-100" src={'./img/hmrc/picture5.png'} alt="HMRC challenge scenario selection" />
-              <CCarouselCaption className="d-none d-md-block"><p>Main journey draft</p></CCarouselCaption>
-            </CCarouselItem>
-          </CCarousel>
-        </div>
-
-        <h2 className="sub-title">Overview</h2>
+      <h2 className="sub-title">Overview</h2>
         <p className="description">
           Wales has its own Council Tax system. Properties there are banded differently from England: nine bands instead of eight, valued against 2003 prices rather than 1991, with 22 local authorities each setting their own rates. Citizens in Wales who think their band is wrong have the right to challenge it. They also have the legal right to do that in Welsh.
           <br /><br />
@@ -76,11 +59,8 @@ function HMRC() {
         <p className="description">
           The prototype, built in the GOV.UK Prototype Kit with HTML and CSS, has supported multiple rounds of usability testing with Welsh speakers, people new to the challenge process, and mobile users in Wales. The bilingual language-switching and conditional routing patterns designed here carry through the service as it moves towards assessment.
         </p>
-
-        <ProjectNav current="/hmrc" />
-      </div>
-    </div>
+    </ProjectLayout>
   );
 }
 
-export default HMRC;
+export default Hmrc;
