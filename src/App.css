@@ -315,9 +315,15 @@ a {
 
 .about-text {
   font-family: var(--font-serif);
-  font-size: clamp(14pt, 2vw, 18pt);
+  font-size: clamp(12pt, 1.5vw, 14pt);
   line-height: 1.6;
   color: var(--fg);
+}
+
+.about-text h1 {
+  font-size: clamp(32pt, 4vw, 48pt);
+  margin-bottom: 32px;
+  letter-spacing: -0.03em;
 }
 
 .about-text p + p {
