@@ -1309,10 +1309,10 @@ a {
   }
 
   .cv-editorial-summary {
-    font-size: 8pt !important;
+    font-size: 8.5pt !important;
     color: black !important;
-    margin-bottom: 8px !important;
-    line-height: 1.25 !important;
+    margin-bottom: 16px !important;
+    line-height: 1.3 !important;
   }
 
   .cv-editorial-summary p {
@@ -1320,7 +1320,7 @@ a {
   }
 
   .cv-section-divider {
-    margin-bottom: 6px !important;
+    margin-bottom: 12px !important;
     padding-bottom: 4px !important;
     border-bottom: 1px solid #ddd !important;
   }
@@ -1331,7 +1331,7 @@ a {
   }
 
   .cv-job-block {
-    margin-bottom: 8px !important;
+    margin-bottom: 16px !important;
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -1370,8 +1370,8 @@ a {
   .cv-editorial-footer-grid {
     display: grid !important;
     grid-template-columns: 1.5fr 1fr 1fr !important;
-    margin-top: 16px !important;
-    padding-top: 8px !important;
+    margin-top: 24px !important;
+    padding-top: 12px !important;
     border-top: 1px solid #ddd !important;
     gap: 16px !important;
     page-break-inside: avoid;
