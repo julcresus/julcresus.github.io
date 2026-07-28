@@ -15,6 +15,7 @@
 
 .accessible-carousel {
   display: flex;
+  align-items: center; /* prevents images stretching vertically */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -56,6 +57,46 @@
 .accessible-carousel .accessible-carousel-caption p {
   margin: 0;
   font-size: 11pt;
+}
+
+/* Button Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.carousel-control:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.carousel-control.prev {
+  left: -22px;
+}
+
+.carousel-control.next {
+  right: -22px;
+}
+
+@media (max-width: 768px) {
+  .carousel-control {
+    display: none; /* Hide buttons on mobile, rely on native swipe */
+  }
 }
 
 /* Optional: small hint that it's scrollable if no trackpad */
