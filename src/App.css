@@ -1180,12 +1180,13 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 1cm;
   }
   
   body {
     background-color: white !important;
     color: black !important;
+    font-size: 9pt !important;
   }
   
   .nav-header, .footer, .about-back, .theme-toggle {
@@ -1196,13 +1197,48 @@ a {
     padding: 0 !important;
     max-width: 100% !important;
   }
+
+  .project-title {
+    font-size: 24pt !important;
+    margin-bottom: 8px !important;
+  }
+
+  .about-lead {
+    font-size: 9.5pt !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .cv-content {
+    margin-top: 0 !important;
+  }
+
+  .cv-job {
+    margin-bottom: 16px !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
   
   .cv-role {
     color: black !important;
+    font-size: 11pt !important;
   }
   
-  .cv-company, .cv-dates, .cv-bullets li {
+  .cv-company {
+    font-size: 10pt !important;
+    margin-bottom: 4px !important;
     color: #444 !important;
+  }
+
+  .cv-dates {
+    font-size: 9pt !important;
+    color: #444 !important;
+  }
+  
+  .cv-bullets li {
+    font-size: 9pt !important;
+    margin-bottom: 3px !important;
+    color: #444 !important;
+    line-height: 1.4 !important;
   }
   
   .cv-bullets li::before {
@@ -1211,5 +1247,35 @@ a {
 
   .section-label {
     color: #888 !important;
+    font-size: 8pt !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cv-sidebar-section {
+    padding-top: 12px !important;
+    margin-top: 16px !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cv-edu-degree {
+    font-size: 10pt !important;
+    margin-bottom: 2px !important;
+  }
+
+  .cv-edu-school, .cv-edu-desc {
+    font-size: 9pt !important;
+  }
+
+  .cv-skills-list li, .cv-tools-list {
+    font-size: 9pt !important;
+    margin-bottom: 3px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Compress the grid gap to save space */
+  .g-5, .gy-5 {
+    --bs-gutter-y: 1.5rem !important;
+    --bs-gutter-x: 2rem !important;
   }
 }
