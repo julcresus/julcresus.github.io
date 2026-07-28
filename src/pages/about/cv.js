@@ -43,7 +43,7 @@ function CV() {
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
             <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Delivered accessible, GDS-compliant solutions covering all 22 Welsh local authorities.</li>
-            <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, supporting a team of 5 planners operating across multiple Natural England reserves. Owned all design decisions within Microsoft Fluent constraints through to handoff.</li>
+            <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, supporting planners across multiple Natural England reserves. Owned all design decisions within Microsoft Fluent constraints through to handoff.</li>
             <li>Set standards for personas, interaction models and service flows to GDS requirements; established WCAG 2.2 compliance as a team-wide expectation across multidisciplinary delivery teams.</li>
             <li>Informally coached other designers on GDS standards and coded prototyping in HTML/CSS, raising the team's capability to work closer to the medium.</li>
           </ul>
@@ -84,7 +84,6 @@ function CV() {
           <p className="cv-job-role">UX/UI Designer Trainee</p>
           <ul className="cv-bullets">
             <li>Designed interaction models for trading platforms and internal financial tools in low- and high-fidelity using Adobe XD and Sketch, shipping interface updates to internal trading systems used daily by the trading floor.</li>
-            <li>Worked directly with quantitative analysts and IT teams to translate complex data workflows into usable interfaces for traders and internal users.</li>
             <li>Led co-creation sessions with traders, product owners and engineers to validate concepts early and reduce costly rework downstream.</li>
           </ul>
         </div>
