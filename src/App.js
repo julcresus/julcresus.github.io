@@ -35,6 +35,7 @@ if (TRACKING_ID) {
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
+const CV = lazy(() => import("./pages/about/cv"));
 const Accessibility = lazy(() => import("./pages/accessibility"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -46,6 +47,7 @@ const Mag = lazy(() => import("./pages/projects/mag"));
 const PAGE_TITLES = {
   '/': 'Julien Crésus-Ashton | Senior Interaction Designer',
   '/aboutme': 'About — Julien Crésus-Ashton',
+  '/cv': 'Curriculum Vitae — Julien Crésus-Ashton',
   '/accessibility': 'Accessibility — Julien Crésus-Ashton',
   '/hmrc': 'HMRC Wales — Julien Crésus-Ashton',
   '/naturalengland': 'Natural England — Julien Crésus-Ashton',
@@ -156,7 +158,7 @@ function Nav() {
             Work
           </NavHashLink>
           <NavLink exact to="/aboutme" className="nav-link" activeClassName="nav-link-active">About</NavLink>
-          <a href="./pdf/cv.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">CV ↗</a>
+          <NavLink exact to="/cv" className="nav-link" activeClassName="nav-link-active">CV</NavLink>
           <ThemeToggle />
         </div>
       </div>
@@ -183,6 +185,7 @@ function AnimatedRoutes() {
       <Switch location={location} key={location.pathname}>
         <Route exact path="/"><PageTransition><Home /></PageTransition></Route>
         <Route exact path="/aboutme"><PageTransition><AboutMe /></PageTransition></Route>
+        <Route exact path="/cv"><PageTransition><CV /></PageTransition></Route>
         <Route exact path="/accessibility"><PageTransition><Accessibility /></PageTransition></Route>
         <Route exact path="/everymindmatters"><PageTransition><EveryMindMatters /></PageTransition></Route>
         <Route exact path="/sgdesign"><PageTransition><SgDesign /></PageTransition></Route>

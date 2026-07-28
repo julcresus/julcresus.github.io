@@ -998,6 +998,10 @@ a {
    Responsive
 ───────────────────────────────────────── */
 @media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
   .nav-inner {
     padding: 20px 5vw;
   }
@@ -1069,4 +1073,106 @@ a {
 
   .project-card-overlay { transition: none; }
   .reading-progress { transition: none; }
+}
+
+/* ── CV PAGE STYLES ──────────────────────────── */
+
+.cv-content {
+  margin-top: 24px;
+}
+
+.cv-job {
+  margin-bottom: 48px;
+}
+
+.cv-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.cv-role {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14pt;
+  color: var(--fg);
+  margin: 0;
+}
+
+.cv-dates {
+  font-size: 10pt;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cv-company {
+  font-size: 12pt;
+  color: var(--fg);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.cv-bullets {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cv-bullets li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 11pt;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cv-bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+.cv-sidebar-section {
+  border-top: 1px solid var(--nav-border);
+  padding-top: 24px;
+}
+
+.cv-edu-degree {
+  font-weight: 500;
+  font-size: 12pt;
+  margin-bottom: 4px;
+}
+
+.cv-edu-school {
+  font-size: 11pt;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.cv-edu-desc {
+  font-size: 10pt;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.cv-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-skills-list li {
+  font-size: 11pt;
+  color: var(--fg);
+  margin-bottom: 6px;
+}
+
+.cv-tools-list {
+  font-size: 11pt;
+  color: var(--fg);
+  line-height: 1.6;
 }
