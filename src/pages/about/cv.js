@@ -21,12 +21,12 @@ function CV() {
 
       <div className="cv-editorial-header">
         <h1 className="cv-name">Julien Crésus-Ashton</h1>
-        <h2 className="cv-editorial-title">SENIOR INTERACTION DESIGNER</h2>
+        <h2 className="cv-editorial-title">LEAD INTERACTION DESIGNER</h2>
       </div>
 
       <div className="cv-editorial-summary">
         <p>
-          London-based interaction designer with eight years’ experience in consultancy and digital transformation across government, fintech, and enterprise. I specialize in user-centred design for complex, high-stakes services where the interaction model matters more than the visual finish. I work across the full delivery lifecycle, collaborating closely with engineering and research to make practical, evidence-based design decisions while treating accessibility (WCAG 2.2) as a strict baseline.
+          London-based interaction designer with eight years' experience in consultancy and digital transformation across government, fintech, and enterprise. I specialize in user-centred design for complex, high-stakes services where the interaction model matters more than the visual finish. I work across the full delivery lifecycle, collaborating closely with engineering and research to make practical, evidence-based design decisions while treating accessibility (WCAG 2.2) as a strict baseline.
         </p>
       </div>
 
@@ -42,13 +42,13 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Owned interaction design for HMRC's Welsh Council Tax service, mapping complex policy logic into flows users could actually navigate. Prototyped in both Figma and coded HTML/CSS, working across discovery, alpha and beta to deliver accessible, GDS-compliant solutions.</li>
-            <li>Designed an internal workforce planning tool for DEFRA/APHA built on PowerBI, working within Microsoft Fluent design constraints.</li>
-            <li>Set out personas, interaction models and service flows to GDS standards; made WCAG 2.2 compliance a baseline expectation across multidisciplinary teams.</li>
-            <li>Worked directly with engineers throughout delivery, translating interaction decisions into specifications and iterating quickly when needed.</li>
-            <li>Worked closely with researchers through usability testing across alpha and beta, using findings to refine flows and reduce friction.</li>
-            <li>Contributed design direction and shaped interaction/service design across DEFRA and Natural England projects.</li>
-            <li>Facilitated workshops and design reviews with senior stakeholders across DEFRA and Natural England.</li>
+            <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Prototyped in Figma and coded HTML/CSS to deliver accessible, GDS-compliant solutions.</li>
+            <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, setting the interaction model within Microsoft Fluent constraints and owning all design decisions through to handoff.</li>
+            <li>Set standards for personas, interaction models and service flows to GDS requirements; established WCAG 2.2 compliance as a team-wide expectation, not an afterthought.</li>
+            <li>Partnered with engineers throughout delivery to translate design decisions into precise specifications, resolving feasibility issues without compromising user needs.</li>
+            <li>Directed design iterations in response to usability testing findings across alpha and beta, reducing friction at key decision points.</li>
+            <li>Set design direction across DEFRA and Natural England, keeping decisions joined up across multidisciplinary delivery teams.</li>
+            <li>Led design reviews and workshops with senior stakeholders across DEFRA and Natural England, translating research into actionable design decisions.</li>
           </ul>
         </div>
 
@@ -59,11 +59,11 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior UX/UI Designer</p>
           <ul className="cv-bullets">
-            <li>Led UX strategy across a range of clients including McArthurGlen and Crisis, owning the design process from research through to handoff.</li>
-            <li>Designed complex user workflows and information architecture across consumer and enterprise products, balancing user needs against technical constraints.</li>
-            <li>Ran the full design process in Figma from early discovery through to handoff, working directly with product managers and engineers.</li>
-            <li>Kept accessibility and design system standards consistent across concurrent projects, and managed client relationships.</li>
-            <li>Helped a user researcher get up to speed with Figma and UX practice.</li>
+            <li>Led UX strategy across multiple concurrent clients including McArthurGlen and Crisis, owning the full design process from discovery through to handoff.</li>
+            <li>Directed information architecture and complex interaction design across consumer and enterprise products, balancing user needs against technical and business constraints.</li>
+            <li>Managed client relationships end-to-end, running regular design reviews and translating stakeholder feedback into design decisions without losing sight of user needs.</li>
+            <li>Owned accessibility and design system standards across all concurrent projects, ensuring consistency without a central design operations function.</li>
+            <li>Coached a user researcher to independently produce production-ready Figma prototypes, upskilling their design craft and improving team throughput.</li>
           </ul>
         </div>
 
@@ -74,10 +74,10 @@ function CV() {
           </div>
           <p className="cv-job-role">UX Designer</p>
           <ul className="cv-bullets">
-            <li>Designed for government programmes including Every Mind Matters, National Funding Formula and Ministry of Defence—working to GDS standards across discovery, alpha and beta.</li>
-            <li>Built research-informed prototypes in Figma and coded prototypes using React and the GOV.UK Design System, enabling faster collaboration.</li>
-            <li>Produced user journeys, personas, service maps and storyboards that helped engineers and product managers understand design intent.</li>
-            <li>Ran workshops that brought research, product and engineering into the same room, helping align on design direction.</li>
+            <li>Designed for government programmes including Every Mind Matters, National Funding Formula and Ministry of Defence, working to GDS standards across discovery, alpha and beta.</li>
+            <li>Built research-informed prototypes in Figma and coded prototypes using React and the GOV.UK Design System, enabling faster collaboration with researchers and stakeholders than static tools allowed.</li>
+            <li>Led cross-functional workshops with research, product and engineering, setting the design direction and ensuring decisions were grounded in user evidence before moving to build.</li>
+            <li>Produced user journeys, personas, service maps and storyboards that made design intent legible to engineers and product managers throughout delivery.</li>
           </ul>
         </div>
 
@@ -88,9 +88,9 @@ function CV() {
           </div>
           <p className="cv-job-role">UX/UI Designer Trainee</p>
           <ul className="cv-bullets">
-            <li>Designed interaction models for trading platforms and internal innovation programmes / financial tools in low- and high-fidelity, using Adobe XD and Sketch.</li>
-            <li>Worked with quantitative analysts and IT teams to translate complex data workflows into usable interfaces for the people using them.</li>
-            <li>Ran co-creation sessions with traders, product owners, end users and engineers to validate concepts early.</li>
+            <li>Designed interaction models for trading platforms and internal financial tools in low- and high-fidelity using Adobe XD and Sketch, within agile delivery teams.</li>
+            <li>Worked directly with quantitative analysts and IT teams to translate complex data workflows into usable interfaces for traders and internal users.</li>
+            <li>Led co-creation sessions with traders, product owners and engineers to validate concepts early and reduce costly rework downstream.</li>
           </ul>
         </div>
       </div>
@@ -100,27 +100,33 @@ function CV() {
           <h3 className="cv-section-title">SKILLS</h3>
           <div className="cv-skills-grid">
             <div>
-              <p className="cv-skill-header">Core</p>
+              <p className="cv-skill-header">Design Practice</p>
               <ul className="cv-bullets">
                 <li>Interaction Design</li>
                 <li>User-Centred Design</li>
                 <li>Service & Journey Mapping</li>
+                <li>Design Critique Facilitation</li>
               </ul>
               <p className="cv-skill-header mt-3">Delivery</p>
               <ul className="cv-bullets">
                 <li>Prototyping & Wireframing</li>
-                <li>Workshop facilitation</li>
+                <li>Workshop Facilitation</li>
+                <li>Cross-functional Influence</li>
                 <li>Stakeholder Management</li>
               </ul>
             </div>
             <div>
-              <p className="cv-skill-header">Standards & Tools</p>
+              <p className="cv-skill-header">Standards</p>
               <ul className="cv-bullets">
                 <li>GDS Design System</li>
                 <li>WCAG 2.2 Accessibility</li>
+                <li>Discovery to Live Delivery</li>
                 <li>HTML & CSS</li>
-                <li>Figma · Sketch · Adobe Suite</li>
-                <li>Miro · JIRA · Confluence</li>
+              </ul>
+              <p className="cv-skill-header mt-3">Tools</p>
+              <ul className="cv-bullets">
+                <li>Figma · Sketch</li>
+                <li>Adobe Suite · Miro</li>
               </ul>
             </div>
           </div>
@@ -131,7 +137,7 @@ function CV() {
           <div className="cv-edu-block">
             <h5 className="cv-edu-title">MSc UX Design</h5>
             <p className="cv-edu-school">Kingston University, London</p>
-            <p className="cv-edu-meta">2018 · Thesis: Autism awareness app in WebVR</p>
+            <p className="cv-edu-meta">2018 · Thesis: WebVR app for autism awareness, exploring immersive environments as a medium for inclusive design and empathy-building.</p>
           </div>
           <div className="cv-edu-block mt-3">
             <h5 className="cv-edu-title">BA Web Design</h5>
