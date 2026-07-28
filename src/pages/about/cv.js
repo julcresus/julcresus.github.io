@@ -94,33 +94,21 @@ function CV() {
           <h3 className="cv-section-title">SKILLS</h3>
           <div className="cv-skills-grid">
             <div>
-              <p className="cv-skill-header">Design Practice</p>
               <ul className="cv-bullets">
                 <li>Interaction Design</li>
                 <li>User-Centred Design</li>
                 <li>Service & Journey Mapping</li>
                 <li>Design Critique Facilitation</li>
-              </ul>
-              <p className="cv-skill-header mt-3">Delivery</p>
-              <ul className="cv-bullets">
                 <li>Prototyping & Wireframing</li>
-                <li>Workshop Facilitation</li>
-                <li>Cross-functional Influence</li>
-                <li>Stakeholder Management</li>
               </ul>
             </div>
             <div>
-              <p className="cv-skill-header">Standards</p>
               <ul className="cv-bullets">
                 <li>GDS Design System</li>
                 <li>WCAG 2.2 Accessibility</li>
-                <li>Discovery to Live Delivery</li>
-                <li>HTML & CSS</li>
-              </ul>
-              <p className="cv-skill-header mt-3">Tools</p>
-              <ul className="cv-bullets">
-                <li>Figma · Sketch</li>
-                <li>Adobe Suite · Miro</li>
+                <li>Cross-functional Influence</li>
+                <li>Workshop Facilitation</li>
+                <li>Figma · Sketch · Adobe Suite</li>
               </ul>
             </div>
           </div>

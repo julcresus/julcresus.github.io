@@ -1104,25 +1104,26 @@ a {
 }
 
 .cv-name {
-  font-family: var(--font-sans);
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
   font-size: 36pt;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   margin-bottom: 8px;
   color: var(--fg);
 }
 
 .cv-editorial-title {
-  font-weight: 500;
-  font-size: 10pt;
-  letter-spacing: 4px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .cv-editorial-summary {
-  font-size: 10.5pt;
-  line-height: 1.6;
+  font-size: 11pt;
+  line-height: 1.7;
   font-style: italic;
   color: var(--fg);
   margin-bottom: 32px;
@@ -1139,16 +1140,19 @@ a {
 }
 
 .cv-section-title {
-  font-weight: 500;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   font-size: 10pt;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted);
   margin: 0;
 }
 
 .cv-job-block {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--nav-border);
 }
 
 .cv-job-top {
@@ -1185,10 +1189,10 @@ a {
 .cv-bullets li {
   position: relative;
   padding-left: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 10.5pt;
   color: var(--fg);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .cv-bullets li::before {
@@ -1266,7 +1270,7 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 8mm;
+    margin: 6mm 10mm;
   }
   
   body {
@@ -1297,26 +1301,30 @@ a {
   }
 
   .cv-name {
-    font-size: 20pt !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 22pt !important;
     color: black !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 2px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .cv-editorial-title {
-    font-size: 7.5pt !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 8pt !important;
     color: #555 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 3px !important;
   }
 
   .cv-editorial-summary {
-    font-size: 8.5pt !important;
+    font-size: 9.5pt !important;
     color: black !important;
-    margin-bottom: 16px !important;
-    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+    line-height: 1.45 !important;
   }
 
   .cv-editorial-summary p {
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
   }
 
   .cv-section-divider {
@@ -1326,12 +1334,16 @@ a {
   }
 
   .cv-section-title {
-    font-size: 7.5pt !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 8pt !important;
     color: #555 !important;
+    letter-spacing: 3px !important;
   }
 
   .cv-job-block {
-    margin-bottom: 16px !important;
+    margin-bottom: 12px !important;
+    padding-top: 10px !important;
+    border-top: 0.5px solid #ddd !important;
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -1341,25 +1353,25 @@ a {
   }
 
   .cv-company-name {
-    font-size: 9pt !important;
+    font-size: 10pt !important;
     color: black !important;
   }
 
   .cv-job-dates, .cv-job-role {
-    font-size: 8pt !important;
+    font-size: 8.5pt !important;
     color: #555 !important;
   }
 
   .cv-job-role {
-    margin-bottom: 2px !important;
+    margin-bottom: 4px !important;
   }
 
   .cv-bullets li {
-    font-size: 7.5pt !important;
-    color: #222 !important;
-    margin-bottom: 2px !important;
-    line-height: 1.2 !important;
-    padding-left: 10px !important;
+    font-size: 8.5pt !important;
+    color: #1a1a1a !important;
+    margin-bottom: 4px !important;
+    line-height: 1.4 !important;
+    padding-left: 12px !important;
   }
 
   .cv-bullets li::before {
