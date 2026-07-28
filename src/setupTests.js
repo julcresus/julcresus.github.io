@@ -18,3 +18,15 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+// Mock window.scrollTo
+window.scrollTo = jest.fn();
+
+// Mock IntersectionObserver
+class MockIntersectionObserver {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+window.IntersectionObserver = MockIntersectionObserver;
