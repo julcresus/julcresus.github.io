@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function Lightbox({ src, alt, onClose }) {
+function Lightbox({ src, alt, caption, onClose }) {
   const overlayRef = useRef(null);
   const closeBtnRef = useRef(null);
 
@@ -59,6 +59,11 @@ function Lightbox({ src, alt, onClose }) {
         onClick={e => e.stopPropagation()}
         tabIndex={0}
       />
+      {caption && (
+        <div className="lightbox-caption" onClick={e => e.stopPropagation()}>
+          <p>{caption}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -198,18 +198,22 @@ function LightboxManager() {
   const [lightbox, setLightbox] = useState(null);
 
   useEffect(() => {
-    const open = img => setLightbox({ src: img.src, alt: img.alt, trigger: img });
+    const open = (img, caption) => setLightbox({ src: img.src, alt: img.alt, trigger: img, caption });
 
     const handleClick = e => {
       const img = e.target.closest('.accessible-carousel-item img');
-      if (img) open(img);
+      if (img) {
+        const caption = img.closest('.accessible-carousel-item').querySelector('.accessible-carousel-caption p')?.textContent;
+        open(img, caption);
+      }
     };
     const handleKey = e => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
       const img = e.target.closest?.('.accessible-carousel-item img');
       if (img) {
         e.preventDefault();
-        open(img);
+        const caption = img.closest('.accessible-carousel-item').querySelector('.accessible-carousel-caption p')?.textContent;
+        open(img, caption);
       }
     };
 
@@ -240,7 +244,7 @@ function LightboxManager() {
     trigger?.focus();
   };
 
-  return <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={close} />;
+  return <Lightbox src={lightbox.src} alt={lightbox.alt} caption={lightbox.caption} onClose={close} />;
 }
 
 const LoadingFallback = () => {
