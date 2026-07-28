@@ -21,7 +21,7 @@ function CV() {
 
       <div className="cv-editorial-header">
         <h1 className="cv-name">Julien Crésus-Ashton</h1>
-        <h2 className="cv-editorial-title">LEAD INTERACTION DESIGNER</h2>
+        <h2 className="cv-editorial-title">SENIOR INTERACTION DESIGNER</h2>
       </div>
 
       <div className="cv-editorial-summary">
@@ -42,13 +42,9 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Prototyped in Figma and coded HTML/CSS to deliver accessible, GDS-compliant solutions covering all 22 Welsh local authorities.</li>
+            <li>Led interaction design for HMRC's Welsh Council Tax service end-to-end, mapping complex policy logic into navigable user flows across discovery, alpha and beta. Delivered accessible, GDS-compliant solutions covering all 22 Welsh local authorities.</li>
             <li>Directed interaction and service design for a DEFRA/APHA workforce planning tool built on PowerBI, supporting a team of 5 planners operating across multiple Natural England reserves. Owned all design decisions within Microsoft Fluent constraints through to handoff.</li>
-            <li>Set standards for personas, interaction models and service flows to GDS requirements; established WCAG 2.2 compliance as a team-wide expectation, not an afterthought.</li>
-            <li>Partnered with engineers throughout delivery to translate design decisions into precise specifications, resolving feasibility issues without compromising user needs.</li>
-            <li>Directed design iterations in response to usability testing findings across alpha and beta, reducing friction at key decision points.</li>
-            <li>Set design direction across DEFRA and Natural England, keeping decisions joined up across multidisciplinary delivery teams.</li>
-            <li>Led design reviews and workshops with senior stakeholders across DEFRA and Natural England, translating research into actionable design decisions.</li>
+            <li>Set standards for personas, interaction models and service flows to GDS requirements; established WCAG 2.2 compliance as a team-wide expectation across multidisciplinary delivery teams.</li>
             <li>Informally coached other designers on GDS standards and coded prototyping in HTML/CSS, raising the team's capability to work closer to the medium.</li>
           </ul>
         </div>
@@ -61,7 +57,6 @@ function CV() {
           <p className="cv-job-role">Senior UX/UI Designer</p>
           <ul className="cv-bullets">
             <li>Led UX strategy across up to 3 concurrent client engagements including McArthurGlen and Crisis, owning the full design process from discovery through to handoff.</li>
-            <li>Directed information architecture and complex interaction design across consumer and enterprise products, balancing user needs against technical and business constraints.</li>
             <li>Managed client relationships end-to-end, running regular design reviews and translating stakeholder feedback into design decisions without losing sight of user needs.</li>
             <li>Owned accessibility and design system standards across all concurrent projects, ensuring consistency without a central design operations function.</li>
             <li>Coached a user researcher to independently produce production-ready Figma prototypes, upskilling their design craft and improving team throughput.</li>
@@ -76,9 +71,8 @@ function CV() {
           <p className="cv-job-role">UX Designer</p>
           <ul className="cv-bullets">
             <li>Designed for government programmes including Every Mind Matters, National Funding Formula and Ministry of Defence, working to GDS standards across discovery, alpha and beta.</li>
-            <li>Built research-informed prototypes in Figma and coded prototypes using React and the GOV.UK Design System, enabling faster collaboration with researchers and stakeholders than static tools allowed.</li>
             <li>Led cross-functional workshops with research, product and engineering, setting the design direction and ensuring decisions were grounded in user evidence before moving to build.</li>
-            <li>Produced user journeys, personas, service maps and storyboards that made design intent legible to engineers and product managers throughout delivery.</li>
+            <li>Built research-informed prototypes in Figma and coded prototypes using React and the GOV.UK Design System, enabling faster collaboration with researchers and stakeholders than static tools allowed.</li>
           </ul>
         </div>
 
