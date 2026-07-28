@@ -26,10 +26,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          Paris-born, London-based interaction designer with eight years of experience in consultancy and digital transformation, working across fintech, government, enterprise and consumer products. I specialize in user-centred design for complex services, where getting the interaction model right matters more than how it looks.
-        </p>
-        <p>
-          I work across the full delivery lifecycle, from discovery through to live, collaborating closely with research and engineering. I use accessibility (WCAG 2.2) as a baseline, and focus on making practical, evidence-based design decisions within real-world constraints.
+          London-based interaction designer with eight years’ experience in consultancy and digital transformation across government, fintech, and enterprise. I specialize in user-centred design for complex, high-stakes services where the interaction model matters more than the visual finish. I work across the full delivery lifecycle, collaborating closely with engineering and research to make practical, evidence-based design decisions while treating accessibility (WCAG 2.2) as a strict baseline.
         </p>
       </div>
 
