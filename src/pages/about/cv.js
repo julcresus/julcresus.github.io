@@ -14,10 +14,20 @@ function CV() {
       <p className="section-label">Curriculum Vitae</p>
       
       <div className="cv-content">
-        <h1 className="project-title" style={{marginBottom: "24px"}}>Julien Crésus-Ashton</h1>
-        <p className="about-lead">
-          Paris-born, London-based interaction designer with eight years of experience in consultancy and digital transformation, working across fintech, government, enterprise and consumer products. I specialize in user-centred design for complex services, where getting the interaction model right matters more than how it looks.
-        </p>
+        <div className="cv-header-flex">
+          <div>
+            <h1 className="project-title" style={{marginBottom: "8px"}}>Julien Crésus-Ashton</h1>
+            <p className="about-lead">
+              Paris-born, London-based interaction designer with eight years of experience in consultancy and digital transformation, working across fintech, government, enterprise and consumer products. I specialize in user-centred design for complex services, where getting the interaction model right matters more than how it looks.
+            </p>
+          </div>
+          <div className="cv-contact-info">
+            <a href="mailto:cresusjulien@gmail.com">cresusjulien@gmail.com</a>
+            <a href="https://linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer">linkedin.com/in/juliencresus</a>
+            <a href="https://julcresus.github.io">julcresus.github.io</a>
+            <span>London, UK</span>
+          </div>
+        </div>
         
         <Row className="g-5 align-items-start mt-4">
           <Col xs={12} md={8}>

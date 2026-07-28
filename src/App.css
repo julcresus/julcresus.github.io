@@ -1081,6 +1081,32 @@ a {
   margin-top: 24px;
 }
 
+.cv-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.cv-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 10pt;
+}
+
+.cv-contact-info a, .cv-contact-info span {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.cv-contact-info a:hover {
+  color: var(--fg);
+}
+
 .cv-job {
   margin-bottom: 48px;
 }
@@ -1180,16 +1206,16 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 1cm;
+    margin: 8mm 10mm;
   }
   
   body {
     background-color: white !important;
     color: black !important;
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
   }
   
-  .nav-header, .footer, .about-back, .theme-toggle {
+  .nav-header, .footer, .about-back, .theme-toggle, .section-label {
     display: none !important;
   }
   
@@ -1198,84 +1224,108 @@ a {
     max-width: 100% !important;
   }
 
+  .cv-header-flex {
+    margin-bottom: 12px !important;
+  }
+
+  .cv-contact-info {
+    font-size: 8pt !important;
+  }
+
+  .cv-contact-info a, .cv-contact-info span {
+    color: #444 !important;
+  }
+
   .project-title {
-    font-size: 24pt !important;
-    margin-bottom: 8px !important;
+    font-size: 20pt !important;
+    margin-bottom: 4px !important;
+    letter-spacing: -0.5px !important;
   }
 
   .about-lead {
-    font-size: 9.5pt !important;
-    margin-bottom: 16px !important;
+    font-size: 8.5pt !important;
+    margin-bottom: 0 !important;
+    line-height: 1.3 !important;
   }
   
   .cv-content {
     margin-top: 0 !important;
   }
 
+  .mt-4 { margin-top: 12px !important; }
+
   .cv-job {
-    margin-bottom: 16px !important;
+    margin-bottom: 10px !important;
     page-break-inside: avoid;
     break-inside: avoid;
   }
   
   .cv-role {
     color: black !important;
-    font-size: 11pt !important;
+    font-size: 10pt !important;
+    margin-bottom: 0 !important;
   }
   
   .cv-company {
-    font-size: 10pt !important;
-    margin-bottom: 4px !important;
+    font-size: 9pt !important;
+    margin-bottom: 2px !important;
     color: #444 !important;
   }
 
   .cv-dates {
-    font-size: 9pt !important;
+    font-size: 8pt !important;
     color: #444 !important;
   }
   
   .cv-bullets li {
-    font-size: 9pt !important;
-    margin-bottom: 3px !important;
+    font-size: 8pt !important;
+    margin-bottom: 2px !important;
     color: #444 !important;
-    line-height: 1.4 !important;
+    line-height: 1.25 !important;
   }
   
   .cv-bullets li::before {
     color: #444 !important;
   }
 
-  .section-label {
-    color: #888 !important;
-    font-size: 8pt !important;
-    margin-bottom: 8px !important;
-  }
-
   .cv-sidebar-section {
-    padding-top: 12px !important;
-    margin-top: 16px !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    border-top: none !important;
     page-break-inside: avoid;
     break-inside: avoid;
   }
+  
+  /* Render pseudo labels instead of .section-label to save space */
+  .cv-sidebar-section:nth-of-type(1)::before { content: "Education"; font-weight: 600; font-size: 8pt; color: #888; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .cv-sidebar-section:nth-of-type(2)::before { content: "Skills"; font-weight: 600; font-size: 8pt; color: #888; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .cv-sidebar-section:nth-of-type(3)::before { content: "Tools"; font-weight: 600; font-size: 8pt; color: #888; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .cv-sidebar-section:nth-of-type(4)::before { content: "Languages"; font-weight: 600; font-size: 8pt; color: #888; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
 
   .cv-edu-degree {
-    font-size: 10pt !important;
-    margin-bottom: 2px !important;
+    font-size: 9pt !important;
+    margin-bottom: 0 !important;
   }
 
   .cv-edu-school, .cv-edu-desc {
-    font-size: 9pt !important;
+    font-size: 8pt !important;
+    margin-bottom: 0 !important;
   }
+  
+  .cv-edu.mt-3 { margin-top: 6px !important; }
 
   .cv-skills-list li, .cv-tools-list {
-    font-size: 9pt !important;
-    margin-bottom: 3px !important;
-    line-height: 1.4 !important;
+    font-size: 8pt !important;
+    margin-bottom: 2px !important;
+    line-height: 1.3 !important;
   }
+
+  .mt-5 { margin-top: 12px !important; }
 
   /* Compress the grid gap to save space */
   .g-5, .gy-5 {
-    --bs-gutter-y: 1.5rem !important;
-    --bs-gutter-x: 2rem !important;
+    --bs-gutter-y: 0.5rem !important;
+    --bs-gutter-x: 1.5rem !important;
   }
 }
