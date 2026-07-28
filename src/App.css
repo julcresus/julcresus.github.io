@@ -275,10 +275,11 @@ a {
 }
 
 .project-card-title {
-  font-family: var(--font-serif);
-  font-size: 20pt;
-  line-height: 1.3;
+  font-family: var(--font-sans);
+  font-size: 22pt;
+  line-height: 1.2;
   font-weight: 500;
+  letter-spacing: -0.02em;
   color: var(--fg);
   margin-bottom: 8px;
   transition: opacity var(--transition);
@@ -289,9 +290,10 @@ a {
 }
 
 .project-card-tags {
-  font-family: var(--font-serif);
-  font-size: 10pt;
+  font-family: var(--font-sans);
+  font-size: 11pt;
   font-style: italic;
+  font-weight: 400;
   color: var(--muted);
 }
 
@@ -706,10 +708,11 @@ a {
 }
 
 .project-card-overlay-text {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 8pt;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: #ffffff;
 }
 
@@ -732,16 +735,18 @@ a {
 }
 
 .project-meta-label {
-  font-family: var(--font-mono);
-  font-size: 7.5pt;
+  font-family: var(--font-sans);
+  font-size: 8pt;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted);
 }
 
 .project-meta-value {
-  font-family: var(--font-serif);
-  font-size: 12pt;
+  font-family: var(--font-sans);
+  font-size: 11pt;
+  font-weight: 400;
   color: var(--fg);
 }
 
