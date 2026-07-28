@@ -1,14 +1,19 @@
 .accessible-carousel-wrap {
   margin: 24px 0 40px;
-  overflow: hidden;
+  overflow: visible; /* allow arrow buttons to sit outside the rail */
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: #f0f0f0;
   transform: translateZ(0); /* Safari fix */
   position: relative;
 }
 
-.dark-mode .accessible-carousel-wrap {
+.accessible-carousel-rail {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #f0f0f0;
+}
+
+.dark-mode .accessible-carousel-rail {
   background-color: #1c1c1c;
   border-color: rgba(255, 255, 255, 0.05);
 }
@@ -99,26 +104,3 @@
   }
 }
 
-/* Optional: small hint that it's scrollable if no trackpad */
-.accessible-carousel-wrap::after {
-  content: "→";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  opacity: 0.5;
-  transition: opacity 0.3s;
-}
-
-.accessible-carousel:active ~ .accessible-carousel-wrap::after {
-  opacity: 0;
-}
