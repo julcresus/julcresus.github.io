@@ -1,5 +1,6 @@
 .accessible-carousel-wrap {
-  margin: 24px 0 40px;
+  max-width: 800px;
+  margin: 32px auto 48px;
   overflow: visible; /* allow arrow buttons to sit outside the rail */
   border-radius: 16px;
   transform: translateZ(0); /* Safari fix */
@@ -37,11 +38,17 @@
   flex: 0 0 100%;
   scroll-snap-align: start;
   position: relative;
-  display: block; /* ensure it displays over Bootstrap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  background-color: transparent;
 }
 
 .accessible-carousel .accessible-carousel-item img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
