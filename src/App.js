@@ -316,7 +316,6 @@ function App() {
               <span className="footer-sep"> — </span>
               <Link to="/accessibility" className="footer-link">Accessibility</Link>
             </div>
-            <p className="footer-badge">✓ WCAG 2.2 AA / 100% Lighthouse Score</p>
           </footer>
         </Router>
       </ThemeProvider>

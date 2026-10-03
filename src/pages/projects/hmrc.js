@@ -1,65 +1,69 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
 
-const IMAGES = [
-  { src: '/img/hmrc/picture1.png', alt: "HMRC Welsh start page", loading: 'lazy', caption: "GOV.UK prototype — Welsh start page (Cymraeg)" },
-  { src: '/img/hmrc/picture2.png', alt: "HMRC postcode search", loading: 'lazy', caption: "GOV.UK prototype — postcode search with bilingual toggle" },
-  { src: '/img/hmrc/picture3.png', alt: "HMRC search results", loading: 'lazy', caption: "GOV.UK prototype — search results" },
-  { src: '/img/hmrc/picture4.png', alt: "HMRC property details", loading: 'lazy', caption: "GOV.UK prototype — property details" },
-  { src: '/img/hmrc/picture5.png', alt: "HMRC challenge scenario selection", loading: 'lazy', caption: "Main journey draft" }
-];
+function EvidenceImage({ src, alt, children }) {
+  return (
+    <figure className="case-evidence">
+      <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`View full-size image: ${alt} (opens in a new tab)`}>
+        <img src={src} alt={alt} loading="lazy" />
+      </a>
+      <figcaption>{children} <span>Open image to inspect the detail ↗</span></figcaption>
+    </figure>
+  );
+}
 
 function Hmrc() {
   return (
-    <ProjectLayout 
-      title="HMRC / Welsh Council Tax Service"
-      client="HMRC" agency="Cognizant" year="2023–Present" role="Interaction Design · User Research" team="Sole interaction designer, with content design and user research" 
+    <ProjectLayout
+      title="Designing a Council Tax service for Wales"
+      client="HMRC" agency="Cognizant" year="2023–Present"
+      role="Sole interaction designer" team="With content design, user research and Welsh-speaking colleagues"
       route="/hmrc"
-    
-      carousel={<AccessibleCarousel images={IMAGES} />}
     >
+      <section className="case-summary" aria-labelledby="hmrc-summary">
+        <h2 id="hmrc-summary" className="sub-title">The project at a glance</h2>
+        <p className="case-lead">Help people in Wales challenge their Council Tax band through a journey that works in Welsh and English.</p>
+        <dl>
+          <dt>My responsibility</dt>
+          <dd>I owned the interaction design and built the GOV.UK prototype, working with content designers, researchers and Welsh-speaking colleagues.</dd>
+          <dt>The key design work</dt>
+          <dd>Keep language choices consistent, route different challenge scenarios correctly and reflect Wales-specific policy and property data.</dd>
+          <dt>Delivery and validation</dt>
+          <dd>The prototype supported multiple rounds of usability testing, including Welsh speakers and mobile users. The service is moving towards assessment.</dd>
+        </dl>
+      </section>
 
-      <h2 className="sub-title">Overview</h2>
-        <p className="description">
-          Wales has its own Council Tax system. Properties there are banded differently from England: nine bands instead of eight, valued against 2003 prices rather than 1991, with 22 local authorities each setting their own rates. Citizens in Wales who think their band is wrong have the right to challenge it. They also have the legal right to do that in Welsh.
-          <br /><br />
-          The service existed for England. The Welsh side didn't. I was brought in as the sole interaction designer to build it out.
-        </p>
+      <h2 className="sub-title">The problem</h2>
+      <p className="description">The existing service covered England. Wales needed its own journey: nine Council Tax bands rather than eight, a different valuation date and property information reflecting Welsh policy. People also needed to complete the journey in Welsh.</p>
+      <p className="description">Someone challenging their band may already be worried about paying the wrong amount. An unexpected language change or an incorrect route could make a stressful task harder. I needed to adapt the interaction model as well as the content.</p>
 
-        <h2 className="sub-title">The challenge</h2>
-        <p className="description">
-          The starting point was an English-language service that worked well for English users. Adapting it for Wales wasn't just translation. The policies are different, the band system is different, and a meaningful part of the user base would want to complete the whole journey in Welsh.
-          <br /><br />
-          The people we were designing for weren't technical users. Many were dealing with the service because they felt they'd been charged the wrong amount. Already a stressful starting point. Getting the language wrong, or sending someone down the wrong route because of a conditional logic error, would have real consequences.
-        </p>
+      <h2 className="sub-title">1. Keep the language choice consistent</h2>
+      <p className="description">Users could choose Welsh or English at the start. That choice needed to hold across every screen, conditional branch and error state. Without a content management system, I handled language state in the prototype code and checked routes and labels with Welsh-speaking colleagues.</p>
+      <EvidenceImage src="/img/hmrc/picture1.png" alt="Welsh-language Council Tax start page in the GOV.UK prototype">
+        <strong>Welsh entry point.</strong> The start page establishes the language of the journey. The design requirement was to carry that choice through subsequent pages and errors.
+      </EvidenceImage>
+      <EvidenceImage src="/img/hmrc/picture2.png" alt="Council Tax postcode search screen with Welsh and English language options">
+        <strong>Language within the journey.</strong> Postcode search is one of the screens checked for consistency across the bilingual flow.
+      </EvidenceImage>
 
-        <h2 className="sub-title">What I designed</h2>
-        <p className="description">
-          I owned all interaction design on the project, working with a content designer and Welsh-speaking members of the team to get the language right, and with user researchers who ran regular testing sessions throughout.
-          <br /><br />
-          The service involved some genuinely tricky interaction problems.
-        </p>
-        <p className="description">
-          <strong>The bilingual toggle.</strong> Users could switch between Welsh and English at the start of the journey, and that choice had to hold consistently across every screen, every route, and every error state. There was no content management system, so language state had to be handled through the prototype code itself. Working out the right structure for that, and then checking every conditional route with the Welsh-speaking team to make sure nothing slipped through, took real care.
-        </p>
-        <p className="description">
-          <strong>Conditional routing.</strong> The challenge journey has several branches depending on a user's situation: whether they're the current resident, a previous owner, what grounds they're challenging on. Each of those scenarios needed its own flow. Getting the logic right in the GOV.UK Prototype Kit meant thinking carefully about how the routes connected and where they could break.
-        </p>
-        <p className="description">
-          <strong>Wales-specific content and data.</strong> The service needed to surface Welsh-specific property information and reflect the differences in how the Welsh system works: different band ranges, different valuation dates, different local authority structures. That meant working closely with policy and research teams to make sure the design reflected how the system actually worked, not how the English version worked.
-        </p>
+      <h2 className="sub-title">2. Route people by their circumstances</h2>
+      <p className="description">The challenge journey branches according to a person's situation, including whether they are the current resident or a previous owner, and their grounds for challenging. I mapped those scenarios into conditional routes in the GOV.UK Prototype Kit and checked how the branches connected.</p>
+      <EvidenceImage src="/img/hmrc/picture5.png" alt="Draft of the main Council Tax challenge journey and scenario selection">
+        <strong>Scenario routing draft.</strong> Different circumstances require different paths. This artefact shows the main journey draft used to work through that routing.
+      </EvidenceImage>
 
-        <h2 className="sub-title">How we worked</h2>
-        <p className="description">
-          User research ran throughout. Testing sessions included Welsh speakers, people unfamiliar with the challenge process, and people accessing the service on mobile. Findings fed directly back into the design. If something was confusing in testing, we changed it before the next round.
-          <br /><br />
-          Working as the only interaction designer meant I made most of the daily design calls independently, but always in close collaboration with the content designer, researchers, and the wider team. The bilingual work especially required constant back-and-forth. There's no shortcut for having someone fluent in Welsh check whether an interaction label makes sense in context.
-        </p>
+      <h2 className="sub-title">3. Reflect Welsh policy in the property journey</h2>
+      <p className="description">I worked with policy and research colleagues to reflect Wales-specific band ranges, valuation dates and local authority information. The property journey needed to present the Welsh information rather than inherit assumptions from the English service.</p>
+      <EvidenceImage src="/img/hmrc/picture4.png" alt="Property details screen in the Welsh Council Tax prototype">
+        <strong>Property context.</strong> The property details screen sits within a journey shaped by Welsh policy and data requirements.
+      </EvidenceImage>
 
-        <h2 className="sub-title">Outcomes</h2>
-        <p className="description">
-          The prototype, built in the GOV.UK Prototype Kit with HTML and CSS, has supported multiple rounds of usability testing with Welsh speakers, people new to the challenge process, and mobile users in Wales. The bilingual language-switching and conditional routing patterns designed here carry through the service as it moves towards assessment.
-        </p>
+      <h2 className="sub-title">Research and collaboration</h2>
+      <p className="description">Researchers ran testing throughout, including sessions with Welsh speakers, people unfamiliar with the challenge process and mobile users. I revised the prototype between rounds in response to findings, working closely with content design and the wider team.</p>
+      <p className="description">As the sole interaction designer, I made the day-to-day design decisions. Welsh-speaking colleagues helped check whether labels made sense in context, while policy colleagues helped establish the differences the journey needed to accommodate.</p>
+
+      <h2 className="sub-title">What the work delivered</h2>
+      <p className="description">A coded GOV.UK prototype supporting multiple rounds of usability research. The bilingual language and conditional routing patterns carry through the service as it moves towards assessment.</p>
+      <p className="description">The outcome documented here is the prototype and its use in research; live-service performance and completion-rate results are not yet reported.</p>
     </ProjectLayout>
   );
 }
