@@ -14,7 +14,6 @@ const CARD_DETAILS = {
   defra: { description: 'Making workforce planning clearer for APHA managers.', role: 'Interaction design' },
   shyl: { description: 'Bringing luxury services into one booking app.', role: 'UX design' },
   rethink: { description: 'Simplifying one-time and recurring donations.', role: 'UX design' },
-  shya: { description: 'Designing a self-service aviation booking journey.', role: 'UX design' },
   mag: { description: 'Helping shoppers find and redeem outlet offers.', role: 'UX design' },
   mod: { description: 'Prototyping recruitment journeys across the Armed Forces.', role: 'UX design' },
   emm: { description: 'Making mental health support easier to navigate.', role: 'UX design' },

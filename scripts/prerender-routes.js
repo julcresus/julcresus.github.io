@@ -16,6 +16,9 @@ const ROOT = path.join(__dirname, '..');
 const BUILD = process.env.BUILD_PATH ? path.resolve(process.env.BUILD_PATH) : path.join(ROOT, 'build');
 const ORIGIN = 'https://juliencresus.com';
 const DEFAULT_IMAGE = '/img/share/home.png';
+// Pages that still work at their URL but are not on the home grid: kept out of the
+// sitemap and marked noindex.
+const UNLISTED = new Set(['/shya']);
 
 // src/data files are ES modules; read them as plain data without a bundler.
 function readExports(file, names) {
@@ -55,6 +58,7 @@ function render(route) {
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(description)}">`,
     `<link rel="canonical" href="${url}">`,
+    ...(UNLISTED.has(route) ? ['<meta name="robots" content="noindex">'] : []),
     `<meta property="og:type" content="website">`,
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:title" content="${esc(title)}">`,
@@ -75,7 +79,7 @@ routes.forEach(route => {
   fs.writeFileSync(path.join(BUILD, route.slice(1) + '.html'), render(route));
 });
 
-const urls = ['/', ...routes].map(r => `  <url><loc>${ORIGIN}${r === '/' ? '/' : r}</loc></url>`).join('\n');
+const urls = ['/', ...routes.filter(r => !UNLISTED.has(r))].map(r => `  <url><loc>${ORIGIN}${r === '/' ? '/' : r}</loc></url>`).join('\n');
 fs.writeFileSync(
   path.join(BUILD, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
