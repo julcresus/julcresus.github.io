@@ -12,6 +12,7 @@ function ProjectLayout({
   duration, 
   route, 
   carousel,
+  summary,
   children 
 }) {
   return (
@@ -27,6 +28,8 @@ function ProjectLayout({
           duration={duration} 
         />
         
+        {summary}
+
         {carousel && (
           <div className="project-media-hero">
             {carousel}

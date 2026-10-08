@@ -17,6 +17,20 @@ function Naturalengland() {
       route="/naturalengland"
     
       carousel={<AccessibleCarousel images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="ne-summary">
+          <h2 id="ne-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Replace paper files, iPads and legacy systems with one GOV.UK service for planning, running and tracking surveys of protected sites.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>Interaction and service design across two very different journeys: field surveyors recording what they see on site, and managers planning and tracking surveys from the office.</dd>
+            <dt>What research changed</dt>
+            <dd>Testing with ecologists and field surveyors showed people losing their bearings when they were dropped straight into survey detail. I added a site overview page, which is now part of the core service.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Several rounds of usability testing using a coded GOV.UK Prototype Kit prototype. The changes that came from testing carry through as the service continues through development.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

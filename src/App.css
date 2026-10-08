@@ -1373,8 +1373,8 @@ a {
   }
 
   .cv-job-block {
-    margin-bottom: 12px !important;
-    padding-top: 10px !important;
+    margin-bottom: 8px !important;
+    padding-top: 7px !important;
     border-top: 0.5px solid #ddd !important;
     page-break-inside: avoid;
     break-inside: avoid;

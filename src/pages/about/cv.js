@@ -26,7 +26,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          Interaction designer with eight years in UK government and consumer apps. At the moment I'm designing HMRC's Council Tax challenge service for Wales, in Welsh and English, as a coded GOV.UK prototype. I like to get something rough in front of users early and change it when they get stuck. SC cleared.
+          Interaction designer with eight years in UK government and consumer apps. At the moment I'm designing HMRC's Council Tax challenge service for Wales, in Welsh and English, as a coded GOV.UK prototype. On Natural England's protected sites service, testing showed surveyors losing their way, so I added a site overview that is now core to the service. SC cleared.
         </p>
       </div>
 
@@ -43,9 +43,9 @@ function CV() {
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
             <li>Led interaction design for HMRC's Welsh Council Tax service across all 22 Welsh local authorities, mapping complex policy logic into navigable user flows across discovery and alpha. Delivered accessible, GDS-compliant journeys.</li>
-            <li>Designed a DEFRA/APHA workforce planning tool built on PowerBI, supporting planners across multiple Natural England reserves. Made the design decisions within Microsoft Fluent constraints through to handoff.</li>
-            <li>Set the standard for personas, interaction models and service flows to GDS requirements, and made WCAG 2.2 compliance a team-wide expectation.</li>
-            <li>Coached other designers on GDS standards and coded prototyping in HTML/CSS, bringing the team closer to the medium.</li>
+            <li>Designed Natural England's protected sites monitoring service, testing with ecologists and field surveyors. Testing showed users losing their bearings, so I added a site overview page, now part of the core service.</li>
+            <li>Designed a DEFRA/APHA workforce planning tool on PowerBI, replacing team spreadsheets with one view of activities and absences for APHA managers. Designed within Fluent and PowerBI constraints, working with developers through to handoff.</li>
+            <li>Set the standard for personas, interaction models and WCAG 2.2 across the team, and coached other designers on GDS and coded prototyping.</li>
           </ul>
         </div>
 
@@ -56,7 +56,7 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior UX/UI Designer</p>
           <ul className="cv-bullets">
-            <li>Led UX strategy across up to 3 concurrent client engagements including McArthurGlen and Crisis, owning the full design process from discovery through to handoff.</li>
+            <li>Led UX on Shy Lifestyle (a luxury concierge app, live at shylifestyle.com), Rethink Mental Illness's donation module and McArthurGlen's shopping app, across up to 3 concurrent clients.</li>
             <li>Ran regular design reviews with clients and turned stakeholder feedback into design decisions grounded in user needs.</li>
             <li>Owned accessibility and design system standards across all concurrent projects, keeping them consistent.</li>
             <li>Coached a user researcher to independently produce production-ready Figma prototypes, upskilling their design craft and improving team throughput.</li>
