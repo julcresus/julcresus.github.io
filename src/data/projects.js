@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 'hmrc',
-    image: './img/hmrc.webp',
+    image: './img/thumbs/hmrc.webp',
     alt: '',
     title: 'Cognizant — HMRC Wales',
     shortTitle: 'HMRC Wales',
@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     id: 'naturalengland',
-    image: './img/naturalengland.webp',
+    image: './img/thumbs/naturalengland.webp',
     alt: '',
     title: 'Cognizant — Natural England / DEFRA',
     shortTitle: 'Natural England',
@@ -27,7 +27,7 @@ export const projects = [
   },
   {
     id: 'defra',
-    image: './img/defra.webp',
+    image: './img/thumbs/defra.webp',
     alt: '',
     title: 'Cognizant — DEFRA / APHA',
     shortTitle: 'DEFRA',
@@ -92,7 +92,7 @@ export const projects = [
   },
   {
     id: 'mod',
-    image: './img/mod.webp',
+    image: './img/thumbs/mod.webp',
     alt: '',
     title: 'Methods — Armed Forces Recruitment',
     shortTitle: 'Armed Forces',
@@ -105,7 +105,7 @@ export const projects = [
   },
   {
     id: 'emm',
-    image: './img/emm.webp',
+    image: './img/thumbs/emm.webp',
     alt: '',
     title: 'Methods — Every Mind Matters',
     shortTitle: 'Every Mind Matters',

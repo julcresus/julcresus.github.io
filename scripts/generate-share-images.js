@@ -6,7 +6,7 @@
 // The output is committed. scripts/prerender-routes.js points each page at its share card.
 //
 // Government projects deliberately show only their client logo (kind: 'logo') rather than
-// product screens, so they get no thumbnail here and the home grid keeps the logo image.
+// product screens; they get the same framed-card thumbnail as everything else.
 
 const fs = require('fs');
 const os = require('os');
@@ -36,10 +36,10 @@ const HERO = {
   mod: { kind: 'logo', src: 'mod.webp' },
   emm: { kind: 'logo', src: 'emm.webp' },
   shyl: { kind: 'panel', src: 'shyl/shyl_1.webp', x: 0.27, w: 0.44, y: 0.1, bg: '#f7f7f7', thumb: { x: 0.05, w: 0.9, y: 0.12 } },
-  rethink: { kind: 'macbook', src: 'rethink/picture3.png', pos: '50% 0%' },
+  rethink: { kind: 'macbook', src: 'rethink/picture2.png', pos: '50% 50%', zoom: 1.1 },
   shya: { kind: 'macbook', src: 'shya/picture5.png', pos: '50% 0%' },
   mag: { kind: 'panel', src: 'mag/picture3.png', x: 0.01, w: 0.98, y: 0.02, bg: '#000' },
-  sg: { kind: 'panel', src: 'sgdesign/picture1.webp', x: 0.21, w: 0.58, y: 0.1, bg: '#fff' },
+  sg: { kind: 'panel', src: 'sgdesign/picture1.webp', x: 0.228, w: 0.29, y: 0.243, bg: '#fff' },
 };
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -56,7 +56,7 @@ function heroMarkup(hero, boxW, boxH) {
     return { css: '', inner: `<div style="width:100%;height:100%;background:#f8f8f8 url('${url(hero.src)}') center/105% auto no-repeat"></div>` };
   }
   if (hero.kind === 'macbook') {
-    const w = Math.min(boxW * 0.94, boxH * 1.2);   // lid width
+    const w = Math.min(boxW * 0.98, boxH * 1.35);   // lid width
     const bez = Math.round(w * 0.022);
     const screenW = Math.round(w - bez * 2);
     const screenH = Math.round(screenW * 0.625);   // 16:10
@@ -65,7 +65,7 @@ function heroMarkup(hero, boxW, boxH) {
       css: `.mac{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);width:${Math.round(w)}px}
 .lid{background:#1d1d1f;border-radius:${bez * 1.4}px ${bez * 1.4}px ${bez * .6}px ${bez * .6}px;padding:${bez}px;height:${lidH}px;position:relative;box-shadow:0 0 0 1px #3a3a3c inset}
 .lid:before{content:'';position:absolute;top:${bez * .38}px;left:50%;width:${bez * .3}px;height:${bez * .3}px;margin-left:-${bez * .15}px;border-radius:50%;background:#3a3a3c}
-.scr{width:${screenW}px;height:${screenH}px;background:#fff url('${url(hero.src)}') ${hero.pos || '50% 0%'}/cover no-repeat;border-radius:${bez * .3}px}
+.scr{width:${screenW}px;height:${screenH}px;background:#fff url('${url(hero.src)}') ${hero.pos || '50% 0%'}/${hero.zoom ? `${hero.zoom * 100}% auto` : 'cover'} no-repeat;border-radius:${bez * .3}px}
 .base{width:${Math.round(w * 1.08)}px;margin-left:-${Math.round(w * 0.04)}px;height:${Math.round(w * 0.022)}px;background:linear-gradient(#e3e4e6,#b9bbc0);border-radius:0 0 ${w * .02}px ${w * .02}px;position:relative;box-shadow:0 14px 28px rgba(0,0,0,.2)}
 .base:after{content:'';position:absolute;left:50%;top:0;width:${Math.round(w * .16)}px;height:${Math.round(w * .008)}px;margin-left:-${Math.round(w * .08)}px;background:#9a9ca1;border-radius:0 0 ${w * .01}px ${w * .01}px}`,
       inner: '<div class="mac"><div class="lid"><div class="scr"></div></div><div class="base"></div></div>',
@@ -112,12 +112,18 @@ ${m ? `<div class="panel">${m.inner}</div>` : ''}${photo ? '<div class="photo"><
 </body></html>`;
 }
 
+// Grid thumbnails share one soft background. The MacBook sits directly on it; everything
+// else (phone screens, mockups, client logos) is framed as a card with the same margins.
 function thumbHtml(hero) {
-  const m = heroMarkup({ ...hero, ...(hero.thumb || {}) }, 960, 540);
+  const framed = hero.kind !== 'macbook';
+  const inset = { x: 56, y: 36 };
+  const m = framed
+    ? heroMarkup({ ...hero, ...(hero.thumb || {}) }, 960 - inset.x * 2, 540 - inset.y * 2)
+    : heroMarkup(hero, 960, 540);
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}
 body{width:960px;height:540px;overflow:hidden;background:#f3f3f3;position:relative}
-.frame{position:absolute;inset:0}
+.frame{position:absolute;${framed ? `left:${inset.x}px;right:${inset.x}px;top:${inset.y}px;bottom:${inset.y}px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.14),0 0 0 1px rgba(0,0,0,.07)` : 'inset:0'}}
 ${m.css}
 </style></head><body><div class="frame">${m.inner}</div></body></html>`;
 }
@@ -179,7 +185,7 @@ function toWebp(png, webp) {
     console.log('wrote', `public/img/share/${card.id}.png`);
   }
   for (const card of cards) {
-    if (!card.hero || card.hero.kind === 'logo') continue;
+    if (!card.hero) continue;
     const png = path.join(tmp, `${card.id}-thumb.png`);
     await shoot(`${card.id}-thumb`, thumbHtml(card.hero), '960,540', png);
     toWebp(png, path.join(THUMBS, `${card.id}.webp`));
