@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/rethink/picture1.png', alt: "Rethink donation module wireframes", loading: 'lazy', caption: "Wireframes — donation module redesign" },
@@ -16,7 +16,21 @@ function Rethink() {
       client="Rethink Mental Illness" agency="DAM Digital" year="2022" duration="3 months" role="UX Design · Product Design" 
       route="/rethink"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="rethink-summary">
+          <h2 id="rethink-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Make Rethink Mental Illness's donation module clearer and easier to use for one-off and regular giving.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I led UX and product design: auditing the donation funnel, redesigning the flow, and prototyping and testing it in Figma to accessibility standards.</dd>
+            <dt>The key design work</dt>
+            <dd>Reducing friction at the points where people drop out, and making the difference between one-time and recurring giving clear.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>The redesigned module went live on the Rethink Mental Illness website. The site has since moved to a new design direction, but this work was the foundation for the improved donation experience.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

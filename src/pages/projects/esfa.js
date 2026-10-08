@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/esfa.webp', alt: "ESFA project screen", loading: 'lazy', caption: "GOV.UK prototype — React / Express.js" }
@@ -12,7 +12,7 @@ function Esfa() {
       client="ESFA" agency="Methods" year="2020" role="UX Design · Prototyping" 
       route="/esfa"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
     >
 
       <h2 className="sub-title">Overview</h2>

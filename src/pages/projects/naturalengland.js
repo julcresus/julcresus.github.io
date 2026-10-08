@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/naturalengland/picture1.png', alt: "NRMS service overview", loading: 'lazy', caption: "GOV.UK prototype — service overview" },
@@ -13,10 +13,10 @@ function Naturalengland() {
   return (
     <ProjectLayout 
       title="Natural England / DEFRA / Protected Sites Monitoring"
-      client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" duration="About 8 months" role="Interaction Design · Service Design · User Research" 
+      client="Natural England / DEFRA" agency="Cognizant" year="2024–2025" duration="About 8 months" team="With a content designer, a business analyst, a developer and at least two user researchers" role="Interaction Design · Service Design · User Research" 
       route="/naturalengland"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
       summary={(
         <section className="case-summary" aria-labelledby="ne-summary">
           <h2 id="ne-summary" className="sub-title">The project at a glance</h2>

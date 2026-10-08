@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/defra/picture1.jpg', alt: "People Planner dashboard", loading: 'lazy', caption: "UI design — home dashboard" },
@@ -13,10 +13,24 @@ function Defra() {
   return (
     <ProjectLayout 
       title="DEFRA / APHA / People Planner"
-      client="DEFRA / APHA" agency="Cognizant" year="2023–2024" duration="About 10 months" role="Interaction Design · User Research" 
+      client="DEFRA / APHA" agency="Cognizant" year="2023–2024" duration="About 10 months" team="With a content designer, a business analyst, a developer and three user researchers" role="Interaction Design · User Research" 
       route="/defra"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="defra-summary">
+          <h2 id="defra-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Replace spreadsheet-based workforce planning with one internal tool for APHA managers, built on PowerBI.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>Interaction design and user research for a manager dashboard, a team calendar with a day-level activity list, and an edit flow, working closely with developers.</dd>
+            <dt>The key design work</dt>
+            <dd>Showing planned activities, absences and non-working days at a glance without overwhelming the interface, within what PowerBI and the Fluent design system can actually render.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Regular testing sessions with APHA managers shaped what the dashboard surfaced and how the calendar handled edge cases. The tool was developed and tested as part of an ongoing alpha, with buildable specifications for the development team.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

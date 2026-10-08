@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/emm/picture7.webp', alt: "Every Mind Matters user flow diagram", loading: 'lazy', caption: "UX — user flow diagram" },
@@ -19,7 +19,21 @@ function Everymindmatters() {
       client="Public Health England / NHS" agency="Methods" year="2019" duration="~5 months" role="UX Design · Research" team="With user researchers and service designers" 
       route="/everymindmatters"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="everymindmatters-summary">
+          <h2 id="everymindmatters-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Help people take practical steps for their mental health, through a short, low-pressure quiz and a clear site structure.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I did UX design and research on the quiz flow, site architecture, topics section and 'helping others' journeys, working with user researchers and service designers.</dd>
+            <dt>The key design work</dt>
+            <dd>Designing for people who may already be overwhelmed: short content, few decisions per screen, and mobile first.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Research with people affected by anxiety and low mood shaped the quiz flow. I delivered an interactive Figma prototype to NHS Digital with content blueprints and code guidance, and parts of the work fed into the live service.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/shya/picture1.png', alt: "Shy Aviation booking user journey", loading: 'lazy', caption: "UX — booking user journey map" },
@@ -16,7 +16,7 @@ function Shya() {
       client="Shy Aviation" agency="DAM Digital" year="2022" role="UX Design · Research" 
       route="/shya"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
     >
 
       <h2 className="sub-title">Overview</h2>

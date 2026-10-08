@@ -1,11 +1,11 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
-  { src: '/img/shyl/shyl_1.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — app screens" },
-  { src: '/img/shyl/shyl_2.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — service browsing" },
-  { src: '/img/shyl/shyl_3.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — booking flow" },
-  { src: '/img/shyl/shyl_4.webp', alt: "Shy Lifestyle app UI screens", loading: 'lazy', caption: "UI design — member profile" },
+  { src: '/img/shyl/shyl_1.webp', alt: "Four Shy Lifestyle app screens: sign-in, then browsing villas, yachts and hotels", loading: 'lazy', caption: "UI design — app screens" },
+  { src: '/img/shyl/shyl_2.webp', alt: "Large flow diagram mapping how members browse services", loading: 'lazy', caption: "UI design — service browsing" },
+  { src: '/img/shyl/shyl_3.webp', alt: "Four wireframe screens of the booking flow", loading: 'lazy', caption: "UI design — booking flow" },
+  { src: '/img/shyl/shyl_4.webp', alt: "Four wireframe screens of the member profile", loading: 'lazy', caption: "UI design — member profile" },
   { src: '/img/shyl/picture5.png', alt: "Shy Lifestyle UX workflow wireframes", loading: 'lazy', caption: "Wireframes — UX workflow" }
 ];
 
@@ -16,7 +16,21 @@ function Shyl() {
       client="Shy Lifestyle" agency="DAM Digital" year="2023" duration="9 months" role="UX Lead · Research" team="Paired with a UI designer" 
       route="/shyl"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="shyl-summary">
+          <h2 id="shyl-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Give luxury concierge members one mobile app to browse and book everything from everyday requests to private jets.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I led UX and research, working with a UI designer and the client: competitive research, journey mapping, wireframes and prototypes for membership browsing, service discovery and booking.</dd>
+            <dt>The key design work</dt>
+            <dd>Making a wide range of services, each with different booking needs, feel organised and premium rather than form-heavy.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Close collaboration and regular design reviews with the client. The app launched and is live at shylifestyle.com, with the membership system and booking flow in active use.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

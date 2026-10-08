@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/psstore/picture1.webp', alt: "PlayStation Store app splash screen", loading: 'lazy', caption: "UI design — app splash screen" },
@@ -16,7 +16,7 @@ function Playstation() {
       client="Kingston University" year="2016–2017" role="UX Design · Research" 
       route="/playstation"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
     >
 
       <h2 className="sub-title">Overview</h2>

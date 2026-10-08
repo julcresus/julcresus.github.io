@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/sgdesign/picture1.webp', alt: "SG Markets FX multi-tile trading workspace", loading: 'lazy', caption: "UI design — FX multi-tile trading workspace" },
@@ -14,7 +14,21 @@ function Sgdesign() {
       client="Société Générale" year="2017–2018" role="Interaction Design · Design Systems" 
       route="/sgdesign"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="sgdesign-summary">
+          <h2 id="sgdesign-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Modernise an FX trading platform for institutional clients without making traders feel they had lost something.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I worked in a small digital design team on the tile-based workspace, the bulk trade workflow and a shared design system.</dd>
+            <dt>The key design work</dt>
+            <dd>Dense, fast screens: the hierarchy of rate tiles, simpler bulk trade negotiation and netting, number formatting and clear buy and sell states.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Sitting next to the traders meant constant testing, alongside co-creation sessions with traders, product owners and IT. The updated platform shipped to clients as part of an ongoing programme.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

@@ -11,7 +11,7 @@ function ProjectLayout({
   team, 
   duration, 
   route, 
-  carousel,
+  evidence,
   summary,
   children 
 }) {
@@ -30,11 +30,7 @@ function ProjectLayout({
         
         {summary}
 
-        {carousel && (
-          <div className="project-media-hero">
-            {carousel}
-          </div>
-        )}
+        {evidence}
 
         <div className="project-editorial-text">
           {children}

@@ -13,7 +13,6 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
 import BackToTopButton from './components/BackToTopButton';
-import Lightbox from './components/Lightbox';
 import PageTransition from './components/PageTransition';
 import { PAGE_TITLES, PAGE_META } from "./data/pageMeta";
 import { AnimatePresence } from 'framer-motion';
@@ -30,27 +29,6 @@ import Shya from "./pages/projects/shya";
 const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
 const CV = lazy(() => import("./pages/about/cv"));
-// Tailored CV variants and the CV directory are private working files. They only
-// exist in dev builds: NODE_ENV is inlined at build time, so webpack drops these
-// imports (and the files) from the production bundle entirely.
-const DEV_CV_ROUTES = process.env.NODE_ENV === 'production' ? [] : [
-  ['/cv/rga', lazy(() => import("./pages/about/cv-rga"))],
-  ['/cv/v1', lazy(() => import("./pages/about/cv-v1"))],
-  ['/cv/wise', lazy(() => import("./pages/about/cv-wise"))],
-  ['/cv/hmcts', lazy(() => import("./pages/about/cv-hmcts"))],
-  ['/cv/hmcts-blind', lazy(() => import("./pages/about/cv-hmcts-blind"))],
-  ['/cv/amazon', lazy(() => import("./pages/about/cv-amazon"))],
-  ['/cv/bloomberg', lazy(() => import("./pages/about/cv-bloomberg"))],
-  ['/cv/deepmind', lazy(() => import("./pages/about/cv-deepmind"))],
-  ['/cv/wayve', lazy(() => import("./pages/about/cv-wayve"))],
-  ['/cv/gale', lazy(() => import("./pages/about/cv-gale"))],
-  ['/cv/lego', lazy(() => import("./pages/about/cv-lego"))],
-  ['/cv/synthesia', lazy(() => import("./pages/about/cv-synthesia"))],
-  ['/cv/spotify', lazy(() => import("./pages/about/cv-spotify"))],
-  ['/cv/cobalt', lazy(() => import("./pages/about/cv-cobalt"))],
-  ['/cv-hub', lazy(() => import("./pages/about/cv-hub"))],
-];
-
 const Accessibility = lazy(() => import("./pages/accessibility"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -165,9 +143,6 @@ function AnimatedRoutes() {
         <Route exact path="/"><PageTransition><Home /></PageTransition></Route>
         <Route exact path="/aboutme"><PageTransition><AboutMe /></PageTransition></Route>
         <Route exact path="/cv"><PageTransition><CV /></PageTransition></Route>
-        {DEV_CV_ROUTES.map(([path, Page]) => (
-          <Route exact path={path} key={path}><PageTransition><Page /></PageTransition></Route>
-        ))}
         <Route exact path="/accessibility"><PageTransition><Accessibility /></PageTransition></Route>
         <Route exact path="/everymindmatters"><PageTransition><EveryMindMatters /></PageTransition></Route>
         <Route exact path="/sgdesign"><PageTransition><SgDesign /></PageTransition></Route>
@@ -183,61 +158,6 @@ function AnimatedRoutes() {
       </Switch>
     </AnimatePresence>
   );
-}
-
-// Opens full-size carousel images on click or Enter/Space, via event delegation.
-// Carousel images are rendered by CoreUI, so they're made focusable here rather than in JSX.
-function LightboxManager() {
-  const [lightbox, setLightbox] = useState(null);
-
-  useEffect(() => {
-    const open = (img, caption) => setLightbox({ src: img.src, alt: img.alt, trigger: img, caption });
-
-    const handleClick = e => {
-      const img = e.target.closest('.accessible-carousel-item img');
-      if (img) {
-        const caption = img.closest('.accessible-carousel-item').querySelector('.accessible-carousel-caption p')?.textContent;
-        open(img, caption);
-      }
-    };
-    const handleKey = e => {
-      if (e.key !== 'Enter' && e.key !== ' ') return;
-      const img = e.target.closest?.('.accessible-carousel-item img');
-      if (img) {
-        e.preventDefault();
-        const caption = img.closest('.accessible-carousel-item').querySelector('.accessible-carousel-caption p')?.textContent;
-        open(img, caption);
-      }
-    };
-
-    const makeFocusable = () => {
-      document.querySelectorAll('.accessible-carousel-item img:not([tabindex])').forEach(img => {
-        img.setAttribute('tabindex', '0');
-        img.setAttribute('role', 'button');
-      });
-    };
-    makeFocusable();
-    const observer = new MutationObserver(makeFocusable);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    document.addEventListener('click', handleClick);
-    document.addEventListener('keydown', handleKey);
-    return () => {
-      observer.disconnect();
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKey);
-    };
-  }, []);
-
-  if (!lightbox) return null;
-
-  const close = () => {
-    const { trigger } = lightbox;
-    setLightbox(null);
-    trigger?.focus();
-  };
-
-  return <Lightbox src={lightbox.src} alt={lightbox.alt} caption={lightbox.caption} onClose={close} />;
 }
 
 const LoadingFallback = () => {
@@ -280,7 +200,6 @@ function App() {
       <ThemeProvider>
         <Router basename={process.env.PUBLIC_URL}>
           <RouteHandler />
-          <LightboxManager />
           <a href="#main-content" className="skip-link">Skip to main content</a>
           <Nav />
           <main id="main-content">

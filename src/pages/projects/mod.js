@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/mod/mod-4.webp', alt: "MoD recruitment landing page and branch selection", loading: 'lazy', caption: "Prototype — landing page & branch selection" },
@@ -17,7 +17,21 @@ function Mod() {
       client="Ministry of Defence" agency="Methods" year="2019–2020" duration="5 months" role="UX Design · Prototyping" team="Largely independent, after an initial team of three" 
       route="/mod"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="mod-summary">
+          <h2 id="mod-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Redesign recruitment for the Royal Navy, British Army and Royal Air Force around the candidate.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I was the UX designer on a five-month project cut short by the pandemic, working largely independently after an initial team of three, and prototyping the candidate journey in code.</dd>
+            <dt>The key design work</dt>
+            <dd>A multi-branch candidate journey, from eligibility check and account creation through to application and assessment booking.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>Stakeholder workshops shaped the flows. The coded prototype (React, Express and the GOV.UK Design System) became the foundation for a Salesforce prototype that went through internal testing across the branches.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

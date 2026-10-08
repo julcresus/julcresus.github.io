@@ -1,5 +1,5 @@
 import ProjectLayout from '../../components/ProjectLayout';
-import AccessibleCarousel from '../../components/AccessibleCarousel';
+import EvidenceGrid from '../../components/EvidenceGrid';
 
 const IMAGES = [
   { src: '/img/mag/picture1.png', alt: "McArthurGlen offer listing flow", loading: 'lazy', caption: "Wireframes — corp offer listing & QR redemption flow" },
@@ -13,10 +13,24 @@ function Mag() {
   return (
     <ProjectLayout 
       title="DAM Digital / McArthurGlen"
-      client="McArthurGlen" agency="DAM Digital" year="2022" role="UX Design · Research" 
+      client="McArthurGlen" agency="DAM Digital" year="2022" team="With a business analyst and a UI designer from DAM" role="UX Design · Research" 
       route="/mag"
     
-      carousel={<AccessibleCarousel images={IMAGES} />}
+      evidence={<EvidenceGrid images={IMAGES} />}
+      summary={(
+        <section className="case-summary" aria-labelledby="mag-summary">
+          <h2 id="mag-summary" className="sub-title">The project at a glance</h2>
+          <p className="case-lead">Redesign and extend McArthurGlen's shopping app, where shoppers browse offers and redeem them in store.</p>
+          <dl>
+            <dt>My responsibility</dt>
+            <dd>I led wireframing and UX across the app and responsive web, working in Sketch with a business analyst and a UI designer from DAM.</dd>
+            <dt>The key design work</dt>
+            <dd>A QR redemption flow that works at a busy till: finding the right offer quickly, few steps, sensible fallbacks and clear feedback.</dd>
+            <dt>Delivery and validation</dt>
+            <dd>External user testing and regular client reviews, grounded in how shoppers used the app in centre. The redesign delivered cleaner offer browsing, a more streamlined redemption journey and better onboarding.</dd>
+          </dl>
+        </section>
+      )}
     >
 
       <h2 className="sub-title">Overview</h2>

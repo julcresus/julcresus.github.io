@@ -396,11 +396,6 @@ a {
 /* ─────────────────────────────────────────
    Editorial Layout (Projects)
 ───────────────────────────────────────── */
-.project-media-hero {
-  margin: 48px 0;
-  width: 100%;
-}
-
 .project-editorial-text {
   max-width: 720px;
   margin: 0 auto;
@@ -849,71 +844,6 @@ a {
     bottom: 20px;
     right: 20px;
   }
-}
-
-/* ─────────────────────────────────────────
-   Lightbox
-───────────────────────────────────────── */
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.92);
-  z-index: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
-
-.lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  cursor: default;
-  display: block;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 32pt;
-  cursor: pointer;
-  z-index: 501;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-.lightbox-close:hover {
-  opacity: 1;
-}
-
-.lightbox-caption {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 16px 24px;
-  border-radius: 12px;
-  font-family: var(--font-serif);
-  font-size: 11pt;
-  text-align: center;
-  max-width: 90%;
-  z-index: 502;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.lightbox-caption p {
-  margin: 0;
-}
-
-.accessible-carousel-item img {
-  cursor: zoom-in;
 }
 
 /* ─────────────────────────────────────────
@@ -1500,4 +1430,24 @@ a {
   .portfolio-intro .intro { font-size: clamp(30px, 7vw, 44px); }
   .intro-summary { font-size: 16px; }
   .case-lead { font-size: 21px; }
+}
+
+/* Evidence grid: replaces the image carousels on case studies */
+.evidence-section { margin: 48px 0; }
+.evidence-section > .sub-title { margin-top: 0; }
+.evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+.evidence-grid .case-evidence { margin: 0; }
+.evidence-grid .case-evidence img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+.evidence-grid .case-evidence figcaption { margin-top: 12px; font-size: 14px; line-height: 1.5; }
+.case-evidence a:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .evidence-grid { grid-template-columns: 1fr; }
+}
+
+/* Phones: the CV footer (skills, education, languages) stacks instead of forcing three
+   columns, and row gutters on the About page can't push the page sideways. */
+@media screen and (max-width: 640px) {
+  .cv-editorial-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .cv-job-top { flex-wrap: wrap; gap: 2px 12px; }
+  .about-page { overflow-x: clip; }
 }
