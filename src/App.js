@@ -16,7 +16,6 @@ import BackToTopButton from './components/BackToTopButton';
 import Lightbox from './components/Lightbox';
 import PageTransition from './components/PageTransition';
 import { AnimatePresence } from 'framer-motion';
-import ReactGA from 'react-ga4';
 
 // Import top project pages directly (no lazy loading for instant navigation)
 import HMRC from "./pages/projects/hmrc";
@@ -25,13 +24,6 @@ import DEFRA from "./pages/projects/defra";
 import Shyl from "./pages/projects/shyl";
 import Rethink from "./pages/projects/rethink";
 import Shya from "./pages/projects/shya";
-
-// Initialize Google Analytics
-const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
-if (TRACKING_ID) {
-  // Cookieless: consent is denied by default in public/index.html, so no GA cookies are written.
-  ReactGA.initialize(TRACKING_ID, { gtagOptions: { anonymize_ip: true } });
-}
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/home"));
@@ -123,8 +115,14 @@ function RouteHandler() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (TRACKING_ID) {
-      ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+    // GA is loaded in public/index.html (cookieless, consent denied by default).
+    // Automatic page views are off there, so this sends one per route, including the first.
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
     }
   }, [location.pathname, location.search]);
 
