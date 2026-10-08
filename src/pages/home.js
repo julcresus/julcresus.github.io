@@ -30,7 +30,7 @@ const ProjectCard = React.memo(({ project, index }) => {
         <div className="project-card-image-wrap">
           <img
             src={project.image}
-            alt=""
+            alt={project.alt}
             loading={index < 4 ? 'eager' : 'lazy'}
           />
 

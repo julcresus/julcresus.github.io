@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'hmrc',
     image: './img/hmrc.webp',
-    alt: 'HMRC project with Cognizant',
+    alt: '',
     title: 'Cognizant — HMRC Wales',
     shortTitle: 'HMRC Wales',
     tags: 'UX Design, Interaction Design, User Research',
@@ -15,7 +15,7 @@ export const projects = [
   {
     id: 'naturalengland',
     image: './img/naturalengland.webp',
-    alt: 'Natural England / DEFRA project with Cognizant',
+    alt: '',
     title: 'Cognizant — Natural England / DEFRA',
     shortTitle: 'Natural England',
     tags: 'UX Design, Service Design, User Research',
@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 'defra',
     image: './img/defra.webp',
-    alt: 'DEFRA project with Cognizant',
+    alt: '',
     title: 'Cognizant — DEFRA / APHA',
     shortTitle: 'DEFRA',
     tags: 'UX Design, Interaction Design, User Research',
@@ -40,8 +40,8 @@ export const projects = [
   },
   {
     id: 'shyl',
-    image: './img/shyl.webp',
-    alt: 'Shy Lifestyle app design showcase',
+    image: './img/thumbs/shyl.webp',
+    alt: 'Four screens from the Shy Lifestyle app: sign-in and browsing villas, yachts and hotels',
     title: 'Dam Digital — Shy Lifestyle',
     shortTitle: 'Shy Lifestyle',
     tags: 'App Design, UX Design, User Research',
@@ -53,8 +53,8 @@ export const projects = [
   },
   {
     id: 'rethink',
-    image: './img/rethink.png',
-    alt: 'Rethink responsive UI design project',
+    image: './img/thumbs/rethink.webp',
+    alt: 'Rethink donation page on a laptop, asking whether to give once or regularly',
     title: 'Dam Digital — Rethink',
     shortTitle: 'Rethink',
     tags: 'UX Design, UI Design, Product Design',
@@ -66,8 +66,8 @@ export const projects = [
   },
   {
     id: 'shya',
-    image: './img/shya.webp',
-    alt: 'Shy Aviation UX research project',
+    image: './img/thumbs/shya.webp',
+    alt: 'Shy Aviation quote request form on a laptop',
     title: 'Dam Digital — Shy Aviation',
     shortTitle: 'Shy Aviation',
     tags: 'UX Design, User Research',
@@ -79,8 +79,8 @@ export const projects = [
   },
   {
     id: 'mag',
-    image: './img/mag.webp',
-    alt: 'McArthurGlen app design project',
+    image: './img/thumbs/mag.webp',
+    alt: 'Four screens from the McArthurGlen app listing outlet offers',
     title: 'Dam Digital — McArthurGlen',
     shortTitle: 'McArthurGlen',
     tags: 'App Design, UX Design, User Research',
@@ -93,7 +93,7 @@ export const projects = [
   {
     id: 'mod',
     image: './img/mod.webp',
-    alt: 'Armed Forces Recruitment Program UI design',
+    alt: '',
     title: 'Methods — Armed Forces Recruitment',
     shortTitle: 'Armed Forces',
     tags: 'UX Design, Interaction Design, GOV.UK',
@@ -106,7 +106,7 @@ export const projects = [
   {
     id: 'emm',
     image: './img/emm.webp',
-    alt: 'Every Mind Matters UX research and testing',
+    alt: '',
     title: 'Methods — Every Mind Matters',
     shortTitle: 'Every Mind Matters',
     tags: 'UX Design, Interaction Design, User Research',
@@ -118,8 +118,8 @@ export const projects = [
   },
   {
     id: 'sg',
-    image: './img/sg.webp',
-    alt: 'Societe Generale UX and UI design',
+    image: './img/thumbs/sg.webp',
+    alt: 'Société Générale FX trading workspace with rate tiles and a trade blotter',
     title: 'Société Générale',
     shortTitle: 'Société Générale',
     tags: 'Interaction Design, Design Systems',
