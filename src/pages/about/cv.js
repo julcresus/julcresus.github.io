@@ -26,7 +26,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          Interaction designer with eight years in UK government and consumer apps. At the moment I'm designing HMRC's Council Tax challenge service for Wales, in Welsh and English, as a coded GOV.UK prototype. On Natural England's protected sites service, testing showed surveyors losing their way, so I added a site overview that is now core to the service. SC cleared.
+          Interaction designer with eight years in UK government and consumer apps. At HMRC I designed the Welsh and English Council Tax review service as a coded GOV.UK prototype, tested over six to seven research rounds with at least half Welsh-speaking participants. SC cleared.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Led interaction design for HMRC's Welsh Council Tax service across all 22 Welsh local authorities, mapping complex policy logic into navigable user flows across discovery and alpha. Delivered accessible, GDS-compliant journeys.</li>
+            <li>Led interaction design for HMRC's Welsh Council Tax service during alpha, in Welsh and English, across six to seven research rounds with at least half Welsh-speaking participants. Mapped complex policy logic into navigable flows for all 22 Welsh local authorities.</li>
             <li>Designed Natural England's protected sites monitoring service, testing with ecologists and field surveyors. Testing showed users losing their bearings, so I added a site overview page, now part of the core service.</li>
             <li>Designed a DEFRA/APHA workforce planning tool on PowerBI, replacing team spreadsheets with one view of activities and absences for APHA managers. Designed within Fluent and PowerBI constraints, working with developers through to handoff.</li>
             <li>Set the standard for personas, interaction models and WCAG 2.2 across the team, and coached other designers on GDS and coded prototyping.</li>
@@ -97,7 +97,7 @@ function CV() {
               <ul className="cv-bullets">
                 <li>GDS Design System</li>
                 <li>WCAG 2.2 accessibility</li>
-                <li>Coded prototyping (HTML, CSS, React)</li>
+                <li>Coded prototyping (React, GOV.UK Prototype Kit)</li>
                 <li>Conditional routing and policy logic</li>
                 <li>Bilingual Welsh and English services</li>
               </ul>
@@ -107,7 +107,7 @@ function CV() {
                 <li>Service and journey mapping</li>
                 <li>Workshop and design critique facilitation</li>
                 <li>Figma, Sketch, Adobe XD</li>
-                <li>Working with research and engineering</li>
+                <li>Miro, Mural</li>
               </ul>
             </div>
           </div>

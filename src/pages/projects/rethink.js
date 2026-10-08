@@ -13,7 +13,7 @@ function Rethink() {
   return (
     <ProjectLayout 
       title="Rethink Mental Illness"
-      client="Rethink Mental Illness" agency="DAM Digital" year="2022" role="UX Design · Product Design" 
+      client="Rethink Mental Illness" agency="DAM Digital" year="2022" duration="3 months" role="UX Design · Product Design" 
       route="/rethink"
     
       carousel={<AccessibleCarousel images={IMAGES} />}

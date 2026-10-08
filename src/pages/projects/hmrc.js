@@ -16,7 +16,7 @@ function Hmrc() {
     <ProjectLayout
       title="Designing a Council Tax service for Wales"
       client="HMRC" agency="Cognizant" year="2023–Present"
-      role="Sole interaction designer" team="With content design, user research and Welsh-speaking colleagues"
+      role="Sole interaction designer" duration="5 months, during alpha" team="With content design, user research and Welsh-speaking colleagues"
       route="/hmrc"
     >
       <section className="case-summary" aria-labelledby="hmrc-summary">
@@ -28,7 +28,7 @@ function Hmrc() {
           <dt>The key design work</dt>
           <dd>Keep language choices consistent, route different challenge scenarios correctly and reflect Wales-specific policy and property data.</dd>
           <dt>Delivery and validation</dt>
-          <dd>The prototype supported multiple rounds of usability testing, including Welsh speakers and mobile users. The service is moving towards assessment.</dd>
+          <dd>The prototype supported six to seven rounds of usability testing, with at least half of participants Welsh speakers, plus mobile users. I was on the project for five months during alpha; the service has since moved into beta.</dd>
         </dl>
       </section>
 
@@ -58,11 +58,11 @@ function Hmrc() {
       </EvidenceImage>
 
       <h2 className="sub-title">Research and collaboration</h2>
-      <p className="description">Researchers ran testing throughout, including sessions with Welsh speakers, people unfamiliar with the challenge process and mobile users. I revised the prototype between rounds in response to findings, working closely with content design and the wider team.</p>
+      <p className="description">Researchers ran six to seven rounds of testing while I was on the project, with at least half of participants Welsh speakers, alongside people unfamiliar with the challenge process and mobile users. I revised the prototype between rounds in response to findings, working closely with content design and the wider team.</p>
       <p className="description">As the sole interaction designer, I made the day-to-day design decisions. Welsh-speaking colleagues helped check whether labels made sense in context, while policy colleagues helped establish the differences the journey needed to accommodate.</p>
 
       <h2 className="sub-title">What the work delivered</h2>
-      <p className="description">A coded GOV.UK prototype supporting multiple rounds of usability research. The bilingual language and conditional routing patterns carry through the service as it moves towards assessment.</p>
+      <p className="description">A coded GOV.UK prototype supporting six to seven rounds of usability research. The bilingual language and conditional routing patterns carry through the service, which has since moved into beta.</p>
       <p className="description">The outcome documented here is the prototype and its use in research; live-service performance and completion-rate results are not yet reported.</p>
     </ProjectLayout>
   );
