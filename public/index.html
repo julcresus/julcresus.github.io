@@ -6,9 +6,12 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      // Cookieless analytics: consent is denied by default, so GA writes no cookies
+      // and sends anonymous pings only. Must run before any 'config' call.
+      gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
       gtag('js', new Date());
 
-      gtag('config', 'G-ZMEQ54GJ17');
+      gtag('config', 'G-ZMEQ54GJ17', { anonymize_ip: true });
     </script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />

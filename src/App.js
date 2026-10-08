@@ -29,13 +29,35 @@ import Shya from "./pages/projects/shya";
 // Initialize Google Analytics
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 if (TRACKING_ID) {
-  ReactGA.initialize(TRACKING_ID);
+  // Cookieless: consent is denied by default in public/index.html, so no GA cookies are written.
+  ReactGA.initialize(TRACKING_ID, { gtagOptions: { anonymize_ip: true } });
 }
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/home"));
 const AboutMe = lazy(() => import("./pages/about/aboutme"));
 const CV = lazy(() => import("./pages/about/cv"));
+// Tailored CV variants and the CV directory are private working files. They only
+// exist in dev builds: NODE_ENV is inlined at build time, so webpack drops these
+// imports (and the files) from the production bundle entirely.
+const DEV_CV_ROUTES = process.env.NODE_ENV === 'production' ? [] : [
+  ['/cv/rga', lazy(() => import("./pages/about/cv-rga"))],
+  ['/cv/v1', lazy(() => import("./pages/about/cv-v1"))],
+  ['/cv/wise', lazy(() => import("./pages/about/cv-wise"))],
+  ['/cv/hmcts', lazy(() => import("./pages/about/cv-hmcts"))],
+  ['/cv/hmcts-blind', lazy(() => import("./pages/about/cv-hmcts-blind"))],
+  ['/cv/amazon', lazy(() => import("./pages/about/cv-amazon"))],
+  ['/cv/bloomberg', lazy(() => import("./pages/about/cv-bloomberg"))],
+  ['/cv/deepmind', lazy(() => import("./pages/about/cv-deepmind"))],
+  ['/cv/wayve', lazy(() => import("./pages/about/cv-wayve"))],
+  ['/cv/gale', lazy(() => import("./pages/about/cv-gale"))],
+  ['/cv/lego', lazy(() => import("./pages/about/cv-lego"))],
+  ['/cv/synthesia', lazy(() => import("./pages/about/cv-synthesia"))],
+  ['/cv/spotify', lazy(() => import("./pages/about/cv-spotify"))],
+  ['/cv/cobalt', lazy(() => import("./pages/about/cv-cobalt"))],
+  ['/cv-hub', lazy(() => import("./pages/about/cv-hub"))],
+];
+
 const Accessibility = lazy(() => import("./pages/accessibility"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -186,6 +208,9 @@ function AnimatedRoutes() {
         <Route exact path="/"><PageTransition><Home /></PageTransition></Route>
         <Route exact path="/aboutme"><PageTransition><AboutMe /></PageTransition></Route>
         <Route exact path="/cv"><PageTransition><CV /></PageTransition></Route>
+        {DEV_CV_ROUTES.map(([path, Page]) => (
+          <Route exact path={path} key={path}><PageTransition><Page /></PageTransition></Route>
+        ))}
         <Route exact path="/accessibility"><PageTransition><Accessibility /></PageTransition></Route>
         <Route exact path="/everymindmatters"><PageTransition><EveryMindMatters /></PageTransition></Route>
         <Route exact path="/sgdesign"><PageTransition><SgDesign /></PageTransition></Route>

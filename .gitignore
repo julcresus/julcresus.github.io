@@ -22,3 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /src/pages/about/cv.js
+
+# Private tailored CV variants and directory (dev-only, see src/App.js)
+src/pages/about/cv-*.js

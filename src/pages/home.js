@@ -30,7 +30,7 @@ const ProjectCard = React.memo(({ project, index }) => {
         <div className="project-card-image-wrap">
           <img
             src={project.image}
-            alt={project.alt}
+            alt=""
             loading={index < 4 ? 'eager' : 'lazy'}
           />
 
@@ -53,9 +53,10 @@ ProjectCard.displayName = 'ProjectCard';
 function Home() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filtered = activeFilter === 'All'
-    ? projects.filter(p => !FEATURED_IDS.includes(p.id))
-    : projects.filter(p => p.sector === activeFilter.toLowerCase());
+  const filtered = projects.filter(p =>
+    !FEATURED_IDS.includes(p.id) &&
+    (activeFilter === 'All' || p.sector === activeFilter.toLowerCase())
+  );
 
   return (
     <div className="page-wrapper">
@@ -84,7 +85,7 @@ function Home() {
 
       <section className="projects-section work-archive" aria-labelledby="more-work-heading">
         <h2 id="more-work-heading" className="section-label">More work</h2>
-        <p className="archive-description">Browse the wider portfolio by sector. Sector filters include the selected projects above.</p>
+        <p className="archive-description">More projects, filterable by sector.</p>
         <div className="filter-bar">
           {FILTERS.map(f => (
             <button
