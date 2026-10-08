@@ -26,7 +26,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          Interaction designer with eight years in UK government and consumer apps. At HMRC I designed the Welsh and English Council Tax review service as a coded GOV.UK prototype, tested over six to seven research rounds with at least half Welsh-speaking participants. SC cleared.
+          Interaction designer with eight years in UK government and consumer apps. Currently designing and prototyping a beta service for ICS. Previously HMRC's bilingual Council Tax service, tested over six to seven research rounds with at least half Welsh speakers. SC cleared.
         </p>
       </div>
 
@@ -42,9 +42,10 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Led interaction design for HMRC's Welsh Council Tax service during alpha, in Welsh and English, across six to seven research rounds with at least half Welsh-speaking participants. Mapped complex policy logic into navigable flows for all 22 Welsh local authorities.</li>
+            <li>Designing and prototyping a case-management service for ICS, now in beta. Interaction design and coded GOV.UK Prototype Kit prototypes, using Claude to speed up coding and iteration.</li>
+            <li>Led interaction design for HMRC's Welsh Council Tax service during alpha, in Welsh and English, for all 22 Welsh local authorities. Six to seven research rounds, at least half with Welsh speakers.</li>
             <li>Designed Natural England's protected sites monitoring service, testing with ecologists and field surveyors. Testing showed users losing their bearings, so I added a site overview page, now part of the core service.</li>
-            <li>Designed a DEFRA/APHA workforce planning tool on PowerBI, replacing team spreadsheets with one view of activities and absences for APHA managers. Designed within Fluent and PowerBI constraints, working with developers through to handoff.</li>
+            <li>Designed a DEFRA/APHA workforce planning tool on PowerBI, replacing team spreadsheets with one view of activities and absences for managers, within Fluent constraints.</li>
             <li>Set the standard for personas, interaction models and WCAG 2.2 across the team, and coached other designers on GDS and coded prototyping.</li>
           </ul>
         </div>
@@ -59,7 +60,7 @@ function CV() {
             <li>Led UX on Shy Lifestyle (a luxury concierge app, live at shylifestyle.com), Rethink Mental Illness's donation module and McArthurGlen's shopping app, across up to 3 concurrent clients.</li>
             <li>Ran regular design reviews with clients and turned stakeholder feedback into design decisions grounded in user needs.</li>
             <li>Owned accessibility and design system standards across all concurrent projects, keeping them consistent.</li>
-            <li>Coached a user researcher to independently produce production-ready Figma prototypes, upskilling their design craft and improving team throughput.</li>
+            <li>Coached a user researcher to produce production-ready Figma prototypes.</li>
           </ul>
         </div>
 
@@ -72,7 +73,7 @@ function CV() {
           <ul className="cv-bullets">
             <li>Designed for government programmes including Every Mind Matters, National Funding Formula and Ministry of Defence, working to GDS standards across discovery, alpha and beta.</li>
             <li>Led cross-functional workshops with research, product and engineering, setting the design direction and ensuring decisions were grounded in user evidence before moving to build.</li>
-            <li>Built research-informed prototypes in Figma and coded prototypes using React and the GOV.UK Design System, enabling faster collaboration with researchers and stakeholders than static tools allowed.</li>
+            <li>Built research-informed prototypes in Figma and coded prototypes in React and the GOV.UK Design System.</li>
           </ul>
         </div>
 
@@ -84,7 +85,7 @@ function CV() {
           <p className="cv-job-role">UX/UI Designer Trainee</p>
           <ul className="cv-bullets">
             <li>Designed interaction models for trading platforms and internal financial tools in low- and high-fidelity using Adobe XD and Sketch, shipping interface updates to internal trading systems used daily by the trading floor.</li>
-            <li>Led co-creation sessions with traders, product owners and engineers to validate concepts early and reduce costly rework downstream.</li>
+            <li>Led co-creation sessions with traders, product owners and engineers to validate concepts early.</li>
           </ul>
         </div>
       </div>
