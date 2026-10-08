@@ -13,7 +13,7 @@ function Rethink() {
   return (
     <ProjectLayout 
       title="Rethink Mental Illness"
-      client="Rethink Mental Illness" agency="Dam Digital" year="2022" role="UX Design · Product Design" 
+      client="Rethink Mental Illness" agency="DAM Digital" year="2022" role="UX Design · Product Design" 
       route="/rethink"
     
       carousel={<AccessibleCarousel images={IMAGES} />}
@@ -28,7 +28,7 @@ function Rethink() {
 
         <h2 className="sub-title">Role</h2>
         <p className="description">
-          Working at Dam Digital, I led the UX and product design for the donation module redesign.
+          Working at DAM Digital, I led the UX and product design for the donation module redesign.
         </p>
         <ul className="description">
           <li>Auditing the existing donation funnel to identify drop-off points and usability issues</li>

@@ -12,8 +12,8 @@ const IMAGES = [
 function Shyl() {
   return (
     <ProjectLayout 
-      title="Dam Digital / Shy Lifestyle"
-      client="Shy Lifestyle" agency="Dam Digital" year="2023" role="UX Lead · Research" team="Paired with a UI designer" 
+      title="DAM Digital / Shy Lifestyle"
+      client="Shy Lifestyle" agency="DAM Digital" year="2023" role="UX Lead · Research" team="Paired with a UI designer" 
       route="/shyl"
     
       carousel={<AccessibleCarousel images={IMAGES} />}

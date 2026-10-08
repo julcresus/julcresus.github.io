@@ -129,7 +129,7 @@ ${m.css}
 }
 
 const cards = projects.map(p => {
-  const company = p.title.split(' — ')[0].replace(/^Dam Digital$/, 'DAM Digital');
+  const company = p.title.split(' — ')[0];
   return {
     id: p.id,
     eyebrow: `Case study · ${company} · ${p.year}`,

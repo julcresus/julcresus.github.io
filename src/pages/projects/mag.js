@@ -12,8 +12,8 @@ const IMAGES = [
 function Mag() {
   return (
     <ProjectLayout 
-      title="Dam Digital / McArthurGlen"
-      client="McArthurGlen" agency="Dam Digital" year="2022" role="UX Design · Research" 
+      title="DAM Digital / McArthurGlen"
+      client="McArthurGlen" agency="DAM Digital" year="2022" role="UX Design · Research" 
       route="/mag"
     
       carousel={<AccessibleCarousel images={IMAGES} />}
