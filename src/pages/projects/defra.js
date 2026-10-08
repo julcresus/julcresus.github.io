@@ -13,7 +13,7 @@ function Defra() {
   return (
     <ProjectLayout 
       title="DEFRA / APHA / People Planner"
-      client="DEFRA / APHA" agency="Cognizant" year="2024–2025" role="Interaction Design · User Research" 
+      client="DEFRA / APHA" agency="Cognizant" year="2023–2024" duration="About 10 months" role="Interaction Design · User Research" 
       route="/defra"
     
       carousel={<AccessibleCarousel images={IMAGES} />}

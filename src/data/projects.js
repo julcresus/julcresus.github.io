@@ -32,7 +32,7 @@ export const projects = [
     title: 'Cognizant — DEFRA / APHA',
     shortTitle: 'DEFRA',
     tags: 'UX Design, Interaction Design, User Research',
-    year: '2024–2025',
+    year: '2023–2024',
     readTime: 4,
     teaser: 'Internal scheduling tool · PowerBI constraints',
     route: '/defra',
