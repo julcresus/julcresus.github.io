@@ -15,7 +15,7 @@ function Hmrc() {
   return (
     <ProjectLayout
       title="Designing a Council Tax service for Wales"
-      client="HMRC" agency="Cognizant" year="2023–Present"
+      client="HMRC" agency="Cognizant" year="2025–2026"
       role="Sole interaction designer" duration="5 months, during alpha" team="With content design, user research and Welsh-speaking colleagues"
       route="/hmrc"
     >

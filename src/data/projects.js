@@ -6,7 +6,7 @@ export const projects = [
     title: 'Cognizant — HMRC Wales',
     shortTitle: 'HMRC Wales',
     tags: 'UX Design, Interaction Design, User Research',
-    year: '2023–Present',
+    year: '2025–2026',
     readTime: 4,
     teaser: 'Bilingual Welsh service · GOV.UK Prototype Kit',
     route: '/hmrc',
