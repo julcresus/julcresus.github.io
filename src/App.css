@@ -162,6 +162,7 @@ a {
   max-width: 860px;
   color: var(--muted);
   margin-bottom: 24px;
+  text-wrap: balance;
 }
 
 .intro:last-child {
@@ -650,7 +651,6 @@ a {
 
 .footer-identity {
   margin: 0 0 8px;
-  opacity: 0.5;
 }
 
 .footer-links {
