@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@coreui/react": "^5.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -15,7 +14,6 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^18.2.0",
-    "react-ga4": "^2.1.0",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
@@ -23,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build && node scripts/prerender-routes.js",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build && node scripts/prerender-routes.js && node scripts/purge-css.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "optimize-images": "node scripts/optimize-images.js",
@@ -47,6 +45,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
+    "purgecss": "^8.0.0",
     "sharp": "^0.33.1"
   }
 }

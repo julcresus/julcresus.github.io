@@ -1,8 +1,22 @@
 import React, { useEffect } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
 import '../../App.css';
 
+// Per-application summaries ("/cv?for=rga") come from a gitignored local file and exist in
+// dev builds only: NODE_ENV is inlined at build time, so production never includes them.
+let SUMMARIES = {};
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    SUMMARIES = require('./cv-summaries').default;
+  } catch (e) {
+    SUMMARIES = {};
+  }
+}
+
 function CV() {
+  const { search } = useLocation();
+  const tailored = SUMMARIES[new URLSearchParams(search).get('for')];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +40,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          Interaction designer with eight years in UK government and consumer apps. Currently designing and prototyping a beta service for ICS. Previously HMRC's bilingual Council Tax service, tested over six to seven research rounds with at least half Welsh speakers. SC cleared.
+          {tailored || 'Interaction designer with eight years in UK government and consumer apps. Currently designing and prototyping a beta service for ICS. Previously HMRC\'s bilingual Council Tax service, tested over six to seven research rounds with at least half Welsh speakers. SC cleared.'}
         </p>
       </div>
 
