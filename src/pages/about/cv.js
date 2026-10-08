@@ -106,8 +106,8 @@ function CV() {
               <ul className="cv-bullets">
                 <li>Service and journey mapping</li>
                 <li>Workshop and design critique facilitation</li>
-                <li>Figma, Sketch, Adobe XD</li>
-                <li>Miro, Mural</li>
+                <li>AI tools (Claude, Copilot)</li>
+                <li>Figma, Sketch, Miro, Mural</li>
               </ul>
             </div>
           </div>

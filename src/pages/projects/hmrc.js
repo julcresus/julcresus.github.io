@@ -27,6 +27,8 @@ function Hmrc() {
           <dd>I owned the interaction design and built the GOV.UK prototype, working with content designers, researchers and Welsh-speaking colleagues.</dd>
           <dt>The key design work</dt>
           <dd>Keep language choices consistent, route different challenge scenarios correctly and reflect Wales-specific policy and property data.</dd>
+          <dt>What research changed</dt>
+          <dd>Testing led to concrete changes between rounds. Questions people couldn't answer accurately were removed, and wording that felt confrontational was softened.</dd>
           <dt>Delivery and validation</dt>
           <dd>The prototype supported six to seven rounds of usability testing, with at least half of participants Welsh speakers, plus mobile users. I was on the project for five months during alpha; the service has since moved into beta.</dd>
         </dl>
