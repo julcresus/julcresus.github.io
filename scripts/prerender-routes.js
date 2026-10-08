@@ -15,7 +15,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const BUILD = process.env.BUILD_PATH ? path.resolve(process.env.BUILD_PATH) : path.join(ROOT, 'build');
 const ORIGIN = 'https://juliencresus.com';
-const DEFAULT_IMAGE = '/img/hmrc.webp';
+const DEFAULT_IMAGE = '/img/share/home.png';
 
 // src/data files are ES modules; read them as plain data without a bundler.
 function readExports(file, names) {
@@ -26,9 +26,14 @@ function readExports(file, names) {
 const { PAGE_TITLES, PAGE_META } = readExports('src/data/pageMeta.js', ['PAGE_TITLES', 'PAGE_META']);
 const { projects } = readExports('src/data/projects.js', ['projects']);
 
-const imageByRoute = Object.fromEntries(
-  projects.map(p => [p.route, p.image.replace(/^\./, '')])
-);
+// Share cards live in public/img/share/ (made by scripts/generate-share-images.js).
+const shareCard = id => `/img/share/${id}.png`;
+const imageByRoute = Object.fromEntries([
+  ...projects.map(p => [p.route, shareCard(p.id)]),
+  ['/aboutme', shareCard('about')],
+  ['/cv', shareCard('cv')],
+  ['/accessibility', shareCard('accessibility')],
+]);
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
