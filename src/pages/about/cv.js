@@ -69,7 +69,7 @@ function CV() {
             <h3 className="cv-company-name">DAM Digital</h3>
             <span className="cv-job-dates">Apr 2022 – Nov 2023</span>
           </div>
-          <p className="cv-job-role">Senior UX/UI Designer</p>
+          <p className="cv-job-role">Senior UX Designer</p>
           <ul className="cv-bullets">
             <li>Led UX on Shy Lifestyle (a luxury concierge app, live at shylifestyle.com), Rethink Mental Illness's donation module and McArthurGlen's shopping app, across up to 3 concurrent clients.</li>
             <li>Ran regular design reviews with clients and turned stakeholder feedback into design decisions grounded in user needs.</li>
@@ -133,7 +133,7 @@ function CV() {
           <div className="cv-edu-block">
             <h3 className="cv-edu-title">MSc UX Design</h3>
             <p className="cv-edu-school">Kingston University, London</p>
-            <p className="cv-edu-meta">2018 · Thesis: WebVR app for autism awareness, exploring immersive environments as a medium for inclusive design and empathy-building.</p>
+            <p className="cv-edu-meta">2016 – 2017 · Thesis: WebVR app for autism awareness, exploring immersive environments as a medium for inclusive design and empathy-building.</p>
           </div>
           <div className="cv-edu-block mt-3">
             <h3 className="cv-edu-title">BA Web Design</h3>
