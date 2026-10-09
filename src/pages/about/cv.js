@@ -131,7 +131,7 @@ function CV() {
         <div className="cv-footer-column">
           <h2 className="cv-section-title">EDUCATION</h2>
           <div className="cv-edu-block">
-            <h3 className="cv-edu-title">MSc UX Design</h3>
+            <h3 className="cv-edu-title">MSc UX Design (Merit)</h3>
             <p className="cv-edu-school">Kingston University, London</p>
             <p className="cv-edu-meta">2016 – 2017 · Thesis: WebVR app for autism awareness, exploring immersive environments as a medium for inclusive design and empathy-building.</p>
           </div>
