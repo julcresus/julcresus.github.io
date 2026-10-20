@@ -1045,10 +1045,10 @@ a {
 .cv-editorial-title {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 9pt;
+  font-size: 10pt;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--fg);
 }
 
 .cv-editorial-summary {
@@ -1111,7 +1111,7 @@ a {
 
 .cv-job-role {
   font-size: 11pt;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -1178,7 +1178,7 @@ a {
 
 .cv-edu-school {
   font-size: 10pt;
-  font-style: italic;
+  font-style: normal;
   color: var(--muted);
   margin-bottom: 2px;
 }
@@ -1201,7 +1201,11 @@ a {
 
 .cv-meta {
   color: var(--muted);
-  font-style: italic;
+  font-style: normal;
+}
+
+.cv-bullets strong {
+  font-weight: 600;
 }
 
 @media print {
@@ -1241,6 +1245,14 @@ a {
   .cv-editorial-page .cv-editorial-title {
     font-weight: 600 !important;
   }
+
+  .cv-editorial-page .cv-job-role {
+    font-weight: 500 !important;
+  }
+
+  .cv-editorial-page .cv-bullets strong {
+    font-weight: 600 !important;
+  }
   
   .nav-header, .footer, .about-back, .theme-toggle {
     display: none !important;
@@ -1273,8 +1285,8 @@ a {
   }
 
   .cv-editorial-title {
-    font-size: 8.5pt !important;
-    color: #3d3d3d !important;
+    font-size: 10pt !important;
+    color: #1a1a1a !important;
     margin-bottom: 6px !important;
     letter-spacing: 4px !important;
   }
@@ -1298,7 +1310,7 @@ a {
 
   .cv-section-title {
     font-size: 8.5pt !important;
-    color: #3d3d3d !important;
+    color: #707070 !important;
     letter-spacing: 4px !important;
   }
 
@@ -1324,12 +1336,14 @@ a {
     color: black !important;
   }
 
-  .cv-job-dates, .cv-job-role {
+  .cv-job-dates {
     font-size: 9pt !important;
     color: #3d3d3d !important;
   }
 
   .cv-job-role {
+    font-size: 9pt !important;
+    color: #555555 !important;
     margin-bottom: 4px !important;
   }
 

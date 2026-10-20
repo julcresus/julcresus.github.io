@@ -25,9 +25,9 @@ function Naturalengland() {
             <dt>My responsibility</dt>
             <dd>Interaction and service design across two very different journeys: field surveyors recording what they see on site, and managers planning and tracking surveys from the office.</dd>
             <dt>What research changed</dt>
-            <dd>Testing with ecologists and field surveyors showed people losing their bearings when they were dropped straight into survey detail. I added a site overview page, which is now part of the core service.</dd>
+            <dd>Testing with ecologists and geological specialists pointed to three things: a preference for grouped, form-style layouts for complex, repeated tasks; guidance inside the service; and a clear view of how a site, its surveys and its assessments relate.</dd>
             <dt>Delivery and validation</dt>
-            <dd>Several rounds of usability testing using a coded GOV.UK Prototype Kit prototype. The changes that came from testing carry through as the service continues through development.</dd>
+            <dd>Several rounds of usability testing with ecologists and field surveyors, using a coded GOV.UK Prototype Kit prototype with realistic site data.</dd>
           </dl>
         </section>
       )}
@@ -51,23 +51,27 @@ function Naturalengland() {
 
         <h2 className="sub-title">What I designed</h2>
         <p className="description">
-          The service had a few main areas. A site overview page was one of the earlier iterations that research pushed us to add. Users were getting dropped into survey detail without enough context about the site itself. A landing page with key links and a summary of recent activity made it significantly easier to orientate.
+          The service had a few main areas: finding a site, site information, the monitoring specification and surveys. Each site had its own pages, so people could see how a site, its surveys and its assessments relate.
           <br /><br />
           From there, surveyors could access the surveys they needed to complete, with the specific monitoring questions and data fields relevant to their site. Managers could create new surveys and assign them to particular sites and teams.
+          <br /><br />
+          Different people needed to see different things. Stakeholders and business analysts set the access rules, and I designed how those rules worked in the experience: different content for each role, and a clear message, “You don't have access to this”, when something wasn't available.
           <br /><br />
           Journey maps helped us work through the different user paths early on, and the GOV.UK Prototype Kit let us test interactions with real users rather than static mockups.
         </p>
 
         <h2 className="sub-title">How we worked</h2>
         <p className="description">
-          We ran several rounds of usability testing with ecologists and field surveyors. One clear finding was the missing site landing page. Users kept losing their bearings navigating straight into survey detail. That came directly from testing and was one of the more tangible moments where research reshaped the design.
+          We ran several rounds of usability testing with ecologists and field surveyors. Findings included a preference for grouped, form-style layouts, a need for guidance inside the service, and the importance of showing clearly how site data, surveys and condition assessments relate.
+          <br /><br />
+          I started with low-fidelity sketches in a workshop with stakeholders, user researchers and a business analyst, then built Figma screens and a coded prototype with realistic data, so people could click through the journey and see how it would work.
           <br /><br />
           Working with expert users was one of the more interesting aspects. Ecologists and surveyors know their domain deeply. They had strong opinions about how data should be structured and what information mattered most. Getting designs in front of them early and often was the only way to make sure we were reflecting that knowledge rather than designing around it.
         </p>
 
         <h2 className="sub-title">Outcomes</h2>
         <p className="description">
-          The design work contributed to replacing a paper and iPad-based workflow with a structured digital service that works for both field surveyors and office-based managers. Changes that came directly from usability testing, like the site overview page, are now part of the core service as it continues through development.
+          The design work contributed to a structured digital service intended to replace a paper and iPad-based workflow, for both field surveyors and office-based managers. The outcome documented here is the prototype and its use in research; the service is still in development.
         </p>
     </ProjectLayout>
   );

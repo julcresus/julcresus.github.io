@@ -32,7 +32,7 @@ export const PAGE_META = {
     }
   },
   '/aboutme':        { description: 'About Julien Crésus-Ashton — Senior Interaction Designer, London. Eight years across government, consumer and fintech. Currently at Cognizant.' },
-  '/cv':             { description: 'Curriculum vitae for Julien Crésus-Ashton, Senior Interaction Designer in London. SC cleared. HMRC, DEFRA, Natural England and consumer apps.' },
+  '/cv':             { description: 'Curriculum vitae for Julien Crésus-Ashton, Senior Interaction Designer in London. HMRC, DEFRA, Natural England and consumer apps.' },
   '/accessibility':  { description: 'Accessibility statement for juliencresus.com: WCAG 2.2 AA target, what\'s in place, known issues, and how to report a problem.' },
   '/hmrc':           { description: 'Interaction design for HMRC\'s Welsh Council Tax challenge service — bilingual UX, conditional routing, GOV.UK Prototype Kit.' },
   '/naturalengland': { description: 'Service design for Natural England\'s protected sites monitoring programme — field survey tools, GOV.UK prototype, user research.' },

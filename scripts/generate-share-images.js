@@ -142,7 +142,7 @@ const cards = projects.map(p => {
 cards.push(
   { id: 'home', photo: true, eyebrow: 'Portfolio', title: 'Julien Crésus-Ashton', hook: 'Senior Interaction Designer. I make complex services easier to use.' },
   { id: 'about', photo: true, eyebrow: 'About', title: 'Julien Crésus-Ashton', hook: 'Eight years designing government services and consumer apps in London.' },
-  { id: 'cv', photo: true, eyebrow: 'Curriculum vitae', title: 'Julien Crésus-Ashton', hook: 'Senior Interaction Designer. SC cleared. HMRC, DEFRA, Natural England.' },
+  { id: 'cv', photo: true, eyebrow: 'Curriculum vitae', title: 'Julien Crésus-Ashton', hook: 'Senior Interaction Designer. HMRC, DEFRA, Natural England.' },
   { id: 'accessibility', eyebrow: 'Accessibility statement', title: 'Accessibility', hook: 'WCAG 2.2 AA target, what is in place, known issues and how to report a problem.' },
 );
 

@@ -29,8 +29,6 @@ function CV() {
         <a href="https://linkedin.com/in/juliencresus/" target="_blank" rel="noopener noreferrer">linkedin.com/in/juliencresus</a>
         <span className="cv-separator">·</span>
         <a href="https://juliencresus.com">juliencresus.com</a>
-        <span className="cv-separator">·</span>
-        <span>London, UK</span>
       </div>
 
       <div className="cv-editorial-header">
@@ -40,7 +38,7 @@ function CV() {
 
       <div className="cv-editorial-summary">
         <p>
-          {tailored || 'Interaction designer with eight years in UK government and consumer apps. Currently designing and prototyping a beta service for ICS. Previously HMRC\'s bilingual Council Tax service, tested over six to seven research rounds with at least half Welsh speakers. SC cleared.'}
+          {tailored || 'Senior interaction designer with eight years in UK government and consumer apps. I design accessible services, test them with users and prototype in code.'}
         </p>
       </div>
 
@@ -56,11 +54,12 @@ function CV() {
           </div>
           <p className="cv-job-role">Senior Interaction Designer</p>
           <ul className="cv-bullets">
-            <li>Designing and prototyping a case-management service for ICS, now in beta. Interaction design and coded GOV.UK Prototype Kit prototypes, using Claude to speed up coding and iteration.</li>
-            <li>Led interaction design for HMRC's Welsh Council Tax service during alpha, in Welsh and English, for all 22 Welsh local authorities. Six to seven research rounds, at least half with Welsh speakers.</li>
-            <li>Designed Natural England's protected sites monitoring service, testing with ecologists and field surveyors. Testing showed users losing their bearings, so I added a site overview page, now part of the core service.</li>
-            <li>Designed a DEFRA/APHA workforce planning tool on PowerBI, replacing team spreadsheets with one view of activities and absences for managers, within Fluent constraints.</li>
-            <li>Set the standard for personas, interaction models and WCAG 2.2 across the team, and coached other designers on GDS and coded prototyping.</li>
+            <li>Designing and prototyping a case-management service for ICS (Integrated Corporate Services), now in beta. Interaction design and coded “GOV.UK Prototype Kit” prototypes, using AI services to speed up coding and iteration.</li>
+            <li>Led interaction design for the Welsh Council Tax service at HMRC (HM Revenue and Customs) during alpha, in Welsh and English, for all 22 Welsh local authorities. Assisted multiple research rounds.</li>
+            <li>Designed journeys for Natural England's protected sites monitoring service, from workshop sketches to Figma screens and a coded prototype, tested with ecologists and field surveyors.</li>
+            <li>Designed a workforce planning tool for DEFRA (Department for Environment, Food and Rural Affairs) and APHA (Animal and Plant Health Agency) on PowerBI, replacing team spreadsheets with one view of activities and absences for managers, within the constraints of Microsoft’s design system.</li>
+            <li>Set the standard for personas, interaction models and WCAG (Web Content Accessibility Guidelines) 2.2 across the team.</li>
+            <li>Coached and led other designers on GDS (Government Digital Service) and coded prototyping.</li>
           </ul>
         </div>
 
@@ -114,7 +113,6 @@ function CV() {
                 <li>WCAG 2.2 accessibility</li>
                 <li>Coded prototyping (React, GOV.UK Prototype Kit)</li>
                 <li>Conditional routing and policy logic</li>
-                <li>Bilingual Welsh and English services</li>
               </ul>
             </div>
             <div>
@@ -146,7 +144,7 @@ function CV() {
           <h2 className="cv-section-title">LANGUAGES</h2>
           <ul className="cv-lang-list">
             <li>French <span className="cv-meta">(Native)</span></li>
-            <li>English <span className="cv-meta">(Bilingual)</span></li>
+            <li>English <span className="cv-meta">(Fluent)</span></li>
             <li>German <span className="cv-meta">(Basic)</span></li>
           </ul>
         </div>
